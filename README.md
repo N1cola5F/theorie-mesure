@@ -28,6 +28,21 @@ npm test           # 运行 Vitest 单元测试（组件纯逻辑）
 
 构建产物位于 `docs/.vitepress/dist/`，为纯静态文件，可直接用任意静态服务器托管。
 
+## 部署 Déploiement
+
+已部署到 GitHub Pages：**https://cuteyzm.github.io/theorie-mesure/**
+
+更新内容后，重新部署只需：
+
+```bash
+npm run deploy     # 用正确 base 构建并推送到 gh-pages 分支
+```
+
+`deploy.mjs` 会自动从 `origin` 推断仓库名设置 `base`，再把构建产物推到 `gh-pages` 分支（Pages 源指向该分支）。源码托管在 `main` 分支。
+
+> 若想改为「推送即自动部署」的 CI 流程：先 `gh auth refresh -s workflow` 授予 workflow 权限，再加入 `.github/workflows/deploy.yml`（VitePress 官方 Pages 工作流）。
+
+
 ## 目录结构
 
 ```
