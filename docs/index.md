@@ -1,0 +1,24 @@
+---
+layout: home
+hero:
+  name: "测度论 · Théorie de la mesure"
+  text: "交互式双语笔记"
+  tagline: De la théorie de la mesure aux variables aléatoires — 从测度到随机变量
+  actions:
+    - theme: brand
+      text: 第一章 开始 →
+      link: /ch1
+    - theme: alt
+      text: 概率↔测度论词典
+      link: /dictionary
+features:
+  - title: 第一章 · Éléments de théorie de la mesure
+    details: 可数集、limsup/liminf、Tribu（σ-代数）、测度、Borel-Cantelli
+    link: /ch1
+  - title: 第二章 · Fonctions mesurables et intégration
+    details: 逆像、可测函数、Lebesgue 积分四步构造、TCM / Fatou / TCD 三定理
+    link: /ch2
+  - title: 第三章 · Variables aléatoires réelles
+    details: Fubini-Tonelli、换元公式、loi、分布函数、期望、独立性
+    link: /ch3
+---

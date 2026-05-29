@@ -1,0 +1,78 @@
+/* ============================================================
+   测度论文档站 — 低饱和学术风主题 (明 / 暗)
+   ============================================================ */
+
+:root {
+  /* 主色：柔和靛蓝 slate-indigo */
+  --vp-c-brand-1: #4f6ea8;
+  --vp-c-brand-2: #5e7cb3;
+  --vp-c-brand-3: #6f8ac0;
+  --vp-c-brand-soft: rgba(79, 110, 168, 0.14);
+
+  /* 语义容器调色板（明） */
+  --m-def-bg:  #eef3f8; --m-def-bd:  #5b7fa6; --m-def-ti:  #36567a;
+  --m-prop-bg: #eef4ef; --m-prop-bd: #5f8a6a; --m-prop-ti: #3c6049;
+  --m-theo-bg: #f2eff7; --m-theo-bd: #7d6ba3; --m-theo-ti: #54447e;
+  --m-coro-bg: #ecf4f3; --m-coro-bd: #4f8f86; --m-coro-ti: #336860;
+  --m-attn-bg: #f8f2e6; --m-attn-bd: #b08a47; --m-attn-ti: #835d22;
+  --m-exer-bg: #f1f3f5; --m-exer-bd: #7a828c; --m-exer-ti: #4f565e;
+  --m-loi-bg:  #f4eef3; --m-loi-bd:  #9c6a93; --m-loi-ti:  #6d4266;
+}
+
+.dark {
+  --vp-c-brand-1: #8aa6d6;
+  --vp-c-brand-2: #7c99cc;
+  --vp-c-brand-3: #6f8ac0;
+  --vp-c-brand-soft: rgba(138, 166, 214, 0.16);
+
+  /* 语义容器调色板（暗）：低饱和背景 + 浅色文字 */
+  --m-def-bg:  #1b2531; --m-def-bd:  #5b7fa6; --m-def-ti:  #a9c4e6;
+  --m-prop-bg: #1a261d; --m-prop-bd: #5f8a6a; --m-prop-ti: #a9cfb2;
+  --m-theo-bg: #241f2e; --m-theo-bd: #8a78b0; --m-theo-ti: #c7b8e2;
+  --m-coro-bg: #182624; --m-coro-bd: #4f8f86; --m-coro-ti: #9fcfc7;
+  --m-attn-bg: #2a2418; --m-attn-bd: #b08a47; --m-attn-ti: #e0c486;
+  --m-exer-bg: #20242a; --m-exer-bd: #828a94; --m-exer-ti: #bcc4cd;
+  --m-loi-bg:  #271f26; --m-loi-bd:  #9c6a93; --m-loi-ti:  #d6aecd;
+}
+
+/* ---------- 语义容器 ---------- */
+.mblock {
+  border-radius: 8px;
+  padding: 12px 16px 4px;
+  margin: 16px 0;
+  border-left: 4px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.mblock .mblock-title {
+  font-weight: 700;
+  margin: 0 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.mblock > :last-child { margin-bottom: 8px; }
+.mblock ul { margin: 4px 0; }
+
+.mblock-def  { background: var(--m-def-bg);  border-left-color: var(--m-def-bd); }
+.mblock-def  .mblock-title { color: var(--m-def-ti); }
+.mblock-prop { background: var(--m-prop-bg); border-left-color: var(--m-prop-bd); }
+.mblock-prop .mblock-title { color: var(--m-prop-ti); }
+.mblock-theo { background: var(--m-theo-bg); border-left-color: var(--m-theo-bd); }
+.mblock-theo .mblock-title { color: var(--m-theo-ti); }
+.mblock-coro { background: var(--m-coro-bg); border-left-color: var(--m-coro-bd); }
+.mblock-coro .mblock-title { color: var(--m-coro-ti); }
+.mblock-attn { background: var(--m-attn-bg); border-left-color: var(--m-attn-bd); }
+.mblock-attn .mblock-title { color: var(--m-attn-ti); }
+.mblock-exer { background: var(--m-exer-bg); border-left-color: var(--m-exer-bd); }
+.mblock-exer .mblock-title { color: var(--m-exer-ti); }
+.mblock-loi  { background: var(--m-loi-bg);  border-left-color: var(--m-loi-bd); }
+.mblock-loi  .mblock-title { color: var(--m-loi-ti); }
+
+/* 让块级公式在窄屏可横向滚动，不撑破布局 */
+.mblock mjx-container[display="true"],
+.vp-doc mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}

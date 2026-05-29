@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>概率论思维导图 — Théorie de la mesure / Fonctions mesurables / Variables aléatoires</title>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        fontFamily: '"Segoe UI","Microsoft YaHei",sans-serif',
+        fontSize: '15px'
+      },
+      flowchart: { curve: 'basis', padding: 14 }
+    });
+  });
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    background: #f4f6fa;
+    color: #222;
+    margin: 0;
+    padding: 24px;
+    line-height: 1.55;
+  }
+  h1 {
+    text-align: center;
+    background: linear-gradient(90deg,#2c3e50,#4a6fa5);
+    color: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+  .chapter {
+    margin: 40px 0;
+    border-left: 8px solid #4a6fa5;
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  }
+  .chapter > h2 {
+    color: #2c3e50;
+    border-bottom: 3px double #4a6fa5;
+    padding-bottom: 8px;
+  }
+  .section {
+    margin: 22px 0;
+    padding: 14px 18px;
+    background: #f8fafd;
+    border-radius: 10px;
+    border-left: 5px solid #6a89cc;
+  }
+  .section > h3 { color: #34495e; margin-top: 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .card {
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.93em;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .card .title { display:inline-block; margin-left:4px; }
+  .def     { background:#e3f2fd; border-left:4px solid #1976d2; }
+  .prop    { background:#e8f5e9; border-left:4px solid #388e3c; }
+  .theo    { background:#f3e5f5; border-left:4px solid #7b1fa2; }
+  .coro    { background:#e0f2f1; border-left:4px solid #00796b; }
+  .attn    { background:#fff3e0; border-left:4px solid #e65100; }
+  .exer    { background:#f5f5f5; border-left:4px solid #616161; }
+  .law     { background:#ede7f6; border-left:4px solid #5e35b1; }
+  .rel     { background:#fff8e1; border:2px dashed #f9a825; padding:14px; border-radius:10px; margin:14px 0; }
+  .rel h4  { margin:0 0 10px 0; color:#b76e00; }
+  .tag {
+    display:inline-block;
+    font-size:.72em;
+    padding:2px 8px;
+    border-radius:10px;
+    color:#fff;
+    margin-right:6px;
+    vertical-align:middle;
+  }
+  .tag-def  { background:#1976d2; }
+  .tag-prop { background:#388e3c; }
+  .tag-theo { background:#7b1fa2; }
+  .tag-coro { background:#00796b; }
+  .tag-attn { background:#e65100; }
+  .tag-exer { background:#616161; }
+  .tag-law  { background:#5e35b1; }
+  .card b.title { color:#1a1a1a; }
+  .arrow { color:#b71c1c; font-weight:bold; }
+  .biarrow { color:#0d47a1; font-weight:bold; }
+  .nope { color:#616161; text-decoration:line-through; }
+  ul.tight { margin:4px 0 4px 18px; padding:0; }
+  ul.tight li { margin:2px 0; }
+  .toc {
+    background:#fff;
+    padding:14px 22px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+    margin-bottom:24px;
+  }
+  .toc a { color:#1a73e8; text-decoration:none; margin-right:14px; }
+  .toc a:hover { text-decoration:underline; }
+  .legend {
+    background:#eceff1;
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:.9em;
+    margin:10px 0;
+  }
+  .legend span { margin-right:12px; }
+  .mermaid-box {
+    background:#fff;
+    border-radius:12px;
+    padding:18px;
+    margin:14px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    border:1px solid #e0e6ef;
+    overflow-x:auto;
+  }
+  .mermaid-box h4 { margin:0 0 8px 0; color:#2c3e50; }
+  .mermaid-legend {
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    font-size:.85em;
+    color:#444;
+    margin-bottom:8px;
+    padding:8px 12px;
+    background:#f7f9fc;
+    border-radius:6px;
+  }
+  .mermaid-legend .lg { display:inline-flex; align-items:center; gap:6px; }
+  .mermaid-legend .line { display:inline-block; width:36px; height:0; border-top:2.5px solid; vertical-align:middle; }
+  .mermaid-legend .lg-imp .line { border-color:#2e7d32; }
+  .mermaid-legend .lg-not .line { border-top-style:dashed; border-color:#c62828; }
+  .mermaid-legend .lg-iff .line { border-color:#1565c0; }
+  .mermaid svg { display:block; margin:0 auto; max-width:100%; }
+  .mermaid-note { font-size:.85em; color:#5d4037; margin-top:6px; }
+  /* 概率 ↔ 测度论 对照 */
+  table.dict {
+    width:100%;
+    border-collapse:collapse;
+    font-size:.9em;
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  table.dict th, table.dict td {
+    padding:6px 10px;
+    border:1px solid #e0e6ef;
+    text-align:left;
+  }
+  table.dict th { background:#4a6fa5; color:#fff; }
+  table.dict tr:nth-child(even) { background:#f7f9fc; }
+</style>
+</head>
+<body>
+
+<h1>📘 概率论三章思维导图<br><span style="font-size:.6em;font-weight:normal;">Théorie de la mesure · Fonctions mesurables · Variables aléatoires</span></h1>
+
+<div class="toc">
+  <b>目录：</b>
+  <a href="#ch1">第一章 Éléments de théorie de la mesure</a>
+  <a href="#ch2">第二章 Fonctions mesurables et intégration</a>
+  <a href="#ch3">第三章 Variables aléatoires réelles</a>
+</div>
+
+<div class="legend">
+  <b>图例：</b>
+  <span class="tag tag-def">Définition</span>
+  <span class="tag tag-prop">Proposition</span>
+  <span class="tag tag-theo">Théorème</span>
+  <span class="tag tag-coro">Corollaire</span>
+  <span class="tag tag-law">Loi usuelle</span>
+  <span class="tag tag-attn">Attention/Note</span>
+  <span class="tag tag-exer">Exemple/Exercice</span>
+  &nbsp;|&nbsp;
+  <span class="arrow">⇒</span> 单向蕴含 &nbsp;
+  <span class="biarrow">⇔</span> 等价 &nbsp;
+  <span class="nope">⇐</span> 反向不成立
+</div>
+
+<div class="rel" style="background:#f0f7ff;border-color:#1565c0;">
+  <h4 style="color:#0d47a1;">🔁 概率 ↔ 测度论 词典（核心对照）</h4>
+  <table class="dict">
+    <tr><th>Théorie de la mesure</th><th>Théorie des probabilités</th><th>说明</th></tr>
+    <tr><td>Ensemble $\Omega$</td><td>Univers $\Omega$</td><td>样本空间</td></tr>
+    <tr><td>Tribu $\mathcal{T}$（$\sigma$-algèbre）</td><td>Ensemble des événements</td><td>事件域</td></tr>
+    <tr><td>Partie $A\in\mathcal{T}$</td><td>Événement</td><td>事件</td></tr>
+    <tr><td>$\emptyset$</td><td>Événement impossible</td><td>—</td></tr>
+    <tr><td>$A,B$ disjoints</td><td>$A,B$ incompatibles</td><td>—</td></tr>
+    <tr><td>Mesure $\mu$ avec $\mu(\Omega)=1$</td><td>Probabilité $\mathbb{P}$</td><td>—</td></tr>
+    <tr><td>Fonction mesurable $X$</td><td>Variable aléatoire</td><td>—</td></tr>
+    <tr><td>Intégrale $\int X\,d\mu$</td><td>Espérance $\mathbb{E}(X)$</td><td>—</td></tr>
+    <tr><td>$\mu$-presque partout</td><td>$\mathbb{P}$-presque sûrement</td><td>p.p. / p.s.</td></tr>
+  </table>
+</div>
+
+<!-- ============== CHAPITRE 1 ============== -->
+<div class="chapter" id="ch1">
+<h2>第一章 — Éléments de théorie de la mesure</h2>
+<p><i>Cadre：</i>$(\Omega,\mathcal{T})$ 可测空间，$\mu$ 测度。本章建立测度论语言：可数集 / Tribu / Mesure / Borel-Cantelli。</p>
+
+<!-- ===== 1.1 ===== -->
+<div class="section">
+<h3>1.1 Rappels théorie des ensembles</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 1.1.1</span><b class="title">Ensemble dénombrable</b>
+    存在 $\varphi:E\to\mathbb{N}$ 单射。
+    <ul class="tight">
+      <li>$\varphi$ 双射 → <b>infini dénombrable</b>；否则 <b>fini</b>。</li>
+      <li>$\mathbb{Z},\mathbb{Q},\mathbb{N}\times\mathbb{N}$ 可数；$\mathcal{P}(\mathbb{N}),\mathbb{R}$ <b>不可数</b>。</li>
+    </ul>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.1.2</span><b class="title">Induction structurelle</b>
+    $A\subset E$ 由：(i) 生成部分 $B\subset A$；(ii) 构造规则 $f:A^I\to E$ 给出。$A$ 是满足这两条的<b>最小</b>子集。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.1.3</span><b class="title">Définition récursive d'une fonction</b>
+    $g:E\to F$：在 $B$ 上已知；存在 $U:F^I\to F$ 使 $g(f((e_i)))=U((g(e_i)))$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exemples</span>
+    <ul class="tight">
+      <li>$\mathbb{N}$：$0\in\mathbb{N}$；$n\in\mathbb{N}\Rightarrow n+1\in\mathbb{N}$。</li>
+      <li>$K[X]$：$\lambda,X$ 是多项式；$P+Q,P\cdot Q$ 仍是。</li>
+      <li>Liste：$[\,]$ 是列表；$a::s$ 仍是 → 递归 $\mathrm{somme}$。</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===== 1.2 集合极限 ===== -->
+<div class="section">
+<h3>1.2 Limite supérieure / inférieure d'une suite d'ensembles</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 1.1.4</span><b class="title">$\limsup A_n$（无限多次）</b>
+    $$\limsup_{n} A_n=\bigcap_{n\in\mathbb{N}}\bigcup_{m\ge n}A_m$$
+    "$\omega$ 属于 <b>无穷多个</b> $A_n$"。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.1.4</span><b class="title">$\liminf A_n$（最终一直在）</b>
+    $$\liminf_{n} A_n=\bigcup_{n\in\mathbb{N}}\bigcap_{m\ge n}A_m$$
+    "$\omega$ 从某 $n$ 起<b>一直</b>在 $A_m$ 中"。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.1.1</span><b class="title">关系</b>
+    $\liminf A_n\subset \limsup A_n$；若相等则 $(A_n)$ <b>收敛</b>。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note 概率解读</span>
+    抛硬币 $A_i=$"第 $i$ 次正面"：
+    <ul class="tight">
+      <li>$\limsup A_n$ = "出现<b>无限</b>多次正面"</li>
+      <li>$\liminf A_n$ = "从某次起一直正面"</li>
+    </ul>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 1.1.1</span>
+    De Morgan：$\overline{\limsup A_n}=\liminf \overline{A_n}$，$\overline{\liminf A_n}=\limsup \overline{A_n}$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 1.1.2</span>
+    "硬币连续两次正面无穷多次"：$A_i=\{\omega_i=F,\omega_{i+1}=F\}$，事件 $=\limsup A_n$。
+  </div>
+</div>
+</div>
+
+<!-- ===== 1.3 Tribus ===== -->
+<div class="section">
+<h3>1.3 Tribus（$\sigma$-algèbre）</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 1.2.1</span><b class="title">Tribu</b>
+    $\mathcal{T}\subset\mathcal{P}(\Omega)$ 满足：
+    <ul class="tight">
+      <li>$\emptyset,\Omega\in\mathcal{T}$</li>
+      <li>$A\in\mathcal{T}\Rightarrow A^c\in\mathcal{T}$（complémentation）</li>
+      <li>$(A_n)\in\mathcal{T}^\mathbb{N}\Rightarrow \bigcup_n A_n\in\mathcal{T}$（réunion dénombrable）</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.2.2-4</span><b class="title">Stabilités dérivées</b>
+    <ul class="tight">
+      <li>Différence propre：$A\subset B\Rightarrow B\setminus A\in\mathcal{T}$</li>
+      <li>Intersection dénombrable：$\bigcap_n A_n\in\mathcal{T}$</li>
+      <li>$\limsup A_n,\liminf A_n\in\mathcal{T}$</li>
+    </ul>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.2.2</span><b class="title">Tribu engendrée $\mathcal{T}(\mathcal{G})$</b>
+    包含 $\mathcal{G}$ 的<b>最小</b> tribu。
+    <br>Prop 1.2.1：$\mathcal{T}(\mathcal{G})=\bigcap\{\mathcal{T}\text{ tribu}, \mathcal{G}\subset\mathcal{T}\}$
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.2.3</span><b class="title">Tribu borélienne $\mathcal{B}(E)$</b>
+    $E$ evn，$\mathcal{O}$ = ouverts。$\mathcal{B}(E)=\mathcal{T}(\mathcal{O})$。元素称 <b>borélien</b>。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.2.4</span><b class="title">Espace mesurable / probabilisable</b>
+    $(\Omega,\mathcal{T})$ → événements = 元素 $\in\mathcal{T}$。
+    若 $\Omega$ 可数，常取 $\mathcal{T}=\mathcal{P}(\Omega)$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exemple 1.2.1-2</span>
+    <ul class="tight">
+      <li>最小 tribu：$\{\emptyset,\Omega\}$</li>
+      <li>$\mathcal{P}(\Omega)$ 总是 tribu</li>
+      <li>$\{A\subset\mathbb{R}: A\text{ ou }A^c\text{ dénombrable}\}$ 是 tribu</li>
+    </ul>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 1.2.3</span>
+    $\mathbb{R}$ 上 $\mathcal{B}(\mathbb{R})$：单点 $\{a\}=\bigcap_n(a-2^{-n},a+2^{-n})$ → 是 borélien；故 $\mathbb{Q},\mathbb{R}\setminus\mathbb{Q}$ 都是。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note 系统 Dynkin（Ex 1.2.4-5）</span>
+    $\mathcal{D}$ Dynkin = (i) $\Omega\in\mathcal{D}$ (ii) $A\subset B\Rightarrow B\setminus A\in\mathcal{D}$ (iii) 不交 $\sigma$-réunion 稳定。<br>
+    <b>Théorème des classes monotones</b>：若 $\mathcal{G}$ 对有限交稳定，则 $\mathcal{D}(\mathcal{G})=\mathcal{T}(\mathcal{G})$ —— 证唯一性的关键工具。
+  </div>
+</div>
+</div>
+
+<!-- ===== 1.4 Mesure ===== -->
+<div class="section">
+<h3>1.4 Mesure</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 1.3.1</span><b class="title">Mesure $\mu$</b>
+    $\mu:\mathcal{T}\to[0,+\infty]$ 满足：
+    <ul class="tight">
+      <li>$\mu(\emptyset)=0$</li>
+      <li>$\sigma$-additivité：$(A_n)$ 两两不交 $\Rightarrow \mu(\bigcup A_n)=\sum_n \mu(A_n)$</li>
+    </ul>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 1.3.1</span><b class="title">Variantes</b>
+    <ul class="tight">
+      <li><b>Finie</b>：$\mu(\Omega)<+\infty$</li>
+      <li><b>$\sigma$-finie</b>：$\Omega=\bigcup A_n$，$\mu(A_n)<+\infty$</li>
+      <li><b>Probabilité</b>：$\mu(\Omega)=1$（$(\Omega,\mathcal{T},\mathbb{P})$ probabilisé）</li>
+      <li><b>Négligeable</b>：$\mu(A)=0$</li>
+    </ul>
+  </div>
+  <div class="card theo"><span class="tag tag-theo">Th 1.3.1 — Lebesgue</span><b class="title">Mesure de Lebesgue sur $\mathbb{R}^n$</b>
+    在 $(\mathbb{R}^n,\mathcal{B}(\mathbb{R}^n))$ 上存在<b>唯一</b>测度 $\lambda$ 满足：
+    $$\lambda([a_1,b_1]\times\cdots\times[a_n,b_n])=\prod_{i=1}^n(b_i-a_i)$$
+    <small>（存在性 ADMIS；唯一性来自 classes monotones）</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.3.1</span><b class="title">Propriétés élémentaires</b>
+    <ul class="tight">
+      <li>Additivité finie：$A,B$ 不交 $\Rightarrow \mu(A\cup B)=\mu(A)+\mu(B)$</li>
+      <li>Monotonie：$A\subset B\Rightarrow \mu(A)\le \mu(B)$</li>
+      <li>Inclusion-exclusion：$\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)$</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.3.2 — Continuité</span><b class="title">Croissante / décroissante</b>
+    <ul class="tight">
+      <li>$(A_n)$ <b>croissante</b>：$\mu(\bigcup A_n)=\lim \mu(A_n)$ <span style="color:#c62828">（无附加假设）</span></li>
+      <li>$(B_n)$ <b>décroissante</b>，$\exists m, \mu(B_m)<+\infty$：$\mu(\bigcap B_n)=\lim \mu(B_n)$</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.3.3 — Boole</span><b class="title">Sous-additivité dénombrable</b>
+    $\displaystyle\mu\!\left(\bigcup_n A_n\right)\le\sum_n \mu(A_n)$（不需要不交！）
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 1.3.4</span><b class="title">Caractérisation alternative</b>
+    $\mu$ 是测度 $\Leftrightarrow$ $\mu(\emptyset)=0$ + 有限可加 + 递增连续。
+  </div>
+  <div class="card theo"><span class="tag tag-theo">Prop 1.3.5 — Borel-Cantelli</span><b class="title">关键引理（第一部分）</b>
+    若 $\sum_n \mu(A_n)<+\infty$，则
+    $$\mu\!\left(\limsup_n A_n\right)=0.$$
+    <small>证：Boole 不等式 + 取尾巴 $\to 0$。</small>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exemples</span>
+    <ul class="tight">
+      <li>1.3.1：$\mu(A)=\mathrm{Card}(A\cap\mathbb{N})$ 是 $\sigma$-finie 概率测度</li>
+      <li>1.3.3：$(u_n)$ 收敛正项级数 → $\mu(A)=\sum_{k\in A}u_k$ 是测度</li>
+      <li>1.3.4：$\mathbb{R}^2$ 中 $A=\{0\le y\le f(x)\}$，$\lambda(A)=\int f\,dx$ → 测度↔积分桥梁</li>
+    </ul>
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Attention</span>
+    递减连续<b>必须</b>有 $\mu(B_m)<+\infty$！反例：$B_n=[n,+\infty)$，$\lambda(B_n)=+\infty$ 不收敛到 $\lambda(\emptyset)=0$。
+  </div>
+</div>
+
+<!-- 第一章关系图 -->
+<div class="mermaid-box">
+  <h4>🔗 第一章核心结构图 — Tribu / Mesure / 概率</h4>
+  <div class="mermaid-legend">
+    <span class="lg lg-imp"><span class="line"></span>蕴含 ⇒</span>
+    <span class="lg lg-iff"><span class="line"></span>定义/特殊化 ⇔</span>
+    <span class="lg lg-not"><span class="line"></span>需附加条件</span>
+  </div>
+  <div class="mermaid">
+flowchart TB
+    SET["集合 Ω<br/>(Univers)"]:::base
+    TRIBU["Tribu 𝒯<br/>(σ-algèbre)"]:::struct
+    MES["Espace mesurable<br/>(Ω, 𝒯)"]:::struct
+    BOREL["Tribu borélienne 𝓑(E)<br/>由 ouverts 生成"]:::struct
+    MESURE["Mesure μ<br/>(σ-additive, μ(∅)=0)"]:::measure
+    FIN["μ finie<br/>μ(Ω) &lt; ∞"]:::special
+    PROBA["Probabilité ℙ<br/>μ(Ω) = 1"]:::special
+    LEB["Mesure de Lebesgue λ<br/>sur (ℝⁿ, 𝓑(ℝⁿ))"]:::special
+    BC["Borel-Cantelli<br/>Σμ(Aₙ)&lt;∞ ⇒ μ(limsup Aₙ)=0"]:::result
+
+    SET ==> TRIBU
+    TRIBU <==>|"définition"| MES
+    TRIBU ==>|"E evn + ouverts"| BOREL
+    MES ==>|"+ μ"| MESURE
+    MESURE ==>|"μ(Ω) finie"| FIN
+    FIN ==>|"μ(Ω)=1"| PROBA
+    BOREL ==>|"Th 1.3.1 unicité"| LEB
+    MESURE ==> BC
+
+    classDef base fill:#eceff1,stroke:#546e7a,color:#263238;
+    classDef struct fill:#bbdefb,stroke:#1565c0,color:#0d47a1;
+    classDef measure fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef special fill:#e1bee7,stroke:#6a1b9a,color:#4a148c;
+    classDef result fill:#ffe0b2,stroke:#ef6c00,color:#bf360c;
+
+    linkStyle 0 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 1 stroke:#1565c0,stroke-width:3px;
+    linkStyle 2 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 3 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 4 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 5 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 6 stroke:#7b1fa2,stroke-width:2.5px;
+    linkStyle 7 stroke:#ef6c00,stroke-width:2.5px;
+  </div>
+  <p class="mermaid-note">从集合到概率空间：Tribu 提供"可观测的"事件域；Mesure 给事件赋值；Probabilité 是 $\mu(\Omega)=1$ 的特例；Borel-Cantelli 把<b>测度论</b>与<b>极限事件</b>桥接，是后续概率结论的基石。</p>
+</div>
+
+<div class="mermaid-box">
+  <h4>🔗 §1.4 测度的连续性 — 单调性条件对照</h4>
+  <div class="mermaid">
+flowchart LR
+    INC["(Aₙ) 递增<br/>A₀⊂A₁⊂..."]:::ok
+    DEC["(Bₙ) 递减<br/>B₀⊃B₁⊃..."]:::ok
+    INC_R["μ(∪Aₙ) = lim μ(Aₙ)<br/>(无附加条件 ✓)"]:::ok
+    DEC_R["μ(∩Bₙ) = lim μ(Bₙ)<br/>需 ∃m, μ(Bₘ)&lt;∞"]:::warn
+    CE["反例: Bₙ=[n,+∞[<br/>λ(Bₙ)=+∞, ∩Bₙ=∅"]:::ex
+
+    INC ==> INC_R
+    DEC ==>|"附加条件"| DEC_R
+    DEC -.->|"无穷测度时失败"| CE
+
+    classDef ok fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef warn fill:#ffe0b2,stroke:#ef6c00,color:#bf360c;
+    classDef ex fill:#ffcdd2,stroke:#c62828,color:#b71c1c;
+
+    linkStyle 0 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 1 stroke:#ef6c00,stroke-width:2.5px;
+    linkStyle 2 stroke:#c62828,stroke-width:1.8px,stroke-dasharray:6 4;
+  </div>
+  <p class="mermaid-note">递增连续无条件成立；递减连续需要至少一项<b>有限</b>测度——这是为什么概率（有限测度）几乎总能用此性质。</p>
+</div>
+</div>
+</div><!-- ============== CHAPITRE 2 ============== -->
+<div class="chapter" id="ch2">
+<h2>第二章 — Fonctions mesurables et intégration</h2>
+<p><i>Cadre：</i>$(E,\mathcal{T})$、$(F,\mathcal{S})$ espaces mesurables，$f:E\to F$。建立<b>可测映射</b>与<b>Lebesgue 积分</b>，并推广到任意测度空间。</p>
+
+<!-- ===== 2.1 ===== -->
+<div class="section">
+<h3>2.1 Image réciproque（核心工具）</h3>
+<div class="grid">
+  <div class="card prop"><span class="tag tag-prop">Prop 2.1.1</span><b class="title">Propriétés algébriques</b>
+    <ul class="tight">
+      <li>$X^{-1}(\emptyset)=\emptyset$，$X^{-1}(F)=E$</li>
+      <li>$X^{-1}(B^c)=X^{-1}(B)^c$（补的逆像 = 逆像的补）</li>
+      <li>$X^{-1}(\bigcup B_i)=\bigcup X^{-1}(B_i)$；$X^{-1}(\bigcap B_i)=\bigcap X^{-1}(B_i)$</li>
+      <li>$B_i$ 不交 $\Rightarrow X^{-1}(B_i)$ 不交</li>
+    </ul>
+    <small>口诀：<b>逆像与所有集合运算交换</b>。</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.1.2</span><b class="title">$X^{-1}(\mathcal{S})$ 是 $E$ 上的 tribu</b>
+    $X^{-1}(\mathcal{S})=\{X^{-1}(B):B\in\mathcal{S}\}$ 是 tribu。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.1.3</span><b class="title">到达域上的 tribu</b>
+    给 $(E,\mathcal{T})$ 与 $X:E\to F$，$\mathcal{S}=\{B\subset F: X^{-1}(B)\in\mathcal{T}\}$ 是 $F$ 上的 tribu。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.1.4 — 关键</span><b class="title">交换性</b>
+    $$X^{-1}(\mathcal{T}(\mathcal{G}))=\mathcal{T}(X^{-1}(\mathcal{G})).$$
+    <small>使得"在 $\mathcal{S}$ 的<b>生成系</b>上验证 $X^{-1}(G)\in\mathcal{T}$"就足以保证可测。</small>
+  </div>
+</div>
+</div>
+
+<!-- ===== 2.2 ===== -->
+<div class="section">
+<h3>2.2 Fonctions mesurables</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 2.2.1</span><b class="title">Fonction mesurable / VA</b>
+    $f:(E,\mathcal{T})\to(F,\mathcal{S})$ 可测 $\Leftrightarrow \forall \Sigma\in\mathcal{S},\,f^{-1}(\Sigma)\in\mathcal{T}$.
+    <ul class="tight">
+      <li>概率空间 → <b>variable aléatoire</b></li>
+      <li>$\mathcal{T},\mathcal{S}$ boréliennes → <b>fonction borélienne</b></li>
+    </ul>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.2.2</span><b class="title">Fonction simple / étagée</b>
+    存在不交 $(A_k)\in\mathcal{T}^n$ 与 $(x_k)\in\mathbb{R}^n$：
+    $$X=\sum_{k=1}^n x_k\,\mathbf{1}_{A_k}.$$
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.2.3-4</span><b class="title">$\overline{\mathbb{R}}$ et opérations</b>
+    $\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm\infty\}$，$\mathcal{B}(\overline{\mathbb{R}})=\{A\subset\overline{\mathbb{R}}: A\cap\mathbb{R}\in\mathcal{B}(\mathbb{R})\}$。
+    <ul class="tight">
+      <li>$x+(\pm\infty)=\pm\infty$（$x\in\mathbb{R}$）</li>
+      <li>约定 $0\cdot(\pm\infty)=0$（保持后续积分运算一致）</li>
+      <li>$\infty-\infty$ 未定义</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.1</span><b class="title">Composition</b>
+    $f,g$ 可测 $\Rightarrow g\circ f$ 可测。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.2 — 关键判定</span><b class="title">由生成系判可测</b>
+    若 $\mathcal{T}(\mathcal{G})=\mathcal{S}$：
+    $$f \text{ mesurable}\Leftrightarrow \forall G\in\mathcal{G},\,f^{-1}(G)\in\mathcal{T}.$$
+    <small>典型 $\mathcal{G}=\{(-\infty,a]:a\in\mathbb{R}\}$ 或开集族。</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.3</span><b class="title">Stabilité par sup, inf, limsup, liminf 可数</b>
+    $(f_n)$ 可测族 $\to \sup f_n,\inf f_n,\limsup f_n,\liminf f_n$ 可测。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.4-6</span><b class="title">Exemples fondamentaux</b>
+    <ul class="tight">
+      <li>$\mathbf{1}_A$（$A\in\mathcal{T}$）可测</li>
+      <li>$f$ continue（boréliennes）→ mesurable</li>
+      <li>$X+Y,\,XY,\,\lambda X,\,|X|$ 可测（算术稳定性）</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.7</span><b class="title">Vectorielles</b>
+    $X=(X_1,\dots,X_n):E\to\mathbb{R}^n$ 可测 $\Leftrightarrow$ 每个 $X_i$ 可测。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.2.8-9 — Lemme d'approximation</span><b class="title">阶梯函数逼近</b>
+    $X:E\to[0,+\infty]$ 可测 $\Leftrightarrow$ 存在 $(X_n)$ étagées positives，<b>逐点单增</b>趋于 $X$。<br>
+    <small>构造：$X_n=\sum_{k=0}^{n2^n-1}\frac{k}{2^n}\mathbf{1}_{\{k/2^n\le X<(k+1)/2^n\}}+n\mathbf{1}_{\{X\ge n\}}$.</small>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.2.1</span>
+    若 $(f_n)\to f$ 逐点（且 $f_n$ 可测），则 $f$ 可测（用 $f=\liminf f_n=\limsup f_n$）。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note 概率视角</span>
+    随机变量 $X:\Omega\to\mathbb{R}$，事件 $\{X\le a\}=X^{-1}(]-\infty,a])\in\mathcal{T}$，所以可以谈"$X$ 取这种值的概率"。
+  </div>
+</div>
+</div>
+
+<!-- ===== 2.3 Intégration ===== -->
+<div class="section">
+<h3>2.3 Intégration de Lebesgue（四步构造）</h3>
+
+<p style="background:#fff3e0;padding:10px 14px;border-radius:8px;font-size:.9em;">
+<b>构造路线：</b>(1) 阶梯正函数 → (2) 可测正函数（sup 逼近）→ (3) 实可测（$X^+-X^-$）→ (4) 在事件 $A$ 上限制（$\int_A=\int X\mathbf{1}_A$）。
+</p>
+
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 2.3.1</span><b class="title">① Fonction étagée positive</b>
+    $f=\sum_{k=1}^n x_k\mathbf{1}_{A_k}$（$x_k\ge 0$）：
+    $$\int f\,d\mu=\sum_{k=1}^n x_k\,\mu(A_k).$$
+    <small>定义不依赖于划分（验证：取细分公共划分）。</small>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.3.2</span><b class="title">② Fonction mesurable positive</b>
+    $X:\Omega\to[0,+\infty]$ 可测：
+    $$\int X\,d\mu=\sup\!\left\{\int S\,d\mu : 0\le S\le X,\ S\text{ étagée}\right\}\!\in[0,+\infty].$$
+    若 $\int X\,d\mu<+\infty$，称 $X$ <b>$\mu$-intégrable</b>。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.3.3</span><b class="title">③ Fonction mesurable réelle</b>
+    $X^+=\sup(X,0),\,X^-=\sup(-X,0)$，两者均可测正。若 $\int X^+\,d\mu,\int X^-\,d\mu<+\infty$：
+    $$\int X\,d\mu=\int X^+\,d\mu-\int X^-\,d\mu.$$
+    <b>$X$ intégrable</b> $\Leftrightarrow$ $|X|$ intégrable（因 $|X|=X^++X^-$）。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.3.4</span><b class="title">④ Intégrale sur $A\in\mathcal{T}$</b>
+    $\int_A X\,d\mu = \int X\cdot\mathbf{1}_A\,d\mu.$
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 2.3.5</span><b class="title">Presque partout（p.p. / p.s.）</b>
+    性质 $P$ 在 $\Omega$ 上 <b>$\mu$-p.p.</b> $\Leftrightarrow \exists A\in\mathcal{T},\ \mu(A)=0,\ \forall\omega\in A^c, P(\omega)$ 真。
+    概率情形称 <b>presque sûr</b>。
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 2.3.3-5</span><b class="title">Propriétés (linéarité, monotonie, intégrabilité)</b>
+    $X,Y$ 正或可积：
+    <ul class="tight">
+      <li><b>Linéarité</b>：$\int(X+Y)=\int X+\int Y$，$\int \lambda X=\lambda\int X$</li>
+      <li><b>Monotonie</b>：$X\le Y\Rightarrow \int X\le \int Y$；$X=Y$ p.p.$\Rightarrow$ 积分相等</li>
+      <li>$X$ 可积 $\Leftrightarrow |X|$ 可积；$X$ 可积 $\Rightarrow X$ p.p. fini</li>
+      <li>$|X|\le Y$，$Y$ 可积 $\Rightarrow X$ 可积</li>
+      <li>不交 $A,B$：$\int_{A\cup B}=\int_A+\int_B$</li>
+    </ul>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.3.2 — Riemann ↔ Lebesgue</span>
+    $f:[a,b]\to\mathbb{R}$ Riemann 可积 $\Rightarrow$ Lebesgue 可积，且 $\int_a^b f(t)dt=\int_{[a,b]}f\,d\lambda$。<br>
+    <b>反之不一定：</b>$\mathbf{1}_\mathbb{Q}$ 不 Riemann 可积，但 Lebesgue 可积，$\int_{[a,b]}\mathbf{1}_\mathbb{Q}d\lambda=0$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.3.3 — 计数测度</span>
+    $\mu(A)=\mathrm{Card}(A\cap\mathbb{N})$（$\mathbb{R}$ 上 $\mathcal{P}(\mathbb{R})$）：
+    $\int f\,d\mu=\sum_n f(n)$ → <b>测度论积分 = 级数</b>。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note — 与 Riemann 的关系</span>
+    Lebesgue 积分严格<b>推广</b> Riemann：所有 Riemann 可积函数都 Lebesgue 可积且值相等；额外能积更"病态"的函数（如 $\mathbf{1}_\mathbb{Q}$）。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.3.4 — 范围估计</span>
+    $m\le X\le M$ 在 $A$ 上，$\mu(A)<\infty$：$m\mu(A)\le \int_A X\,d\mu\le M\mu(A)$.
+  </div>
+</div>
+</div>
+
+<!-- ===== 2.3.3 收敛三定理 ===== -->
+<div class="section">
+<h3>2.3' Trois théorèmes de convergence（核心三定理）</h3>
+<div class="grid">
+  <div class="card theo" style="grid-column:1/-1;"><span class="tag tag-theo">Th 2.3.1 — Convergence monotone (TCM)</span><b class="title">Beppo-Levi</b>
+    $(X_n)$ 可测正，<b>逐点单增</b>趋于 $X$ → $X$ 可测且
+    $$\int X\,d\mu=\lim_{n\to\infty}\int X_n\,d\mu\quad \text{(允许 }=+\infty\text{)}.$$
+    <b>级数形式：</b>$Y_n\ge 0$ 可测 $\Rightarrow\displaystyle\int\sum_n Y_n\,d\mu=\sum_n \int Y_n\,d\mu$.
+  </div>
+  <div class="card theo" style="grid-column:1/-1;"><span class="tag tag-theo">Th 2.3.2 — Lemme de Fatou</span><b class="title">不等式</b>
+    $(X_n)$ 可测正：
+    $$\int \liminf_n X_n\,d\mu\le \liminf_n \int X_n\,d\mu.$$
+    <small><b>不等号严格</b>可发生（Ex 2.3.8：$X_n=\frac{1}{2n}\mathbf{1}_{[-n,n]}$，$\int X_n=1\to\int 0=0$）。</small>
+  </div>
+  <div class="card theo" style="grid-column:1/-1;"><span class="tag tag-theo">Th 2.3.3 — Convergence dominée (TCD)</span><b class="title">Lebesgue</b>
+    $(X_n)$ 可测，假设：
+    <ul class="tight">
+      <li>$X_n\to X$ p.p.</li>
+      <li>$\exists Y\ge 0$ avec $|X_n|\le Y$（hypothèse de domination）且 $\int Y\,d\mu<+\infty$</li>
+    </ul>
+    则 $X$ 可积且
+    $$\int X\,d\mu=\lim_n\int X_n\,d\mu,\qquad \lim_n\int|X_n-X|\,d\mu=0.$$
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note 三定理对比</span>
+    <ul class="tight">
+      <li>TCM：单增 + 正 → 等式</li>
+      <li>Fatou：仅正 → 不等式</li>
+      <li>TCD：可控（dominée）→ 等式（最常用）</li>
+    </ul>
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Attention — TCD 的反例</span>
+    若没有可积 $Y$ 控制：$f_n=\frac{1}{2n}\mathbf{1}_{[-n,n]}$ 一致趋 0，但 $\int f_n=1\not\to 0$。<br>
+    →<b>支配假设不可省</b>。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.3.6 — TCM 递减版</span>
+    若 $X_1$ 可积且 $X_n\downarrow 0$ p.p.，则 $\int X_n\to 0$（用 $Y_n=X_1-X_n\uparrow X_1$ 套 TCM）。<br>
+    <b>反例（无 $X_1$ 可积）</b>：$X_n=\mathbf{1}_{[n,+\infty[}$ 递减 $\to 0$ 但 $\int X_n=+\infty$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 2.3.10 — TCD 应用</span>
+    $f_n(x)=\sin^n(1/x)\mathbf{1}_{0<|x|<1}$：$|f_n|\le \mathbf{1}_{[-1,1]}$ 可积，$f_n\to 0$ p.p. → $\int f_n\to 0$。
+  </div>
+</div>
+
+<!-- 第二章关系图 -->
+<div class="mermaid-box">
+  <h4>🔗 第二章核心结构图 — 从可测函数到积分</h4>
+  <div class="mermaid-legend">
+    <span class="lg lg-imp"><span class="line"></span>构造步骤 ⇒</span>
+    <span class="lg lg-iff"><span class="line"></span>充要 ⇔</span>
+    <span class="lg lg-not"><span class="line"></span>需附加假设</span>
+  </div>
+  <div class="mermaid">
+flowchart TB
+    IND["1_A<br/>(indicatrice)"]:::base
+    ETA["Fonction étagée<br/>Σ xₖ 1_Aₖ"]:::base
+    POS["Fonction mesurable<br/>positive X≥0"]:::pos
+    REAL["Fonction mesurable<br/>réelle X = X⁺ - X⁻"]:::real
+    INT_ETA["∫f dμ = Σ xₖ μ(Aₖ)"]:::int1
+    INT_POS["∫X dμ = sup{∫S, S étagée ≤ X}"]:::int2
+    INT_REAL["∫X dμ = ∫X⁺ - ∫X⁻<br/>(si finis)"]:::int3
+    APP["Lemme d'approximation<br/>X = lim ↑ Sₙ"]:::tool
+
+    IND ==> ETA
+    ETA ==>|"limite ↑"| POS
+    POS ==>|"X = X⁺-X⁻"| REAL
+    ETA ==> INT_ETA
+    INT_ETA ==>|"sup逼近"| INT_POS
+    INT_POS ==>|"séparation ±"| INT_REAL
+    APP <==>|"caractérise"| POS
+
+    classDef base fill:#bbdefb,stroke:#1565c0,color:#0d47a1;
+    classDef pos fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef real fill:#a5d6a7,stroke:#1b5e20,color:#1b5e20;
+    classDef int1 fill:#fff9c4,stroke:#f9a825,color:#f57f17;
+    classDef int2 fill:#ffe082,stroke:#ef6c00,color:#bf360c;
+    classDef int3 fill:#ffcc80,stroke:#e65100,color:#bf360c;
+    classDef tool fill:#e1bee7,stroke:#6a1b9a,color:#4a148c;
+
+    linkStyle 0 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 1 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 2 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 3 stroke:#ef6c00,stroke-width:2.5px;
+    linkStyle 4 stroke:#ef6c00,stroke-width:2.5px;
+    linkStyle 5 stroke:#ef6c00,stroke-width:2.5px;
+    linkStyle 6 stroke:#1565c0,stroke-width:3px;
+  </div>
+  <p class="mermaid-note">从 indicatrice 到一般可测函数的构造与积分定义同步推进，<b>逼近引理</b>是把"可测正函数"还原到"阶梯函数"的桥。</p>
+</div>
+
+<div class="mermaid-box">
+  <h4>🔗 三大收敛定理对比</h4>
+  <div class="mermaid">
+flowchart LR
+    TCM["TCM (单增正)<br/>Xₙ ↑ X<br/>∫X = lim ∫Xₙ"]:::ok
+    FAT["Fatou (仅正)<br/>∫lim inf Xₙ ≤ lim inf ∫Xₙ<br/>(不等式)"]:::warn
+    TCD["TCD (支配)<br/>|Xₙ| ≤ Y, ∫Y &lt; ∞<br/>∫X = lim ∫Xₙ"]:::ok
+    CE1["反例: Xₙ=1_[n,∞)<br/>(无支配)"]:::ex
+    CE2["反例: 1/(2n)·1_[-n,n]<br/>不严格不等"]:::ex
+
+    TCM ==>|"特殊情形"| TCD
+    FAT -.->|"严格 &lt;"| CE2
+    TCD -.->|"无 Y 失败"| CE1
+
+    classDef ok fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef warn fill:#fff9c4,stroke:#f9a825,color:#f57f17;
+    classDef ex fill:#ffcdd2,stroke:#c62828,color:#b71c1c;
+
+    linkStyle 0 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 1 stroke:#c62828,stroke-width:1.8px,stroke-dasharray:6 4;
+    linkStyle 2 stroke:#c62828,stroke-width:1.8px,stroke-dasharray:6 4;
+  </div>
+  <p class="mermaid-note">Fatou 给不等式（最弱），TCM/TCD 给等式。TCD 是实际工作中最常用的——<b>找到一个可积的支配函数 $Y$</b>。</p>
+</div>
+</div>
+</div><!-- ============== CHAPITRE 3 ============== -->
+<div class="chapter" id="ch3">
+<h2>第三章 — Variables aléatoires réelles</h2>
+<p><i>Cadre：</i>$(\Omega,\mathcal{T},\mathbb{P})$ probabilisé，$X:\Omega\to\mathbb{R}$ VA。研究 <b>loi</b>、<b>fonction de répartition</b>、<b>densité</b>、<b>espérance</b>、<b>indépendance</b>。</p>
+
+<!-- ===== 3.1 ===== -->
+<div class="section">
+<h3>3.1 Compléments — Fubini-Tonelli & Changement de variable</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 3.1.1</span><b class="title">Tribu et mesure produit</b>
+    $(E,\mathcal{T},\mu),(F,\mathcal{S},\nu)$：
+    <ul class="tight">
+      <li>$\mathcal{T}\otimes\mathcal{S}=\mathcal{T}((A\times B)_{A\in\mathcal{T},B\in\mathcal{S}})$</li>
+      <li>$\mu\otimes\nu$：唯一测度，$\mu\otimes\nu(A\times B)=\mu(A)\nu(B)$（约定 $0\cdot\infty=0$）</li>
+    </ul>
+    <small>例：$\mathbb{R}\times\mathbb{R}\to \lambda^{\otimes 2}=$ Lebesgue 在 $\mathbb{R}^2$。</small>
+  </div>
+  <div class="card theo"><span class="tag tag-theo">Th 3.1.1 — Tonelli</span><b class="title">$f\ge 0$ mesurable</b>
+    $\mu,\nu$ $\sigma$-finies。对正可测 $f:E\times F\to[0,+\infty]$：
+    $$\int_{E\times F}\!\!f\,d(\mu\otimes\nu)=\int_E\!\!\left(\!\int_F f(x,y)d\nu\!\right)\!d\mu=\int_F\!\!\left(\!\int_E f(x,y)d\mu\!\right)\!d\nu.$$
+    <small><b>正性自动保证</b>三式合理（可以 $=+\infty$）。</small>
+  </div>
+  <div class="card theo"><span class="tag tag-theo">Th 3.1.2 — Fubini</span><b class="title">$f$ intégrable</b>
+    若 $\int_{E\times F}|f|\,d(\mu\otimes\nu)<+\infty$：
+    <ul class="tight">
+      <li>$\mu$-p.p. $x$，$y\mapsto f(x,y)$ $\nu$-可积；$\nu$-p.p. $y$ 类似</li>
+      <li>积分换序成立（同 Tonelli 公式）</li>
+    </ul>
+    <b>实用：</b>先用 <b>Tonelli</b> 检查 $\int|f|<\infty$，再用 <b>Fubini</b> 换序。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note 序-积分互换</span>
+    $E=\mathbb{N}$（计数），$F=\mathbb{R}$（Lebesgue）：Fubini = <b>级数-积分换序</b>定理。
+  </div>
+  <div class="card theo"><span class="tag tag-theo">Th 3.1.3 — Changement de variable</span><b class="title">在 $\mathbb{R}^n$</b>
+    $\Phi:\Omega\to U$ 满足：
+    <ol class="tight" style="margin-left:18px;">
+      <li>双射 $\Omega\to U$</li>
+      <li>$\Phi\in C^1$</li>
+      <li>$\det\mathrm{Jac}_\Phi(x)\ne 0$（$\forall x$ 或 p.p.）</li>
+    </ol>
+    则
+    $$\int_U f(y)\,dy=\int_\Omega (f\circ\Phi)(x)\,|\det\mathrm{Jac}_\Phi(x)|\,dx.$$
+    （$f\ge 0$ 时无须 intégrabilité 假设。）
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exemples</span>
+    <ul class="tight">
+      <li>3.1.1：$\int_{0\le x_1\le \cdots\le x_n\le a}\!dx_1\cdots dx_n=a^n/n!$</li>
+      <li>3.1.2：极坐标 → $\int_{\mathbb{R}}e^{-t^2}dt=\sqrt\pi$</li>
+      <li>3.1.3：$u=xy,v=y$ 求 $\int_{[0,1]^2}\varphi(xy)dxdy=\int_0^1\varphi(u)(-\ln u)du$ → $f(u)=-\ln u\cdot\mathbf{1}_{]0,1[}$</li>
+    </ul>
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Attention</span>
+    Tonelli 与 Fubini 都要求 $\sigma$-finie！例如 $\mu=$ comptage 在 $\mathbb{R}$（不可数）就不 $\sigma$-finie，结论可能失败。
+  </div>
+</div>
+</div>
+<!-- ===== 3.2 Variables aléatoires ===== -->
+<div class="section">
+<h3>3.2 Variables aléatoires — Loi, $F_X$, espérance, transfert</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 3.2.1</span><b class="title">Variable aléatoire (VA)</b>
+    $X:(\Omega,\mathcal{T},\mathbb{P})\to(E,\mathcal{S})$ mesurable. $E=\mathbb{R}$ → <b>VA réelle</b>.
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.2.2</span><b class="title">Loi $\mathbb{P}_X$（mesure image）</b>
+    $\forall A\in\mathcal{S},\ \mathbb{P}_X(A)=\mathbb{P}(X^{-1}(A))=\mathbb{P}(X\in A).$
+    <br>$\mathbb{P}_X$ 是 $(E,\mathcal{S})$ 上的概率测度。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.2.3</span><b class="title">Fonction de répartition $F_X$</b>
+    $\forall a\in\mathbb{R},\ F_X(a)=\mathbb{P}(X\le a).$
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 3.2.2</span><b class="title">Propriétés de $F_X$</b>
+    <ul class="tight">
+      <li>croissante sur $\mathbb{R}$</li>
+      <li>$\lim_{-\infty}F_X=0,\ \lim_{+\infty}F_X=1$</li>
+      <li>continue à droite（用 décroissance + finitude）</li>
+    </ul>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 3.2.1</span><b class="title">$F_X$ caractérise la loi</b>
+    $\mathbb{P}_X=\mathbb{P}_Y\Leftrightarrow \forall a, F_X(a)=F_Y(a)$.
+    <br><small>证：$(]-\infty,a])$ 是 stable par $\cap$ → classes monotones。</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 3.2.3-4</span><b class="title">Caractérisation par $\varphi$ continue</b>
+    等价于：
+    <ul class="tight">
+      <li>$\forall \varphi\in C_c(\mathbb{R})$（continue support compact），$\mathbb{E}[\varphi(X)]=\mathbb{E}[\varphi(Y)]$</li>
+      <li>$\forall \varphi\in C_b(\mathbb{R})$（continue bornée）相同</li>
+    </ul>
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.2.4</span><b class="title">VA discrète</b>
+    存在 $S$ 可数，$\mathbb{P}(X\in S)=1$。例：VA finies、$\mathbb{N}$-valuées。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.2.5</span><b class="title">VA à densité (absolument continue)</b>
+    $\exists f:\mathbb{R}\to\mathbb{R}$ mesurable, $f\ge 0$, $\int_\mathbb{R} f=1$，且
+    $$\forall A\in\mathcal{B}(\mathbb{R}),\ \mathbb{P}(X\in A)=\int_A f(t)\,dt.$$
+    $f$ 称 <b>densité de probabilité</b>。
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.2.6-8</span><b class="title">Espérance, moment, variance</b>
+    <ul class="tight">
+      <li>$\mathbb{E}(X)=\int_\Omega X\,d\mathbb{P}$（si $\mathbb{P}$-intégrable）</li>
+      <li>Moment ordre $k$：$\mathbb{E}(|X|^k)<+\infty\Rightarrow \mathbb{E}(X^k)$</li>
+      <li>$\mathrm{Var}(X)=\mathbb{E}((X-\mathbb{E}X)^2)=\mathbb{E}(X^2)-\mathbb{E}(X)^2$（König-Huygens）</li>
+    </ul>
+  </div>
+  <div class="card theo" style="grid-column:1/-1;"><span class="tag tag-theo">Th 3.2.1 — 关键 / Formule de transfert</span><b class="title">Théorème de transport</b>
+    $X:\Omega\to\mathbb{R}$ VA，$f:\mathbb{R}\to\mathbb{R}$ mesurable：
+    $$\boxed{\ \mathbb{E}(f(X))=\int_\mathbb{R} f(x)\,d\mathbb{P}_X(x)\ }$$
+    <ul class="tight">
+      <li>$X$ 离散，$\mathbb{P}(X=x_k)=p_k$：$\mathbb{E}(f(X))=\sum_k p_k f(x_k)$</li>
+      <li>$X$ 有密度 $f_X$：$\mathbb{E}(f(X))=\int_\mathbb{R} f(x)\,f_X(x)\,dx$</li>
+    </ul>
+    <small>证：$\mathbf{1}_A$ → étagée（线性）→ 正可测（TCM）→ 实可测（$\pm$ 分解）。</small>
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 3.2.1</span>
+    $X$ 有密度 $\mathbf{1}_{[0,+\infty[}(x)e^{-x}$（$\mathcal{E}(1)$）：用分部积分得 $\mathbb{E}(X^k)=k!$。
+  </div>
+</div>
+</div>
+
+<!-- ===== 3.3 Lois usuelles ===== -->
+<div class="section">
+<h3>3.3 Lois usuelles</h3>
+
+<h4 style="color:#5e35b1;">3.3.1 — Lois discrètes</h4>
+<div class="grid">
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Uniforme $\mathcal{U}(E)$（$|E|=n$）</b>
+    $\mathbb{P}(X=e)=\dfrac{1}{n}$.
+    <br>典型：骰子、抽签。
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Binomiale $\mathcal{B}(n,p)$</b>
+    $\mathbb{P}(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$，$k\in\{0,\dots,n\}$.
+    <br>$\mathbb{E}(X)=np,\ \mathrm{Var}(X)=np(1-p)$. n 次独立 Bernoulli($p$) 的成功次数。
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Hypergéométrique $\mathcal{H}(n,N,p)$</b>
+    $\mathbb{P}(X=k)=\dfrac{\binom{N_1}{k}\binom{N_2}{n-k}}{\binom{N}{n}}$，$N_1=Np,N_2=N(1-p)$.
+    <br>不放回抽样模型（与 $\mathcal{B}$ 对比：放回）。
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Géométrique $\mathcal{G}(p)$</b>
+    $\mathbb{P}(X=k)=(1-p)^{k-1}p$，$k\ge 1$.
+    <br>$\mathbb{E}(X)=1/p,\ \mathrm{Var}(X)=(1-p)/p^2$. 首次成功时刻；<b>无记忆性</b>（离散）。
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Poisson $\mathcal{P}(\lambda)$</b>
+    $\mathbb{P}(X=k)=\dfrac{e^{-\lambda}\lambda^k}{k!}$，$k\in\mathbb{N}$.
+    <br>$\mathbb{E}(X)=\mathrm{Var}(X)=\lambda$. <b>稀有事件计数</b>（$\mathcal{B}(n,\lambda/n)\to\mathcal{P}(\lambda)$）。
+  </div>
+</div>
+
+<h4 style="color:#5e35b1;">3.3.2 — Lois à densité</h4>
+<div class="grid">
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Uniforme $\mathcal{U}([a,b])$</b>
+    $f(x)=\dfrac{1}{b-a}\mathbf{1}_{[a,b]}(x)$.
+    <br>$\mathbb{E}(X)=\dfrac{a+b}{2},\ \mathrm{Var}(X)=\dfrac{(b-a)^2}{12}$.
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Exponentielle $\mathcal{E}(\lambda)$，$\lambda>0$</b>
+    $f(x)=\lambda e^{-\lambda x}\mathbf{1}_{]0,+\infty[}(x)$.
+    <br>$\mathbb{E}(X^k)=\dfrac{k!}{\lambda^k}$；$\mathbb{E}(X)=1/\lambda,\ \mathrm{Var}(X)=1/\lambda^2$.
+    <br><b>无记忆性</b>（连续）：$\mathbb{P}(X>s+t\mid X>s)=\mathbb{P}(X>t)$.
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Normale réduite $\mathcal{N}(0,1)$</b>
+    $f(x)=\dfrac{1}{\sqrt{2\pi}}e^{-x^2/2}$.
+    <br>$\mathbb{E}(X)=0,\ \mathrm{Var}(X)=1$. 矩：$\mathbb{E}(X^{2k+1})=0,\ \mathbb{E}(X^{2k})=\dfrac{(2k)!}{k!\,2^k}$.
+  </div>
+  <div class="card law"><span class="tag tag-law">Loi</span><b class="title">Normale générale $\mathcal{N}(\mu,\sigma^2)$</b>
+    $f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}\exp\!\left(-\dfrac{1}{2}\!\left(\dfrac{x-\mu}{\sigma}\right)^{\!2}\right)$.
+    <br>$\mathbb{E}(X)=\mu$（espérance），$\sigma$（écart-type），$\mathrm{Var}(X)=\sigma^2$.
+    <br>$X\sim\mathcal{N}(0,1)\Rightarrow \sigma X+\mu\sim\mathcal{N}(\mu,\sigma^2)$.
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note — 计算 $\mathcal{N}(0,1)$ 矩</span>
+    定义 $\varphi(t)=\mathbb{E}(e^{tX})=e^{t^2/2}$（解 $\varphi'=t\varphi,\varphi(0)=1$）。展开 $e^{t^2/2}=\sum t^{2k}/(k!2^k)$ 与 $\sum \mathbb{E}(X^k)t^k/k!$ 系数对比 → 矩公式。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercices 3.3.1-3</span>
+    通过 transfert 直接算 $\mathbb{E}(X^k),\mathrm{Var}(X)$（uniforme / exp / normale）→ 上面公式。
+  </div>
+</div>
+</div>
+<!-- ===== 3.4 Indépendance ===== -->
+<div class="section">
+<h3>3.4 Indépendance</h3>
+<div class="grid">
+  <div class="card def"><span class="tag tag-def">Déf 3.4.1</span><b class="title">$X_1 \perp\!\!\!\perp X_2$（2 个 VA）</b>
+    $\forall(A,B)\in\mathcal{B}(\mathbb{R})^2$：
+    $$\mathbb{P}(X_1\in A, X_2\in B)=\mathbb{P}(X_1\in A)\cdot \mathbb{P}(X_2\in B).$$
+  </div>
+  <div class="card def"><span class="tag tag-def">Déf 3.4.2</span><b class="title">Indépendance mutuelle ($n$ VA)</b>
+    $\forall (A_1,\dots,A_n)\in\mathcal{B}(\mathbb{R})^n$：
+    $$\mathbb{P}(X_1\in A_1,\dots,X_n\in A_n)=\prod_{i=1}^n \mathbb{P}(X_i\in A_i).$$
+    <small>注意：<b>两两独立 ≠ 互相独立</b>（pairwise vs mutually）。</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 3.4.1 — 关键</span><b class="title">3 种等价刻画（2 个 VA）</b>
+    以下等价：
+    <ol class="tight" style="margin-left:18px;">
+      <li>$X_1$ 与 $X_2$ 独立</li>
+      <li>$\mathbb{P}_{(X_1,X_2)}=\mathbb{P}_{X_1}\otimes \mathbb{P}_{X_2}$（联合 = 边际乘积）</li>
+      <li>$\forall \varphi,\psi\in C_c(\mathbb{R}),\ \mathbb{E}(\varphi(X_1)\psi(X_2))=\mathbb{E}(\varphi(X_1))\,\mathbb{E}(\psi(X_2))$</li>
+    </ol>
+    <small>证：(1)⇒(2) 由 classes monotones；(2)⇒(3) 由 Fubini；(3)⇒(1) 由逼近 + monotones。</small>
+  </div>
+  <div class="card prop"><span class="tag tag-prop">Prop 3.4.2</span><b class="title">$n$ 个 VA 的等价刻画</b>
+    类似：$\mathbb{P}_{(X_1,\dots,X_n)}=\bigotimes_{i=1}^n \mathbb{P}_{X_i}$；或 $\mathbb{E}\!\left(\prod \varphi_i(X_i)\right)=\prod \mathbb{E}(\varphi_i(X_i))$.
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note — 重要推论</span>
+    若 $X_1,X_2$ 独立且都可积：$\mathbb{E}(X_1 X_2)=\mathbb{E}(X_1)\mathbb{E}(X_2)$；故 $\mathrm{Var}(X_1+X_2)=\mathrm{Var}(X_1)+\mathrm{Var}(X_2)$。<br>
+    <b>反向不成立</b>：$\mathbb{E}(XY)=\mathbb{E}(X)\mathbb{E}(Y)$（即 $\mathrm{Cov}=0$）<b>不</b>蕴含独立。
+  </div>
+  <div class="card attn"><span class="tag tag-attn">Note — 联合密度判独立</span>
+    若 $(X_1,X_2)$ 有联合密度 $f_{(X_1,X_2)}$ 且能写为 $f_{(X_1,X_2)}(x,y)=g(x)h(y)$ 几乎处处，则 $X_1\perp\!\!\!\perp X_2$，$X_1$ 密度 $\propto g$，$X_2$ 密度 $\propto h$。
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 3.4.1 — 模拟 Poisson</span>
+    $(X_i)$ i.i.d. $\mathcal{U}([0,1])$，$Y_i=\prod_{j\le i}X_j$。固定 $\lambda>0$，$u_\lambda=e^{-\lambda}$：
+    $\mathbb{P}(Y_i>u_\lambda \ge Y_{i+1})=\dfrac{u_\lambda \lambda^i}{i!}$
+    → 算法：循环乘 $X_j$ 直到首次 $\le e^{-\lambda}$，返回 $i-1$ 模拟 $\mathcal{P}(\lambda)$.
+  </div>
+  <div class="card exer"><span class="tag tag-exer">Exercice 3.4.2</span>
+    若 $\mathbb{E}(\varphi(X,Y))=\!\!\int\varphi(x,y)\lambda e^{-\lambda x}\mu e^{-\mu y}dxdy$（密度可分离），则：
+    <ul class="tight">
+      <li>$X\sim\mathcal{E}(\lambda),\ Y\sim\mathcal{E}(\mu)$</li>
+      <li>$X\perp\!\!\!\perp Y$</li>
+      <li>$X+Y$ 密度：$\lambda=\mu$ → $\lambda^2 x e^{-\lambda x}\mathbf{1}_{x>0}$（Erlang/Gamma(2,$\lambda$)）；$\lambda\ne\mu$ → $\lambda\mu \dfrac{e^{-\mu x}-e^{-\lambda x}}{\lambda-\mu}\mathbf{1}_{x>0}$</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 第三章核心关系图 -->
+<div class="mermaid-box">
+  <h4>🔗 第三章核心结构图 — 从 VA 到独立性</h4>
+  <div class="mermaid-legend">
+    <span class="lg lg-imp"><span class="line"></span>定义 / 蕴含 ⇒</span>
+    <span class="lg lg-iff"><span class="line"></span>等价刻画 ⇔</span>
+    <span class="lg lg-not"><span class="line"></span>反向不成立</span>
+  </div>
+  <div class="mermaid">
+flowchart TB
+    OMG["(Ω, 𝒯, ℙ)<br/>espace probabilisé"]:::base
+    VA["X : Ω → ℝ<br/>VA réelle (mesurable)"]:::va
+    LOI["Loi ℙ_X<br/>(mesure image sur ℝ)"]:::loi
+    FX["F_X(a) = ℙ(X ≤ a)<br/>fonction de répartition"]:::fx
+    DENS["X à densité f_X<br/>ℙ(X∈A) = ∫_A f_X dt"]:::dens
+    DISC["X discrète<br/>ℙ(X∈S)=1, S dénombrable"]:::disc
+    ESP["𝔼(X) = ∫_Ω X dℙ"]:::esp
+    TRANS["Transfert<br/>𝔼(f(X)) = ∫_ℝ f dℙ_X"]:::theo
+    INDEP["X₁ ⫫ X₂<br/>ℙ_{(X₁,X₂)} = ℙ_{X₁}⊗ℙ_{X₂}"]:::indep
+
+    OMG ==> VA
+    VA ==>|"définition"| LOI
+    LOI <==>|"Prop 3.2.1"| FX
+    LOI ==>|"absolument continue"| DENS
+    LOI ==>|"support dénombrable"| DISC
+    VA ==>|"X intégrable"| ESP
+    ESP <==>|"Th 3.2.1"| TRANS
+    LOI ==>|"Prop 3.4.1"| INDEP
+
+    classDef base fill:#eceff1,stroke:#546e7a,color:#263238;
+    classDef va fill:#bbdefb,stroke:#1565c0,color:#0d47a1;
+    classDef loi fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef fx fill:#a5d6a7,stroke:#1b5e20,color:#1b5e20;
+    classDef dens fill:#ffe0b2,stroke:#ef6c00,color:#bf360c;
+    classDef disc fill:#fff9c4,stroke:#f9a825,color:#f57f17;
+    classDef esp fill:#e1bee7,stroke:#6a1b9a,color:#4a148c;
+    classDef theo fill:#ce93d8,stroke:#4a148c,color:#4a148c;
+    classDef indep fill:#ffccbc,stroke:#bf360c,color:#bf360c;
+
+    linkStyle 0 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 1 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 2 stroke:#1565c0,stroke-width:3px;
+    linkStyle 3 stroke:#ef6c00,stroke-width:2.5px;
+    linkStyle 4 stroke:#f9a825,stroke-width:2.5px;
+    linkStyle 5 stroke:#6a1b9a,stroke-width:2.5px;
+    linkStyle 6 stroke:#1565c0,stroke-width:3px;
+    linkStyle 7 stroke:#bf360c,stroke-width:2.5px;
+  </div>
+  <p class="mermaid-note">VA 通过 mesure image 携带"loi"；$F_X$ 与 loi 互为充要；密度/离散是 loi 的两种表现；transfert 是把 $\mathbb{E}$ 的计算搬到 $\mathbb{R}$ 上的桥梁；独立性 = 联合 loi 是边际乘积。</p>
+</div>
+
+<div class="mermaid-box">
+  <h4>🔗 §3.4 独立性的三种等价表述</h4>
+  <div class="mermaid">
+flowchart LR
+    A["(1) 事件独立<br/>ℙ(X∈A,Y∈B)=ℙ(X∈A)ℙ(Y∈B)"]:::eq
+    B["(2) 联合 loi 分解<br/>ℙ_{(X,Y)} = ℙ_X ⊗ ℙ_Y"]:::eq
+    C["(3) 期望分离<br/>𝔼(φ(X)ψ(Y)) = 𝔼φ(X)·𝔼ψ(Y)<br/>(∀φ,ψ ∈ C_c)"]:::eq
+
+    A <==>|"classes monotones"| B
+    B <==>|"Fubini + transfert"| C
+    A <==>|"approximation"| C
+
+    COR["推论:<br/>𝔼(XY) = 𝔼X·𝔼Y<br/>Var(X+Y) = VarX + VarY"]:::cor
+    NOT["反向 ⇏:<br/>Cov(X,Y)=0 ⇏ X⫫Y"]:::warn
+
+    A ==> COR
+    COR -.-> NOT
+
+    classDef eq fill:#bbdefb,stroke:#1565c0,color:#0d47a1;
+    classDef cor fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef warn fill:#ffcdd2,stroke:#c62828,color:#b71c1c;
+
+    linkStyle 0 stroke:#1565c0,stroke-width:3px;
+    linkStyle 1 stroke:#1565c0,stroke-width:3px;
+    linkStyle 2 stroke:#1565c0,stroke-width:3px;
+    linkStyle 3 stroke:#2e7d32,stroke-width:2.5px;
+    linkStyle 4 stroke:#c62828,stroke-width:1.8px,stroke-dasharray:6 4;
+  </div>
+  <p class="mermaid-note">三表述等价；最常用<b>(3)</b>验证（取适当 $\varphi,\psi$）。注意：协方差为零是<b>必要</b>非充分（除 Gaussien 联合情形）。</p>
+</div>
+
+<div class="mermaid-box">
+  <h4>🔗 三章总览 — 测度论 ↔ 概率</h4>
+  <div class="mermaid">
+flowchart LR
+    CH1["第一章<br/>Tribu 𝒯 + Mesure μ<br/>↔ 事件域 + 概率"]:::c1
+    CH2["第二章<br/>Fonction mesurable + ∫<br/>↔ VA + 𝔼"]:::c2
+    CH3["第三章<br/>VA réelle: loi, F_X, densité<br/>+ indépendance + lois usuelles"]:::c3
+
+    CH1 ==>|"VA = fonction mesurable<br/>𝔼 = ∫"| CH2
+    CH2 ==>|"transfert + Fubini + chgt var"| CH3
+
+    classDef c1 fill:#bbdefb,stroke:#1565c0,color:#0d47a1;
+    classDef c2 fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20;
+    classDef c3 fill:#e1bee7,stroke:#6a1b9a,color:#4a148c;
+
+    linkStyle 0 stroke:#1565c0,stroke-width:3px;
+    linkStyle 1 stroke:#2e7d32,stroke-width:3px;
+  </div>
+  <p class="mermaid-note">第三章是测度论语言在概率上的<b>具体化</b>：把第二章的 transfert / TCM / TCD / Fubini 应用到 $\mathbb{R}$-valued VA 上，得到 $F_X$、密度、独立性、常用分布族。</p>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
