@@ -1,196 +1,23 @@
 {
-  "version": "1.6.0",
+  "version": "1.6.1",
   "date": "2026-10-09",
-  "scope": "Affected online delivery only; no screenshots or full visual review.",
+  "scope": "GitHub account rename and address migration only; no repeated visual or interaction review.",
+  "repository": "N1cola5F/theorie-mesure",
+  "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+  "previous_version": "1.6.0",
+  "previous_check": "维护记录/v1.6.0_网站检查.json",
   "integrity": {
-    "unchanged_offline_html": {
-      "测量理论_知识整合.html": "7faea2a475265c37229ea9bca6e078ee27797f8afa2319555e30101e096380b6",
-      "测量理论_知识整合_v1.5.0_备份.html": "7faea2a475265c37229ea9bca6e078ee27797f8afa2319555e30101e096380b6",
-      "测量理论_知识整合_按需加载.html": "66e63fcdf2cd4df4c95a04a1142c671b50e27cd515acf91431376aa576eb3265"
-    },
-    "unchanged_published_pdfs": 17,
-    "unchanged_content_inputs": 15,
-    "unchanged_full_search_entries": 117,
-    "hashed_svg_assets": 651,
-    "chapter_ids": 117,
-    "entry_html_bytes": 63573
-  },
-  "browser": {
-    "initial": {
-      "version": "1.6.0",
-      "elements": 1058,
-      "cards": 7,
-      "images": 7,
-      "inlineSvg": 0,
-      "closedImages": 0,
-      "transfers": [
-        {
-          "url": "/site/reader/styles/85b7b1f02af3444825b19590.css",
-          "bytes": 20338
-        },
-        {
-          "url": "/site/reader/scripts/bdedad2575af69b58f972d20.js",
-          "bytes": 16354
-        },
-        {
-          "url": "/site/reader/chapters/1353f743a6a56ca80c44cdf1.json",
-          "bytes": 54214
-        },
-        {
-          "url": "/site/reader/fonts/1aa18cfefa58132c52ce5de7.otf",
-          "bytes": 111536
-        },
-        {
-          "url": "/site/reader/fonts/c1fce25075567bb8dbf21516.otf",
-          "bytes": 118828
-        },
-        {
-          "url": "/site/reader/assets/95a3206fb96bebd8448cd43c.svg",
-          "bytes": 150719
-        },
-        {
-          "url": "/site/reader/assets/c7fe7b79280cbc3625181286.svg",
-          "bytes": 95584
-        },
-        {
-          "url": "/site/reader/assets/c0e60efa9bc8beac1eaf8a8c.svg",
-          "bytes": 63694
-        },
-        {
-          "url": "/site/reader/assets/1e8c61a1db5845c19730d170.svg",
-          "bytes": 25581
-        },
-        {
-          "url": "/site/reader/assets/f21912e3d8b1d48b6f27165d.svg",
-          "bytes": 102166
-        },
-        {
-          "url": "/site/reader/assets/be4c4075e6f320f1c9425647.svg",
-          "bytes": 183503
-        },
-        {
-          "url": "/site/reader/assets/c69467d0b86a2b03616f6236.svg",
-          "bytes": 140021
-        }
-      ],
-      "htmlBytes": 63573,
-      "pdfRequests": 0
-    },
-    "initialRequests": [
-      "http://127.0.0.1:8916/site/reader/",
-      "http://127.0.0.1:8916/site/reader/styles/85b7b1f02af3444825b19590.css",
-      "http://127.0.0.1:8916/site/reader/scripts/bdedad2575af69b58f972d20.js",
-      "http://127.0.0.1:8916/site/reader/chapters/1353f743a6a56ca80c44cdf1.json",
-      "http://127.0.0.1:8916/site/reader/fonts/1aa18cfefa58132c52ce5de7.otf",
-      "http://127.0.0.1:8916/site/reader/fonts/c1fce25075567bb8dbf21516.otf",
-      "http://127.0.0.1:8916/site/reader/assets/95a3206fb96bebd8448cd43c.svg",
-      "http://127.0.0.1:8916/site/reader/assets/c7fe7b79280cbc3625181286.svg",
-      "http://127.0.0.1:8916/site/reader/assets/c0e60efa9bc8beac1eaf8a8c.svg",
-      "http://127.0.0.1:8916/site/reader/assets/1e8c61a1db5845c19730d170.svg",
-      "http://127.0.0.1:8916/site/reader/assets/f21912e3d8b1d48b6f27165d.svg",
-      "http://127.0.0.1:8916/site/reader/assets/c69467d0b86a2b03616f6236.svg",
-      "http://127.0.0.1:8916/site/reader/assets/be4c4075e6f320f1c9425647.svg"
+    "unchanged_svg_assets": 651,
+    "unchanged_chapters": 13,
+    "unchanged_search_script_and_style": true,
+    "unchanged_pdfs": 17,
+    "unchanged_offline_html": 3,
+    "current_github_links": [
+      "https://github.com/N1cola5F/theorie-mesure/blob/main/reader-source/CHANGELOG.md",
+      "https://github.com/N1cola5F/theorie-mesure/blob/main/知识整合/README.md",
+      "https://github.com/N1cola5F/theorie-mesure/tree/main/reader-source/历史记录"
     ],
-    "french": {
-      "cards": 7,
-      "chineseImages": 0,
-      "links": [
-        "../origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf#page=76",
-        "../origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf#page=77"
-      ]
-    },
-    "proofRestored": {
-      "open": true,
-      "images": 1
-    },
-    "search": {
-      "results": 3,
-      "cards": 0,
-      "images": 0,
-      "ids": [
-        "#jacobian-inverse",
-        "#change-variables",
-        "#expectation-transfer"
-      ]
-    },
-    "deepLink": {
-      "hash": "#expectation-transfer",
-      "chapter": "#ch9",
-      "inactiveCards": 0
-    },
-    "origins": {
-      "count": 17,
-      "allOrigin": true
-    },
-    "sourceHeadStatus": 200,
-    "retry": {
-      "errorHidden": true,
-      "cards": 8
-    },
-    "mobile": {
-      "narrow": true,
-      "overflow": false
-    },
-    "searchRequestsAfterSearch": [
-      "http://127.0.0.1:8916/site/reader/search/f6eeade348cbe17c8444c89c.json"
-    ],
-    "errors": []
+    "entry_bytes": 63270
   },
-  "live": {
-    "checked_at_utc": "2026-10-09T10:41:35+00:00",
-    "url": "https://cuteyzm.github.io/theorie-mesure/reader/",
-    "version": "1.6.0",
-    "updated": "2026-10-09",
-    "pages_build_status": "built",
-    "pages_commit": "1533ee1b0239890c6a0e9d2c1b29d65a1d3faca7",
-    "responses": [
-      {
-        "path": "reader/",
-        "status": 200,
-        "bytes": 63556,
-        "local_bytes": 63573,
-        "same_html_after_git_newline_normalization": true,
-        "sha256": "e02e73f647baf8be7c31af43e35e20110b8645c5197bbf452826272b46318a80"
-      },
-      {
-        "path": "reader/chapters/1353f743a6a56ca80c44cdf1.json",
-        "status": 200,
-        "cards": 7
-      },
-      {
-        "path": "reader/styles/85b7b1f02af3444825b19590.css",
-        "status": 200,
-        "bytes": 20338,
-        "hash_matches": true
-      },
-      {
-        "path": "reader/scripts/bdedad2575af69b58f972d20.js",
-        "status": 200,
-        "bytes": 16354,
-        "hash_matches": true
-      },
-      {
-        "path": "reader/assets/c0e60efa9bc8beac1eaf8a8c.svg",
-        "status": 200,
-        "bytes": 63694,
-        "hash_matches": true
-      },
-      {
-        "path": "origin/index.json",
-        "status": 200,
-        "pdfs": 17
-      },
-      {
-        "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
-        "status": 200,
-        "content_length": 1625544,
-        "content_type": "application/pdf"
-      },
-      {
-        "path": "existing-site-root",
-        "status": 200,
-        "preserved_vitepress": true
-      }
-    ]
-  }
+  "live": null
 }

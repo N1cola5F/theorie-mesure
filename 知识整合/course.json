@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "1.6.0",
+  "version": "1.6.1",
   "updated": "2026-10-09",
   "title": "测量理论",
   "subtitle": "Théorie de la mesure",
@@ -230,18 +230,25 @@
   },
   "roadmap": [],
   "release_notes": [
-    "发布 GitHub Pages 在线入口，可在不同设备直接访问同一个网址。",
-    "入口与章节、搜索索引、字体及矢量片段分开；当前章节与所选语言按需加载，搜索索引首次搜索时才请求。",
-    "原始 PDF 保存在仓库 origin 目录，页码链接直接打开对应资料；保留全部 13 个主题、117 个条目和原文重点强调。",
-    "使用内容哈希为资源命名，未变资源可复用缓存；发布更新后刷新网页即可读取新版，本地离线备份保留。"
+    "GitHub 用户名改为 N1cola5F，在线入口及仓库维护链接同步更新。",
+    "发布地址集中在 course.json 的 hosting 配置，已有发布克隆同步更新 Git origin。",
+    "沿用 13 个主题、117 个条目、中法对照、原文重点强调与分文件按需加载；课程内容不变。",
+    "原 PDF 仍位于仓库 origin/，后续请收藏并使用新的在线地址。"
   ],
   "overview_intro": "从测度与积分，到随机变量与极限定理。沿着定义、定理与证明，逐章建立本学期的知识结构。",
   "scope_note": "本版整合 W1–W3、W4 上传的 157 页全学期课程手册及 25 页 CM04 幻灯片，覆盖 13 个主题。CM04 的课堂重点是多重积分；“W4 手册”表示资料来源，不表示后续章节已经授课。",
   "coverage_fr": "W1 · W2 · W3 · Manuel W4 et CM04",
   "release_notes_fr": [
-    "Lecture en ligne sur GitHub Pages, accessible depuis plusieurs appareils avec la même adresse.",
-    "Chapitres, index de recherche, polices et vecteurs sont séparés. Les données se chargent à la demande ; l’index complet est demandé lors de la première recherche.",
-    "Les PDF originaux sont conservés dans origin ; les pages sources ouvrent les documents correspondants. Les 13 thèmes et 117 notions restent disponibles.",
-    "Les adresses des ressources dépendent de leur contenu, afin de réutiliser le cache. Après publication, actualisez la page pour lire la nouvelle édition."
-  ]
+    "Le compte GitHub devient N1cola5F. Les adresses de lecture et les liens vers le dépôt sont mis à jour.",
+    "La configuration hosting de course.json regroupe les adresses de publication ; les clones existants utilisent la nouvelle origine Git.",
+    "Les 13 thèmes, 117 notions, textes originaux et modes de lecture restent inchangés.",
+    "Les PDF restent dans origin/. Utilisez désormais la nouvelle adresse de lecture."
+  ],
+  "hosting": {
+    "repository": "N1cola5F/theorie-mesure",
+    "pages_url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+    "previous_repositories": [
+      "CuteYzm/theorie-mesure"
+    ]
+  }
 }

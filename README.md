@@ -1,5 +1,5 @@
 <!-- semester-reader -->
-本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器](https://cuteyzm.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
+本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器](https://n1cola5f.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
 
 # 测度论 · Théorie de la mesure — 交互式双语文档站
 
@@ -33,7 +33,7 @@ npm test           # 运行 Vitest 单元测试（组件纯逻辑）
 
 ## 部署 Déploiement
 
-已部署到 GitHub Pages：**https://cuteyzm.github.io/theorie-mesure/**
+已部署到 GitHub Pages：**https://n1cola5f.github.io/theorie-mesure/**
 
 更新内容后，重新部署只需：
 

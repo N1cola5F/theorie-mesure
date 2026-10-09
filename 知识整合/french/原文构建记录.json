@@ -3,9 +3,9 @@
   "mapped_cards": 117,
   "unique_fragments": 271,
   "source_sha256": {
+    "cm4": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
     "cm3": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
-    "w4": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
-    "cm4": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5"
+    "w4": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89"
   },
   "excerpt_locations": [
     {

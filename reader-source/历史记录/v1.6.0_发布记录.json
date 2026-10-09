@@ -1,0 +1,21 @@
+{
+  "repository": "CuteYzm/theorie-mesure",
+  "version": "1.6.0",
+  "date": "2026-10-09",
+  "published": true,
+  "main": {
+    "commit": "4a0d9111504e61a2c7eecae7521086166868a9da",
+    "changed": true,
+    "prepared": false,
+    "pending_commits_before_push": 1,
+    "summary": " 749 files changed, 505806 insertions(+), 1 deletion(-)"
+  },
+  "gh_pages": {
+    "commit": "1533ee1b0239890c6a0e9d2c1b29d65a1d3faca7",
+    "changed": true,
+    "prepared": false,
+    "pending_commits_before_push": 1,
+    "summary": " 692 files changed, 487194 insertions(+)"
+  },
+  "url": "https://cuteyzm.github.io/theorie-mesure/reader/"
+}

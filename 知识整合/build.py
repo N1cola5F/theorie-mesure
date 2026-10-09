@@ -160,7 +160,7 @@ def main():
                 'html_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'cards':len(cards),'chapters':len(config['chapters']),
                 'proofs':sum(bool(c['proof']) for c in cards),'compiled_fragments':len(fragments),'original_vector_fragments':len(original_files),
                 'delivery':'external-hashed-svg-and-chapter-json','search':'separate-index-loaded-on-first-search','source_files':origins,
-                'runtime_tex_compilation':False,'repository':'CuteYzm/theorie-mesure','pages_url':'https://cuteyzm.github.io/theorie-mesure/reader/'}
+                'runtime_tex_compilation':False,'repository':config['hosting']['repository'],'pages_url':config['hosting']['pages_url']}
         (BASE/'网站构建记录.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print(json.dumps({k:v for k,v in report.items() if k!='source_files'},ensure_ascii=False,indent=2),flush=True);print(output,flush=True);return
     OUTPUT.write_text(render_book(BASE,config,cards,vectors,bank,args.font_root,originals,lazy=True),encoding='utf-8')

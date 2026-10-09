@@ -1,6 +1,6 @@
 # 测量理论知识整合：维护说明
 
-当前版本：**v1.6.0 · 2026-10-09**。阅读入口：[GitHub Pages 在线阅读](https://cuteyzm.github.io/theorie-mesure/reader/)。源文件与原 PDF：[GitHub 仓库](https://github.com/CuteYzm/theorie-mesure)。本地 [v1.5.1 单文件版](../测量理论_知识整合_按需加载.html)、[v1.5.0 完整备份](../测量理论_知识整合_v1.5.0_备份.html) 与 [旧入口](../测量理论_知识整合.html) 继续保留。
+当前版本：**v1.6.1 · 2026-10-09**。阅读入口：[GitHub Pages 在线阅读](https://n1cola5f.github.io/theorie-mesure/reader/)。源文件与原 PDF：[GitHub 仓库](https://github.com/N1cola5F/theorie-mesure)。本地 [v1.5.1 单文件版](../测量理论_知识整合_按需加载.html)、[v1.5.0 完整备份](../测量理论_知识整合_v1.5.0_备份.html) 与 [旧入口](../测量理论_知识整合.html) 继续保留。
 
 ## 本版范围
 
@@ -135,6 +135,8 @@ python 知识整合/publish.py --publish
 
 发布需要 git、已登录的 GitHub CLI 与该仓库写权限。发布器在 tmp/github/ 复用独立克隆，以普通提交更新 main 与 gh-pages，保留既有 VitePress 站点。main 保存 reader/、origin/、知识整合源文件和历史记录；gh-pages 保存可直接访问的静态资源。GitHub Pages 当前使用 gh-pages 根目录发布；旧站点 deploy.mjs 也会复制 reader/ 和 origin/，避免后续旧站点构建遗漏阅读器。构建不需要 GitHub 权限；省略 --publish 只准备本地提交。
 
+GitHub 地址集中在 course.json 的 hosting：repository 为仓库完整名称，pages_url 为在线入口。用户名或仓库名变化时更新这两个字段，把已核实的旧仓库名加入 previous_repositories，再重新构建与发布；发布器会同步更新现有克隆的 Git origin。当前仓库为 N1cola5F/theorie-mesure，在线入口为 https://n1cola5f.github.io/theorie-mesure/reader/。旧版本清单及当时的发布证据保持原样。
+
 更换电脑时可以通过 --font-root 指定含 lm 与 lm-math 子目录的字体目录；如果没有宋体，应在排版配置.tex 中明确改用已安装的中文字体，再完整编译。MiKTeX 首次调用可能需要其正常的缓存写入权限；本项目构建不需要 shell-escape，也不依赖 latexmk 或 Perl。
 
 ## 发布检查
@@ -148,7 +150,7 @@ python 知识整合/publish.py --publish
 5. 写好发布记录后，最后执行（替换版本号和实际日期）：
 
 ~~~powershell
-python 维护记录/snapshot.py v1.6.0 --date YYYY-MM-DD --previous 维护记录/版本清单/v1.5.1.json
+python 维护记录/snapshot.py v1.6.1 --date YYYY-MM-DD --previous 维护记录/版本清单/v1.6.0.json
 ~~~
 
 旧版截图与打印核验件保存在 output/playwright；本次未生成新截图，它们不代表当前版本的重新核验。版本清单排除此目录和编译缓存，只记录最终 HTML、源文件、维护记录及课程资料。

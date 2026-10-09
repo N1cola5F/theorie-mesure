@@ -129,11 +129,12 @@ def render_book(base,config,cards,vectors,bank,font_root,originals,lazy=False,we
     head_styles=(f'<link rel="stylesheet" href="{web["style"]}">' if web_dir else f'<style>{font_css}{css}</style>')
     scripts=(json_tag('reader-config',web['boot'])+f'<script defer src="{web["script"]}"></script>' if web_dir else json_tag('search-index',data)+deferred+'<script>'+script+'</script>')
     if web_dir:
+        repository_url='https://github.com/'+config['hosting']['repository']
         resources=resources.replace('页面离线可读，原始 PDF 链接需要保留仓库目录。','网页按需读取仓库中的章节与矢量片段，原始资料位于 origin 目录。').replace('La page se lit hors ligne.','Les chapitres et extraits sont chargés depuis le dépôt.')
         resources=resources.replace('<table>','<table id="source-catalog">',1)
-        resources=resources.replace('测量理论_知识整合_v1.5.0_备份.html','https://github.com/CuteYzm/theorie-mesure/tree/main/reader-source/历史记录')
+        resources=resources.replace('测量理论_知识整合_v1.5.0_备份.html',repository_url+'/tree/main/reader-source/历史记录')
         resources=resources.replace('打开 v1.5.0 完整备份','查看历史版本记录').replace('Ouvrir la copie complète v1.5.0','Consulter les éditions précédentes')
-        resources=resources.replace('href="CHANGELOG.md"','href="https://github.com/CuteYzm/theorie-mesure/blob/main/reader-source/CHANGELOG.md"').replace('href="知识整合/README.md"','href="https://github.com/CuteYzm/theorie-mesure/blob/main/知识整合/README.md"')
+        resources=resources.replace('href="CHANGELOG.md"','href="'+repository_url+'/blob/main/reader-source/CHANGELOG.md"').replace('href="知识整合/README.md"','href="'+repository_url+'/blob/main/知识整合/README.md"')
         noscript='本版需要 JavaScript 加载章节，可点击“资料与版本”中的 PDF 链接阅读原始讲义。'
     else:
         noscript='本版需要 JavaScript 加载章节；可打开 <a href="测量理论_知识整合_v1.5.0_备份.html">v1.5.0 完整备份</a>阅读。' if lazy else 'JavaScript 未启用：全部正文仍可阅读，搜索和章节切换不可用。'

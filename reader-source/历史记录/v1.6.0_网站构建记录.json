@@ -1,9 +1,9 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.0",
   "date": "2026-10-09",
   "html_file": "site/reader/index.html",
-  "html_bytes": 63270,
-  "html_sha256": "4d11f58e99c269efd662d993190bc18898cf4e7369950a4ed404a8e5dd7a7ad3",
+  "html_bytes": 63573,
+  "html_sha256": "87da11c1b0ae93beee9d349e890b2ed88e16682f7ec5789506319c01dfc570b6",
   "cards": 117,
   "chapters": 13,
   "proofs": 73,
@@ -167,6 +167,6 @@
     }
   ],
   "runtime_tex_compilation": false,
-  "repository": "N1cola5F/theorie-mesure",
-  "pages_url": "https://n1cola5f.github.io/theorie-mesure/reader/"
+  "repository": "CuteYzm/theorie-mesure",
+  "pages_url": "https://cuteyzm.github.io/theorie-mesure/reader/"
 }

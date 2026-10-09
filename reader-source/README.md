@@ -1,6 +1,6 @@
 # 全学期资料阅读器
 
-在线入口：https://cuteyzm.github.io/theorie-mesure/reader/
+在线入口：https://n1cola5f.github.io/theorie-mesure/reader/
 
 - reader/：已编译的静态站点，章节 JSON、完整搜索索引与 SVG 分开保存。
 - origin/：教师原 PDF 与资源页所需资料，index.json 记录原路径和 SHA-256。
