@@ -19,5 +19,76 @@
     ],
     "entry_bytes": 63270
   },
-  "live": null
+  "live": {
+    "checked_at_utc": "2026-10-09T10:55:45+00:00",
+    "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+    "version": "1.6.1",
+    "updated": "2026-10-09",
+    "pages_build_status": "built",
+    "pages_commit": "259036907d6b458cc518462b64c52446de0673dd",
+    "responses": [
+      {
+        "path": "reader/",
+        "status": 200,
+        "bytes": 63253,
+        "local_bytes": 63270,
+        "same_html_after_git_newline_normalization": true,
+        "sha256": "76ee3d95d75068c402a438e1db26fea1483f1906739d74290779ca622c4d41c7"
+      },
+      {
+        "path": "reader/chapters/1353f743a6a56ca80c44cdf1.json",
+        "status": 200,
+        "cards": 7
+      },
+      {
+        "path": "reader/styles/85b7b1f02af3444825b19590.css",
+        "status": 200,
+        "bytes": 20338,
+        "hash_matches": true
+      },
+      {
+        "path": "reader/scripts/bdedad2575af69b58f972d20.js",
+        "status": 200,
+        "bytes": 16354,
+        "hash_matches": true
+      },
+      {
+        "path": "reader/assets/c0e60efa9bc8beac1eaf8a8c.svg",
+        "status": 200,
+        "bytes": 63694,
+        "hash_matches": true
+      },
+      {
+        "path": "origin/index.json",
+        "status": 200,
+        "pdfs": 17
+      },
+      {
+        "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+        "status": 200,
+        "content_length": 1625544,
+        "content_type": "application/pdf"
+      },
+      {
+        "path": "existing-site-root",
+        "status": 200,
+        "preserved_vitepress": true
+      },
+      {
+        "path": "reader-source/CHANGELOG.md",
+        "status": 200,
+        "repository": "N1cola5F/theorie-mesure"
+      },
+      {
+        "path": "知识整合/README.md",
+        "status": 200,
+        "repository": "N1cola5F/theorie-mesure"
+      },
+      {
+        "path": "reader-source/历史记录",
+        "status": 200,
+        "repository": "N1cola5F/theorie-mesure"
+      }
+    ]
+  }
 }

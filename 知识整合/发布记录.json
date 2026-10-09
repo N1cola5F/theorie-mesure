@@ -1,21 +1,21 @@
 {
-  "repository": "CuteYzm/theorie-mesure",
-  "version": "1.6.0",
+  "repository": "N1cola5F/theorie-mesure",
+  "version": "1.6.1",
   "date": "2026-10-09",
   "published": true,
   "main": {
-    "commit": "4a0d9111504e61a2c7eecae7521086166868a9da",
+    "commit": "9a3334b7ee9cfbe62c095c458f2d0324adbe8cc1",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 749 files changed, 505806 insertions(+), 1 deletion(-)"
+    "summary": " 19 files changed, 5737 insertions(+), 236 deletions(-)"
   },
   "gh_pages": {
-    "commit": "1533ee1b0239890c6a0e9d2c1b29d65a1d3faca7",
+    "commit": "259036907d6b458cc518462b64c52446de0673dd",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 692 files changed, 487194 insertions(+)"
+    "summary": " 3 files changed, 7 insertions(+), 7 deletions(-)"
   },
-  "url": "https://cuteyzm.github.io/theorie-mesure/reader/"
+  "url": "https://n1cola5f.github.io/theorie-mesure/reader/"
 }
