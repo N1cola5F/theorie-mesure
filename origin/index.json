@@ -1,0 +1,159 @@
+{
+  "version": "1.6.0",
+  "updated": "2026-10-09",
+  "files": [
+    {
+      "path": "origin/output/pdf/TD02_前五题_原题与逐步解答.pdf",
+      "sha256": "fe1f3b5e62908e2c4fe1afb7d92ca00a5cb1908cd309c3cdaa478ae2757e6e2b",
+      "bytes": 204552,
+      "label": "TD2 前五题详解",
+      "fr_label": "TD2 — Réponses de travail, 1–5",
+      "kind": "学习辅助",
+      "fr_kind": "Notes de travail"
+    },
+    {
+      "path": "origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "sha256": "699cad327e3667679e4ce3c12d42bdaf53d575f048d1a5838301e38cb63f0dba",
+      "bytes": 590868,
+      "label": "CM1 法语讲义",
+      "fr_label": "CM1 — Mesure extérieure",
+      "kind": "课程讲义",
+      "fr_kind": "Cours"
+    },
+    {
+      "path": "origin/按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "sha256": "b508db4edcd18d558684142190eff83e4b11b7ec38f9cd6fd279c60395e5f87b",
+      "bytes": 359062,
+      "label": "TD1 官方答案",
+      "fr_label": "Corrigé officiel du TD1",
+      "kind": "教师官方",
+      "fr_kind": "Corrigé officiel"
+    },
+    {
+      "path": "origin/按周划分/W1/TD01_EN.pdf",
+      "sha256": "454e2bad387315883c105cbc0e55ff31ef8bcb1d1a0994301da06fc6076e9691",
+      "bytes": 270116,
+      "label": "TD01_EN.pdf",
+      "fr_label": "TD01_EN.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W1/TD01_FR.pdf",
+      "sha256": "606ddf6771970798a9437713b1b3cc3c5ced169c4b6face0aa8c3fdbd9dc47ef",
+      "bytes": 274907,
+      "label": "TD01_FR.pdf",
+      "fr_label": "TD01_FR.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W1/TD01_rappels_cours_FR.pdf",
+      "sha256": "f1bf013c6047a6e263578a055d046887fd299092a563b68264d54e5bacdcb675",
+      "bytes": 102324,
+      "label": "TD01_rappels_cours_FR.pdf",
+      "fr_label": "TD01_rappels_cours_FR.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W2/CM1_ZFAI_chapter1_EN.pdf",
+      "sha256": "991e99660a1f5be34e46e4f06780684fa06995bec295160c6395fb2fd4f5dd51",
+      "bytes": 588187,
+      "label": "CM1_ZFAI_chapter1_EN.pdf",
+      "fr_label": "CM1_ZFAI_chapter1_EN.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "sha256": "b1ab000990c80622ae2079c299f30de7ecc060e0d86833f7ebae38804a1bc249",
+      "bytes": 812979,
+      "label": "CM2 法语讲义",
+      "fr_label": "CM2 — Tribus et mesures",
+      "kind": "课程讲义",
+      "fr_kind": "Cours"
+    },
+    {
+      "path": "origin/按周划分/W2/TD02_course_reminders_EN.pdf",
+      "sha256": "81f88215914a1f5b5437ac342ab9f8123b80094eeaa2296abf059b5521d7b12e",
+      "bytes": 79416,
+      "label": "TD02_course_reminders_EN.pdf",
+      "fr_label": "TD02_course_reminders_EN.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W2/TD02_FR.pdf",
+      "sha256": "2af330be7e729165bb09b26121eeea7adee20ba45f82ebb99d0a1b437916e0ee",
+      "bytes": 206604,
+      "label": "TD2 法语题单",
+      "fr_label": "Énoncé du TD2",
+      "kind": "习题原文",
+      "fr_kind": "Exercices"
+    },
+    {
+      "path": "origin/按周划分/W2/TD02_rappels_cours_FR.pdf",
+      "sha256": "95003808fe2be7efac90cdb8eb1bf10b8411dcb414850266e92bcd9a0301b545",
+      "bytes": 78958,
+      "label": "TD2 习题课讲义",
+      "fr_label": "TD2 — Rappels de cours",
+      "kind": "复习幻灯片",
+      "fr_kind": "Rappels"
+    },
+    {
+      "path": "origin/按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "sha256": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+      "bytes": 698367,
+      "label": "CM3 法语讲义",
+      "fr_label": "CM3 — Intégrale de Lebesgue (FR)",
+      "kind": "课程讲义",
+      "fr_kind": "Cours"
+    },
+    {
+      "path": "origin/按周划分/W3/CM3_ZFAI_Lebesgue_integral_EN.pdf",
+      "sha256": "e754d5baf29c23f7681adc6f6f412aa817bf1bf125a6a877a98c412fd14d0a10",
+      "bytes": 1109517,
+      "label": "CM3 英语讲义",
+      "fr_label": "CM3 — Lebesgue integral (EN)",
+      "kind": "课程讲义",
+      "fr_kind": "Cours"
+    },
+    {
+      "path": "origin/按周划分/W3/Rappels_TD03_FR.pdf",
+      "sha256": "94bcc627b14edd4ca34959efa31764e96c977dfeec20d3f706d93399058be331",
+      "bytes": 321841,
+      "label": "W3 课程复习提要",
+      "fr_label": "W3 — Rappels de cours",
+      "kind": "复习幻灯片",
+      "fr_kind": "Rappels"
+    },
+    {
+      "path": "origin/按周划分/W3/TD03_FR.pdf",
+      "sha256": "2804ac8893f1adb2104b986380f4c4644c32600a675c45333b65ca4ac6d3cde9",
+      "bytes": 210050,
+      "label": "TD03_FR.pdf",
+      "fr_label": "TD03_FR.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/W4/CM04_FR_integrales-multiples.pdf",
+      "sha256": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
+      "bytes": 570433,
+      "label": "CM04 多重积分幻灯片",
+      "fr_label": "CM04 — Intégrales multiples",
+      "kind": "W4 课堂幻灯片",
+      "fr_kind": "Diapositives"
+    },
+    {
+      "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+      "sha256": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
+      "bytes": 1625544,
+      "label": "W4 全学期课程手册",
+      "fr_label": "Manuel de mesure et probabilités",
+      "kind": "课程手册 · 2026-09-29",
+      "fr_kind": "Manuel · 2026-09-29"
+    }
+  ]
+}
