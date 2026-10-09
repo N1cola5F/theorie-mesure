@@ -1,7 +1,7 @@
 // 一键部署到 GitHub Pages（gh-pages 分支）
 // 用法：npm run deploy
 import { execSync } from 'node:child_process'
-import { writeFileSync, rmSync } from 'node:fs'
+import { writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 
 const DIST = 'docs/.vitepress/dist'
 const run = (cmd, opts = {}) => execSync(cmd, { stdio: 'inherit', ...opts })
@@ -12,6 +12,11 @@ const repo = remote.replace(/\.git$/, '').split('/').pop()
 
 process.env.DOCS_BASE = `/${repo}/`
 run('vitepress build docs')
+
+// Keep the semester reader and source PDFs when the original site is rebuilt.
+for (const directory of ['reader', 'origin']) {
+  if (existsSync(directory)) cpSync(directory, `${DIST}/${directory}`, { recursive: true })
+}
 
 writeFileSync(`${DIST}/.nojekyll`, '')
 rmSync(`${DIST}/.git`, { recursive: true, force: true })

@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "version": "1.6.0",
+  "updated": "2026-10-09",
+  "title": "测量理论",
+  "subtitle": "Théorie de la mesure",
+  "semester": "2026–2027 · Semestre 7",
+  "coverage": "W1 · W2 · W3 · W4 手册与 CM04",
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": "01",
+      "title": "Lebesgue 外测度",
+      "fr": "Mesure extérieure de Lebesgue",
+      "file": "content/01-exterior.tex",
+      "week": "W1",
+      "intro": "从可数覆盖定义长度，再用可测性恢复可加性。",
+      "color": "navy"
+    },
+    {
+      "id": "ch2",
+      "number": "02",
+      "title": "σ-代数与 Borel 集",
+      "fr": "Tribus et boréliens",
+      "file": "content/02-tribus.tex",
+      "week": "W2",
+      "intro": "确定哪些集合可测，并用生成族减少验证工作。",
+      "color": "indigo"
+    },
+    {
+      "id": "ch3",
+      "number": "03",
+      "title": "测度与连续性",
+      "fr": "Mesures et continuité",
+      "file": "content/03-measures.tex",
+      "week": "W2",
+      "intro": "从可数可加性出发，理解极限、零测集与唯一性。",
+      "color": "burgundy"
+    },
+    {
+      "id": "ch4",
+      "number": "04",
+      "title": "可测函数",
+      "fr": "Fonctions mesurables",
+      "file": "content/04-functions.tex",
+      "week": "W2–W3",
+      "intro": "用原像理解可测性，补充生成族、Lebesgue 可测复合与扩展实数值。",
+      "color": "emerald"
+    },
+    {
+      "id": "ch5",
+      "number": "05",
+      "title": "Lebesgue 积分",
+      "fr": "Intégrale de Lebesgue",
+      "file": "content/05-integral.tex",
+      "week": "W3–W4",
+      "intro": "从简单函数构造积分，理解三大收敛定理、含参积分及广义控制收敛。",
+      "color": "ochre"
+    },
+    {
+      "id": "ch6",
+      "number": "06",
+      "title": "多重积分",
+      "fr": "Intégrales multiples",
+      "file": "content/06-multiple.tex",
+      "week": "W4 · CM04",
+      "intro": "先判断换序条件，再选择区域描述与坐标变换。",
+      "color": "navy"
+    },
+    {
+      "id": "ch7",
+      "number": "07",
+      "title": "Lᵖ 空间",
+      "fr": "Espaces Lᵖ",
+      "file": "content/07-lp.tex",
+      "week": "W4 手册",
+      "intro": "范数、基本不等式、完备性与 Hilbert 空间。",
+      "color": "indigo"
+    },
+    {
+      "id": "ch8",
+      "number": "08",
+      "title": "测度分解",
+      "fr": "Décomposition des mesures",
+      "file": "content/08-decomposition.tex",
+      "week": "W4 手册",
+      "intro": "区分密度、绝对连续、奇异性及 Lebesgue 分解。",
+      "color": "burgundy"
+    },
+    {
+      "id": "ch9",
+      "number": "09",
+      "title": "实随机变量",
+      "fr": "Variables aléatoires réelles",
+      "file": "content/09-probability.tex",
+      "week": "W4 手册",
+      "intro": "用像测度和积分统一分布、期望、独立性与生成函数。",
+      "color": "emerald"
+    },
+    {
+      "id": "ch10",
+      "number": "10",
+      "title": "随机向量",
+      "fr": "Vecteurs aléatoires",
+      "file": "content/10-vectors.tex",
+      "week": "W4 手册",
+      "intro": "从联合分布到边缘、协方差矩阵与独立和的卷积。",
+      "color": "ochre"
+    },
+    {
+      "id": "ch11",
+      "number": "11",
+      "title": "条件分布与条件期望",
+      "fr": "Lois et espérance conditionnelles",
+      "file": "content/11-conditional.tex",
+      "week": "W4 手册",
+      "intro": "用子 σ-代数表达信息，连接概率核、投影和回归。",
+      "color": "navy"
+    },
+    {
+      "id": "ch12",
+      "number": "12",
+      "title": "特征函数与高斯向量",
+      "fr": "Fonctions caractéristiques · Vecteurs gaussiens",
+      "file": "content/12-gaussian.tex",
+      "week": "W4 手册",
+      "intro": "用特征函数识别分布，理解联合高斯的构造和独立性。",
+      "color": "indigo"
+    },
+    {
+      "id": "ch13",
+      "number": "13",
+      "title": "收敛与极限定理",
+      "fr": "Convergences et théorèmes limites",
+      "file": "content/13-convergence.tex",
+      "week": "W4 手册",
+      "intro": "比较四种收敛，建立大数定律、中心极限及向量推广。",
+      "color": "burgundy"
+    }
+  ],
+  "sources": {
+    "cm1": {
+      "label": "CM1 法语讲义",
+      "path": "origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "pages": 73,
+      "kind": "课程讲义",
+      "fr_label": "CM1 — Mesure extérieure",
+      "fr_kind": "Cours"
+    },
+    "cm2": {
+      "label": "CM2 法语讲义",
+      "path": "origin/按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "pages": 88,
+      "kind": "课程讲义",
+      "fr_label": "CM2 — Tribus et mesures",
+      "fr_kind": "Cours"
+    },
+    "r2": {
+      "label": "TD2 习题课讲义",
+      "path": "origin/按周划分/W2/TD02_rappels_cours_FR.pdf",
+      "pages": 10,
+      "kind": "复习幻灯片",
+      "fr_label": "TD2 — Rappels de cours",
+      "fr_kind": "Rappels"
+    },
+    "td1": {
+      "label": "TD1 官方答案",
+      "path": "origin/按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "pages": 17,
+      "kind": "教师官方",
+      "fr_label": "Corrigé officiel du TD1",
+      "fr_kind": "Corrigé officiel"
+    },
+    "td2": {
+      "label": "TD2 法语题单",
+      "path": "origin/按周划分/W2/TD02_FR.pdf",
+      "pages": 6,
+      "kind": "习题原文",
+      "fr_label": "Énoncé du TD2",
+      "fr_kind": "Exercices"
+    },
+    "answer2": {
+      "label": "TD2 前五题详解",
+      "path": "origin/output/pdf/TD02_前五题_原题与逐步解答.pdf",
+      "pages": 7,
+      "kind": "学习辅助",
+      "fr_label": "TD2 — Réponses de travail, 1–5",
+      "fr_kind": "Notes de travail"
+    },
+    "cm3": {
+      "label": "CM3 法语讲义",
+      "path": "origin/按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "pages": 84,
+      "kind": "课程讲义",
+      "fr_label": "CM3 — Intégrale de Lebesgue (FR)",
+      "fr_kind": "Cours"
+    },
+    "cm3en": {
+      "label": "CM3 英语讲义",
+      "path": "origin/按周划分/W3/CM3_ZFAI_Lebesgue_integral_EN.pdf",
+      "pages": 85,
+      "kind": "课程讲义",
+      "fr_label": "CM3 — Lebesgue integral (EN)",
+      "fr_kind": "Cours"
+    },
+    "r3": {
+      "label": "W3 课程复习提要",
+      "path": "origin/按周划分/W3/Rappels_TD03_FR.pdf",
+      "pages": 11,
+      "kind": "复习幻灯片",
+      "fr_label": "W3 — Rappels de cours",
+      "fr_kind": "Rappels"
+    },
+    "w4": {
+      "label": "W4 全学期课程手册",
+      "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+      "pages": 157,
+      "kind": "课程手册 · 2026-09-29",
+      "fr_label": "Manuel de mesure et probabilités",
+      "fr_kind": "Manuel · 2026-09-29"
+    },
+    "cm4": {
+      "label": "CM04 多重积分幻灯片",
+      "path": "origin/按周划分/W4/CM04_FR_integrales-multiples.pdf",
+      "pages": 25,
+      "kind": "W4 课堂幻灯片",
+      "fr_label": "CM04 — Intégrales multiples",
+      "fr_kind": "Diapositives"
+    }
+  },
+  "roadmap": [],
+  "release_notes": [
+    "发布 GitHub Pages 在线入口，可在不同设备直接访问同一个网址。",
+    "入口与章节、搜索索引、字体及矢量片段分开；当前章节与所选语言按需加载，搜索索引首次搜索时才请求。",
+    "原始 PDF 保存在仓库 origin 目录，页码链接直接打开对应资料；保留全部 13 个主题、117 个条目和原文重点强调。",
+    "使用内容哈希为资源命名，未变资源可复用缓存；发布更新后刷新网页即可读取新版，本地离线备份保留。"
+  ],
+  "overview_intro": "从测度与积分，到随机变量与极限定理。沿着定义、定理与证明，逐章建立本学期的知识结构。",
+  "scope_note": "本版整合 W1–W3、W4 上传的 157 页全学期课程手册及 25 页 CM04 幻灯片，覆盖 13 个主题。CM04 的课堂重点是多重积分；“W4 手册”表示资料来源，不表示后续章节已经授课。",
+  "coverage_fr": "W1 · W2 · W3 · Manuel W4 et CM04",
+  "release_notes_fr": [
+    "Lecture en ligne sur GitHub Pages, accessible depuis plusieurs appareils avec la même adresse.",
+    "Chapitres, index de recherche, polices et vecteurs sont séparés. Les données se chargent à la demande ; l’index complet est demandé lors de la première recherche.",
+    "Les PDF originaux sont conservés dans origin ; les pages sources ouvrent les documents correspondants. Les 13 thèmes et 117 notions restent disponibles.",
+    "Les adresses des ressources dépendent de leur contenu, afin de réutiliser le cache. Après publication, actualisez la page pour lire la nouvelle édition."
+  ]
+}

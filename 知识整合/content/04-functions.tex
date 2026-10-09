@@ -1,0 +1,190 @@
+% @card {"id":"preimage","type":"proposition","title":"原像保留集合运算","fr":"Image réciproque","refs":[["cm2",57,59],["cm3",10,13],["w4",37,38]],"requires":["sigma-algebra"]}
+对任意映射 $f:E\to F$，
+\[
+\begin{aligned}
+f^{-1}(B^c)&=(f^{-1}(B))^c,\\
+f^{-1}\!\left(\bigcup_nB_n\right)&=\bigcup_nf^{-1}(B_n),\\
+f^{-1}\!\left(\bigcap_nB_n\right)&=\bigcap_nf^{-1}(B_n).
+\end{aligned}
+\]
+原像还保持差集和不交性。\textbf{这些公式不要求 $f$ 连续、可测或可逆。}
+
+符号 $f^{-1}(B)$ 表示集合的原像，不表示逆函数。
+% @end
+
+% @card {"id":"measurable-function","type":"definition","title":"可测函数：可测集的原像仍可测","fr":"Application mesurable","refs":[["cm2",63,64],["cm3",17,18],["w4",40,40]],"requires":["sigma-algebra","preimage"]}
+映射 $f:(E,\T_E)\to(F,\T_F)$ 可测，当且仅当
+\[
+B\in\T_F\Longrightarrow f^{-1}(B)\in\T_E.
+\]
+即问题“$f(x)\in B$”对应一个可测事件。
+
+当定义域和值域均为 Euclidean 空间且取 Borel 族时，称为 Borel 可测。概率空间上的实值可测函数就是实随机变量。
+% @end
+
+% @card {"id":"generator-test","type":"proposition","title":"只需检验一组生成元","fr":"Critère par générateurs","refs":[["cm2",65,68],["cm3",21,22],["r3",3,3],["w4",41,41]],"requires":["measurable-function","generated-sigma","borel-generators"]}
+若 $\sigma(\mathcal G)=\T_F$，则 $f$ 可测当且仅当所有 $G\in\mathcal G$ 的原像都在 $\T_E$ 中。
+
+对实值函数，以下任一条件就足够：
+\[
+\{f<a\}\in\T_E\ (\forall a),\qquad
+\{f\le a\}\in\T_E\ (\forall a).
+\]
+也可使用 $\{f>a\}$ 或 $\{f\ge a\}$；测试阈值可限制为有理数。
+% @proof
+定义 $\mathcal H=\{B\in\T_F:f^{-1}(B)\in\T_E\}$。原像运算公式表明 $\mathcal H$ 是值域上的 $\sigma$-代数。若它包含 $\mathcal G$，最小性给出 $\T_F=\sigma(\mathcal G)\subseteq\mathcal H$。
+\dep{原像保留补集与可数并；生成 $\sigma$-代数最小性。}
+% @end
+
+% @card {"id":"measurable-examples","type":"example","title":"连续函数与示性函数","fr":"Continuité · Indicatrices","refs":[["cm2",69,71],["cm3",23,24],["w4",41,42]],"requires":["generator-test","vitali"]}
+连续函数 $\R^p\to\R^q$ 是 Borel 可测函数；实单调函数与常值函数也可测。
+
+对于 $A\subseteq E$，
+\[
+\mathbf1_A\text{ 可测}\iff A\in\T_E.
+\]
+所以 Vitali 非可测集 $V$ 的示性函数也不可测，虽然它只取两个值。
+% @proof
+连续函数把开集拉回开集，故通过开集生成族检验。
+\dep{连续性的原像刻画；生成元检验。}
+
+若 $A$ 可测，则示性函数的原像只有 $\varnothing,A,A^c,E$ 四种可能。反之，$A=\{\mathbf1_A>1/2\}$，由可测性得 $A$ 可测。
+\dep{示性函数定义；$\sigma$-代数公理；阈值检验。}
+% @end
+
+% @card {"id":"measurable-operations","type":"proposition","title":"复合、向量与代数运算","fr":"Stabilité des fonctions mesurables","refs":[["cm2",72,74],["cm3",19,19],["cm3",25,27],["w4",40,42]],"requires":["measurable-function","generator-test"]}
+可测函数的复合仍可测；$f=(f_1,\ldots,f_d)$ 可测，当且仅当每个坐标 $f_i$ 可测。
+
+对有限实值可测函数 $f,g$，
+\[
+f+g,\quad fg,\quad |f|,\quad\max(f,g),\quad\min(f,g)
+\]
+均可测。
+
+\textbf{边界：}若允许扩展实数，必须先处理 $\infty-\infty$ 等未定义运算，不能无条件套用有限实值版本。
+% @proof
+复合使用 $(g\circ f)^{-1}(B)=f^{-1}(g^{-1}(B))$。向量函数用开矩形生成族检验，原像是各坐标原像的有限交。代数运算是向量 $(f,g)$ 与连续映射的复合。
+\dep{原像运算；生成元检验；连续函数可测。}
+% @end
+
+% @card {"id":"measurable-limits","type":"theorem","title":"可数确界与逐点极限","fr":"Supremum · Limite simple","refs":[["cm2",75,77],["cm3",29,30],["w4",43,44]],"requires":["generator-test","sigma-algebra"]}
+若每个 $f_n$ 可测，则 $\sup_nf_n$、$\inf_nf_n$、$\limsup_nf_n$、$\liminf_nf_n$ 都是扩展实值可测函数。
+\[
+\begin{gathered}
+\limsup_nf_n=\inf_N\sup_{n\ge N}f_n,\\
+\liminf_nf_n=\sup_N\inf_{n\ge N}f_n.
+\end{gathered}
+\]
+因此逐点极限 $f=\lim_nf_n$ 若存在，仍可测。
+
+\textbf{阅读补充：}即使每个 $f_n$ 都是有限实值，上确界也可能为 $+\infty$，例如 $f_n\equiv n$。
+% @proof
+对每个实数 $a$，
+\[
+\{\sup_nf_n>a\}=\bigcup_n\{f_n>a\}.
+\]
+由可数并封闭性得到可测性；下确界类似。再两次使用可数确界，得到上、下极限的可测性。
+\dep{阈值检验；$\sigma$-代数的可数并封闭性。}
+% @end
+
+% @card {"id":"simple-functions","type":"definition","title":"可测简单函数","fr":"Fonction étagée mesurable","refs":[["cm2",78,79],["cm3",33,35],["r3",6,6],["w4",45,45]],"requires":["measurable-examples","measurable-operations"]}
+可测简单函数可写成
+\[
+s=\sum_{k=1}^{m}c_k\mathbf1_{A_k},
+\]
+其中 $(A_k)$ 是可测分割，$c_k$ 为有限实数。
+
+\textbf{需要同时记住：}有限个值，以及可测的水平集。仅“取值有限”不能推出可测性；$\mathbf1_V$ 就是反例。
+
+简单函数的分块不必是区间，因此它比 Riemann 积分中的区间阶梯函数更一般。
+\dep{示性函数可测性；有限线性组合封闭性。这里明确了 CM2 第 78 页的可测分块条件。}
+% @end
+
+% @card {"id":"simple-approximation","type":"theorem","title":"从下方用简单函数逼近","fr":"Approximation par fonctions étagées","refs":[["cm2",80,82],["cm3",36,42],["r3",7,7],["w4",45,48]],"requires":["simple-functions","generator-test"]}
+若 $f:E\to[0,+\infty]$ 可测，则存在非负可测简单函数 $s_n$，使
+\[
+0\le s_n\uparrow f.
+\]
+一种构造是在高度 $n$ 截断，再以步长 $2^{-n}$ 向下取整：
+\[
+s_n(x)=
+\begin{cases}
+2^{-n}\lfloor2^nf(x)\rfloor,& f(x)<n,\\
+n,& f(x)\ge n.
+\end{cases}
+\]
+% @proof
+\textbf{可测与有限值。}每个分块由 $f$ 的阈值条件描述，因此可测；取整后只出现有限多个值。
+\dep{阈值检验；简单函数定义。}
+
+\textbf{单调与收敛。}网格从 $2^{-n}$ 细化为 $2^{-(n+1)}$，向下取整值不会降低，截断高度也升高。若 $f(x)<\infty$，当 $n>f(x)$ 时误差小于 $2^{-n}$；若 $f(x)=\infty$，则 $s_n(x)=n\to\infty$。
+\dep{二进网格嵌套；实数取整性质。}
+% @end
+
+% @card {"id":"pushforward","type":"definition","title":"像测度与分布","fr":"Mesure image","refs":[["cm2",83,85],["cm3",31,31],["w4",44,44]],"requires":["measurable-function","measure-definition","preimage"]}
+若 $f:(E,\T_E)\to(F,\T_F)$ 可测，$\mu$ 是 $E$ 上的测度，定义
+\[
+f_*\mu(B)=\mu(f^{-1}(B)),\qquad B\in\T_F.
+\]
+讲义也记为 $f(\mu)$。这就是 $\mu$ 经 $f$ 的像测度。
+
+对随机变量 $X$，分布满足 $P_X(B)=P(X\in B)$。这里用原像定义新测度，不能把它误写为 $\mu(f(B))$。
+% @proof
+可测性保证右侧有定义；空集的原像为空集。对可数不交族 $(B_n)$，原像仍两两不交且原像与并交换，因此
+\[
+\begin{aligned}
+f_*\mu\!\left(\bigsqcup_n B_n\right)
+&=\sum_n\mu(f^{-1}(B_n))\\
+&=\sum_n f_*\mu(B_n).
+\end{aligned}
+\]
+\dep{原像运算；$\mu$ 的可数可加性。}
+% @end
+
+% @card {"id":"preimage-generated","type":"proposition","title":"原像与生成 σ-代数交换","fr":"Tribu engendrée et image réciproque","refs":[["cm3",14,16],["r3",4,4],["w4",38,39]],"requires":["preimage","generated-sigma"]}
+对任意映射 $f:E\to F$ 和集合族 $\mathcal G\subseteq\mathcal P(F)$，
+\[
+f^{-1}(\sigma(\mathcal G))
+=\sigma(f^{-1}(\mathcal G)).
+\]
+这里 $f^{-1}(\mathcal G)$ 表示逐个生成元取原像后得到的集合族。
+
+若 $\mathcal S$ 是 $F$ 上的 $\sigma$-代数，则 $f^{-1}(\mathcal S)$ 自动是 $E$ 上的 $\sigma$-代数。此结论不预先要求 $f$ 可测。
+% @proof
+\textbf{第一个包含。}原像保持空集、补集及可数并，故 $f^{-1}(\sigma(\mathcal G))$ 是包含 $f^{-1}(\mathcal G)$ 的 $\sigma$-代数，因此包含后者生成的 $\sigma$-代数。
+\dep{原像运算；生成族最小性。}
+
+\textbf{反向包含。}设
+\[
+\mathcal H=\{B\subseteq F:
+f^{-1}(B)\in\sigma(f^{-1}(\mathcal G))\}.
+\]
+同样由原像运算，$\mathcal H$ 是包含 $\mathcal G$ 的 $\sigma$-代数，所以 $\sigma(\mathcal G)\subseteq\mathcal H$，得到反向包含。
+\dep{原像运算；生成族最小性；CM3 第 16 页。}
+% @end
+
+% @card {"id":"lebesgue-composition","type":"warning","title":"Lebesgue 可测函数的复合需要核对中间空间","fr":"Composition et tribu intermédiaire","refs":[["cm3",18,20],["w4",41,41]],"requires":["measurable-function","measurable-operations","borel-lebesgue"]}
+$f:\R\to\R$ 称为 Lebesgue 可测，是指
+\[
+f:(\R,\M(\lambda^*))\longrightarrow(\R,\B(\R))
+\]
+可测。Borel 可测函数必然 Lebesgue 可测，反向不一定成立。
+
+\textbf{复合的前提：}内层函数的到达 $\sigma$-代数，必须与外层函数使用的出发 $\sigma$-代数匹配。
+
+两个仅知 Lebesgue 可测的函数，复合不保证 Lebesgue 可测：内层的条件只保证 Borel 集的原像可测，不能直接用它拉回任意 Lebesgue 可测集。
+
+\textbf{可安全应用的情形：}若内层 $f$ Lebesgue 可测、外层 $g$ Borel 可测，则 $g\circ f$ Lebesgue 可测。
+\dep{复合原像恒等式；可测映射定义；CM3 第 19–20 页。此处仅说明讲义中的条件边界，不导入 TD 反例题解。}
+% @end
+
+% @card {"id":"extended-real-line","type":"definition","title":"扩展实数值与非负积分的约定","fr":"Droite réelle achevée","refs":[["cm3",28,30],["w4",42,43]],"requires":["borel-generators","measurable-limits"]}
+记 $\overline{\R}=\R\cup\{-\infty,+\infty\}$，并取
+\[
+\B(\overline{\R})
+=\{A\subseteq\overline{\R}:A\cap\R\in\B(\R)\}.
+\]
+可用半直线 $[-\infty,a]$（$a\in\R$）生成该 $\sigma$-代数。可数上、下确界和极限的可测性可在此值域中统一表述。
+
+\textbf{积分中的约定：}对非负积分的系数与测度乘积采用 $0\cdot\infty=0$。这不赋予 $\infty-\infty$ 意义；涉及正负部分时必须分别判断是否有限。
+% @end

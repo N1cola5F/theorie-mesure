@@ -1,0 +1,133 @@
+% @card {"id":"conditional-expectation","type":"theorem","title":"条件期望的定义、存在与唯一性","fr":"Espérance conditionnelle","refs":[["w4",124,126]],"requires":["radon-nikodym","zero-integral","signed-integral"]}
+设 $X\in L^1(\Omega,\T,\mathbb P)$，$\mathcal G\subset\T$ 是子 $\sigma$-代数。存在几乎必然唯一的 $\mathcal G$-可测可积变量 $Z$，使
+\[
+\int_A Z\,\dd\mathbb P=\int_A X\,\dd\mathbb P
+\qquad(A\in\mathcal G).
+\]
+记作 $Z=\mathbb E(X\mid\mathcal G)$。条件期望是随机变量，表达只使用 $\mathcal G$ 中信息的平均预测。定义
+\[
+\mathbb E(X\mid Y)=\mathbb E(X\mid\sigma(Y)).
+\]
+% @proof
+\textbf{1. 非负情形。} 在 $(\Omega,\mathcal G)$ 上令 $\nu(A)=\int_A X\,\dd\mathbb P$。它是有限测度且 $\nu\ll\mathbb P|_{\mathcal G}$。Radon--Nikodym 导数 $Z$ 满足要求，且 $\int Z\,\dd\mathbb P=\mathbb EX<\infty$。\dep{密度测度；Radon--Nikodym 定理。}
+
+\textbf{2. 一般情形。} 分别构造 $X^+$、$X^-$ 的条件期望，再作差。\dep{正负部分分解；积分线性性。}
+
+\textbf{3. 唯一性。} 两候选 $Z_1,Z_2$ 之差在任意 $A\in\mathcal G$ 上积分为零。取 $A=\{Z_1>Z_2\}$，得到 $(Z_1-Z_2)^+$ 积分为零；交换两者，得几乎必然相等。\dep{$\mathcal G$-可测性；非负积分为零判别。}
+% @end
+
+% @card {"id":"conditional-properties","type":"proposition","title":"条件期望的运算规则","fr":"Propriétés et tour","refs":[["w4",126,127]],"requires":["conditional-expectation","independent-variables","lp-inclusion-jensen"]}
+以下等式均按几乎必然理解。条件期望线性、保序，并保持总期望。若 $\mathcal H\subset\mathcal G$，
+\[
+\begin{aligned}
+\mathbb E[\mathbb E(X\mid\mathcal G)]&=\mathbb EX,\\
+\mathbb E[\mathbb E(X\mid\mathcal G)\mid\mathcal H]
+&=\mathbb E(X\mid\mathcal H),\\
+\mathbb E[\mathbb E(X\mid\mathcal H)\mid\mathcal G]
+&=\mathbb E(X\mid\mathcal H).
+\end{aligned}
+\]
+若 $Y$ 为 $\mathcal G$-可测且有界（更一般地，$X,XY$ 可积），
+\[
+\mathbb E(XY\mid\mathcal G)=Y\mathbb E(X\mid\mathcal G).
+\]
+若 $\sigma(X)$ 与 $\mathcal G$ 独立，则 $\mathbb E(X\mid\mathcal G)=\mathbb EX$；若 $X$ 已 $\mathcal G$-可测，则条件期望为 $X$ 本身。
+
+对实值凸函数 $\varphi$，若 $X,\varphi(X)$ 可积，条件 Jensen 给出
+\[
+\varphi(\mathbb E(X\mid\mathcal G))
+\le\mathbb E(\varphi(X)\mid\mathcal G).
+\]
+% @proof
+\textbf{1. 塔式。} 对每个 $A\in\mathcal H\subset\mathcal G$，候选的积分均等于 $\int_A X\,\dd\mathbb P$，由唯一性确定。另一个方向利用 $\mathcal H$-可测蕴含 $\mathcal G$-可测。\dep{条件期望的刻画及唯一性。}
+
+\textbf{2. 提取已知因子。} 先取 $Y=\mathbf1_B$，把在 $A$ 上积分改为在 $A\cap B$ 上积分；再用简单逼近和截断推广。\dep{简单逼近；单调或控制收敛；唯一性。}
+
+\textbf{3. 独立。} 对 $A\in\mathcal G$，$\mathbb E(X\mathbf1_A)=\mathbb EX\,\mathbb P(A)$，故常数 $\mathbb EX$ 满足定义。\dep{独立性下积分因子化。}
+
+\textbf{4. Jensen 的证明路线。} 将凸函数写成可数族仿射下支撑函数的上确界；对每个下界用线性性、保序性，再取上确界。\dep{凸函数支撑线表示〔凸分析性质〕；条件期望保序。}
+% @end
+
+% @card {"id":"conditional-calculation","type":"proposition","title":"分割与离散条件的计算","fr":"Conditionnement par une partition","refs":[["w4",124,128]],"requires":["conditional-expectation","partition-sigma"]}
+若 $\mathcal G$ 由有限或可数分割 $(B_i)$ 生成，$\mathbb P(B_i)>0$，则对可积 $X$，
+\[
+\mathbb E(X\mid\mathcal G)
+=\sum_i\frac{\mathbb E(X\mathbf1_{B_i})}{\mathbb P(B_i)}
+\mathbf1_{B_i}.
+\]
+对离散 $Y$，取 $B_i=\{Y=y_i\}$ 即可。零概率块上的值可任意指定，不影响等价类。
+
+验证候选 $Z$ 时须检查：$\mathcal G$-可测、可积，以及在 $A\in\mathcal G$ 上积分相同。若只检查生成族，应使用包含 $\Omega$ 的生成 $\pi$-系统，再通过唯一性推广，任意生成族本身不一定足够。
+\dep{分割生成的 $\sigma$-代数；条件期望唯一性；$\pi$--$\lambda$ 方法。}
+% @end
+
+% @card {"id":"conditional-law","type":"theorem","title":"条件分布与条件转移公式","fr":"Loi conditionnelle et noyau","refs":[["w4",129,130]],"requires":["conditional-expectation","expectation-transfer","joint-marginal","tonelli"]}
+对实随机变量 $X,Y$，条件分布是概率核 $K(y,A)$：固定 $y$ 时为概率测度，固定 Borel 集 $A$ 时对 $y$ 可测，并满足
+\[
+\mathbb P(X\in A,Y\in B)
+=\int_B K(y,A)\,\dd\mathbb P_Y(y).
+\]
+实值情形存在此核，且按 $\mathbb P_Y$-几乎处处唯一；此存在性定理在手册中作为承认结果。
+
+若 $\varphi(X)$ 可积，则
+\[
+\begin{gathered}
+h(y)=\int_{\R}\varphi(x)\,K(y,\dd x),\\
+\mathbb E(\varphi(X)\mid Y)=h(Y)\quad\text{几乎必然}.
+\end{gathered}
+\]
+若有联合密度，则对满足 $0<f_Y(y)<\infty$ 的几乎所有 $y$，
+\[
+f_{X\mid Y=y}(x)=\frac{f_{X,Y}(x,y)}{f_Y(y)}.
+\]
+其余 $y$ 上可选择任意概率分布补全核。这里不是用事件 $\{Y=y\}$ 的零概率作除数。
+% @proof
+\textbf{1. 转移。} 对 $\varphi=\mathbf1_A$，核的定义正是条件期望积分刻画。依次推广至简单、非负、可积函数，即得 $h(Y)$ 为候选并由唯一性确定。\dep{简单逼近；单调收敛；条件期望唯一性。}
+
+\textbf{2. 密度比。} 将密度比分别乘以 $f_Y(y)$ 并在 $B$ 上积分，Tonelli 得 $\int_{A\times B}f_{X,Y}$；在有效 $y$ 上对 $x$ 的积分为 $1$。\dep{边缘密度公式；Tonelli。}
+% @end
+
+% @card {"id":"conditional-projection","type":"proposition","title":"平方误差最优预测与总方差","fr":"Projection et variance totale","refs":[["w4",125,125],["w4",130,131]],"requires":["conditional-properties","hilbert-riesz","moments-variance"]}
+若 $X\in L^2$，令 $Z=\mathbb E(X\mid\mathcal G)$。则 $Z\in L^2(\mathcal G)$，并且它是 $X$ 在此闭子空间上的正交投影。对每个 $U\in L^2(\mathcal G)$，
+\[
+\|X-U\|_2^2=\|X-Z\|_2^2+\|Z-U\|_2^2.
+\]
+定义条件方差
+\[
+\operatorname{Var}(X\mid\mathcal G)
+=\mathbb E(X^2\mid\mathcal G)-Z^2.
+\]
+它非负，且
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+={}&\mathbb E[\operatorname{Var}(X\mid\mathcal G)]\\
+&+\operatorname{Var}(Z).
+\end{aligned}
+\]
+% @proof
+\textbf{1. 投影。} 条件 Jensen 给出 $\mathbb EZ^2\le\mathbb EX^2$。由条件期望定义，对有界 $\mathcal G$-可测 $U$ 有 $\mathbb E[(X-Z)U]=0$；截断 $U$，用 Cauchy--Schwarz 推广到 $L^2$。展开平方得到勾股等式。\dep{条件 Jensen；条件期望刻画；Hölder；内积展开。}
+
+\textbf{2. 方差。} 对条件方差取期望得到 $\mathbb EX^2-\mathbb EZ^2$；加上 $\operatorname{Var}(Z)=\mathbb EZ^2-(\mathbb EX)^2$ 即可。\dep{总期望公式；方差展开。}
+% @end
+
+% @card {"id":"linear-regression","type":"proposition","title":"线性回归与正规方程","fr":"Régression linéaire","refs":[["w4",132,133]],"requires":["conditional-projection","covariance-matrix"]}
+对 $X,Y_1,\ldots,Y_d\in L^2$，在所有 $Y$ 的仿射函数中，使均方误差最小的预测为
+\[
+Z=\mathbb EX+\sum_j\alpha_j(Y_j-\mathbb EY_j),
+\]
+其中
+\[
+\sum_j\alpha_j\operatorname{Cov}(Y_j,Y_k)
+=\operatorname{Cov}(X,Y_k),\quad 1\le k\le d.
+\]
+若 $\Sigma_Y$ 可逆，系数唯一；若奇异，系数可能不唯一，但预测随机变量仍几乎必然唯一。单变量且 $\operatorname{Var}(Y)>0$ 时，
+\[
+Z=\mathbb EX+
+\frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(Y)}
+(Y-\mathbb EY).
+\]
+线性回归只在仿射函数中最优；一般不等于允许所有可测函数的 $\mathbb E(X\mid Y)$。
+% @proof
+令 $H=\operatorname{span}(1,Y_1,\ldots,Y_d)$，它有限维因而闭。投影定理给出唯一最优 $Z$。余项 $X-Z$ 与 $1$ 正交确定常数项，与每个 $Y_k-\mathbb EY_k$ 正交给出正规方程。\dep{Hilbert 空间正交投影定理〔基础性质〕；协方差双线性。}
+% @end

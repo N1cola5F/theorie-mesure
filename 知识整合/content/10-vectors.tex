@@ -1,0 +1,90 @@
+% @card {"id":"joint-marginal","type":"definition","title":"联合分布与边缘分布","fr":"Loi jointe et lois marginales","refs":[["w4",116,117]],"requires":["random-variable-law","generator-test","tonelli"]}
+$X=(X_1,\ldots,X_d):\Omega\to\R^d$ 是随机向量，当且仅当各坐标可测。联合分布是 $\mathbb P_X$，第 $i$ 个边缘分布是投影的像测度 $(\pi_i)_*\mathbb P_X$。
+
+二维有密度情形，
+\[
+\begin{aligned}
+f_X(x)&=\int_{\R}f_{X,Y}(x,y)\,\dd y,\\
+f_Y(y)&=\int_{\R}f_{X,Y}(x,y)\,\dd x.
+\end{aligned}
+\]
+离散情形将积分换成对另一坐标求和。\dep{矩形生成族判别可测性；Tonelli 给出边缘公式。}
+
+边缘分布一般不能确定联合分布，边缘各自有密度也不保证联合有密度。例如 $(U,U)$ 的联合分布集中于对角线，即使 $U$ 在 $[0,1]$ 上均匀。
+% @end
+
+% @card {"id":"independence-factorization","type":"proposition","title":"密度分解与独立性的稳定性","fr":"Factorisation et fonctions indépendantes","refs":[["w4",118,119]],"requires":["joint-marginal","independent-variables","tonelli","preimage"]}
+若随机向量有联合密度，则各坐标相互独立当且仅当
+\[
+f_{X_1,\ldots,X_d}(x_1,\ldots,x_d)
+=\prod_{i=1}^d f_{X_i}(x_i)
+.
+\]
+等式按 $\lambda_d$-几乎处处理解。
+离散情形用概率质量函数逐点因子化。检验密度时须保留其支撑集，不能只分解代数表达式。
+
+相互独立的变量分别经 Borel 函数变换后仍相互独立；由互不重叠坐标块构成的函数也独立。
+% @proof
+\textbf{1. 密度。} 乘积密度在矩形上的积分，由 Tonelli 分解为边缘概率的乘积。反向由独立性确定乘积测度，再由密度的几乎处处唯一性确定密度。\dep{Tonelli；测度唯一性；Radon--Nikodym 唯一性。}
+
+\textbf{2. 变换。} $\{g_i(X_i)\in A_i\}=\{X_i\in g_i^{-1}(A_i)\}$。原像是 Borel 集，可以直接代入独立性的定义。\dep{可测性；原像运算。}
+% @end
+
+% @card {"id":"covariance","type":"proposition","title":"协方差、相关系数与不相关","fr":"Covariance et corrélation","refs":[["w4",119,121]],"requires":["moments-variance","holder","independent-variables"]}
+对 $X,Y\in L^2$，
+\[
+\operatorname{Cov}(X,Y)=\mathbb E(XY)-\mathbb EX\,\mathbb EY.
+\]
+协方差对称、双线性，$\operatorname{Cov}(X,X)=\operatorname{Var}(X)$。当两个方差均正，定义
+\[
+\rho(X,Y)=\frac{\operatorname{Cov}(X,Y)}
+{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}.
+\]
+有 $|\rho|\le1$，等号当且仅当 $Y=aX+b$ 几乎必然，且 $a\ne0$。独立推出协方差为零，逆向一般不成立。
+
+例如 $X$ 在 $\{-1,0,1\}$ 上均匀，$Y=X^2$：协方差为零，但 $\mathbb P(X=0,Y=0)=1/3\ne1/9$。
+% @proof
+\textbf{1. 存在性与性质。} Cauchy--Schwarz 保证 $XY$ 可积；展开定义并用期望线性性得对称性和双线性。\dep{Hölder 的 $p=q=2$ 情形。}
+
+\textbf{2. 相关系数。} 对中心化的 $X,Y$ 用 Cauchy--Schwarz，再除以正的标准差。等号等价于中心化变量在 $L^2$ 中线性相关。\dep{Cauchy--Schwarz 及等号条件〔内积空间性质〕。}
+
+\textbf{3. 独立。} 独立性给出 $\mathbb E(XY)=\mathbb EX\,\mathbb EY$，代入定义。\dep{独立变量乘积期望。}
+% @end
+
+% @card {"id":"covariance-matrix","type":"proposition","title":"协方差矩阵与线性变换","fr":"Matrice de covariance","refs":[["w4",121,121],["w4",145,145]],"requires":["covariance"]}
+设随机向量 $X$ 各坐标属于 $L^2$，记 $m=\mathbb EX$，
+\[
+\Sigma_X=(\operatorname{Cov}(X_i,X_j))_{i,j}.
+\]
+它是对称半正定矩阵，且对 $a\in\R^d$，
+\[
+\operatorname{Var}(a^\top X)=a^\top\Sigma_Xa\ge0.
+\]
+确定矩阵 $B$ 和向量 $c$ 满足
+\[
+\begin{gathered}
+\mathbb E(BX+c)=Bm+c,\\
+\Sigma_{BX+c}=B\Sigma_XB^\top.
+\end{gathered}
+\]
+独立坐标使协方差矩阵对角化，但对角协方差通常只表达两两不相关。
+% @proof
+对 $\sum_i a_iX_i$ 的方差用协方差双线性展开，得到 $\sum_{i,j}a_ia_j\operatorname{Cov}(X_i,X_j)$，这正是矩阵二次型。对 $BX+c$ 的每一对坐标同样展开即得变换公式。\dep{协方差的双线性、对称性；方差非负。}
+% @end
+
+% @card {"id":"sum-convolution","type":"theorem","title":"独立和的分布是卷积","fr":"Loi d'une somme et convolution","refs":[["w4",122,123],["cm4",24,24]],"requires":["independence-factorization","expectation-transfer","change-variables","positive-convolution"]}
+若 $X,Y$ 独立且为整数值变量，则
+\[
+\mathbb P(X+Y=k)=
+\sum_{j\in\mathbb Z}\mathbb P(X=j)\mathbb P(Y=k-j).
+\]
+若分别有密度 $f_X,f_Y$，则 $X+Y$ 有密度
+\[
+f_{X+Y}(z)=\int_{\R}f_X(x)f_Y(z-x)\,\dd x.
+\]
+该非负积分几乎处处有限，总积分为 $1$。没有独立性时须从实际联合分布出发，不能直接卷积边缘。
+% @proof
+\textbf{1. 离散。} 把 $\{X+Y=k\}$ 按 $X=j$ 分成可数不交并，再用独立性分解每一项。\dep{可数可加性；独立性。}
+
+\textbf{2. 密度。} 对任意非负 Borel 函数 $h$，将 $\mathbb E h(X+Y)$ 写成对 $f_X(x)f_Y(y)$ 的二重积分。用 $(x,y)\mapsto(x,z=x+y)$ 换元，Jacobian 为 $1$；Tonelli 将内积分识别为上式。取 $h=1$ 验证归一化，取示性函数识别分布。\dep{转移公式；换元；Tonelli。}
+% @end

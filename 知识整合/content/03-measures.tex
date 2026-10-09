@@ -1,0 +1,154 @@
+% @card {"id":"measure-definition","type":"definition","title":"测度与可数可加性","fr":"Mesure · σ-additivité","refs":[["cm2",33,33],["r2",5,5],["w4",29,29]],"requires":["sigma-algebra"]}
+在可测空间 $(\Omega,\T)$ 上，测度是映射 $\mu:\T\to[0,+\infty]$，满足 $\mu(\varnothing)=0$，以及
+\[
+\mu\!\left(\bigsqcup_{n\ge1}A_n\right)
+=\sum_{n\ge1}\mu(A_n)
+\]
+对所有\textbf{两两不交的可测集}序列成立。
+
+$(\Omega,\T,\mu)$ 称为测度空间。概率测度满足 $\mu(\Omega)=1$。允许值 $+\infty$，但 $+\infty-(+\infty)$ 没有定义。
+% @end
+
+% @card {"id":"finite-sigma-finite","type":"definition","title":"有限测度与 σ-有限测度","fr":"Mesure finie · σ-finie","refs":[["cm2",34,35],["r2",6,9],["w4",29,30]],"requires":["measure-definition"]}
+\textbf{有限：}$\mu(\Omega)<+\infty$。
+
+\textbf{$\sigma$-有限：}存在可测集 $E_n$，使
+\[
+\Omega=\bigcup_{n\ge1}E_n,\qquad\mu(E_n)<+\infty.
+\]
+Lebesgue 测度在 $\R$ 上不有限，但由 $\R=\bigcup_n[-n,n]$ 可知它是 $\sigma$-有限的。
+
+计数测度在 $\N$ 上 $\sigma$-有限；在不可数全集的幂集上不是 $\sigma$-有限，因为有限测度的集合只能是有限集。
+% @end
+
+% @card {"id":"point-atoms","type":"definition","title":"本课程的原子是一个点","fr":"Atome ponctuel","refs":[["cm2",35,36],["w4",31,31]],"requires":["measure-definition"]}
+按 CM2 的约定，点 $x$ 是原子，如果 $\{x\}$ 可测且
+\[
+\mu(\{x\})>0.
+\]
+Dirac 测度 $\delta_{x_0}(A)=\mathbf1_A(x_0)$ 的原子为 $x_0$；Lebesgue 测度对每个单点赋零。
+
+在 $\N$ 上，若 $\mu(A)=\sum_{n\in A}a_n$ 且 $a_n\ge0$，其点原子恰为 $\{n:a_n>0\}$。
+
+\textbf{术语边界：}一般测度论还使用“原子集合”的定义。本笔记按课程的点原子约定作答，不混用两种概念。
+% @end
+
+% @card {"id":"measure-properties","type":"proposition","title":"有限可加性、单调性与差集","fr":"Propriétés élémentaires","refs":[["cm2",37,40],["w4",34,34]],"requires":["measure-definition"]}
+对可测集 $A\subseteq B$，
+\[
+\mu(B)=\mu(A)+\mu(B\setminus A)\ge\mu(A).
+\]
+若 $\mu(A)<\infty$，才可写
+\[
+\mu(B\setminus A)=\mu(B)-\mu(A).
+\]
+容斥的安全形式为
+\[
+\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B).
+\]
+在涉及的量有限时，才将它改写成含减法的形式。
+% @proof
+有限可加性由可数可加性补充空集得到。再使用不交分解 $B=A\sqcup(B\setminus A)$ 得到单调性与差集公式。
+\dep{测度定义；非负性。}
+
+将 $A\cup B$ 分为 $A\setminus B$、$A\cap B$、$B\setminus A$ 三块，分别展开两边即可得到不含减法的容斥等式，避免无穷减无穷。
+\dep{有限可加性；扩展非负实数的加法。}
+% @end
+
+% @card {"id":"increasing-continuity","type":"theorem","title":"递增连续性","fr":"Continuité croissante","refs":[["cm2",41,42],["r2",8,8],["w4",34,35]],"requires":["measure-definition"]}
+若 $A_n\uparrow A$，且各 $A_n$ 可测，则
+\[
+\mu(A)=\lim_{n\to\infty}\mu(A_n).
+\]
+\textbf{不需要} $\mu(A_1)<\infty$ 或 $\mu(\Omega)<\infty$；极限可以是 $+\infty$。
+% @proof
+令 $D_1=A_1$，$D_n=A_n\setminus A_{n-1}$。则 $D_n$ 可测且两两不交，
+\[
+A=\bigsqcup_{n\ge1}D_n,\qquad
+A_N=\bigsqcup_{n=1}^{N}D_n.
+\]
+所以 $\mu(A)=\sum_n\mu(D_n)$，而 $\mu(A_N)$ 是该非负级数的部分和，令 $N\to\infty$ 即得结论。
+\dep{$\sigma$-代数的差集封闭性；可数可加性；非负级数定义。}
+% @end
+
+% @card {"id":"decreasing-continuity","type":"theorem","title":"递减连续性需要有限性","fr":"Continuité décroissante","refs":[["cm2",43,44],["r2",8,8],["w4",34,35]],"requires":["increasing-continuity","measure-properties"]}
+若 $A_n\downarrow A$、各 $A_n$ 可测，并且 $\mu(A_1)<\infty$，则
+\[
+\mu(A)=\lim_n\mu(A_n).
+\]
+更一般地，某一项测度有限即可从该项开始应用。
+
+\textbf{反例：}$A_n=[n,+\infty)$ 递减至空集，但每项 Lebesgue 测度均为无穷。省略有限性，结论就会失败。
+% @proof
+令 $B_n=A_1\setminus A_n$，则 $B_n\uparrow A_1\setminus A$。先用递增连续性，再以有限值 $\mu(A_1)$ 相减：
+\[
+\mu(A_1)-\mu(A_n)\longrightarrow\mu(A_1)-\mu(A).
+\]
+\dep{递增连续性；有限测度差集公式。}
+% @end
+
+% @card {"id":"subadditivity","type":"proposition","title":"去重之后再求和","fr":"Sous-additivité dénombrable","refs":[["cm2",45,46],["w4",35,36]],"requires":["measure-properties"]}
+对任意可测集序列，不需要两两不交，
+\[
+\mu\left(\bigcup_{n\ge1}A_n\right)\le\sum_{n\ge1}\mu(A_n).
+\]
+证明和应用中常用“去重”：
+\[
+B_1=A_1,\qquad B_n=A_n\setminus\bigcup_{k<n}A_k.
+\]
+$B_n$ 两两不交、$B_n\subseteq A_n$，且它们的并与原来的并相同。
+\dep{先可数可加，再单调性；CM2 第 46 页。}
+% @end
+
+% @card {"id":"borel-cantelli","type":"theorem","title":"Borel–Cantelli 第一引理","fr":"Lemme de Borel–Cantelli","refs":[["cm2",47,48],["w4",36,36]],"requires":["set-limits","subadditivity"]}
+若 $(A_n)$ 为可测集序列且 $\sum_n\mu(A_n)<\infty$，则
+\[
+\mu(\limsup_n A_n)=0.
+\]
+即只有一个零测集中的点会无穷多次落入这些集合。
+
+\textbf{条件辨析：}这条结论不要求独立性，也不要求总测度为 1。
+% @proof
+对每个 $N$，
+\[
+\begin{gathered}
+\limsup_n A_n\subseteq\bigcup_{n\ge N}A_n,\\
+\mu(\limsup_n A_n)\le\sum_{n\ge N}\mu(A_n).
+\end{gathered}
+\]
+右侧为收敛非负级数的尾和，随 $N\to\infty$ 趋于零。
+\dep{上极限定义；测度单调性；可数次可加性。}
+% @end
+
+% @card {"id":"dynkin","type":"theorem","title":"用 π–λ 方法推广结论","fr":"Théorème de Dynkin","refs":[["cm2",49,52],["w4",31,32]],"requires":["generated-sigma"]}
+$\pi$-系统：对有限非空交封闭的集合族。
+
+Dynkin 系统 $\mathcal D$：包含 $\Omega$，对嵌套差 $B\setminus A$（$A\subseteq B$）封闭，对可数不交并封闭。
+
+\textbf{Dynkin 定理：}若 $\mathcal C$ 是 $\pi$-系统、$\mathcal D$ 是包含 $\mathcal C$ 的 Dynkin 系统，则
+\[
+\sigma(\mathcal C)\subseteq\mathcal D.
+\]
+典型用途：先在较小的生成族验证，再推广到整个 $\sigma$-代数。
+% @proof
+考虑包含 $\mathcal C$ 的最小 Dynkin 系统 $\mathcal D(\mathcal C)$。固定 $A$，研究满足 $A\cap B\in\mathcal D(\mathcal C)$ 的 $B$ 所成的族。
+
+先让 $A\in\mathcal C$，再推广到 $A\in\mathcal D(\mathcal C)$，两次用最小性，最终证明 $\mathcal D(\mathcal C)$ 对交封闭，因此成为 $\sigma$-代数。
+\dep{Dynkin 系统的最小性；$\pi$-系统交封闭性。这里只列讲义证明路线，非完整证明。}
+% @end
+
+% @card {"id":"measure-uniqueness","type":"theorem","title":"有限测度的唯一性","fr":"Unicité des mesures finies","refs":[["cm2",53,53],["w4",32,32]],"requires":["dynkin","measure-properties"]}
+设有限测度 $\mu,\nu$ 定义在 $(\Omega,\T)$ 上，$\mathcal C$ 为生成 $\T$ 的 $\pi$-系统。显式要求
+\[
+\mu(\Omega)=\nu(\Omega),\qquad
+\mu(C)=\nu(C)\quad(C\in\mathcal C).
+\]
+则 $\mu=\nu$。若 $\Omega\in\mathcal C$，总质量条件已自动包含。
+
+\textbf{阅读修订：}为避免“有限交是否包含空交”的约定歧义，此处补明总质量一致。不能只凭“均为有限测度”跳过这一条件。
+% @proof
+令 $\mathcal D=\{A\in\T:\mu(A)=\nu(A)\}$。总质量相等保证 $\Omega\in\mathcal D$；有限性允许嵌套差相减；可数可加性保证可数不交并封闭。
+
+$\mathcal D$ 因此是包含 $\mathcal C$ 的 Dynkin 系统，故包含 $\sigma(\mathcal C)=\T$。
+\dep{有限差公式；可数可加性；Dynkin 定理。}
+% @end

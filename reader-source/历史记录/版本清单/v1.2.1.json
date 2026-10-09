@@ -1,0 +1,1095 @@
+{
+  "version": "v1.2.1",
+  "release_date": "2026-09-28",
+  "timezone": "Asia/Shanghai",
+  "recorded_at": "2026-09-28T16:15:01+08:00",
+  "scope": "All supported content and maintenance files; excludes tmp, build, .git, caches, output/playwright, and snapshot files.",
+  "history_note": "",
+  "comparison": {
+    "previous_version": "v1.2.0",
+    "added": [
+      "按周划分/W3/Rappels_TD03_FR.pdf"
+    ],
+    "removed": [],
+    "modified": [
+      "CHANGELOG.md",
+      "README.md",
+      "测量理论_知识整合.html",
+      "知识整合/README.md",
+      "知识整合/browser-check.js",
+      "知识整合/course.json",
+      "知识整合/render.py",
+      "知识整合/构建记录.json",
+      "知识整合/校验记录.md"
+    ]
+  },
+  "file_count": 175,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "category": "maintenance",
+      "size_bytes": 10704,
+      "sha256": "8af5763b5571a62290aee3fc0b12ecdc357a3b6b7384f9255894f845c4b1d0c9"
+    },
+    {
+      "path": "output/pdf/TD02_前五题_原题与逐步解答.pdf",
+      "category": "derived_solution_or_source",
+      "size_bytes": 204552,
+      "sha256": "fe1f3b5e62908e2c4fe1afb7d92ca00a5cb1908cd309c3cdaa478ae2757e6e2b",
+      "pdf_pages": 7
+    },
+    {
+      "path": "output/source/TD02_前五题/body.tex",
+      "category": "derived_solution_or_source",
+      "size_bytes": 18628,
+      "sha256": "f31fb468021504059431682324780a645e5c95e377fec5133772fc9b3b79cda9"
+    },
+    {
+      "path": "output/source/TD02_前五题/build.py",
+      "category": "derived_solution_or_source",
+      "size_bytes": 1745,
+      "sha256": "dee50f6be641730c1fdd4f37810994b258d66e1a3a45d97ceecd39aa39357e83"
+    },
+    {
+      "path": "output/source/TD02_前五题/main.tex",
+      "category": "derived_solution_or_source",
+      "size_bytes": 1892,
+      "sha256": "9c41478411e23996f79f74701b69b42fdaa3963920552d203adf0da66b26e32c"
+    },
+    {
+      "path": "output/source/TD02_前五题/qa.py",
+      "category": "derived_solution_or_source",
+      "size_bytes": 4288,
+      "sha256": "06e3b8e722e46e00c2dac47cd19cf2f4ffafd4b9e1499df573384dae7109b0c0"
+    },
+    {
+      "path": "output/source/TD02_前五题/README.md",
+      "category": "derived_solution_or_source",
+      "size_bytes": 1893,
+      "sha256": "8ee74b07598681faceb0a9aad314bcbcf2b366f449d95d2161f6d77d97ec9ed7"
+    },
+    {
+      "path": "output/source/TD02_前五题/TD02_前五题_原题与逐步解答.md",
+      "category": "derived_solution_or_source",
+      "size_bytes": 17153,
+      "sha256": "19c9c0ecb5d18400845dce906dadc928af6c245c3b097c39251e16930c721263"
+    },
+    {
+      "path": "output/source/TD02_前五题/校验记录.json",
+      "category": "derived_solution_or_source",
+      "size_bytes": 1936,
+      "sha256": "d8c7be0f086419a7e1fd120e8016c51a0cfb82276ee8aa4fe487814d42e3d0cc"
+    },
+    {
+      "path": "output/source/TD02_前五题/校验记录.md",
+      "category": "derived_solution_or_source",
+      "size_bytes": 4163,
+      "sha256": "19b62f15ef3f9d08720129febb61034c442283d221fb8f7d4a0389c8a9f9219b"
+    },
+    {
+      "path": "README.md",
+      "category": "maintenance",
+      "size_bytes": 2015,
+      "sha256": "a409d6bcab3a5d63dacc1132861b978526bf1ad7f3cbac5af30c3b7acda9cff5"
+    },
+    {
+      "path": "参考html/概率论知识点总结_完整版收尾版.html",
+      "category": "design_reference",
+      "size_bytes": 305869,
+      "sha256": "dc995e06da4e7962f8e36676c9b8c16ecb254083f39f4696044e1c3c746620ec"
+    },
+    {
+      "path": "处理后_md/_conversion/build_md.py",
+      "category": "historical_transcription",
+      "size_bytes": 5756,
+      "sha256": "d7202e07ce99a4bf8ab0f52789f0535a648eea1e838da035556589c717a321ea"
+    },
+    {
+      "path": "处理后_md/_conversion/check_prose.py",
+      "category": "historical_transcription",
+      "size_bytes": 677,
+      "sha256": "06a1b5a554254abd386c00858125aadcbabfef4636ae9a2327d8fe71f8a6403b"
+    },
+    {
+      "path": "处理后_md/_conversion/extracted.json",
+      "category": "historical_transcription",
+      "size_bytes": 70591,
+      "sha256": "848b6d4b8875f14ecbfa3ec78dd6cb6e799d74974fc6d526078945db4cbb1e8e"
+    },
+    {
+      "path": "处理后_md/_conversion/render.py",
+      "category": "historical_transcription",
+      "size_bytes": 1117,
+      "sha256": "f6c9b442fd3b056df7d8a9380edb89835882e7959300d07fbfcabc73a2226ea0"
+    },
+    {
+      "path": "处理后_md/_conversion/validate.py",
+      "category": "historical_transcription",
+      "size_bytes": 3548,
+      "sha256": "6b45a8e9124640c47359a465cbe52fda923b3cf3f53c138cc66a51f0e04fd925"
+    },
+    {
+      "path": "处理后_md/manifest.json",
+      "category": "historical_transcription",
+      "size_bytes": 26047,
+      "sha256": "1ffe3398f5db5dfc342c56c7ace17a668d2ee90d6511cd6e3bb0559da9794955"
+    },
+    {
+      "path": "处理后_md/README.md",
+      "category": "historical_transcription",
+      "size_bytes": 3565,
+      "sha256": "3ca0ada698ca269da723269a5cfe0b85651018bf757d25e3c3fc424e09e863cf"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/extracted-original.json",
+      "category": "historical_transcription",
+      "size_bytes": 38472,
+      "sha256": "a9c7dc657d6c3d1e7df986bea0b32593bb9ac0d1dbb73ab5ced0619802d7059a"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-001.png",
+      "category": "historical_transcription",
+      "size_bytes": 47775,
+      "sha256": "77e3eb50724a09c92df6ef82a97da5319cc84d71e9f9d7064ed599062c8e8d76"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-002.png",
+      "category": "historical_transcription",
+      "size_bytes": 58863,
+      "sha256": "fc4278f20f246ddf68a562989f08aa82577ab98741c85f407ecfd232b0b2a1ac"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-003.png",
+      "category": "historical_transcription",
+      "size_bytes": 71963,
+      "sha256": "314d2b561354166c40bc33ee3739bfac48c10169c96e5eca191d3ced8d342ed4"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-004.png",
+      "category": "historical_transcription",
+      "size_bytes": 101650,
+      "sha256": "94689180946fead8befbd372cf592a8ba1bac19c61d9b867c110f9e22ab784e7"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-005.png",
+      "category": "historical_transcription",
+      "size_bytes": 96296,
+      "sha256": "546563f8c68ba7a6c12aa37b396d6d82ae04d844d5c68de33e3bba8c6e2abc4f"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-006.png",
+      "category": "historical_transcription",
+      "size_bytes": 75066,
+      "sha256": "5fa971a46e8ff73c66f8d20cc35ecd5cef27de84e9f7a26aa34623dc815fc0ee"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-007.png",
+      "category": "historical_transcription",
+      "size_bytes": 76854,
+      "sha256": "652ab77c2ae678316bca81f8548d2352413830f26a3b843a7c2d94fceac3eab5"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-008.png",
+      "category": "historical_transcription",
+      "size_bytes": 77528,
+      "sha256": "565abe86823fbd69cc4dfa8afeb62ce83ff27659641ec46b51dadbcfe3527225"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-009.png",
+      "category": "historical_transcription",
+      "size_bytes": 78468,
+      "sha256": "35ed234a48d71d05eba8af984a3e0d24291409a61f458d846a0df59d06f185f7"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-010.png",
+      "category": "historical_transcription",
+      "size_bytes": 79247,
+      "sha256": "1c9a7767a20ae23e48e6ad703d41c11318780cff010ba363ca2f7c6765000a56"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-011.png",
+      "category": "historical_transcription",
+      "size_bytes": 81155,
+      "sha256": "0f985164ea77fcd931055b3a45edc6626f0b6c19b7a267084a6a82ce0526f101"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-012.png",
+      "category": "historical_transcription",
+      "size_bytes": 101995,
+      "sha256": "7d6505984ca9a39add2afdb8927f05b477f51a7c4766ad151126ef28d52fe795"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-013.png",
+      "category": "historical_transcription",
+      "size_bytes": 78472,
+      "sha256": "20dd5549768bb422dd589f0b952e68e7eb81a8d1b27c00010baf27483bcc9e8c"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-014.png",
+      "category": "historical_transcription",
+      "size_bytes": 78242,
+      "sha256": "d69a8d950cdd6da351466a6f47990d5f081dfbe005b6121face7fe0bf2f1a9df"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-015.png",
+      "category": "historical_transcription",
+      "size_bytes": 97114,
+      "sha256": "18ae34e5dd4f000a60cef77ac78013edbb503f96cf360573db7e33c06ed16304"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-016.png",
+      "category": "historical_transcription",
+      "size_bytes": 50993,
+      "sha256": "c76f8d78819d8907dfa364e65713d9a97c4b729ea08855a5dfc0212bc9242d3b"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-017.png",
+      "category": "historical_transcription",
+      "size_bytes": 72028,
+      "sha256": "a70b527bd3cb6797ba2edef0327404b29fd8749a079e329e7ad3bbda5272b6ae"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-018.png",
+      "category": "historical_transcription",
+      "size_bytes": 75239,
+      "sha256": "d23f4373b559c301f891811877e52bd35568c2c2ddc1034aaaf14651fee817d7"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-019.png",
+      "category": "historical_transcription",
+      "size_bytes": 72498,
+      "sha256": "9f0a4f4f47e0573ec5b3e5483a0097e2f418802ac2a93e3478b398253b425940"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-020.png",
+      "category": "historical_transcription",
+      "size_bytes": 88987,
+      "sha256": "2a479c1b72251ba0296d9e9f55560060596682d15a043964614fba1f78d8f212"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-021.png",
+      "category": "historical_transcription",
+      "size_bytes": 60860,
+      "sha256": "f05fd1d8de657e35340a6305d51f19162e1d97ee3f50f6e82ffa26c8e2e60fa1"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-022.png",
+      "category": "historical_transcription",
+      "size_bytes": 93657,
+      "sha256": "abb4e66e0adbf6b6c7131be1cad619c43404768c96799c95716402524f39f7a9"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-023.png",
+      "category": "historical_transcription",
+      "size_bytes": 75228,
+      "sha256": "a1719287e913f473d596bd12964349cb6c3e939bc792a6293a9cd4585f4b65ca"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-024.png",
+      "category": "historical_transcription",
+      "size_bytes": 69635,
+      "sha256": "79e0a5e4aa14576cf0c0930f31fe04a45f3ff2f8f45076182a1f5fe7b97ca81e"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-025.png",
+      "category": "historical_transcription",
+      "size_bytes": 58323,
+      "sha256": "a46c5e18448038ac847f78b8897d4e6219120ca4c1f5ff29a14d7f686e0b3bd5"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-026.png",
+      "category": "historical_transcription",
+      "size_bytes": 59209,
+      "sha256": "1d1de26c217838fc2da89daab04772dab8e9651dbc681adff8c30e0340ffca7a"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-027.png",
+      "category": "historical_transcription",
+      "size_bytes": 63826,
+      "sha256": "ea5d8dffd1c0bcb77e84ffd0090d811ddd9a128f9c167b87698e0b7cb4752026"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-028.png",
+      "category": "historical_transcription",
+      "size_bytes": 61948,
+      "sha256": "12a56beaebfb7cbf6be02878c33ea8fb35a3517af5cb5d8341dd036534cbfece"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-029.png",
+      "category": "historical_transcription",
+      "size_bytes": 63239,
+      "sha256": "b517c21301fbc69aec2135d17ccee429584d5953913843d7ad11a5b376d74603"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-030.png",
+      "category": "historical_transcription",
+      "size_bytes": 74666,
+      "sha256": "edf576f4dcc9204118ff22d55929357ceb0c32689489bf7921b64b152d05dba5"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-031.png",
+      "category": "historical_transcription",
+      "size_bytes": 85189,
+      "sha256": "adea9b64453ab4b07f870d770a758d1935da29baf4a12b6adb652663dc6986dd"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-032.png",
+      "category": "historical_transcription",
+      "size_bytes": 88010,
+      "sha256": "cabc4da6b24d879879a0be0b4cc1c5abc553a45e1aeee05f6ef0b950ace82c31"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-033.png",
+      "category": "historical_transcription",
+      "size_bytes": 79127,
+      "sha256": "4abd0d99959206bb0f087d997f1cfc263842ec41981ebeb8fb110d562188f555"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-034.png",
+      "category": "historical_transcription",
+      "size_bytes": 66449,
+      "sha256": "7d13cf50c3b89ea26c212d6c3f7ef32e8add130cd9fcf81904edcd0d322696d1"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-035.png",
+      "category": "historical_transcription",
+      "size_bytes": 51085,
+      "sha256": "5269855a67c69a958a638787c1462401cecd1876a77e4903e78cba91f750d380"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-036.png",
+      "category": "historical_transcription",
+      "size_bytes": 78109,
+      "sha256": "175681e55d2142d7416c6ee1d547eb9880c41f22b522d2d32a6e22b5bde62899"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-037.png",
+      "category": "historical_transcription",
+      "size_bytes": 99374,
+      "sha256": "f30ca922cfe6ef4503b57d007f942913b6d3281719b809dfa21637c53ef4137a"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-038.png",
+      "category": "historical_transcription",
+      "size_bytes": 79500,
+      "sha256": "4f172d350be29990eeb27300d784da4f7f3cf7c4fefe1513fb19efab7c9459ba"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-039.png",
+      "category": "historical_transcription",
+      "size_bytes": 82696,
+      "sha256": "3c5e391cf9d108eaaaea2525a4a2e64a4016350e34d652d44ddf539aa06c9fc7"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-040.png",
+      "category": "historical_transcription",
+      "size_bytes": 80535,
+      "sha256": "91ea193d10d2d98e505d7e7dc291b0e67cc7445a1d73d6ca115d6439bc7825c2"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-041.png",
+      "category": "historical_transcription",
+      "size_bytes": 80424,
+      "sha256": "33ec6b657811bc76e514682a78aacbc4adcf1c8fb96a69a854785233639756fe"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-042.png",
+      "category": "historical_transcription",
+      "size_bytes": 50830,
+      "sha256": "6fcb4ac58efbf7ab4747b2b7a3b052038f1b72e04973e71b06ed0a0b2490b324"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-043.png",
+      "category": "historical_transcription",
+      "size_bytes": 73772,
+      "sha256": "a10ab2a245f90dd4830fd0d57d0cf65d0c4ad1cce9bc6ed8963f788fc055ff18"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-044.png",
+      "category": "historical_transcription",
+      "size_bytes": 59810,
+      "sha256": "23b1d9ca87a2f86b9ed77db56eb4bba4309d4d791b877c0801ae8b4a6ae298ca"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-045.png",
+      "category": "historical_transcription",
+      "size_bytes": 101173,
+      "sha256": "015fab8b8e5cce042a86e716985663494805ec0aa037b0222390e977b4629b54"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-046.png",
+      "category": "historical_transcription",
+      "size_bytes": 83258,
+      "sha256": "fb8c0c799722520fb120970e7047a899d54f5f4253b35a46930f6b39b57a08f6"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-047.png",
+      "category": "historical_transcription",
+      "size_bytes": 78434,
+      "sha256": "7a57311811ae00dbf7bd5e8a739770eb97089817e62fc4beb54ea8697c62a26c"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-048.png",
+      "category": "historical_transcription",
+      "size_bytes": 70472,
+      "sha256": "29040d5248e87f80d5edf92080ace92e0c8cf38e538f6cf613bccac3ab0ddb19"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-049.png",
+      "category": "historical_transcription",
+      "size_bytes": 59374,
+      "sha256": "667e8ebacb1b152bf7cf4d929a907d366cffbe5c64eda325f770bc5014ca8ffd"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-050.png",
+      "category": "historical_transcription",
+      "size_bytes": 57827,
+      "sha256": "816c6d7551427e62d3d9e4a49ac77a0dc11431d7e12936820f645905f5ef319a"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-051.png",
+      "category": "historical_transcription",
+      "size_bytes": 80671,
+      "sha256": "ef6fd9ff13b8a37f970842038f980a683959c798f18d7d8f413b2c8611f1a58b"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-052.png",
+      "category": "historical_transcription",
+      "size_bytes": 66767,
+      "sha256": "bdd0a31a48f0160925ac97b2cf8fd5f8bbd2881fb590a45e1e6e7b126e3264a6"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-053.png",
+      "category": "historical_transcription",
+      "size_bytes": 70817,
+      "sha256": "f299d1eb59a73a63e5562239d7ecd119d1817cdd8ed732f157cb43090448bed4"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-054.png",
+      "category": "historical_transcription",
+      "size_bytes": 76887,
+      "sha256": "fe665b1e8d5f5b2e57945617d313482922041c48d93925c4ebe360d6b6ff08f0"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-055.png",
+      "category": "historical_transcription",
+      "size_bytes": 95388,
+      "sha256": "a0f82f54322ec55bfc1419c2b91e3d8153dbf70426d210948ee5f0369c80a2a5"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-056.png",
+      "category": "historical_transcription",
+      "size_bytes": 74045,
+      "sha256": "7b04412e5ffa7283cf1308b6fb816fa8580f1de5ed13d7362f0b2553e7caa677"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-057.png",
+      "category": "historical_transcription",
+      "size_bytes": 86208,
+      "sha256": "b438502562e43f066c675e5f866deecaf5c273e2446a15e688f00644a2cdb3b7"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-058.png",
+      "category": "historical_transcription",
+      "size_bytes": 65657,
+      "sha256": "d6c5215f6dd36b38296daec0df3899af91c6903f6ef0ca8e88c46382598662fd"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-059.png",
+      "category": "historical_transcription",
+      "size_bytes": 77347,
+      "sha256": "f67e8db79e1860a3a7721b42d98cf92af9340c2658f7473a4f89e85955abeca5"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-060.png",
+      "category": "historical_transcription",
+      "size_bytes": 78263,
+      "sha256": "9f167bc929fab4211cacfb9174345a9c56910001045dbe2efc2c6b90661669fa"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-061.png",
+      "category": "historical_transcription",
+      "size_bytes": 97727,
+      "sha256": "2343c364e2b0436558f3dce550d7ee548f6518d7134acfe0af951610b9d1f376"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-062.png",
+      "category": "historical_transcription",
+      "size_bytes": 99277,
+      "sha256": "51c04af04753bef8cee92c5b9113799376f763c8c64667717eb1e75075f118a4"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-063.png",
+      "category": "historical_transcription",
+      "size_bytes": 95021,
+      "sha256": "8767ecfa471be231b492efbef3a211406e8f642b8fc1a90ff30cbc5e30dba2ab"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-064.png",
+      "category": "historical_transcription",
+      "size_bytes": 90782,
+      "sha256": "82a9dd25276232d7a693ddfb114d1cdcc2d123b61e97be7b4c8b18c8ae92b369"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-065.png",
+      "category": "historical_transcription",
+      "size_bytes": 86613,
+      "sha256": "4d812d60f406881eb81f56d121927096fe6908465862259d26c673123c105555"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-066.png",
+      "category": "historical_transcription",
+      "size_bytes": 91160,
+      "sha256": "dbf4b55e6be1e8677a6a93b27b9437987ebb186f28bffe62d11f4cd2677c27f1"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-067.png",
+      "category": "historical_transcription",
+      "size_bytes": 70683,
+      "sha256": "b032bd8c2b7325f1938ddd205293754eb5f147e8fa7ccc72f6303f98c6b2edd6"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-068.png",
+      "category": "historical_transcription",
+      "size_bytes": 78108,
+      "sha256": "9ab1370991108ae0630124a46a4fe866a4b4e04f1d84c129b88f78072936c674"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-069.png",
+      "category": "historical_transcription",
+      "size_bytes": 68513,
+      "sha256": "fb7c660565532cdfa840e88ff7489b04fb1f92bec8bf1733f7610c4a28d6614e"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-070.png",
+      "category": "historical_transcription",
+      "size_bytes": 65804,
+      "sha256": "4b23218fda310dc581488cc4b94afa7a6de054a6f386896886b472047ee5872a"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-071.png",
+      "category": "historical_transcription",
+      "size_bytes": 87576,
+      "sha256": "fe92a04143ffce9a2af5e713ea8e2afd2782978d923ef97f1f581d345fb43c5c"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-072.png",
+      "category": "historical_transcription",
+      "size_bytes": 110476,
+      "sha256": "65417f2840c5921d85ee502cbe2e52552b3f68c8862f63ddde153a54fee2533d"
+    },
+    {
+      "path": "处理后_md/W1/assets/CM1_ZFAI_chapitre1_FR/page-073.png",
+      "category": "historical_transcription",
+      "size_bytes": 79538,
+      "sha256": "b37c4aad6703f227edc2fa8ac41876b0ae889d6293b90f93fa25e16e52737f78"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/extracted-original.json",
+      "category": "historical_transcription",
+      "size_bytes": 14875,
+      "sha256": "285368deb7298ec1e36163df7e0cb019ff2a49a7b4c6a30334b2325442a8dfaa"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-001.png",
+      "category": "historical_transcription",
+      "size_bytes": 223855,
+      "sha256": "48aba4400072857a77e7c8f9a76eff38145c5b23509f8c219447a9d68260d1c8"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-002.png",
+      "category": "historical_transcription",
+      "size_bytes": 268353,
+      "sha256": "2568a6cc0f734323c7924373cef4bb6ab5342821f65d4bb4559537757a4a2877"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-003.png",
+      "category": "historical_transcription",
+      "size_bytes": 262568,
+      "sha256": "2c29f31d00c8b6826380abcc4f0619a1c7efb4519aaf4bc478ae9446ff4f9f5c"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-004.png",
+      "category": "historical_transcription",
+      "size_bytes": 302501,
+      "sha256": "c18fe9bac0ca7ec8e7b4143b1b635fda84801c4bff5dd49ada6daf08760601c5"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-005.png",
+      "category": "historical_transcription",
+      "size_bytes": 342847,
+      "sha256": "fc38f962310ed1df78b1d895450d4bfaf4e4aadc3c8791d19ad881c446bd41ba"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-006.png",
+      "category": "historical_transcription",
+      "size_bytes": 319562,
+      "sha256": "eaa52ac44ca02c0b3ec156afbe72d71b1711648f626f631ea47ecdd1bfe4d286"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_EN/page-007.png",
+      "category": "historical_transcription",
+      "size_bytes": 121569,
+      "sha256": "a40e5d8369fcd5bec621820382436a0b4917abb0f2840a7e1f1ffcc9b8fbcc8f"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/extracted-original.json",
+      "category": "historical_transcription",
+      "size_bytes": 15701,
+      "sha256": "c9f4e043c1b0b02ff6500126a3ce0812a5826ce0cd9b930792fda706955b7989"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-001.png",
+      "category": "historical_transcription",
+      "size_bytes": 230672,
+      "sha256": "a2a1e186845f6b82c9b177f4621216296644def96782f06ae58853806fdd4b2f"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-002.png",
+      "category": "historical_transcription",
+      "size_bytes": 284953,
+      "sha256": "d41794efcd2ed1ff9646a14dd5d984dc0948ce79a3a051e6743f683eb4b7c706"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-003.png",
+      "category": "historical_transcription",
+      "size_bytes": 266140,
+      "sha256": "d5c7869828fb7b0845e4d2a8a2e637f28687ff80dc8ee60c9af446f724fd48b2"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-004.png",
+      "category": "historical_transcription",
+      "size_bytes": 304665,
+      "sha256": "a327b330b9bbc5d58900a4e290beb1f1af1a7dbdf64ba0ea1ccc96b4863786bc"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-005.png",
+      "category": "historical_transcription",
+      "size_bytes": 353376,
+      "sha256": "6b8786d8f0a1c282f9a11ea2a798d986b04230c27cfeb92a9926989646e2fd6b"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-006.png",
+      "category": "historical_transcription",
+      "size_bytes": 328877,
+      "sha256": "fb3cb9b78ca41b24d67b2c1d674fae35db15ac44bda842cfd6e64b385dd357f1"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_FR/page-007.png",
+      "category": "historical_transcription",
+      "size_bytes": 124262,
+      "sha256": "880dcdd692dcf2389ff877c52865b253acb237eb3153917a60b2336bbabd3be8"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/extracted-original.json",
+      "category": "historical_transcription",
+      "size_bytes": 5908,
+      "sha256": "f7dcc7463717f459687ded51fd9ba82a46f9740dc902031949ff768cab91a82e"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-001.png",
+      "category": "historical_transcription",
+      "size_bytes": 51583,
+      "sha256": "5fe1cf0cd995f6901d65dce28e58ee1ec3df1c084c4af2078d8915e7025c7782"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-002.png",
+      "category": "historical_transcription",
+      "size_bytes": 64389,
+      "sha256": "bf4bcd65a6e84c37866ef025dc2099ecc7530e93fa8844a8ab98a7390007a99e"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-003.png",
+      "category": "historical_transcription",
+      "size_bytes": 86965,
+      "sha256": "4a3e6123b2fb1008c70663cee8184d88abf2df92c502edc6210b8eec02f01aa6"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-004.png",
+      "category": "historical_transcription",
+      "size_bytes": 84460,
+      "sha256": "cf5bcf360309a95ae425530f2ef3e51defd95a8d78485d96bf2aca996a3f2ece"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-005.png",
+      "category": "historical_transcription",
+      "size_bytes": 73359,
+      "sha256": "ffd6ad8e0cca9047c28c54f388e31699aaa169d8773047dedff3b9a76c84309b"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-006.png",
+      "category": "historical_transcription",
+      "size_bytes": 56627,
+      "sha256": "9cc18e6aa6596cbe4767df31c893b5648c176c7427c2c73c190995cbfe98eae8"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-007.png",
+      "category": "historical_transcription",
+      "size_bytes": 53379,
+      "sha256": "bc362d6fa393fbdaf8e2d205d5fb4cde52c5299751bfe5dc6de72b157032bbd2"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-008.png",
+      "category": "historical_transcription",
+      "size_bytes": 67455,
+      "sha256": "06a41291e58c74733dbfc0d88a04893eba6242a75430abdb3786edc288d85e80"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-009.png",
+      "category": "historical_transcription",
+      "size_bytes": 73391,
+      "sha256": "55902884fb35e3622cc3de0e8acf47a570a5529246ba6abe34b6b3948f2c4d25"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-010.png",
+      "category": "historical_transcription",
+      "size_bytes": 77405,
+      "sha256": "92565d8d46f7bbcfd64da7bd120a1cbb29d50053d583384c2f600c51c49cc885"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-011.png",
+      "category": "historical_transcription",
+      "size_bytes": 63991,
+      "sha256": "dc57f78a30df6b169c52df856776337c682b4bdc10def63ddbe832bd14760e42"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-012.png",
+      "category": "historical_transcription",
+      "size_bytes": 70527,
+      "sha256": "a2dba151cc6b2159ff3cc180e366e0b8847f51e6fb49b29f68f6b685e1d7cae4"
+    },
+    {
+      "path": "处理后_md/W1/assets/TD01_rappels_cours_FR/page-013.png",
+      "category": "historical_transcription",
+      "size_bytes": 69774,
+      "sha256": "3e3d1fc50180fcab66c5d8418d530abe2215ba9ac3d0cb251d6f29c3804c6e1f"
+    },
+    {
+      "path": "处理后_md/W1/CM1_ZFAI_chapitre1_FR.md",
+      "category": "historical_transcription",
+      "size_bytes": 53139,
+      "sha256": "86f165f78cef3789e070459fbf413bc72877395081ad575604de4281b67e5218"
+    },
+    {
+      "path": "处理后_md/W1/TD01_EN.md",
+      "category": "historical_transcription",
+      "size_bytes": 17584,
+      "sha256": "2ab773be2623377dd2ef10374325e086c48c87d4d200d05054c3e92c3ddb0368"
+    },
+    {
+      "path": "处理后_md/W1/TD01_FR.md",
+      "category": "historical_transcription",
+      "size_bytes": 18676,
+      "sha256": "66441b2ae0c5ba9ff7c6405f973e6b37e067bf9ca1e3cbceb8b8593fc08f0b92"
+    },
+    {
+      "path": "处理后_md/W1/TD01_rappels_cours_FR.md",
+      "category": "historical_transcription",
+      "size_bytes": 8870,
+      "sha256": "d6c2cd42108896e2bb466b8800ff09cea97f414e5757cbd169cd6c2c8777b0ee"
+    },
+    {
+      "path": "处理后_md/校验记录.md",
+      "category": "historical_transcription",
+      "size_bytes": 1388,
+      "sha256": "7ba1dffb0fc3939425ef22c896d448f794d40f72a500031b9ae758041d182b03"
+    },
+    {
+      "path": "按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 590868,
+      "sha256": "699cad327e3667679e4ce3c12d42bdaf53d575f048d1a5838301e38cb63f0dba",
+      "pdf_pages": 73
+    },
+    {
+      "path": "按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "category": "source_pdf",
+      "size_bytes": 359062,
+      "sha256": "b508db4edcd18d558684142190eff83e4b11b7ec38f9cd6fd279c60395e5f87b",
+      "pdf_pages": 17
+    },
+    {
+      "path": "按周划分/W1/TD01_EN.pdf",
+      "category": "source_pdf",
+      "size_bytes": 270116,
+      "sha256": "454e2bad387315883c105cbc0e55ff31ef8bcb1d1a0994301da06fc6076e9691",
+      "pdf_pages": 7
+    },
+    {
+      "path": "按周划分/W1/TD01_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 274907,
+      "sha256": "606ddf6771970798a9437713b1b3cc3c5ced169c4b6face0aa8c3fdbd9dc47ef",
+      "pdf_pages": 7
+    },
+    {
+      "path": "按周划分/W1/TD01_rappels_cours_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 102324,
+      "sha256": "f1bf013c6047a6e263578a055d046887fd299092a563b68264d54e5bacdcb675",
+      "pdf_pages": 13
+    },
+    {
+      "path": "按周划分/W1/TD01_原题与中文详解.pdf",
+      "category": "derived_solution",
+      "size_bytes": 408779,
+      "sha256": "f4a98203ed2c104bd4c32d1cfad4a5d0f5a89fedf07dd302c4c4ea52eede13c8",
+      "pdf_pages": 30
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/body.tex",
+      "category": "maintenance",
+      "size_bytes": 60982,
+      "sha256": "e769d52b552254ab81c2c430340d519d0ac7e929847f5799b4b13dbf7ea08082"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/build.py",
+      "category": "maintenance",
+      "size_bytes": 8431,
+      "sha256": "719504263d9a5f4f75557c576b2edf7ec4f27cdb7e7b6e0bf77675becab1165f"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/exercise_inventory.json",
+      "category": "maintenance",
+      "size_bytes": 4449,
+      "sha256": "8b43a8f5049885898898faf24f6d73a8b1d8cc88a84c59226858ec3f60edb786"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/main.tex",
+      "category": "maintenance",
+      "size_bytes": 1869,
+      "sha256": "b5e6c1297308684a00cf1298fdbaff966491396e3794c811d1dfc7e25937e26a"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/qa.py",
+      "category": "maintenance",
+      "size_bytes": 1949,
+      "sha256": "1c9ce20524c2d18e9a8f37f9099197d69545eee652bf0150dfab5ad586ac669d"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/README.md",
+      "category": "maintenance",
+      "size_bytes": 1337,
+      "sha256": "3333b5630d5b73dd21d15611c98e966e73e4dcedccf2c419bdb26d850de17627"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/solutions.md",
+      "category": "maintenance",
+      "size_bytes": 33006,
+      "sha256": "498a215ed2500ffd53abafa7dc84b842ee57ec61d31bc5055fc51bbdc41d069c"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/TD01_原题与中文详解.md",
+      "category": "maintenance",
+      "size_bytes": 54466,
+      "sha256": "70fd563e39ef5ec3c3d60e55c8f34d2518250741cc1a8300f82a55d9f9c9c2d8"
+    },
+    {
+      "path": "按周划分/W1/TD01_详解源文件/校验记录.json",
+      "category": "maintenance",
+      "size_bytes": 5093,
+      "sha256": "c829b49f256b7ce0d723d26dbf72542244857fd97b3ea35926ee4ea32eca291d"
+    },
+    {
+      "path": "按周划分/W2/05d3bfab3fba9fdf7d4b6cb7311b4574_4711173919059858534_m.docx",
+      "category": "maintenance",
+      "size_bytes": 161760,
+      "sha256": "924f4abac2887964175be3d58893eddb7d481050d2e9ffe192c6e76fa7f0d51c"
+    },
+    {
+      "path": "按周划分/W2/CM1_ZFAI_chapter1_EN.pdf",
+      "category": "source_pdf",
+      "size_bytes": 588187,
+      "sha256": "991e99660a1f5be34e46e4f06780684fa06995bec295160c6395fb2fd4f5dd51",
+      "pdf_pages": 73
+    },
+    {
+      "path": "按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 812979,
+      "sha256": "b1ab000990c80622ae2079c299f30de7ecc060e0d86833f7ebae38804a1bc249",
+      "pdf_pages": 88
+    },
+    {
+      "path": "按周划分/W2/TD02_course_reminders_EN.pdf",
+      "category": "source_pdf",
+      "size_bytes": 79416,
+      "sha256": "81f88215914a1f5b5437ac342ab9f8123b80094eeaa2296abf059b5521d7b12e",
+      "pdf_pages": 10
+    },
+    {
+      "path": "按周划分/W2/TD02_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 206604,
+      "sha256": "2af330be7e729165bb09b26121eeea7adee20ba45f82ebb99d0a1b437916e0ee",
+      "pdf_pages": 6
+    },
+    {
+      "path": "按周划分/W2/TD02_rappels_cours_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 78958,
+      "sha256": "95003808fe2be7efac90cdb8eb1bf10b8411dcb414850266e92bcd9a0301b545",
+      "pdf_pages": 10
+    },
+    {
+      "path": "按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 698367,
+      "sha256": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+      "pdf_pages": 84
+    },
+    {
+      "path": "按周划分/W3/CM3_ZFAI_Lebesgue_integral_EN.pdf",
+      "category": "source_pdf",
+      "size_bytes": 1109517,
+      "sha256": "e754d5baf29c23f7681adc6f6f412aa817bf1bf125a6a877a98c412fd14d0a10",
+      "pdf_pages": 85
+    },
+    {
+      "path": "按周划分/W3/Rappels_TD03_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 321841,
+      "sha256": "94bcc627b14edd4ca34959efa31764e96c977dfeec20d3f706d93399058be331",
+      "pdf_pages": 11
+    },
+    {
+      "path": "按周划分/W3/TD03_FR.pdf",
+      "category": "source_pdf",
+      "size_bytes": 210050,
+      "sha256": "2804ac8893f1adb2104b986380f4c4644c32600a675c45333b65ca4ac6d3cde9",
+      "pdf_pages": 6
+    },
+    {
+      "path": "测量理论_知识整合.html",
+      "category": "knowledge_reader",
+      "size_bytes": 7909171,
+      "sha256": "a436762101f5c58f6e687c58cc008ecd6676043c960e54fe7dde5f1155a4a06b"
+    },
+    {
+      "path": "知识整合/assets/app.js",
+      "category": "knowledge_reader",
+      "size_bytes": 4269,
+      "sha256": "09ef47ce6e063d079d04ce8c6dbfceecb2f56448a7d3d9fa93c78dfd5ece617d"
+    },
+    {
+      "path": "知识整合/assets/GUST-FONT-LICENSE.TXT",
+      "category": "knowledge_reader",
+      "size_bytes": 1377,
+      "sha256": "49ea6cb9257bbee0a3979c48a774cd221550ac1c20c95549efe45fc99cc18050"
+    },
+    {
+      "path": "知识整合/assets/style.css",
+      "category": "knowledge_reader",
+      "size_bytes": 14002,
+      "sha256": "dede126ff526953e8f502b60e16c1da6f258a1ecacb3e146a073679a6315d761"
+    },
+    {
+      "path": "知识整合/browser-check.js",
+      "category": "knowledge_reader",
+      "size_bytes": 3687,
+      "sha256": "3b39009c64d913a226b6b1f02f9e4ec9687da15fa56e87df1fe27646c795d56e"
+    },
+    {
+      "path": "知识整合/build.py",
+      "category": "knowledge_reader",
+      "size_bytes": 9806,
+      "sha256": "c034d3290e8409419dad012515aeb31aa7df2e31aab999f954fca1d2f54b4bf9"
+    },
+    {
+      "path": "知识整合/content/01-exterior.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 7888,
+      "sha256": "93928d1b5b5113910b806cece8f23385096faa434cd36cd25a544552035eefc5"
+    },
+    {
+      "path": "知识整合/content/02-tribus.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 5802,
+      "sha256": "8443ff388389594bacee499dd5599329ae6d476c7b4f0bf8e38449d98fa9a1ca"
+    },
+    {
+      "path": "知识整合/content/03-measures.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 7496,
+      "sha256": "c53e2fa82a2fda85e0a80ef20ae33dbc5ec0af77fd482144298e89b708c98723"
+    },
+    {
+      "path": "知识整合/content/04-functions.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 6909,
+      "sha256": "f4daf335664fd9d3ed1c561b3fa9304bf0fa6596024ca8cc0ee5a8593192ea9f"
+    },
+    {
+      "path": "知识整合/content/05-td2.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 1275,
+      "sha256": "6f10e66e59d39ab4fba3f29e2dcdf68059bc49333811e7b5a831cdcdef306349"
+    },
+    {
+      "path": "知识整合/course.json",
+      "category": "knowledge_reader",
+      "size_bytes": 3626,
+      "sha256": "940c68545981db36824fbc037a610ab07a467b627c321bbd33a5ab8379ea5dfe"
+    },
+    {
+      "path": "知识整合/final-check.js",
+      "category": "knowledge_reader",
+      "size_bytes": 1125,
+      "sha256": "67c1941d33d5e7312ff3b3bebfcf09ce3659cd814a626e3601e6110d3390617d"
+    },
+    {
+      "path": "知识整合/README.md",
+      "category": "knowledge_reader",
+      "size_bytes": 7758,
+      "sha256": "d2fbb3b1890e5946016e9fcea91c78853cdd602a0918dedc3af0cc2eb0391726"
+    },
+    {
+      "path": "知识整合/render.py",
+      "category": "knowledge_reader",
+      "size_bytes": 9669,
+      "sha256": "2c607207b40a4ef343079560452bd1def763b5dc53298433cc05e667631e5e00"
+    },
+    {
+      "path": "知识整合/validate.py",
+      "category": "knowledge_reader",
+      "size_bytes": 2476,
+      "sha256": "388c0ec8e458ed353376ecdd2efa3c6f802bf8e011550d2c81d56ef9d61b2792"
+    },
+    {
+      "path": "知识整合/排版配置.tex",
+      "category": "knowledge_reader",
+      "size_bytes": 910,
+      "sha256": "94957d8f08dc1712ad26562baa8400fa98948dc2b48390ceac23048c2f73ca40"
+    },
+    {
+      "path": "知识整合/构建记录.json",
+      "category": "knowledge_reader",
+      "size_bytes": 1203,
+      "sha256": "c821c65c84b48628c3db110a0fce098d5b0acf72ebc32c158db2185a61107cfe"
+    },
+    {
+      "path": "知识整合/校验记录.md",
+      "category": "knowledge_reader",
+      "size_bytes": 5066,
+      "sha256": "4f168d65a5db2130dfc73281bb11eb7bef1add8ecfc00fbaa56c63ad7f53c4b8"
+    },
+    {
+      "path": "知识整合/浏览器补充校验.json",
+      "category": "knowledge_reader",
+      "size_bytes": 182,
+      "sha256": "97e9e408ca85b45457c66e5f2581e67792fac2cf13e882156dd9ca3d83bde758"
+    },
+    {
+      "path": "知识整合/静态校验记录.json",
+      "category": "knowledge_reader",
+      "size_bytes": 291,
+      "sha256": "f2ff558c8782aae835c7ed128f3f4317bdf0c89a96233ca0f3b08661f149a57e"
+    },
+    {
+      "path": "维护记录/snapshot.py",
+      "category": "maintenance",
+      "size_bytes": 3940,
+      "sha256": "922cd214742f6bcbceeaabb36ab62fca4bf8e01621af2d8cf00c0ac7bc8880a4"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+% 正文、公式、证明共享此文件。字体路径由构建脚本注入。
+\usepackage{fontspec,xeCJK,unicode-math}
+\setmainfont{lmroman10-regular.otf}[Path=\FontRoot/lm/,
+  BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,
+  BoldItalicFont=lmroman10-bolditalic.otf]
+\setmathfont{latinmodern-math.otf}[Path=\FontRoot/lm-math/]
+\setCJKmainfont{SimSun}[AutoFakeBold=2]
+\usepackage{amsmath,xcolor,enumitem}
+\definecolor{ink}{HTML}{202633}
+\definecolor{muted}{HTML}{5C665E}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{1.2em}
+\linespread{1.17}
+\setlist{leftmargin=1.7em,itemsep=3pt,topsep=4pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\B}{\mathcal B}
+\newcommand{\T}{\mathcal T}
+\newcommand{\M}{\mathcal M}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\dep}[1]{\par{\small\color{muted}〔依据：#1〕}\par}

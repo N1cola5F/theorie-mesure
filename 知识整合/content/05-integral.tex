@@ -1,0 +1,389 @@
+% @card {"id":"almost-everywhere","type":"definition","title":"几乎处处：允许一个零测例外集","fr":"Presque partout · p.p.","refs":[["cm3",9,9],["cm3",56,56],["w4",54,54]],"requires":["measure-definition","null-sets"]}
+在 $(E,\T,\mu)$ 上，性质在某个可测零测集 $N$ 之外成立，称它 $\mu$-几乎处处成立，记为 $\mu$-p.p. 或 $\mu$-a.e.。
+\[
+f=g\ \mu\text{-p.p.}
+\quad\Longleftrightarrow\quad
+\mu(\{f\ne g\})=0
+\]
+上式用于可测实值函数 $f,g$。例如对 Lebesgue 测度，$\mathbf1_{\Q}=0$ 几乎处处，但不处处相等。
+
+\textbf{条件边界：}几乎处处依赖所选测度。计数测度下只有空集零测；对 $\delta_a$，只需核对点 $a$。
+
+在一般未完备的测度空间上，任意修改零测集内的值不一定保持可测性。因此后续结论仍明确要求函数可测。
+% @end
+
+% @card {"id":"simple-integral","type":"definition","title":"第一步：非负简单函数的积分","fr":"Intégrale d’une fonction étagée positive","refs":[["cm3",43,44],["cm3",49,49],["r3",6,6],["w4",49,50]],"requires":["simple-functions","measure-properties","extended-real-line"]}
+设 $(A_k)_{k=1}^m$ 是可测分割，$a_k\ge0$ 为有限实数，且
+\[
+s=\sum_{k=1}^m a_k\mathbf1_{A_k}.
+\]
+定义
+\[
+\int_E s\,\dd\mu=\sum_{k=1}^m a_k\mu(A_k).
+\]
+采用 $0\cdot\infty=0$；积分可以为 $+\infty$。特别地，$\int_E\mathbf1_A\,\dd\mu=\mu(A)$。
+% @proof
+\textbf{与表示无关。}若另有分割 $(B_j)$，取共同细分 $A_i\cap B_j$。每个非空交块上两种表示的函数值相同；用有限可加性展开各块测度，得到相同的和。
+\dep{简单函数定义；测度有限可加性；CM3 第 43 页。}
+
+\textbf{单调性。}若 $0\le s\le t$，在共同细分的每个非空块上逐项比较系数，再乘以非负测度并求和，得到 $\int s\le\int t$。同理得到非负简单函数的可加性及非负齐次性。
+\dep{共同细分；非负有限和；CM3 第 49 页。}
+% @end
+
+% @card {"id":"positive-integral","type":"definition","title":"第二步：非负可测函数的积分","fr":"Définition par borne supérieure","refs":[["cm3",47,48],["r3",8,8],["w4",50,51]],"requires":["simple-integral","simple-approximation"]}
+对可测函数 $f:E\to[0,+\infty]$，定义
+\[
+\int_E f\,\dd\mu
+=\sup_{\substack{0\le s\le f\\s\text{ 为简单函数}}}
+\int_E s\,\dd\mu.
+\]
+该上确界在 $[0,+\infty]$ 中总有定义。非负函数“积分存在”不代表积分有限。
+
+\textbf{基本比较：}若 $0\le f\le g$，则 $\int f\,\dd\mu\le\int g\,\dd\mu$。
+% @proof
+固定任意非负简单函数 $s\le f$。由 $s\le g$，$\int s\,\dd\mu$ 是定义 $\int g\,\dd\mu$ 时参与取上确界的一个值。因此
+\[
+\int s\,\dd\mu\le\int g\,\dd\mu.
+\]
+再对所有 $s\le f$ 取上确界即可。
+\dep{积分的上确界定义；CM3 第 48 页。}
+
+当 $f$ 本身简单时，下方简单函数的积分不超过 $\int f$，而 $s=f$ 可以取到该值。因此新定义与第一步一致。
+\dep{简单函数积分的单调性。}
+% @end
+
+% @card {"id":"monotone-convergence","type":"theorem","title":"单调收敛：从下方逼近后交换极限","fr":"Théorème de Beppo–Levi","refs":[["cm3",50,51],["cm3",65,66],["w4",59,60]],"requires":["positive-integral","increasing-continuity","measurable-limits"]}
+若 $f_n:E\to[0,+\infty]$ 可测且 $f_n\uparrow f$，则
+\[
+\int_E f\,\dd\mu=\lim_{n\to\infty}\int_E f_n\,\dd\mu.
+\]
+不要求各函数可积，也不要求 $\mu(E)<\infty$；两边均可为 $+\infty$。
+
+当 $f_n$ 是递增简单逼近时，这也是讲义命题 5.13，说明积分等于任一此类逼近的积分极限。
+% @proof
+\textbf{1. 上界。}由单调性，积分序列递增，极限 $L$ 存在，且 $L\le\int f\,\dd\mu$。
+\dep{非负积分单调性。}
+
+\textbf{2. 反向比较。}固定简单函数 $0\le s\le f$ 和 $0<c<1$，令 $E_n=\{f_n\ge cs\}$。当 $s(x)>0$ 时，$f(x)\ge s(x)>cs(x)$；当 $s(x)=0$ 时该条件恒成立。因此 $E_n\uparrow E$，且
+\[
+c\int_E s\mathbf1_{E_n}\,\dd\mu
+\le\int_E f_n\,\dd\mu\le L.
+\]
+\dep{逐点递增收敛；阈值可测性；积分单调性。}
+
+\textbf{3. 取两次极限。}写 $s=\sum_j a_j\mathbf1_{A_j}$，用测度递增连续性得
+\[
+\begin{aligned}
+\int s\mathbf1_{E_n}\,\dd\mu
+&=\sum_j a_j\mu(A_j\cap E_n)\\
+&\longrightarrow\sum_j a_j\mu(A_j)=\int s\,\dd\mu.
+\end{aligned}
+\]
+故 $c\int s\le L$。先令 $c\uparrow1$，再对 $s\le f$ 取上确界，得到 $\int f\le L$。
+\dep{简单函数积分；测度递增连续性；非负积分定义。}
+% @end
+
+% @card {"id":"measure-integral-examples","type":"example","title":"同一种积分，三种测度","fr":"Lebesgue · Comptage · Dirac","refs":[["cm3",8,8],["cm3",45,46],["r3",6,6],["w4",49,54]],"requires":["simple-integral","monotone-convergence","point-atoms"]}
+同一个函数的积分取决于测度。对非负可测函数，
+\[
+\int_{\N} f\,\dd\#=\sum_{n\ge0}f(n),
+\qquad
+\int_{\R}f\,\dd\delta_a=f(a).
+\]
+对可积的有符号函数也成立；计数测度下可积等价于绝对可求和。
+
+讲义中的 Lebesgue 例子为
+\[
+f=2\mathbf1_{[0,1]}+3\mathbf1_{\Q\cap[1,4]},
+\qquad \int_{\R}f\,\dd\lambda=2.
+\]
+有理数部分零测；重叠点 $1$ 也零测。
+% @proof
+计数测度下，先用有限截断写积分为部分和，再用单调收敛。Dirac 测度下，简单函数的积分只保留含 $a$ 的分割块；对一般非负函数用简单逼近和单调收敛。
+\dep{简单函数积分；简单逼近定理；单调收敛定理。}
+% @end
+
+% @card {"id":"signed-integral","type":"definition","title":"第三步：正负部与可积性","fr":"Parties positive et négative · Intégrabilité","refs":[["cm3",52,54],["r3",10,10],["w4",53,54]],"requires":["positive-integral","measurable-operations"]}
+对可测实值函数，令
+\[
+\begin{gathered}
+f^+=\max(f,0),\qquad f^-=\max(-f,0),\\
+f=f^+-f^-,\qquad |f|=f^++f^-.
+\end{gathered}
+\]
+若 $\int f^+$、$\int f^-$ 至少一个有限，可定义
+\[
+\int f\,\dd\mu=\int f^+\,\dd\mu-\int f^-\,\dd\mu.
+\]
+两者都无限时，Lebesgue 积分没有定义。
+
+\textbf{可积}要求 $\int|f|\,\dd\mu<\infty$，等价于正、负部积分均有限，此时积分为有限实数。记可积函数类为 $L^1(\mu)$；按几乎处处相等取商的结构留待后续章节。
+% @end
+
+% @card {"id":"integral-properties","type":"proposition","title":"线性、单调性与积分三角不等式","fr":"Linéarité · Monotonie","refs":[["cm3",58,59],["w4",55,56]],"requires":["signed-integral","monotone-convergence"]}
+对可积实值函数 $f,g$ 和 $a,b\in\R$，
+\[
+\int(af+bg)\,\dd\mu
+=a\int f\,\dd\mu+b\int g\,\dd\mu.
+\]
+若 $f\le g$，则 $\int f\le\int g$；特别地，
+\[
+\left|\int f\,\dd\mu\right|\le\int|f|\,\dd\mu.
+\]
+非负函数的可加性及非负齐次性可在扩展非负实数中使用。不能借线性形式制造 $\infty-\infty$。
+% @proof
+\textbf{非负情形。}分别取简单逼近 $s_n\uparrow f$、$t_n\uparrow g$，则 $s_n+t_n\uparrow f+g$。简单函数层面的可加性通过单调收敛传到一般非负函数；齐次性类似。
+\dep{简单逼近；简单积分性质；单调收敛。}
+
+\textbf{可积情形。}先由 $|af+bg|\le|a||f|+|b||g|$ 得到可积性，再用正负部展开。由 $-\,|f|\le f\le|f|$ 与单调性得到三角不等式。
+\dep{正负部定义；非负积分单调性与可加性。}
+% @end
+
+% @card {"id":"integral-on-sets","type":"proposition","title":"在可测集上积分与加权测度","fr":"Intégration sur un ensemble","refs":[["cm3",55,55],["cm3",60,60],["w4",54,54]],"requires":["positive-integral","integral-series"]}
+对可测集 $A$，在积分有定义时记
+\[
+\int_A f\,\dd\mu:=\int_E f\mathbf1_A\,\dd\mu.
+\]
+若 $f\ge0$ 可测，$A_n$ 两两不交，则
+\[
+\int_{\bigcup_n A_n}f\,\dd\mu
+=\sum_n\int_{A_n}f\,\dd\mu.
+\]
+因此 $\nu(A)=\int_A f\,\dd\mu$ 是一个测度。对有符号可积 $f$，上述不交分解仍成立，且右侧绝对收敛。
+% @proof
+两两不交保证 $f\mathbf1_{\bigcup A_n}=\sum_n f\mathbf1_{A_n}$。非负情形应用级数与积分交换；空集积分为零。对可积函数分别处理正负部，且
+\[
+\sum_n\left|\int_{A_n}f\,\dd\mu\right|
+\le\int_E|f|\,\dd\mu<\infty.
+\]
+\dep{示性函数恒等式；非负级数积分公式；积分三角不等式。加权测度为直接推论。}
+% @end
+
+% @card {"id":"zero-integral","type":"theorem","title":"非负积分为零与几乎处处相等","fr":"Intégrale nulle · Égalité p.p.","refs":[["cm3",61,62],["r3",9,9],["w4",57,57]],"requires":["almost-everywhere","positive-integral","integral-properties"]}
+对非负可测函数 $f$，
+\[
+\int f\,\dd\mu=0
+\quad\Longleftrightarrow\quad f=0\ \mu\text{-p.p.}
+\]
+若可测实值函数 $f,g$ 几乎处处相等，且其中之一可积，则另一个也可积，且积分相等。
+
+\textbf{不可漏掉非负性：}有正负抵消时，积分为零不能推出函数几乎处处为零。
+% @proof
+\textbf{必要性。}令 $A_n=\{f\ge1/n\}$，则
+\[
+\frac1n\mu(A_n)\le\int f\,\dd\mu=0.
+\]
+于是每个 $A_n$ 零测，而 $\{f>0\}=\bigcup_n A_n$ 仍零测。
+\dep{单调性；示性函数积分；可数个零测集的并零测。}
+
+\textbf{充分性与不变性。}若 $f$ 仅在可测零测集上非零，则任意 $0\le s\le f$ 的非零水平集均零测，故 $\int s=0$；取上确界得 $\int f=0$。再将一般函数分为零测集及其补集上的部分，分别处理正负部，即得几乎处处不变性。
+\dep{简单积分定义；上确界定义；非负可加性；正负部。}
+% @end
+
+% @card {"id":"integrability-criteria","type":"proposition","title":"比较判别与有限测度上的有界函数","fr":"Critères d’intégrabilité","refs":[["cm3",63,63],["r3",9,9],["w4",57,58]],"requires":["signed-integral","zero-integral","integral-properties"]}
+若 $f$ 可测、$g\ge0$ 可积，且 $|f|\le g$ 几乎处处，则
+\[
+\int|f|\,\dd\mu\le\int g\,\dd\mu<\infty,
+\]
+所以 $f$ 可积。
+
+若 $\mu(E)<\infty$ 且 $|f|\le M<\infty$ 几乎处处，则 $\int|f|\,\dd\mu\le M\mu(E)$。
+
+\textbf{边界：}“有界”本身不够。$\R$ 上的常值函数 $1$ 有界，但 $\int_{\R}1\,\dd\lambda=\infty$。
+\dep{积分单调性；几乎处处不变性；常数函数积分。}
+% @end
+
+% @card {"id":"riemann-lebesgue","type":"proposition","title":"Lebesgue 积分与 Riemann 积分","fr":"Lien avec l’intégrale de Riemann","refs":[["cm3",57,57]],"requires":["signed-integral","zero-integral","borel-lebesgue"]}
+若 $f:[a,b]\to\R$ Riemann 可积，则它关于完备 Lebesgue 测度也可积，且
+\[
+\int_a^b f(x)\,\dd x=\int_{[a,b]}f\,\dd\lambda.
+\]
+反向不成立：$\mathbf1_{\Q\cap[0,1]}$ 在每一点不连续，故不 Riemann 可积，却满足
+\[
+\int_{[0,1]}\mathbf1_{\Q}\,\dd\lambda=0.
+\]
+注意：一般 Riemann 可积函数保证 Lebesgue 可测，未必 Borel 可测；此处采用 Lebesgue 完备化。
+\dep{讲义第 57 页；Riemann 可积的零测不连续集判据（基础分析）；可数集零测。}
+% @end
+
+% @card {"id":"integral-series","type":"theorem","title":"非负级数可与积分交换","fr":"Séries de fonctions positives","refs":[["cm3",67,67],["w4",60,61]],"requires":["monotone-convergence","integral-properties"]}
+若每个 $f_n\ge0$ 可测，则
+\[
+\int_E\left(\sum_{n\ge0}f_n\right)\dd\mu
+=\sum_{n\ge0}\int_E f_n\,\dd\mu.
+\]
+不要求右侧有限。
+
+有符号函数不能直接套用此结论。一条充分条件是 $\sum_n\int|f_n|\,\dd\mu<\infty$；此时级数几乎处处绝对收敛，也可交换求和与积分。
+% @proof
+对非负情形，部分和 $S_N=\sum_{n=0}^Nf_n$ 递增。有限可加性给出 $\int S_N=\sum_{n=0}^N\int f_n$，再用单调收敛。
+\dep{非负积分线性；单调收敛定理。}
+
+有符号情形先对 $\sum_n|f_n|$ 用已证结论，得到可积控制函数；再对 $S_N$ 用控制收敛。
+\dep{非负级数结论；可积非负函数几乎处处有限；控制收敛。此处为补充推论。}
+% @end
+
+% @card {"id":"fatou","type":"theorem","title":"Fatou：无需单调的单向估计","fr":"Lemme de Fatou","refs":[["cm3",68,69],["w4",61,61]],"requires":["monotone-convergence","measurable-limits"]}
+若 $f_n\ge0$ 可测，则
+\[
+\int_E\liminf_{n\to\infty}f_n\,\dd\mu
+\le\liminf_{n\to\infty}\int_E f_n\,\dd\mu.
+\]
+不要求单调、不要求可积控制函数；一般只能得到这个方向的不等式。
+% @proof
+令 $g_n=\inf_{k\ge n}f_k$。则 $g_n$ 可测，且
+\[
+0\le g_n\uparrow\liminf_n f_n.
+\]
+对每个 $k\ge n$ 都有 $g_n\le f_k$，故
+\[
+\int g_n\,\dd\mu\le\inf_{k\ge n}\int f_k\,\dd\mu.
+\]
+左侧由单调收敛趋于 $\int\liminf f_n$；右侧的极限就是 $\liminf\int f_n$。
+\dep{可数下确界可测；积分单调性；单调收敛。}
+% @end
+
+% @card {"id":"dominated-convergence","type":"theorem","title":"控制收敛：一个共同的可积上界","fr":"Théorème de convergence dominée","refs":[["cm3",70,71],["cm3",82,82],["w4",62,63]],"requires":["fatou","integrability-criteria","zero-integral"]}
+设 $f_n,f$ 为可测实值函数，$f_n\to f$ 几乎处处，并存在与 $n$ 无关的非负 $g\in L^1(\mu)$，使所有 $n$ 都满足 $|f_n|\le g$ 几乎处处。则
+\[
+\begin{gathered}
+f_n,f\in L^1(\mu),\\
+\int|f_n-f|\,\dd\mu\longrightarrow0,\\
+\int f_n\,\dd\mu\longrightarrow\int f\,\dd\mu.
+\end{gathered}
+\]
+逐项各有一个上界不够；必须给出同一个可积控制函数。
+% @proof
+\textbf{1. 可积性。}合并可数个例外零测集后，可在共同补集上取极限，得 $|f|\le g$。比较判别给出 $f_n,f$ 可积。
+\dep{零测集可数并性质；比较判别。}
+
+\textbf{2. 积分差趋零。}记 $h_n=|f_n-f|$，则 $0\le h_n\le2g$ 且 $h_n\to0$ 几乎处处。对 $2g-h_n$ 用 Fatou，得
+\[
+2\int g\,\dd\mu
+\le2\int g\,\dd\mu-\limsup_n\int h_n\,\dd\mu.
+\]
+因为 $\int g<\infty$，可相减，故 $\int h_n\to0$。
+\dep{Fatou 引理；有限积分线性；几乎处处不变性。}
+
+\textbf{3. 原积分收敛。}由
+\[
+\left|\int f_n\,\dd\mu-\int f\,\dd\mu\right|
+\le\int|f_n-f|\,\dd\mu
+\]
+得到结论。
+\dep{积分线性与三角不等式。这是讲义证明路线的等价补充写法。}
+% @end
+
+% @card {"id":"convergence-choice","type":"warning","title":"先核对条件，再交换极限","fr":"Choisir le bon théorème","refs":[["cm3",72,74],["cm3en",65,65],["r3",2,2],["w4",59,63]],"requires":["monotone-convergence","fatou","dominated-convergence"]}
+\textbf{单调收敛：}非负且递增；可允许无限积分。
+
+\textbf{Fatou：}非负，但缺少单调性或控制时，先求单向估计。
+
+\textbf{控制收敛：}几乎处处收敛，并找到独立于 $n$ 的可积上界。
+
+在 $\R$ 上，$f_n=\mathbf1_{[n,n+1]}$ 逐点趋零，而 $\int f_n\,\dd\lambda=1$；上界 $1$ 不可积。
+
+英文讲义第 65 页另给出 $f_n=(2n)^{-1}\mathbf1_{[-n,n]}$：高度趋零、支撑区间变长，仍有 $f_n\to0$ 逐点成立而积分恒为 $1$。
+
+\textbf{课程范围：}以上收敛工具已在 CM3 中出现；复习提要第 2 页将其习题练习安排至 TD3bis 自学。本网页收录讲义知识，不收录题目。
+% @end
+
+% @card {"id":"parameter-continuity","type":"theorem","title":"含参积分的连续性","fr":"Continuité sous le signe intégral","refs":[["cm3",75,76],["w4",64,64]],"requires":["dominated-convergence"]}
+令 $u$ 在实区间内变化，且
+\[
+F(u)=\int_E f(u,x)\,\dd\mu(x).
+\]
+在 $u_0$ 的某个邻域内，假设：
+\begin{enumerate}
+\item 每个 $x\mapsto f(u,x)$ 可测；
+\item 几乎处处的 $x$ 满足 $u\mapsto f(u,x)$ 在 $u_0$ 连续；
+\item 存在共同的 $g\ge0$ 可积，控制该邻域内的 $|f(u,x)|$。
+\end{enumerate}
+则 $F(u)\to F(u_0)$。局部的统一控制已经足够。
+% @proof
+任取 $u_n\to u_0$，最终各项位于该邻域。连续性给出 $f(u_n,x)\to f(u_0,x)$ 几乎处处，而共同上界使控制收敛适用，故 $F(u_n)\to F(u_0)$。
+\dep{控制收敛定理；实变量连续性的序列刻画。}
+% @end
+
+% @card {"id":"parameter-derivative","type":"theorem","title":"含参积分求导：控制导数并保证基点可积","fr":"Dérivation sous le signe intégral","refs":[["cm3",78,79],["w4",64,65]],"requires":["dominated-convergence","measurable-limits"]}
+在开区间 $I$ 上，假设每个 $f(u,\cdot)$ 可测；存在共同零测集，其外的 $f(\cdot,x)$ 在 $I$ 可导；并且
+\[
+|\partial_u f(u,x)|\le g(x),\qquad g\in L^1(\mu),
+\]
+对所有 $u\in I$、几乎处处的 $x$ 成立。
+
+\textbf{补明存在条件：}还需某个 $u_*\in I$ 处 $f(u_*,\cdot)$ 可积。于是每个 $F(u)=\int f(u,x)\,\dd\mu$ 都为有限值，且
+\[
+F'(u)=\int_E\partial_u f(u,x)\,\dd\mu(x).
+\]
+仅控制导数不能保证原积分存在，例如无限测度空间上的常数函数 $f(u,x)=1$。
+% @proof
+\textbf{1. 保证积分有限。}中值定理给出
+\[
+|f(u,x)|\le|f(u_*,x)|+|u-u_*|g(x).
+\]
+右侧可积，故各截面可积。
+\dep{中值定理；积分比较判别。此步补明讲义中 $F$ 已有定义所需的条件。}
+
+\textbf{2. 处理差商。}固定 $u_0$，对充分小的 $h\ne0$，
+\[
+q_h(x)=\frac{f(u_0+h,x)-f(u_0,x)}h.
+\]
+有 $|q_h|\le g$，且 $q_h\to\partial_u f(u_0,\cdot)$ 几乎处处。导数的可测版本由差商的序列极限给出；在共同例外集上可置零。对任意 $h_n\to0$ 应用控制收敛，即得所需导数公式。
+\dep{中值定理；可测函数的逐点极限；控制收敛；积分线性。}
+% @end
+
+% @card {"id":"gamma-continuity","type":"example","title":"Gamma 函数：按区间寻找局部上界","fr":"Fonction Gamma d’Euler","refs":[["cm3",77,77],["w4",64,64]],"requires":["parameter-continuity","integrability-criteria"]}
+对 $s>0$，定义
+\[
+\Gamma(s)=\int_0^\infty x^{s-1}e^{-x}\,\dd x.
+\]
+在紧区间 $s\in[a,b]\subset(0,\infty)$ 上，可取
+\[
+g(x)=
+\begin{cases}
+x^{a-1},&0<x\le1,\\
+x^{b-1}e^{-x},&x>1.
+\end{cases}
+\]
+则 $x^{s-1}e^{-x}\le g(x)$，且 $g$ 可积，因此 $\Gamma$ 在 $(0,\infty)$ 连续。
+% @proof
+靠近零时，$a>0$ 保证 $\int_0^1x^{a-1}\,\dd x=1/a$；无穷远处，指数衰减控制任意固定幂。被积函数对参数连续，故可用含参积分连续性定理。
+\dep{幂函数积分；指数与幂的比较（基础分析）；局部控制收敛。此上界是讲义第 77 页控制函数的分段版本。}
+% @end
+
+% @card {"id":"parameter-derivative-example","type":"example","title":"指数参数积分：先控制差商的来源","fr":"Exemple de dérivation","refs":[["cm3",80,80]],"requires":["parameter-derivative"]}
+令
+\[
+F(t)=\int_0^\infty\frac{e^{-tx}}{1+x^2}\,\dd x,\qquad t>0.
+\]
+固定 $0<a\le t\le b$，有
+\[
+\left|\partial_t\frac{e^{-tx}}{1+x^2}\right|
+=\frac{xe^{-tx}}{1+x^2}\le xe^{-ax}.
+\]
+而 $\int_0^\infty xe^{-ax}\,\dd x=a^{-2}<\infty$。原函数也被 $e^{-ax}$ 控制，故积分存在，并有
+\[
+F'(t)=-\int_0^\infty\frac{xe^{-tx}}{1+x^2}\,\dd x.
+\]
+\dep{初等求导与积分；可积导数上界；含参积分求导定理。}
+% @end
+
+% @card {"id":"generalized-domination","type":"theorem","title":"允许变化上界的控制收敛","fr":"Convergence dominée généralisée","refs":[["w4",63,63]],"requires":["dominated-convergence","fatou","integrability-criteria"]}
+W4 手册补充：控制函数可以依赖 $n$，但必须另外控制其极限与积分。
+
+设可测实函数 $f_n\to f$ 几乎处处，非负可积 $g_n\to g$ 几乎处处，且
+\[
+\begin{gathered}
+|f_n|\le g_n\quad\text{几乎处处},\\
+\int g_n\,\dd\mu\longrightarrow\int g\,\dd\mu<\infty.
+\end{gathered}
+\]
+则 $f$ 可积，并有
+\[
+\int f_n\,\dd\mu\longrightarrow\int f\,\dd\mu.
+\]
+普通控制收敛就是 $g_n=g$ 的特例。只有逐项的可积上界 $g_n$，而没有后两项收敛条件，仍然不能据此交换极限与积分。
+
+\dep{W4 手册备注 5.35；可积性由 $|f|\le g$，积分极限由 Fatou 用于 $g_n+f_n$ 与 $g_n-f_n$。这里只整合课程结论，不导入习题。}
+% @end

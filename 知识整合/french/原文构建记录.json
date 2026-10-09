@@ -1,0 +1,3434 @@
+{
+  "method": "Original PDF vector content clipped, with black stroke emphasis; no OCR or retranscription.",
+  "mapped_cards": 117,
+  "unique_fragments": 271,
+  "source_sha256": {
+    "cm3": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+    "w4": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
+    "cm4": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5"
+  },
+  "excerpt_locations": [
+    {
+      "card": "countability",
+      "source": "w4",
+      "page": 5,
+      "clip": [
+        40,
+        313.638,
+        555.276,
+        361.042
+      ],
+      "key": "fr-abd06629de5faeeb71"
+    },
+    {
+      "card": "countability",
+      "source": "w4",
+      "page": 5,
+      "clip": [
+        40,
+        606.167,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5f7c3fbea894551761"
+    },
+    {
+      "card": "countability",
+      "source": "w4",
+      "page": 6,
+      "clip": [
+        40,
+        35,
+        555.276,
+        85.186
+      ],
+      "key": "fr-b694f9f678413ab8ff"
+    },
+    {
+      "card": "set-limits",
+      "source": "w4",
+      "page": 7,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        220.464
+      ],
+      "key": "fr-74ca3389ddaab352c7"
+    },
+    {
+      "card": "set-limits",
+      "source": "w4",
+      "page": 7,
+      "clip": [
+        40,
+        423.636,
+        555.276,
+        798.89
+      ],
+      "key": "fr-590129768416320650"
+    },
+    {
+      "card": "set-limits",
+      "source": "w4",
+      "page": 8,
+      "clip": [
+        40,
+        35,
+        555.276,
+        242.948
+      ],
+      "key": "fr-1039207fa5b1a7a0aa"
+    },
+    {
+      "card": "outer-definition",
+      "source": "w4",
+      "page": 9,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        169.84
+      ],
+      "key": "fr-ef082b806169ef501c"
+    },
+    {
+      "card": "outer-properties",
+      "source": "w4",
+      "page": 9,
+      "clip": [
+        40,
+        244.891,
+        555.276,
+        647.209
+      ],
+      "key": "fr-8d95fd7baeb7de38e8"
+    },
+    {
+      "card": "outer-invariance",
+      "source": "w4",
+      "page": 9,
+      "clip": [
+        40,
+        648.209,
+        555.276,
+        798.89
+      ],
+      "key": "fr-11118074ea0c099d05"
+    },
+    {
+      "card": "outer-invariance",
+      "source": "w4",
+      "page": 10,
+      "clip": [
+        40,
+        35,
+        555.276,
+        558.167
+      ],
+      "key": "fr-07a83ddd22c8fe8c6b"
+    },
+    {
+      "card": "outer-invariance",
+      "source": "w4",
+      "page": 11,
+      "clip": [
+        40,
+        131.018,
+        555.276,
+        798.89
+      ],
+      "key": "fr-100aff1c79968e4871"
+    },
+    {
+      "card": "outer-invariance",
+      "source": "w4",
+      "page": 12,
+      "clip": [
+        40,
+        35,
+        555.276,
+        137.338
+      ],
+      "key": "fr-9efc03b0b0f5d73209"
+    },
+    {
+      "card": "null-sets",
+      "source": "w4",
+      "page": 12,
+      "clip": [
+        40,
+        338.319,
+        555.276,
+        798.89
+      ],
+      "key": "fr-cbe927db9804555cf2"
+    },
+    {
+      "card": "null-sets",
+      "source": "w4",
+      "page": 13,
+      "clip": [
+        40,
+        76.55,
+        555.276,
+        200.161
+      ],
+      "key": "fr-45b1b99455a1b9f923"
+    },
+    {
+      "card": "caratheodory-criterion",
+      "source": "w4",
+      "page": 13,
+      "clip": [
+        40,
+        271.728,
+        555.276,
+        368.754
+      ],
+      "key": "fr-42987f0f570a14ed18"
+    },
+    {
+      "card": "caratheodory-theorem",
+      "source": "w4",
+      "page": 13,
+      "clip": [
+        40,
+        628.256,
+        555.276,
+        798.89
+      ],
+      "key": "fr-6034598a5cf966e937"
+    },
+    {
+      "card": "caratheodory-theorem",
+      "source": "w4",
+      "page": 14,
+      "clip": [
+        40,
+        35,
+        555.276,
+        626.079
+      ],
+      "key": "fr-642610163aa2cfd649"
+    },
+    {
+      "card": "vitali",
+      "source": "w4",
+      "page": 15,
+      "clip": [
+        40,
+        79.917,
+        555.276,
+        615.849
+      ],
+      "key": "fr-bb0e1929da63c7cc32"
+    },
+    {
+      "card": "vitali",
+      "source": "w4",
+      "page": 16,
+      "clip": [
+        40,
+        39.265,
+        555.276,
+        798.89
+      ],
+      "key": "fr-599cb8a8187dc6f8f5"
+    },
+    {
+      "card": "sigma-algebra",
+      "source": "w4",
+      "page": 17,
+      "clip": [
+        40,
+        643.074,
+        555.276,
+        798.89
+      ],
+      "key": "fr-1e2594acccef58b8c3"
+    },
+    {
+      "card": "sigma-algebra",
+      "source": "w4",
+      "page": 18,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        329.625
+      ],
+      "key": "fr-5c9710a81b36bf6c60"
+    },
+    {
+      "card": "generated-sigma",
+      "source": "w4",
+      "page": 19,
+      "clip": [
+        40,
+        253.273,
+        555.276,
+        317.522
+      ],
+      "key": "fr-d212e5d8a19827d379"
+    },
+    {
+      "card": "generated-sigma",
+      "source": "w4",
+      "page": 19,
+      "clip": [
+        40,
+        318.522,
+        555.276,
+        798.89
+      ],
+      "key": "fr-0a5941b155c1df74d6"
+    },
+    {
+      "card": "generated-sigma",
+      "source": "w4",
+      "page": 20,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        650.613
+      ],
+      "key": "fr-f1af460e238a8764b4"
+    },
+    {
+      "card": "generated-sigma",
+      "source": "w4",
+      "page": 20,
+      "clip": [
+        40,
+        651.613,
+        555.276,
+        798.89
+      ],
+      "key": "fr-87639c4a93d5eff0d4"
+    },
+    {
+      "card": "generated-sigma",
+      "source": "w4",
+      "page": 21,
+      "clip": [
+        40,
+        35,
+        555.276,
+        143.565
+      ],
+      "key": "fr-6012ac5a89007f94db"
+    },
+    {
+      "card": "borel-generators",
+      "source": "w4",
+      "page": 21,
+      "clip": [
+        40,
+        544.22,
+        555.276,
+        605.779
+      ],
+      "key": "fr-6d5c25324edfc34dd6"
+    },
+    {
+      "card": "borel-generators",
+      "source": "w4",
+      "page": 22,
+      "clip": [
+        40,
+        628.905,
+        555.276,
+        798.89
+      ],
+      "key": "fr-d8bf062cca5442402b"
+    },
+    {
+      "card": "borel-generators",
+      "source": "w4",
+      "page": 23,
+      "clip": [
+        40,
+        35,
+        555.276,
+        477.735
+      ],
+      "key": "fr-c1e205fb3743e7b968"
+    },
+    {
+      "card": "borel-generators",
+      "source": "w4",
+      "page": 23,
+      "clip": [
+        40,
+        478.735,
+        555.276,
+        798.89
+      ],
+      "key": "fr-89d4a6166664fa9fd3"
+    },
+    {
+      "card": "borel-generators",
+      "source": "w4",
+      "page": 24,
+      "clip": [
+        40,
+        35,
+        555.276,
+        434.596
+      ],
+      "key": "fr-8d1ba04057e14d5c20"
+    },
+    {
+      "card": "partition-sigma",
+      "source": "w4",
+      "page": 124,
+      "clip": [
+        40,
+        636.81,
+        555.276,
+        798.89
+      ],
+      "key": "fr-becccffce386958de3"
+    },
+    {
+      "card": "partition-sigma",
+      "source": "w4",
+      "page": 125,
+      "clip": [
+        40,
+        35,
+        555.276,
+        148.648
+      ],
+      "key": "fr-28d25ff6a2767ea94a"
+    },
+    {
+      "card": "cantor",
+      "source": "w4",
+      "page": 27,
+      "clip": [
+        40,
+        344.074,
+        555.276,
+        614.053
+      ],
+      "key": "fr-e53485a447e6beaa7f"
+    },
+    {
+      "card": "cantor",
+      "source": "w4",
+      "page": 27,
+      "clip": [
+        40,
+        615.053,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9a823f00a0bf30de30"
+    },
+    {
+      "card": "cantor",
+      "source": "w4",
+      "page": 28,
+      "clip": [
+        40,
+        35,
+        555.276,
+        401.037
+      ],
+      "key": "fr-2f6bdf8755408b07ed"
+    },
+    {
+      "card": "borel-lebesgue",
+      "source": "w4",
+      "page": 24,
+      "clip": [
+        40,
+        508.977,
+        555.276,
+        798.89
+      ],
+      "key": "fr-6f20814750d1344dbe"
+    },
+    {
+      "card": "borel-lebesgue",
+      "source": "w4",
+      "page": 25,
+      "clip": [
+        40,
+        35,
+        555.276,
+        618.535
+      ],
+      "key": "fr-1d970c8a1253540a31"
+    },
+    {
+      "card": "borel-lebesgue",
+      "source": "w4",
+      "page": 26,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        798.89
+      ],
+      "key": "fr-512039c778f54ce257"
+    },
+    {
+      "card": "borel-lebesgue",
+      "source": "w4",
+      "page": 27,
+      "clip": [
+        40,
+        35,
+        555.276,
+        143.907
+      ],
+      "key": "fr-7c6042b9cc5492243e"
+    },
+    {
+      "card": "finite-cofinite",
+      "source": "w4",
+      "page": 17,
+      "clip": [
+        40,
+        643.074,
+        555.276,
+        798.89
+      ],
+      "key": "fr-1e2594acccef58b8c3"
+    },
+    {
+      "card": "finite-cofinite",
+      "source": "w4",
+      "page": 18,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        329.625
+      ],
+      "key": "fr-5c9710a81b36bf6c60"
+    },
+    {
+      "card": "measure-definition",
+      "source": "w4",
+      "page": 29,
+      "clip": [
+        40,
+        305.273,
+        555.276,
+        525.629
+      ],
+      "key": "fr-a3d7d1413c5a9ad452"
+    },
+    {
+      "card": "finite-sigma-finite",
+      "source": "w4",
+      "page": 29,
+      "clip": [
+        40,
+        305.273,
+        555.276,
+        525.629
+      ],
+      "key": "fr-a3d7d1413c5a9ad452"
+    },
+    {
+      "card": "finite-sigma-finite",
+      "source": "w4",
+      "page": 30,
+      "clip": [
+        40,
+        497.649,
+        555.276,
+        629.094
+      ],
+      "key": "fr-5abe59dae9ae3baaaf"
+    },
+    {
+      "card": "point-atoms",
+      "source": "w4",
+      "page": 31,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        135.255
+      ],
+      "key": "fr-9412691ba1ba94c152"
+    },
+    {
+      "card": "measure-properties",
+      "source": "w4",
+      "page": 34,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        521.447
+      ],
+      "key": "fr-537818f5960b89e5c4"
+    },
+    {
+      "card": "increasing-continuity",
+      "source": "w4",
+      "page": 34,
+      "clip": [
+        40,
+        522.447,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9b792ea8f572de61f8"
+    },
+    {
+      "card": "increasing-continuity",
+      "source": "w4",
+      "page": 35,
+      "clip": [
+        40,
+        35,
+        555.276,
+        237.826
+      ],
+      "key": "fr-cb91112f6593e6a496"
+    },
+    {
+      "card": "decreasing-continuity",
+      "source": "w4",
+      "page": 34,
+      "clip": [
+        40,
+        522.447,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9b792ea8f572de61f8"
+    },
+    {
+      "card": "decreasing-continuity",
+      "source": "w4",
+      "page": 35,
+      "clip": [
+        40,
+        35,
+        555.276,
+        237.826
+      ],
+      "key": "fr-cb91112f6593e6a496"
+    },
+    {
+      "card": "decreasing-continuity",
+      "source": "w4",
+      "page": 35,
+      "clip": [
+        40,
+        444.294,
+        555.276,
+        562.134
+      ],
+      "key": "fr-10a98bd88a3ab0ae48"
+    },
+    {
+      "card": "subadditivity",
+      "source": "w4",
+      "page": 35,
+      "clip": [
+        40,
+        563.134,
+        555.276,
+        798.89
+      ],
+      "key": "fr-29f1493c623909ba85"
+    },
+    {
+      "card": "subadditivity",
+      "source": "w4",
+      "page": 36,
+      "clip": [
+        40,
+        35,
+        555.276,
+        289.602
+      ],
+      "key": "fr-b45779cf0824c5e107"
+    },
+    {
+      "card": "borel-cantelli",
+      "source": "w4",
+      "page": 36,
+      "clip": [
+        40,
+        400.01,
+        555.276,
+        717.861
+      ],
+      "key": "fr-b0d9a20dd0652ba596"
+    },
+    {
+      "card": "dynkin",
+      "source": "w4",
+      "page": 31,
+      "clip": [
+        40,
+        412.541,
+        555.276,
+        520.725
+      ],
+      "key": "fr-7a9909d6fad1204dd9"
+    },
+    {
+      "card": "dynkin",
+      "source": "w4",
+      "page": 31,
+      "clip": [
+        40,
+        624.977,
+        555.276,
+        798.89
+      ],
+      "key": "fr-e4b9eba0266f674b5a"
+    },
+    {
+      "card": "dynkin",
+      "source": "w4",
+      "page": 32,
+      "clip": [
+        40,
+        35,
+        555.276,
+        74.932
+      ],
+      "key": "fr-9ed9cdd31a6e84bd10"
+    },
+    {
+      "card": "measure-uniqueness",
+      "source": "w4",
+      "page": 32,
+      "clip": [
+        40,
+        75.932,
+        555.276,
+        371.836
+      ],
+      "key": "fr-e7eb395e2301ca4d8d"
+    },
+    {
+      "card": "preimage",
+      "source": "w4",
+      "page": 37,
+      "clip": [
+        40,
+        319.767,
+        555.276,
+        798.89
+      ],
+      "key": "fr-c9b9791339b0b73bfe"
+    },
+    {
+      "card": "preimage",
+      "source": "w4",
+      "page": 38,
+      "clip": [
+        40,
+        35,
+        555.276,
+        228.195
+      ],
+      "key": "fr-627b0d074b4a97cfe7"
+    },
+    {
+      "card": "measurable-function",
+      "source": "w4",
+      "page": 40,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        156.077
+      ],
+      "key": "fr-dd2799b27874b2e4a1"
+    },
+    {
+      "card": "measurable-function",
+      "source": "w4",
+      "page": 40,
+      "clip": [
+        40,
+        157.077,
+        555.276,
+        287.678
+      ],
+      "key": "fr-31e2ccec5736c40d9d"
+    },
+    {
+      "card": "generator-test",
+      "source": "w4",
+      "page": 41,
+      "clip": [
+        40,
+        208.583,
+        555.276,
+        376.61
+      ],
+      "key": "fr-cc87f880828fc3ca8a"
+    },
+    {
+      "card": "measurable-examples",
+      "source": "w4",
+      "page": 41,
+      "clip": [
+        40,
+        496.758,
+        555.276,
+        620.731
+      ],
+      "key": "fr-67b34828ccdaba3cea"
+    },
+    {
+      "card": "measurable-examples",
+      "source": "w4",
+      "page": 41,
+      "clip": [
+        40,
+        710.853,
+        555.276,
+        798.89
+      ],
+      "key": "fr-8bc34941f7d4754edb"
+    },
+    {
+      "card": "measurable-examples",
+      "source": "w4",
+      "page": 42,
+      "clip": [
+        40,
+        35,
+        555.276,
+        74.912
+      ],
+      "key": "fr-926222b979dc3a412d"
+    },
+    {
+      "card": "measurable-examples",
+      "source": "w4",
+      "page": 42,
+      "clip": [
+        40,
+        75.912,
+        555.276,
+        232.149
+      ],
+      "key": "fr-b8d553cffe7ed9789a"
+    },
+    {
+      "card": "measurable-operations",
+      "source": "w4",
+      "page": 40,
+      "clip": [
+        40,
+        665.249,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5f7e4520df0bc48d27"
+    },
+    {
+      "card": "measurable-operations",
+      "source": "w4",
+      "page": 42,
+      "clip": [
+        40,
+        321.448,
+        555.276,
+        547.069
+      ],
+      "key": "fr-86a76f2a6dd70a207f"
+    },
+    {
+      "card": "measurable-operations",
+      "source": "w4",
+      "page": 42,
+      "clip": [
+        40,
+        548.069,
+        555.276,
+        683.581
+      ],
+      "key": "fr-3dbb19f535827ccc05"
+    },
+    {
+      "card": "measurable-limits",
+      "source": "w4",
+      "page": 43,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        117.072
+      ],
+      "key": "fr-b7b48e5a6a9c51294c"
+    },
+    {
+      "card": "measurable-limits",
+      "source": "w4",
+      "page": 43,
+      "clip": [
+        40,
+        541.716,
+        555.276,
+        588.821
+      ],
+      "key": "fr-8f5835f836e8a452da"
+    },
+    {
+      "card": "simple-functions",
+      "source": "w4",
+      "page": 45,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        177.668
+      ],
+      "key": "fr-bf6682b37c5538052b"
+    },
+    {
+      "card": "simple-functions",
+      "source": "w4",
+      "page": 45,
+      "clip": [
+        40,
+        474.986,
+        555.276,
+        557.505
+      ],
+      "key": "fr-202420633727a04c6a"
+    },
+    {
+      "card": "simple-approximation",
+      "source": "w4",
+      "page": 45,
+      "clip": [
+        40,
+        558.505,
+        555.276,
+        798.89
+      ],
+      "key": "fr-2416465e061b39bb6f"
+    },
+    {
+      "card": "simple-approximation",
+      "source": "w4",
+      "page": 46,
+      "clip": [
+        40,
+        35,
+        555.276,
+        798.89
+      ],
+      "key": "fr-7e1e313ae50b42a5f0"
+    },
+    {
+      "card": "simple-approximation",
+      "source": "w4",
+      "page": 47,
+      "clip": [
+        40,
+        35,
+        555.276,
+        798.89
+      ],
+      "key": "fr-02ec09d9706b817a7e"
+    },
+    {
+      "card": "pushforward",
+      "source": "w4",
+      "page": 44,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        121.019
+      ],
+      "key": "fr-a5a70518d96a80c8ad"
+    },
+    {
+      "card": "preimage-generated",
+      "source": "w4",
+      "page": 39,
+      "clip": [
+        40,
+        439.133,
+        555.276,
+        512.743
+      ],
+      "key": "fr-c2777e0d52ca99a103"
+    },
+    {
+      "card": "lebesgue-composition",
+      "source": "w4",
+      "page": 41,
+      "clip": [
+        40,
+        38.611,
+        555.276,
+        207.583
+      ],
+      "key": "fr-c1c5a72bf03f138522"
+    },
+    {
+      "card": "extended-real-line",
+      "source": "w4",
+      "page": 42,
+      "clip": [
+        40,
+        684.581,
+        555.276,
+        798.89
+      ],
+      "key": "fr-66088ac764c6b96de4"
+    },
+    {
+      "card": "almost-everywhere",
+      "source": "w4",
+      "page": 54,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        141.682
+      ],
+      "key": "fr-e4e65e85b3fbcd5e9b"
+    },
+    {
+      "card": "simple-integral",
+      "source": "w4",
+      "page": 49,
+      "clip": [
+        40,
+        220.487,
+        555.276,
+        327.103
+      ],
+      "key": "fr-c1d294265f3d4c4aa3"
+    },
+    {
+      "card": "positive-integral",
+      "source": "w4",
+      "page": 50,
+      "clip": [
+        40,
+        545.935,
+        555.276,
+        654.159
+      ],
+      "key": "fr-f77c2aa35e61b90fa4"
+    },
+    {
+      "card": "monotone-convergence",
+      "source": "w4",
+      "page": 59,
+      "clip": [
+        40,
+        106.41,
+        555.276,
+        798.89
+      ],
+      "key": "fr-68a9b6318083c5cbd6"
+    },
+    {
+      "card": "monotone-convergence",
+      "source": "w4",
+      "page": 60,
+      "clip": [
+        40,
+        35,
+        555.276,
+        512.242
+      ],
+      "key": "fr-dc5d9f286494c46b69"
+    },
+    {
+      "card": "measure-integral-examples",
+      "source": "w4",
+      "page": 49,
+      "clip": [
+        40,
+        732.421,
+        555.276,
+        798.89
+      ],
+      "key": "fr-25d3e60fdc582ad805"
+    },
+    {
+      "card": "measure-integral-examples",
+      "source": "w4",
+      "page": 50,
+      "clip": [
+        40,
+        35,
+        555.276,
+        523.877
+      ],
+      "key": "fr-e68da5b00c95daf5de"
+    },
+    {
+      "card": "measure-integral-examples",
+      "source": "w4",
+      "page": 54,
+      "clip": [
+        40,
+        142.682,
+        555.276,
+        216.956
+      ],
+      "key": "fr-28c63d9f02984d55c9"
+    },
+    {
+      "card": "signed-integral",
+      "source": "w4",
+      "page": 53,
+      "clip": [
+        40,
+        57.744,
+        555.276,
+        401.714
+      ],
+      "key": "fr-583636e66a9ff45ffc"
+    },
+    {
+      "card": "integral-properties",
+      "source": "w4",
+      "page": 55,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        798.89
+      ],
+      "key": "fr-c229b66a9018405d54"
+    },
+    {
+      "card": "integral-properties",
+      "source": "w4",
+      "page": 56,
+      "clip": [
+        40,
+        35,
+        555.276,
+        296.35
+      ],
+      "key": "fr-690a2bf1300c238b1f"
+    },
+    {
+      "card": "integral-properties",
+      "source": "w4",
+      "page": 56,
+      "clip": [
+        40,
+        297.35,
+        555.276,
+        798.89
+      ],
+      "key": "fr-ff9e79a9e0ed2f28ce"
+    },
+    {
+      "card": "integral-properties",
+      "source": "w4",
+      "page": 57,
+      "clip": [
+        40,
+        35,
+        555.276,
+        187.512
+      ],
+      "key": "fr-1b123aecedde1eff1a"
+    },
+    {
+      "card": "integral-on-sets",
+      "source": "w4",
+      "page": 54,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        141.682
+      ],
+      "key": "fr-e4e65e85b3fbcd5e9b"
+    },
+    {
+      "card": "integral-on-sets",
+      "source": "w4",
+      "page": 85,
+      "clip": [
+        40,
+        168.733,
+        555.276,
+        798.89
+      ],
+      "key": "fr-ed72a134f9f2d497e5"
+    },
+    {
+      "card": "zero-integral",
+      "source": "w4",
+      "page": 57,
+      "clip": [
+        40,
+        188.512,
+        555.276,
+        521.472
+      ],
+      "key": "fr-ed4f6095f1fe2863a2"
+    },
+    {
+      "card": "integrability-criteria",
+      "source": "w4",
+      "page": 57,
+      "clip": [
+        40,
+        522.472,
+        555.276,
+        798.89
+      ],
+      "key": "fr-d7c5c221e03c816eec"
+    },
+    {
+      "card": "integrability-criteria",
+      "source": "w4",
+      "page": 58,
+      "clip": [
+        40,
+        35,
+        555.276,
+        472.95
+      ],
+      "key": "fr-e512864a4c2dfcbb89"
+    },
+    {
+      "card": "riemann-lebesgue",
+      "source": "cm3",
+      "page": 57,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-240f13a89a82a95e8a"
+    },
+    {
+      "card": "integral-series",
+      "source": "cm3",
+      "page": 67,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-1501396cac5d1505fe"
+    },
+    {
+      "card": "fatou",
+      "source": "w4",
+      "page": 61,
+      "clip": [
+        40,
+        157.888,
+        555.276,
+        505.839
+      ],
+      "key": "fr-65104ade4cf5287e0f"
+    },
+    {
+      "card": "dominated-convergence",
+      "source": "w4",
+      "page": 62,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        798.89
+      ],
+      "key": "fr-e5bd3d9d1741ada3c5"
+    },
+    {
+      "card": "convergence-choice",
+      "source": "w4",
+      "page": 63,
+      "clip": [
+        40,
+        40.428,
+        555.276,
+        232.158
+      ],
+      "key": "fr-c679f6294fa1c693c4"
+    },
+    {
+      "card": "convergence-choice",
+      "source": "w4",
+      "page": 61,
+      "clip": [
+        40,
+        506.839,
+        555.276,
+        798.89
+      ],
+      "key": "fr-b6bfad1af75785e181"
+    },
+    {
+      "card": "parameter-continuity",
+      "source": "w4",
+      "page": 64,
+      "clip": [
+        40,
+        231.642,
+        555.276,
+        464.116
+      ],
+      "key": "fr-2036e22b48bbc0131d"
+    },
+    {
+      "card": "parameter-derivative",
+      "source": "w4",
+      "page": 64,
+      "clip": [
+        40,
+        593.963,
+        555.276,
+        798.89
+      ],
+      "key": "fr-53ab638c35d0d4cf65"
+    },
+    {
+      "card": "parameter-derivative",
+      "source": "w4",
+      "page": 65,
+      "clip": [
+        40,
+        35,
+        555.276,
+        210.067
+      ],
+      "key": "fr-965ea315d3a35148d4"
+    },
+    {
+      "card": "parameter-derivative",
+      "source": "w4",
+      "page": 65,
+      "clip": [
+        40,
+        211.067,
+        555.276,
+        360.589
+      ],
+      "key": "fr-ef95b37206454f1165"
+    },
+    {
+      "card": "gamma-continuity",
+      "source": "w4",
+      "page": 64,
+      "clip": [
+        40,
+        465.116,
+        555.276,
+        592.963
+      ],
+      "key": "fr-aeafeb8b28a3b671cd"
+    },
+    {
+      "card": "parameter-derivative-example",
+      "source": "cm3",
+      "page": 80,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-bf930e826c9ac8b6b1"
+    },
+    {
+      "card": "generalized-domination",
+      "source": "w4",
+      "page": 63,
+      "clip": [
+        40,
+        233.158,
+        555.276,
+        494.683
+      ],
+      "key": "fr-1fc53362fced8eeb1b"
+    },
+    {
+      "card": "product-measure",
+      "source": "w4",
+      "page": 66,
+      "clip": [
+        40,
+        303.271,
+        555.276,
+        368.032
+      ],
+      "key": "fr-5c688815002e9663d5"
+    },
+    {
+      "card": "product-measure",
+      "source": "w4",
+      "page": 66,
+      "clip": [
+        40,
+        369.032,
+        555.276,
+        526.577
+      ],
+      "key": "fr-603e4a975368208f8d"
+    },
+    {
+      "card": "cm04-method",
+      "source": "cm4",
+      "page": 2,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-ff8f248120afc8e3f2"
+    },
+    {
+      "card": "cm04-method",
+      "source": "cm4",
+      "page": 9,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-24587b05d46e66c561"
+    },
+    {
+      "card": "cm04-method",
+      "source": "cm4",
+      "page": 23,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-633029566526f40c3e"
+    },
+    {
+      "card": "cm04-method",
+      "source": "cm4",
+      "page": 25,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-b242041c14a3395887"
+    },
+    {
+      "card": "jacobian-inverse",
+      "source": "cm4",
+      "page": 15,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-22412191296dc76b36"
+    },
+    {
+      "card": "jacobian-inverse",
+      "source": "cm4",
+      "page": 16,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-57d46eda1978a01849"
+    },
+    {
+      "card": "measurable-sections",
+      "source": "w4",
+      "page": 66,
+      "clip": [
+        40,
+        603.151,
+        555.276,
+        798.89
+      ],
+      "key": "fr-bc2bd3bc89e43bcf17"
+    },
+    {
+      "card": "measurable-sections",
+      "source": "w4",
+      "page": 67,
+      "clip": [
+        40,
+        35,
+        555.276,
+        208.407
+      ],
+      "key": "fr-694431db288a13c66f"
+    },
+    {
+      "card": "measurable-sections",
+      "source": "w4",
+      "page": 67,
+      "clip": [
+        40,
+        209.407,
+        555.276,
+        393.172
+      ],
+      "key": "fr-fd949f02290f6c014b"
+    },
+    {
+      "card": "tonelli",
+      "source": "cm4",
+      "page": 7,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-be1c748f724db6ce59"
+    },
+    {
+      "card": "tonelli",
+      "source": "w4",
+      "page": 67,
+      "clip": [
+        40,
+        394.172,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9f919c8dc4a44db727"
+    },
+    {
+      "card": "tonelli",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        35,
+        555.276,
+        223.547
+      ],
+      "key": "fr-82c4162c4bccbac142"
+    },
+    {
+      "card": "fubini",
+      "source": "cm4",
+      "page": 8,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-b9b31fa50764806fbe"
+    },
+    {
+      "card": "fubini",
+      "source": "cm4",
+      "page": 9,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-24587b05d46e66c561"
+    },
+    {
+      "card": "fubini",
+      "source": "w4",
+      "page": 67,
+      "clip": [
+        40,
+        394.172,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9f919c8dc4a44db727"
+    },
+    {
+      "card": "fubini",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        35,
+        555.276,
+        223.547
+      ],
+      "key": "fr-82c4162c4bccbac142"
+    },
+    {
+      "card": "fubini-warning",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        348.733,
+        555.276,
+        461.877
+      ],
+      "key": "fr-1904a1c57eb4c674f8"
+    },
+    {
+      "card": "fubini-warning",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        462.877,
+        555.276,
+        613.266
+      ],
+      "key": "fr-6ff0686780314ce31c"
+    },
+    {
+      "card": "integration-domain",
+      "source": "cm4",
+      "page": 10,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-07824a7cc78b42ef98"
+    },
+    {
+      "card": "positive-convolution",
+      "source": "w4",
+      "page": 69,
+      "clip": [
+        40,
+        377.725,
+        555.276,
+        568.751
+      ],
+      "key": "fr-176437229bf8489815"
+    },
+    {
+      "card": "change-variables",
+      "source": "w4",
+      "page": 71,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        269.028
+      ],
+      "key": "fr-630d49f14726764467"
+    },
+    {
+      "card": "polar-coordinates",
+      "source": "cm4",
+      "page": 18,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-bbd226209fc721cd4b"
+    },
+    {
+      "card": "polar-coordinates",
+      "source": "cm4",
+      "page": 19,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-631fd6219479b46eb4"
+    },
+    {
+      "card": "polar-coordinates",
+      "source": "cm4",
+      "page": 20,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-62db053eb9994e3bbe"
+    },
+    {
+      "card": "cylindrical-spherical",
+      "source": "cm4",
+      "page": 21,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-6fa030f65ae8c04c12"
+    },
+    {
+      "card": "cylindrical-spherical",
+      "source": "cm4",
+      "page": 22,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-626fe32f380e217dac"
+    },
+    {
+      "card": "cylindrical-spherical",
+      "source": "cm4",
+      "page": 23,
+      "clip": [
+        7,
+        4,
+        355.835,
+        251.12599999999998
+      ],
+      "key": "fr-633029566526f40c3e"
+    },
+    {
+      "card": "lp-spaces",
+      "source": "w4",
+      "page": 76,
+      "clip": [
+        40,
+        443.538,
+        555.276,
+        511.162
+      ],
+      "key": "fr-4486a282962660f626"
+    },
+    {
+      "card": "lp-spaces",
+      "source": "w4",
+      "page": 76,
+      "clip": [
+        40,
+        512.162,
+        555.276,
+        575.311
+      ],
+      "key": "fr-b00c00d7661a0618ac"
+    },
+    {
+      "card": "lp-spaces",
+      "source": "w4",
+      "page": 76,
+      "clip": [
+        40,
+        639.523,
+        555.276,
+        798.89
+      ],
+      "key": "fr-21746ef26dd27495aa"
+    },
+    {
+      "card": "lp-spaces",
+      "source": "w4",
+      "page": 77,
+      "clip": [
+        40,
+        35,
+        555.276,
+        55.966
+      ],
+      "key": "fr-90acf49daddf306d8c"
+    },
+    {
+      "card": "lp-spaces",
+      "source": "w4",
+      "page": 77,
+      "clip": [
+        40,
+        56.966,
+        555.276,
+        167.306
+      ],
+      "key": "fr-270e173ddae9c02966"
+    },
+    {
+      "card": "markov-chebyshev",
+      "source": "w4",
+      "page": 77,
+      "clip": [
+        40,
+        266.791,
+        555.276,
+        579.284
+      ],
+      "key": "fr-236c5dedf8f055c921"
+    },
+    {
+      "card": "markov-chebyshev",
+      "source": "w4",
+      "page": 77,
+      "clip": [
+        40,
+        580.284,
+        555.276,
+        798.89
+      ],
+      "key": "fr-78db13a6d6be45052f"
+    },
+    {
+      "card": "holder",
+      "source": "w4",
+      "page": 78,
+      "clip": [
+        40,
+        205.594,
+        555.276,
+        505.002
+      ],
+      "key": "fr-34a21b195b8f94d67d"
+    },
+    {
+      "card": "minkowski",
+      "source": "w4",
+      "page": 79,
+      "clip": [
+        40,
+        132.477,
+        555.276,
+        389.307
+      ],
+      "key": "fr-617965e3fb3b296bc9"
+    },
+    {
+      "card": "lp-inclusion-jensen",
+      "source": "w4",
+      "page": 78,
+      "clip": [
+        40,
+        506.002,
+        555.276,
+        700.872
+      ],
+      "key": "fr-056f3e2d49b3c518ee"
+    },
+    {
+      "card": "lp-inclusion-jensen",
+      "source": "w4",
+      "page": 79,
+      "clip": [
+        40,
+        591.21,
+        555.276,
+        798.89
+      ],
+      "key": "fr-8ffc5dfc6b8d48a910"
+    },
+    {
+      "card": "lp-inclusion-jensen",
+      "source": "w4",
+      "page": 80,
+      "clip": [
+        40,
+        35,
+        555.276,
+        443.513
+      ],
+      "key": "fr-c488174ff507fae52a"
+    },
+    {
+      "card": "lp-completeness",
+      "source": "w4",
+      "page": 81,
+      "clip": [
+        40,
+        107.016,
+        555.276,
+        241.502
+      ],
+      "key": "fr-1988cf6495b41e6494"
+    },
+    {
+      "card": "lp-completeness",
+      "source": "w4",
+      "page": 82,
+      "clip": [
+        40,
+        485.773,
+        555.276,
+        640.091
+      ],
+      "key": "fr-aee342fc8f92017175"
+    },
+    {
+      "card": "hilbert-riesz",
+      "source": "w4",
+      "page": 82,
+      "clip": [
+        40,
+        40.704,
+        555.276,
+        302.189
+      ],
+      "key": "fr-ead7c6b820420d8de1"
+    },
+    {
+      "card": "hilbert-riesz",
+      "source": "w4",
+      "page": 82,
+      "clip": [
+        40,
+        303.189,
+        555.276,
+        484.773
+      ],
+      "key": "fr-679f6544cbfd065b8d"
+    },
+    {
+      "card": "density-absolute-continuity",
+      "source": "w4",
+      "page": 84,
+      "clip": [
+        40,
+        244.677,
+        555.276,
+        330.541
+      ],
+      "key": "fr-266fd88155ca36e591"
+    },
+    {
+      "card": "density-absolute-continuity",
+      "source": "w4",
+      "page": 84,
+      "clip": [
+        40,
+        513.454,
+        555.276,
+        639.663
+      ],
+      "key": "fr-4de1a98f77ef2d29fd"
+    },
+    {
+      "card": "density-absolute-continuity",
+      "source": "w4",
+      "page": 84,
+      "clip": [
+        40,
+        640.663,
+        555.276,
+        798.89
+      ],
+      "key": "fr-80ab58654fba134440"
+    },
+    {
+      "card": "density-absolute-continuity",
+      "source": "w4",
+      "page": 85,
+      "clip": [
+        40,
+        168.733,
+        555.276,
+        798.89
+      ],
+      "key": "fr-ed72a134f9f2d497e5"
+    },
+    {
+      "card": "singular-measures",
+      "source": "w4",
+      "page": 86,
+      "clip": [
+        40,
+        306.83,
+        555.276,
+        430.349
+      ],
+      "key": "fr-9d1917643239fbb1b9"
+    },
+    {
+      "card": "singular-measures",
+      "source": "w4",
+      "page": 83,
+      "clip": [
+        40,
+        506.874,
+        555.276,
+        798.89
+      ],
+      "key": "fr-917fe5d1f717a57361"
+    },
+    {
+      "card": "singular-measures",
+      "source": "w4",
+      "page": 84,
+      "clip": [
+        40,
+        39.034,
+        555.276,
+        173.11
+      ],
+      "key": "fr-3af5d6dcd30bf8b144"
+    },
+    {
+      "card": "cantor-measure",
+      "source": "w4",
+      "page": 87,
+      "clip": [
+        40,
+        347.004,
+        555.276,
+        407.957
+      ],
+      "key": "fr-9a97bc6bac30a548f4"
+    },
+    {
+      "card": "cantor-measure",
+      "source": "w4",
+      "page": 88,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        623.489
+      ],
+      "key": "fr-ceed00a1e127c66897"
+    },
+    {
+      "card": "cantor-measure",
+      "source": "w4",
+      "page": 89,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        163.716
+      ],
+      "key": "fr-d900dd9ed5c95ff69a"
+    },
+    {
+      "card": "radon-nikodym",
+      "source": "w4",
+      "page": 89,
+      "clip": [
+        40,
+        248.833,
+        555.276,
+        541.326
+      ],
+      "key": "fr-d168a1956f238feab5"
+    },
+    {
+      "card": "lebesgue-decomposition",
+      "source": "w4",
+      "page": 89,
+      "clip": [
+        40,
+        612.893,
+        555.276,
+        798.89
+      ],
+      "key": "fr-c6e601de97757cb014"
+    },
+    {
+      "card": "lebesgue-decomposition",
+      "source": "w4",
+      "page": 90,
+      "clip": [
+        40,
+        35,
+        555.276,
+        106.315
+      ],
+      "key": "fr-aef0b8610dd6431ec5"
+    },
+    {
+      "card": "lebesgue-decomposition",
+      "source": "w4",
+      "page": 90,
+      "clip": [
+        40,
+        190.458,
+        555.276,
+        798.89
+      ],
+      "key": "fr-637a6e294c453778d3"
+    },
+    {
+      "card": "lebesgue-decomposition",
+      "source": "w4",
+      "page": 91,
+      "clip": [
+        40,
+        35,
+        555.276,
+        129.097
+      ],
+      "key": "fr-0f7941b8a7bfc83253"
+    },
+    {
+      "card": "probability-conditioning",
+      "source": "w4",
+      "page": 92,
+      "clip": [
+        40,
+        509.162,
+        555.276,
+        627.309
+      ],
+      "key": "fr-8e2d654d06947bbc28"
+    },
+    {
+      "card": "probability-conditioning",
+      "source": "w4",
+      "page": 94,
+      "clip": [
+        40,
+        180.404,
+        555.276,
+        276.963
+      ],
+      "key": "fr-10ad38d62a966ced33"
+    },
+    {
+      "card": "probability-conditioning",
+      "source": "w4",
+      "page": 94,
+      "clip": [
+        40,
+        541.579,
+        555.276,
+        798.89
+      ],
+      "key": "fr-0fb748890d093a4ede"
+    },
+    {
+      "card": "probability-conditioning",
+      "source": "w4",
+      "page": 95,
+      "clip": [
+        40,
+        658.773,
+        555.276,
+        798.89
+      ],
+      "key": "fr-fe5b7cf63f4b62e22a"
+    },
+    {
+      "card": "random-variable-law",
+      "source": "w4",
+      "page": 96,
+      "clip": [
+        40,
+        399.324,
+        555.276,
+        471.705
+      ],
+      "key": "fr-366feb64bc6be5aae1"
+    },
+    {
+      "card": "random-variable-law",
+      "source": "w4",
+      "page": 97,
+      "clip": [
+        40,
+        119.831,
+        563.8225479800001,
+        206.989
+      ],
+      "key": "fr-5b0b7b96677d72aada"
+    },
+    {
+      "card": "distribution-function",
+      "source": "w4",
+      "page": 97,
+      "clip": [
+        40,
+        571.786,
+        563.8225479800001,
+        645.643
+      ],
+      "key": "fr-097e2a314c2ba37b90"
+    },
+    {
+      "card": "distribution-function",
+      "source": "w4",
+      "page": 98,
+      "clip": [
+        40,
+        306.63,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5ffad0d174ce536361"
+    },
+    {
+      "card": "distribution-function",
+      "source": "w4",
+      "page": 99,
+      "clip": [
+        40,
+        35,
+        555.276,
+        284.625
+      ],
+      "key": "fr-2d818dac8d60ca0008"
+    },
+    {
+      "card": "distribution-function",
+      "source": "w4",
+      "page": 100,
+      "clip": [
+        40,
+        432.152,
+        555.276,
+        555.024
+      ],
+      "key": "fr-be828bbe36083cdae4"
+    },
+    {
+      "card": "probability-law-types",
+      "source": "w4",
+      "page": 101,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        132.716
+      ],
+      "key": "fr-50f7ca5fc5c57a7b69"
+    },
+    {
+      "card": "probability-law-types",
+      "source": "w4",
+      "page": 101,
+      "clip": [
+        40,
+        209.29,
+        555.276,
+        393.124
+      ],
+      "key": "fr-7bb2b71b7ba478bf2f"
+    },
+    {
+      "card": "probability-law-types",
+      "source": "w4",
+      "page": 101,
+      "clip": [
+        40,
+        394.124,
+        555.276,
+        557.172
+      ],
+      "key": "fr-2f29b6c82e025a5f1e"
+    },
+    {
+      "card": "probability-law-types",
+      "source": "w4",
+      "page": 102,
+      "clip": [
+        40,
+        498.714,
+        555.276,
+        612.612
+      ],
+      "key": "fr-243db1edfd6db40b3d"
+    },
+    {
+      "card": "expectation-transfer",
+      "source": "w4",
+      "page": 104,
+      "clip": [
+        40,
+        177.016,
+        555.276,
+        798.89
+      ],
+      "key": "fr-6fa4cc5f3943a0d118"
+    },
+    {
+      "card": "expectation-transfer",
+      "source": "w4",
+      "page": 103,
+      "clip": [
+        40,
+        58.859,
+        681.0180979799999,
+        168.135
+      ],
+      "key": "fr-ce2c8e9cc7e427565d"
+    },
+    {
+      "card": "expectation-transfer",
+      "source": "w4",
+      "page": 105,
+      "clip": [
+        40,
+        39.034,
+        555.276,
+        391.265
+      ],
+      "key": "fr-3227d05c1abbac3813"
+    },
+    {
+      "card": "moments-variance",
+      "source": "w4",
+      "page": 103,
+      "clip": [
+        40,
+        58.859,
+        681.0180979799999,
+        168.135
+      ],
+      "key": "fr-ce2c8e9cc7e427565d"
+    },
+    {
+      "card": "moments-variance",
+      "source": "w4",
+      "page": 103,
+      "clip": [
+        40,
+        382.819,
+        681.0180979799999,
+        482.94
+      ],
+      "key": "fr-ca85b5ce02d930337c"
+    },
+    {
+      "card": "moments-variance",
+      "source": "w4",
+      "page": 106,
+      "clip": [
+        40,
+        486.934,
+        555.276,
+        594.889
+      ],
+      "key": "fr-76d728d8469ce7fd9e"
+    },
+    {
+      "card": "moments-variance",
+      "source": "w4",
+      "page": 106,
+      "clip": [
+        40,
+        595.889,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5fbc3daed3474442b1"
+    },
+    {
+      "card": "moments-variance",
+      "source": "w4",
+      "page": 107,
+      "clip": [
+        40,
+        455.019,
+        555.276,
+        546.067
+      ],
+      "key": "fr-48cfa230daac0d8287"
+    },
+    {
+      "card": "usual-discrete-laws",
+      "source": "w4",
+      "page": 108,
+      "clip": [
+        40,
+        58.561,
+        555.276,
+        423.026
+      ],
+      "key": "fr-3c8babf2d353e69e1a"
+    },
+    {
+      "card": "usual-continuous-laws",
+      "source": "w4",
+      "page": 108,
+      "clip": [
+        40,
+        526.399,
+        555.276,
+        798.89
+      ],
+      "key": "fr-c2bba96545497d9dfc"
+    },
+    {
+      "card": "usual-continuous-laws",
+      "source": "w4",
+      "page": 109,
+      "clip": [
+        40,
+        35,
+        555.276,
+        455.815
+      ],
+      "key": "fr-3f58b76a38e22f377f"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 110,
+      "clip": [
+        40,
+        177.453,
+        555.276,
+        313.964
+      ],
+      "key": "fr-62f6c4992ad5ab135c"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 110,
+      "clip": [
+        40,
+        584.55,
+        555.276,
+        675.897
+      ],
+      "key": "fr-239f9ffe09eeef9a7f"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 110,
+      "clip": [
+        40,
+        676.897,
+        555.276,
+        798.89
+      ],
+      "key": "fr-0c4d606f8e9227c62b"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 111,
+      "clip": [
+        40,
+        35,
+        555.276,
+        593.472
+      ],
+      "key": "fr-ba3cbd8ea4862420de"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 111,
+      "clip": [
+        40,
+        594.472,
+        555.276,
+        798.89
+      ],
+      "key": "fr-41c481c572f83b5fa2"
+    },
+    {
+      "card": "independent-variables",
+      "source": "w4",
+      "page": 112,
+      "clip": [
+        40,
+        35,
+        555.276,
+        406.749
+      ],
+      "key": "fr-6de989324f53cb57be"
+    },
+    {
+      "card": "generating-function",
+      "source": "w4",
+      "page": 113,
+      "clip": [
+        40,
+        271.417,
+        555.276,
+        364.763
+      ],
+      "key": "fr-7d1f5a037b214ad2b9"
+    },
+    {
+      "card": "generating-function",
+      "source": "w4",
+      "page": 113,
+      "clip": [
+        40,
+        441.265,
+        555.276,
+        597.146
+      ],
+      "key": "fr-07b4a70a7ad8a4cdec"
+    },
+    {
+      "card": "generating-function",
+      "source": "w4",
+      "page": 114,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        644.576
+      ],
+      "key": "fr-e63dd979e8532e7e82"
+    },
+    {
+      "card": "joint-marginal",
+      "source": "w4",
+      "page": 116,
+      "clip": [
+        40,
+        309.918,
+        555.276,
+        401.266
+      ],
+      "key": "fr-2487672e4d7baab674"
+    },
+    {
+      "card": "joint-marginal",
+      "source": "w4",
+      "page": 116,
+      "clip": [
+        40,
+        402.266,
+        555.276,
+        492.114
+      ],
+      "key": "fr-e8551b525a50e1c487"
+    },
+    {
+      "card": "joint-marginal",
+      "source": "w4",
+      "page": 117,
+      "clip": [
+        40,
+        178.627,
+        555.276,
+        256.127
+      ],
+      "key": "fr-830d54186a8b0e1665"
+    },
+    {
+      "card": "joint-marginal",
+      "source": "w4",
+      "page": 117,
+      "clip": [
+        40,
+        257.127,
+        555.276,
+        436.195
+      ],
+      "key": "fr-fc1354f96076e95298"
+    },
+    {
+      "card": "joint-marginal",
+      "source": "w4",
+      "page": 117,
+      "clip": [
+        40,
+        539.867,
+        555.276,
+        798.89
+      ],
+      "key": "fr-dac86f784b5ca8fa4f"
+    },
+    {
+      "card": "independence-factorization",
+      "source": "w4",
+      "page": 118,
+      "clip": [
+        40,
+        249.704,
+        555.276,
+        677.137
+      ],
+      "key": "fr-9fafb4d6f4328e7348"
+    },
+    {
+      "card": "independence-factorization",
+      "source": "w4",
+      "page": 119,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        211.919
+      ],
+      "key": "fr-f00130b08c4ae20482"
+    },
+    {
+      "card": "covariance",
+      "source": "w4",
+      "page": 119,
+      "clip": [
+        40,
+        337.437,
+        555.276,
+        476.998
+      ],
+      "key": "fr-0763faea4b884551e9"
+    },
+    {
+      "card": "covariance",
+      "source": "w4",
+      "page": 119,
+      "clip": [
+        40,
+        477.998,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5ce2002b0489f01b8c"
+    },
+    {
+      "card": "covariance",
+      "source": "w4",
+      "page": 120,
+      "clip": [
+        40,
+        486.492,
+        555.276,
+        609.66
+      ],
+      "key": "fr-f9d505af3febb3fb8f"
+    },
+    {
+      "card": "covariance",
+      "source": "w4",
+      "page": 120,
+      "clip": [
+        40,
+        610.66,
+        555.276,
+        798.89
+      ],
+      "key": "fr-b4c8560571aeb5f699"
+    },
+    {
+      "card": "covariance",
+      "source": "w4",
+      "page": 121,
+      "clip": [
+        40,
+        40.727,
+        576.6313767700001,
+        153.321
+      ],
+      "key": "fr-4cc9c83ae23d5d0cc2"
+    },
+    {
+      "card": "covariance-matrix",
+      "source": "w4",
+      "page": 121,
+      "clip": [
+        40,
+        154.321,
+        576.6313767700001,
+        241.436
+      ],
+      "key": "fr-41eb585d7266ebb87d"
+    },
+    {
+      "card": "covariance-matrix",
+      "source": "w4",
+      "page": 121,
+      "clip": [
+        40,
+        408.386,
+        576.6313767700001,
+        569.834
+      ],
+      "key": "fr-4f5503dfa61bd2f129"
+    },
+    {
+      "card": "sum-convolution",
+      "source": "w4",
+      "page": 122,
+      "clip": [
+        40,
+        472.98,
+        555.276,
+        798.89
+      ],
+      "key": "fr-a9d5f9470cff38ef35"
+    },
+    {
+      "card": "sum-convolution",
+      "source": "w4",
+      "page": 122,
+      "clip": [
+        40,
+        92.86,
+        555.276,
+        301.273
+      ],
+      "key": "fr-81873b8e3d835a19e9"
+    },
+    {
+      "card": "conditional-expectation",
+      "source": "w4",
+      "page": 124,
+      "clip": [
+        40,
+        300.519,
+        555.276,
+        635.81
+      ],
+      "key": "fr-c24b7726b1be47aab4"
+    },
+    {
+      "card": "conditional-expectation",
+      "source": "w4",
+      "page": 126,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        114.583
+      ],
+      "key": "fr-badc3489e16f8d8fa5"
+    },
+    {
+      "card": "conditional-properties",
+      "source": "w4",
+      "page": 126,
+      "clip": [
+        40,
+        384.631,
+        555.276,
+        798.89
+      ],
+      "key": "fr-dbc3edd465402f7e9a"
+    },
+    {
+      "card": "conditional-properties",
+      "source": "w4",
+      "page": 127,
+      "clip": [
+        40,
+        35,
+        555.276,
+        162.553
+      ],
+      "key": "fr-56d696a4ef105b4313"
+    },
+    {
+      "card": "conditional-properties",
+      "source": "w4",
+      "page": 127,
+      "clip": [
+        40,
+        654.602,
+        555.276,
+        798.89
+      ],
+      "key": "fr-5b7691f8f0a07ae9b6"
+    },
+    {
+      "card": "conditional-calculation",
+      "source": "w4",
+      "page": 124,
+      "clip": [
+        40,
+        636.81,
+        555.276,
+        798.89
+      ],
+      "key": "fr-becccffce386958de3"
+    },
+    {
+      "card": "conditional-calculation",
+      "source": "w4",
+      "page": 125,
+      "clip": [
+        40,
+        35,
+        555.276,
+        148.648
+      ],
+      "key": "fr-28d25ff6a2767ea94a"
+    },
+    {
+      "card": "conditional-calculation",
+      "source": "w4",
+      "page": 128,
+      "clip": [
+        40,
+        40.428,
+        555.276,
+        204.901
+      ],
+      "key": "fr-441272db3bf3e0c9d6"
+    },
+    {
+      "card": "conditional-law",
+      "source": "w4",
+      "page": 129,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        173.554
+      ],
+      "key": "fr-6bc44d2780cbc45b57"
+    },
+    {
+      "card": "conditional-law",
+      "source": "w4",
+      "page": 129,
+      "clip": [
+        40,
+        264.71,
+        555.276,
+        428.525
+      ],
+      "key": "fr-356b7966e9255b9742"
+    },
+    {
+      "card": "conditional-law",
+      "source": "w4",
+      "page": 129,
+      "clip": [
+        40,
+        429.525,
+        555.276,
+        798.89
+      ],
+      "key": "fr-e9048f49acf5905d51"
+    },
+    {
+      "card": "conditional-law",
+      "source": "w4",
+      "page": 130,
+      "clip": [
+        40,
+        40.428,
+        555.276,
+        284.947
+      ],
+      "key": "fr-efc9e9f77f9605b7ae"
+    },
+    {
+      "card": "conditional-projection",
+      "source": "w4",
+      "page": 125,
+      "clip": [
+        40,
+        401.637,
+        555.276,
+        798.89
+      ],
+      "key": "fr-b60aa9745d8d6ed77c"
+    },
+    {
+      "card": "conditional-projection",
+      "source": "w4",
+      "page": 130,
+      "clip": [
+        40,
+        517.013,
+        555.276,
+        798.89
+      ],
+      "key": "fr-8b679e6ed54234983a"
+    },
+    {
+      "card": "linear-regression",
+      "source": "w4",
+      "page": 132,
+      "clip": [
+        40,
+        186.12,
+        555.276,
+        798.89
+      ],
+      "key": "fr-aac1d507893859f5cd"
+    },
+    {
+      "card": "linear-regression",
+      "source": "w4",
+      "page": 133,
+      "clip": [
+        40,
+        35,
+        555.276,
+        156.382
+      ],
+      "key": "fr-8a500f2fc20a3da187"
+    },
+    {
+      "card": "linear-regression",
+      "source": "w4",
+      "page": 133,
+      "clip": [
+        40,
+        176.746,
+        555.276,
+        317.867
+      ],
+      "key": "fr-9e386289b911ca28b8"
+    },
+    {
+      "card": "characteristic-function",
+      "source": "w4",
+      "page": 137,
+      "clip": [
+        40,
+        153.789,
+        560.5284570700002,
+        239.856
+      ],
+      "key": "fr-761fef849b94eb93ca"
+    },
+    {
+      "card": "characteristic-function",
+      "source": "w4",
+      "page": 138,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        591.089
+      ],
+      "key": "fr-971cb8404d71531fbd"
+    },
+    {
+      "card": "characteristic-function",
+      "source": "w4",
+      "page": 138,
+      "clip": [
+        40,
+        667.662,
+        555.276,
+        798.89
+      ],
+      "key": "fr-852dc16865d81ce26e"
+    },
+    {
+      "card": "characteristic-function",
+      "source": "w4",
+      "page": 139,
+      "clip": [
+        40,
+        35,
+        555.276,
+        124.388
+      ],
+      "key": "fr-771bcbe176297ad0dc"
+    },
+    {
+      "card": "characteristic-uniqueness-levy",
+      "source": "w4",
+      "page": 140,
+      "clip": [
+        40,
+        59.511,
+        555.276,
+        286.131
+      ],
+      "key": "fr-d9e55bd1a7cd8f1cde"
+    },
+    {
+      "card": "characteristic-uniqueness-levy",
+      "source": "w4",
+      "page": 140,
+      "clip": [
+        40,
+        386.753,
+        555.276,
+        532.208
+      ],
+      "key": "fr-d7177b7da12ec0d1d4"
+    },
+    {
+      "card": "characteristic-uniqueness-levy",
+      "source": "w4",
+      "page": 155,
+      "clip": [
+        40,
+        254.861,
+        555.276,
+        332.053
+      ],
+      "key": "fr-7987099cd32a2b6fe9"
+    },
+    {
+      "card": "gaussian-vector",
+      "source": "w4",
+      "page": 141,
+      "clip": [
+        40,
+        260.187,
+        555.276,
+        335.296
+      ],
+      "key": "fr-3f5958f7e51ead72e3"
+    },
+    {
+      "card": "gaussian-vector",
+      "source": "w4",
+      "page": 141,
+      "clip": [
+        40,
+        336.296,
+        555.276,
+        437.598
+      ],
+      "key": "fr-e3c7084067ffddf503"
+    },
+    {
+      "card": "gaussian-vector",
+      "source": "w4",
+      "page": 141,
+      "clip": [
+        40,
+        648.767,
+        555.276,
+        798.89
+      ],
+      "key": "fr-4d938119908a5eae5e"
+    },
+    {
+      "card": "gaussian-vector",
+      "source": "w4",
+      "page": 142,
+      "clip": [
+        40,
+        35,
+        555.276,
+        187.267
+      ],
+      "key": "fr-be754045faf6c9e60c"
+    },
+    {
+      "card": "gaussian-construction",
+      "source": "w4",
+      "page": 142,
+      "clip": [
+        40,
+        518.695,
+        555.276,
+        798.89
+      ],
+      "key": "fr-f874691d9a827adfca"
+    },
+    {
+      "card": "gaussian-construction",
+      "source": "w4",
+      "page": 142,
+      "clip": [
+        40,
+        285.933,
+        555.276,
+        350.182
+      ],
+      "key": "fr-1f56851044588f8566"
+    },
+    {
+      "card": "gaussian-construction",
+      "source": "w4",
+      "page": 142,
+      "clip": [
+        40,
+        351.182,
+        555.276,
+        517.695
+      ],
+      "key": "fr-c86f46c69d540b6b5e"
+    },
+    {
+      "card": "gaussian-construction",
+      "source": "w4",
+      "page": 143,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        447.287
+      ],
+      "key": "fr-887f31040d529a6b11"
+    },
+    {
+      "card": "gaussian-construction",
+      "source": "w4",
+      "page": 143,
+      "clip": [
+        40,
+        448.287,
+        555.276,
+        798.89
+      ],
+      "key": "fr-9790398c5ffabbd707"
+    },
+    {
+      "card": "gaussian-independence",
+      "source": "w4",
+      "page": 144,
+      "clip": [
+        40,
+        79.311,
+        566.12537677,
+        449.406
+      ],
+      "key": "fr-0dfa173be5e4c31f3a"
+    },
+    {
+      "card": "gaussian-independence",
+      "source": "w4",
+      "page": 144,
+      "clip": [
+        40,
+        450.406,
+        566.12537677,
+        798.89
+      ],
+      "key": "fr-66147d43dd9bd0d99d"
+    },
+    {
+      "card": "gaussian-independence",
+      "source": "w4",
+      "page": 145,
+      "clip": [
+        40,
+        40.727,
+        555.276,
+        144.526
+      ],
+      "key": "fr-74be7fe6b634300df5"
+    },
+    {
+      "card": "gaussian-stability",
+      "source": "w4",
+      "page": 145,
+      "clip": [
+        40,
+        168.542,
+        555.276,
+        322.279
+      ],
+      "key": "fr-1f87bdcceda79099ef"
+    },
+    {
+      "card": "gaussian-stability",
+      "source": "w4",
+      "page": 145,
+      "clip": [
+        40,
+        323.279,
+        555.276,
+        531.357
+      ],
+      "key": "fr-bdd395e71c38df62bb"
+    },
+    {
+      "card": "convergence-modes",
+      "source": "w4",
+      "page": 146,
+      "clip": [
+        40,
+        523.403,
+        555.276,
+        614.144
+      ],
+      "key": "fr-86087fe8fd2229db86"
+    },
+    {
+      "card": "convergence-modes",
+      "source": "w4",
+      "page": 146,
+      "clip": [
+        40,
+        615.144,
+        555.276,
+        666.935
+      ],
+      "key": "fr-08435aff213b2db322"
+    },
+    {
+      "card": "convergence-modes",
+      "source": "w4",
+      "page": 146,
+      "clip": [
+        40,
+        667.935,
+        555.276,
+        716.199
+      ],
+      "key": "fr-21133c95eaed070627"
+    },
+    {
+      "card": "convergence-modes",
+      "source": "w4",
+      "page": 147,
+      "clip": [
+        40,
+        356.332,
+        564.22492576,
+        420.283
+      ],
+      "key": "fr-2b9fd391040d55a650"
+    },
+    {
+      "card": "cdf-convergence",
+      "source": "w4",
+      "page": 147,
+      "clip": [
+        40,
+        539.824,
+        564.22492576,
+        677.147
+      ],
+      "key": "fr-fec6f25c4b05babd14"
+    },
+    {
+      "card": "cdf-convergence",
+      "source": "w4",
+      "page": 147,
+      "clip": [
+        40,
+        678.147,
+        564.22492576,
+        798.89
+      ],
+      "key": "fr-4910dbea372f46d2bc"
+    },
+    {
+      "card": "cdf-convergence",
+      "source": "w4",
+      "page": 152,
+      "clip": [
+        40,
+        409.647,
+        555.276,
+        495.009
+      ],
+      "key": "fr-b0a60a5944d1965e68"
+    },
+    {
+      "card": "convergence-implications",
+      "source": "w4",
+      "page": 148,
+      "clip": [
+        40,
+        228.555,
+        555.276,
+        313.274
+      ],
+      "key": "fr-93ef959c4f90e02a3f"
+    },
+    {
+      "card": "convergence-implications",
+      "source": "w4",
+      "page": 148,
+      "clip": [
+        40,
+        39.138,
+        555.276,
+        137.404
+      ],
+      "key": "fr-c638b36a34dc64927d"
+    },
+    {
+      "card": "convergence-implications",
+      "source": "w4",
+      "page": 148,
+      "clip": [
+        40,
+        314.274,
+        555.276,
+        530.471
+      ],
+      "key": "fr-68040ae1b1a40a420a"
+    },
+    {
+      "card": "convergence-implications",
+      "source": "w4",
+      "page": 148,
+      "clip": [
+        40,
+        531.471,
+        555.276,
+        798.89
+      ],
+      "key": "fr-966bddde2690737687"
+    },
+    {
+      "card": "convergence-implications",
+      "source": "w4",
+      "page": 149,
+      "clip": [
+        40,
+        35,
+        555.276,
+        381.719
+      ],
+      "key": "fr-3116b767c3732ef84b"
+    },
+    {
+      "card": "convergence-counterexamples",
+      "source": "w4",
+      "page": 149,
+      "clip": [
+        40,
+        382.719,
+        555.276,
+        561.801
+      ],
+      "key": "fr-f9106df8fde6dc6cf7"
+    },
+    {
+      "card": "weak-law-large-numbers",
+      "source": "w4",
+      "page": 150,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        392.479
+      ],
+      "key": "fr-6138b727a715fe868c"
+    },
+    {
+      "card": "weak-law-large-numbers",
+      "source": "w4",
+      "page": 152,
+      "clip": [
+        40,
+        58.859,
+        555.276,
+        408.647
+      ],
+      "key": "fr-071fd031621c1cf659"
+    },
+    {
+      "card": "strong-law-fourth-moment",
+      "source": "w4",
+      "page": 150,
+      "clip": [
+        40,
+        481.908,
+        555.276,
+        798.89
+      ],
+      "key": "fr-f16716760279a08b59"
+    },
+    {
+      "card": "strong-law-fourth-moment",
+      "source": "w4",
+      "page": 151,
+      "clip": [
+        40,
+        35,
+        555.276,
+        210.441
+      ],
+      "key": "fr-0754b43f52db3e7fd7"
+    },
+    {
+      "card": "strong-law-fourth-moment",
+      "source": "w4",
+      "page": 151,
+      "clip": [
+        40,
+        211.441,
+        555.276,
+        285.644
+      ],
+      "key": "fr-f64cd1a0844eb0ee08"
+    },
+    {
+      "card": "central-limit-theorem",
+      "source": "w4",
+      "page": 153,
+      "clip": [
+        40,
+        223.384,
+        555.276,
+        675.071
+      ],
+      "key": "fr-d362e217e02713da36"
+    },
+    {
+      "card": "central-limit-theorem",
+      "source": "w4",
+      "page": 154,
+      "clip": [
+        40,
+        373.969,
+        556.15954899,
+        527.276
+      ],
+      "key": "fr-fdb0d7ec9a6a7c26f1"
+    },
+    {
+      "card": "vector-convergence",
+      "source": "w4",
+      "page": 155,
+      "clip": [
+        40,
+        333.053,
+        555.276,
+        669.915
+      ],
+      "key": "fr-9bab9c0c16f123301f"
+    },
+    {
+      "card": "vector-convergence",
+      "source": "w4",
+      "page": 155,
+      "clip": [
+        40,
+        670.915,
+        555.276,
+        798.89
+      ],
+      "key": "fr-8e80a5cad9cfcae983"
+    },
+    {
+      "card": "vector-convergence",
+      "source": "w4",
+      "page": 156,
+      "clip": [
+        40,
+        35,
+        555.276,
+        183.617
+      ],
+      "key": "fr-9714e8ffc6c8571482"
+    },
+    {
+      "card": "vector-convergence",
+      "source": "w4",
+      "page": 156,
+      "clip": [
+        40,
+        285.097,
+        555.276,
+        798.89
+      ],
+      "key": "fr-33a7d1ca9b7d72b2fc"
+    }
+  ],
+  "excluded_exercise_blocks": true,
+  "glyph_boundary_check": "passed"
+}

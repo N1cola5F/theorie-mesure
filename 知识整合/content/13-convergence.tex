@@ -1,0 +1,187 @@
+% @card {"id":"convergence-modes","type":"definition","title":"随机变量的四种收敛","fr":"Modes de convergence","refs":[["w4",146,147]],"requires":["lp-spaces","almost-everywhere","random-variable-law"]}
+对同一概率空间上的实随机变量：
+
+\textbf{$L^p$ 收敛，$1\le p<\infty$：} $X_n,X\in L^p$ 且 $\mathbb E|X_n-X|^p\to0$。
+
+\textbf{几乎必然收敛：}
+\[
+\mathbb P\{\omega:X_n(\omega)\to X(\omega)\}=1.
+\]
+\textbf{依概率收敛：} 对每个 $\varepsilon>0$，
+\[
+\mathbb P(|X_n-X|\ge\varepsilon)\longrightarrow0.
+\]
+\textbf{依分布收敛：} 对每个有界连续函数 $h$，
+\[
+\mathbb Eh(X_n)\longrightarrow\mathbb Eh(X).
+\]
+最后一种只比较分布，允许变量位于不同概率空间。向量情形把绝对值换成 Euclidean 范数，测试函数取 $\R^d$ 上的有界连续函数。
+% @end
+
+% @card {"id":"cdf-convergence","type":"theorem","title":"依分布收敛的分布函数判别","fr":"Convergence des fonctions de répartition","refs":[["w4",147,147],["w4",152,152]],"requires":["convergence-modes","distribution-function"]}
+实随机变量 $X_n$ 依分布收敛到 $X$，当且仅当
+\[
+F_{X_n}(a)\to F_X(a)
+\]
+在 $F_X$ 的所有连续点 $a$ 成立。不要要求在极限分布的跳跃点也收敛；例如常数 $X_n=1/n$ 依分布收敛到 $0$，但 $F_{X_n}(0)=0\ne1$。
+
+当极限为常数 $c$ 时，依分布收敛与依概率收敛等价。
+% @proof
+\textbf{判别定理的证明路线。} 用连续线性斜坡从两侧逼近半直线的示性函数，再以 $F_X$ 在端点的连续性消去间隔。反向先由分布函数控制尾部，再在紧区间上用连续函数的一致连续性作阶梯逼近。手册承认此完整判别定理。\dep{依分布收敛定义；分布函数连续性；紧区间逼近〔分析性质〕。}
+
+\textbf{常数极限。} 对 $\varepsilon>0$，$c-\varepsilon/2,c+\varepsilon/2$ 均为 $\delta_c$ 分布函数的连续点，故
+\[
+\begin{aligned}
+\mathbb P(|X_n-c|\ge\varepsilon)
+\le{}&F_{X_n}(c-\varepsilon/2)\\
+&+1-F_{X_n}(c+\varepsilon/2)\to0.
+\end{aligned}
+\]
+\dep{事件包含；分布函数判别。逆向由依概率收敛推出依分布收敛。}
+% @end
+
+% @card {"id":"convergence-implications","type":"proposition","title":"收敛之间的蕴含","fr":"Implications entre convergences","refs":[["w4",148,149]],"requires":["convergence-modes","cdf-convergence","markov-chebyshev","dominated-convergence","lp-inclusion-jensen"]}
+概率空间中，对于 $1\le p<q\le\infty$，
+\[
+\begin{gathered}
+L^q\Longrightarrow L^p\Longrightarrow
+\text{依概率}\Longrightarrow\text{依分布},\\
+\text{几乎必然}\Longrightarrow\text{依概率}.
+\end{gathered}
+\]
+这些箭头通常不能反向使用。几乎必然收敛与 $L^p$ 收敛之间也没有无条件的单向蕴含。
+% @proof
+\textbf{1. 范数到概率。} $\|X_n-X\|_p\le\|X_n-X\|_q$。再用
+\[
+\mathbb P(|X_n-X|\ge\varepsilon)
+\le\varepsilon^{-p}\mathbb E|X_n-X|^p.
+\]
+\dep{概率测度下 Hölder；Markov。}
+
+\textbf{2. 几乎必然到概率。} 对固定 $\varepsilon$，示性函数 $\mathbf1_{\{|X_n-X|\ge\varepsilon\}}$ 几乎处处趋零且由 $1$ 控制，故其期望趋零。\dep{控制收敛；$\mathbb P(\Omega)=1$。}
+
+\textbf{3. 概率到分布。} 记 $r_n=\mathbb P(|X_n-X|\ge\varepsilon)$。事件包含给出
+\[
+F_X(a-\varepsilon)-r_n
+\le F_{X_n}(a)
+\le F_X(a+\varepsilon)+r_n.
+\]
+先令 $n\to\infty$，再令 $\varepsilon\downarrow0$，在 $F_X$ 连续点得到收敛。\dep{次可加性；分布函数判别。}
+% @end
+
+% @card {"id":"convergence-counterexamples","type":"warning","title":"逆向不成立：两个不同的障碍","fr":"Attention aux réciproques","refs":[["w4",149,149]],"requires":["convergence-modes","expectation-transfer"]}
+在 $([0,1],\B([0,1]),\lambda)$ 上，令
+\[
+X_{2^m+k}=\mathbf1_{[k/2^m,(k+1)/2^m)},
+\quad 0\le k<2^m.
+\]
+对每个有限 $p\ge1$，$\mathbb E|X_{2^m+k}|^p=2^{-m}\to0$，所以它在 $L^p$ 和概率意义下均趋零；但每个 $x\in[0,1)$ 都被无限次命中、又无限次未命中，故不几乎必然收敛。
+
+要说明“依概率不推出 $L^p$”，须另取例子：
+\[
+Y_n=n\mathbf1_{(0,1/n)}.
+\]
+它几乎必然且依概率趋零，但 $\mathbb E|Y_n|=1$，不在 $L^1$ 中趋零。
+
+\dep{示性函数积分；收敛定义。整合修正：手册 p.149 的移动小区间例子实际在每个有限阶 $L^p$ 中收敛，不能同时用来否定这一点。}
+% @end
+
+% @card {"id":"weak-law-large-numbers","type":"theorem","title":"弱大数定律的两条路线","fr":"Loi faible des grands nombres","refs":[["w4",150,150],["w4",152,152]],"requires":["covariance-matrix","moments-variance","characteristic-function","characteristic-uniqueness-levy","cdf-convergence"]}
+设 $(X_i)$ 独立同分布（i.i.d.），$\mathbb E|X_1|<\infty$，$m=\mathbb EX_1$，$S_n=\sum_{i=1}^nX_i$。则
+\[
+S_n/n\xrightarrow{\mathbb P}m.
+\]
+有限方差时可以用 Chebyshev 给出误差概率上界；只有一阶矩时可用特征函数。有限方差是前一种证明的条件，并不是弱大数定律本身的必要条件。
+% @proof
+\textbf{1. 有限方差路线。} 若 $\operatorname{Var}(X_1)=v<\infty$，独立性给出 $\operatorname{Var}(S_n/n)=v/n$，因而
+\[
+\mathbb P(|S_n/n-m|\ge\varepsilon)
+\le\frac{v}{n\varepsilon^2}\to0.
+\]
+\dep{独立和的方差；Chebyshev。}
+
+\textbf{2. 一阶矩路线。} 利用 $|(e^{ihx}-1)/h|\le|x|$ 与控制收敛，得 $\varphi_{X_1}(u)=1+imu+o(u)$。于是对固定 $t$，
+\[
+\varphi_{S_n/n}(t)
+=\varphi_{X_1}(t/n)^n\to e^{imt}.
+\]
+由 Lévy 得到依分布收敛到常数 $m$，再由常数极限判别得依概率收敛。\dep{控制收敛；独立和特征函数；$(1+a/n+o(1/n))^n\to e^a$；Lévy。}
+% @end
+
+% @card {"id":"strong-law-fourth-moment","type":"theorem","title":"强大数定律：四阶矩证明","fr":"Loi forte sous moment d'ordre quatre","refs":[["w4",150,151]],"requires":["weak-law-large-numbers","borel-cantelli","markov-chebyshev","independent-variables"]}
+设 $(X_i)$ 独立同分布，$\mathbb E|X_1|^4<\infty$，则
+\[
+\frac1n\sum_{i=1}^nX_i
+\longrightarrow\mathbb EX_1\quad\text{几乎必然}.
+\]
+一般 i.i.d. 强大数定律在一阶绝对矩有限时也成立；手册承认该推广。本条展示的是四阶矩下的直接证明，不把四阶矩写成必要条件。
+% @proof
+\textbf{1. 中心化。} 令 $Y_i=X_i-\mathbb EX_1$，$A=\mathbb EY_1^4$、$B=\mathbb EY_1^2$。展开四次方，含某个仅出现一次的指标的项因独立和零均值而消失。剩下全相等或两对指标：
+\[
+\mathbb E\left(\sum_{i=1}^nY_i\right)^4
+=nA+3n(n-1)B^2.
+\]
+\dep{多项式展开；独立乘积期望；两对的数量为 $6\binom n2$。}
+
+\textbf{2. 概率求和。} Markov 给出
+\[
+\mathbb P\left(\left|\frac1n\sum_iY_i\right|\ge\varepsilon\right)
+\le\frac{A+3B^2}{n^2\varepsilon^4}.
+\]
+对 $n$ 可求和，故每个固定 $\varepsilon$ 的超限事件仅发生有限次。\dep{Markov；收敛级数；Borel--Cantelli。}
+
+\textbf{3. 得到极限。} 取 $\varepsilon=1/k$，对 $k\ge1$ 的概率一事件作可数交，得到几乎必然收敛。\dep{可数并的零测性；极限定义。}
+% @end
+
+% @card {"id":"central-limit-theorem","type":"theorem","title":"中心极限定理","fr":"Théorème central limite","refs":[["w4",153,154]],"requires":["characteristic-function","characteristic-uniqueness-levy","gaussian-vector","parameter-derivative"]}
+设 $(X_i)$ 独立同分布，均值 $m$，方差 $0<\sigma^2<\infty$。则
+\[
+Z_n=\frac{\sum_{i=1}^n(X_i-m)}{\sigma\sqrt n}
+\xrightarrow{\mathcal L}\mathcal N(0,1).
+\]
+它刻画样本均值在 $1/\sqrt n$ 尺度上的波动；不会声称原始样本本身趋于正态。
+
+大样本时 $S_n$ 可用 $\mathcal N(nm,n\sigma^2)$ 近似。此处是渐近近似，没有仅凭该定理就得到的有限样本误差保证。
+% @proof
+\textbf{1. 二阶展开。} 令 $Y=X_1-m$。二阶矩允许对特征函数求导两次，导数由 $|Y|$、$Y^2$ 控制，于是
+\[
+\varphi_Y(u)=1-\tfrac12\sigma^2u^2+o(u^2).
+\]
+\dep{含参求导；控制收敛；Taylor 展开；$\mathbb EY=0$。}
+
+\textbf{2. 标准化的和。} 独立同分布给出
+\[
+\begin{aligned}
+\varphi_{Z_n}(t)
+&=\left[\varphi_Y\!\left(\frac{t}{\sigma\sqrt n}\right)\right]^n\\
+&=\left[1-\frac{t^2}{2n}+o(1/n)\right]^n
+\longrightarrow e^{-t^2/2}.
+\end{aligned}
+\]
+\dep{特征函数乘法；指数极限。}
+
+\textbf{3. 识别极限。} 极限为标准正态特征函数，且在 $0$ 连续，应用 Lévy。\dep{高斯特征函数；Lévy 定理。}
+% @end
+
+% @card {"id":"vector-convergence","type":"theorem","title":"Cramér–Wold 与向量极限","fr":"Cramér–Wold et limites vectorielles","refs":[["w4",155,157]],"requires":["central-limit-theorem","characteristic-uniqueness-levy","gaussian-construction","covariance-matrix"]}
+\textbf{Cramér--Wold：} 对 $\R^d$ 随机向量，
+\[
+X_n\xrightarrow{\mathcal L}X
+\iff
+\forall u\in\R^d,\ 
+u^\top X_n\xrightarrow{\mathcal L}u^\top X.
+\]
+\textbf{高斯参数极限：} 若 $X_n\sim\mathcal N_d(m_n,\Sigma_n)$，$m_n\to m$、$\Sigma_n\to\Sigma$ 逐项收敛，则 $X_n$ 依分布趋于 $\mathcal N_d(m,\Sigma)$，允许奇异协方差。
+
+\textbf{多维中心极限定理：} i.i.d. 向量 $X_i$ 各坐标二阶可积，均值 $m$、协方差 $\Sigma$ 时，
+\[
+\sqrt n\,(\overline X_n-m)
+\xrightarrow{\mathcal L}\mathcal N_d(0,\Sigma).
+\]
+% @proof
+\textbf{1. 投影判别。} 正向对有界连续 $h$ 使用 $h(u^\top x)$。反向由各投影在特征参数 $1$ 处的收敛，得到向量特征函数逐点收敛，再用多维 Lévy。\dep{依分布收敛定义；多维 Lévy〔承认〕。}
+
+\textbf{2. 高斯极限。} 参数收敛使 $\exp(it^\top m_n-t^\top\Sigma_nt/2)$ 逐点收敛。$\Sigma$ 仍半正定，故极限高斯存在，再用 Lévy。\dep{半正定性在极限下保持；高斯构造；Lévy。}
+
+\textbf{3. 多维中心极限。} 固定 $u$，对 $u^\top X_i$ 用一维中心极限，其方差为 $u^\top\Sigma u$。若此方差为零，投影已几乎必然是常数。所有方向均得到正确极限，应用第 1 步。\dep{协方差二次型；零方差判别；一维中心极限定理；Cramér--Wold。}
+% @end

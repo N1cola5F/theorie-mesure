@@ -1,0 +1,113 @@
+% @card {"id":"characteristic-function","type":"proposition","title":"特征函数及其运算","fr":"Fonction caractéristique","refs":[["w4",137,139]],"requires":["expectation-transfer","dominated-convergence","independent-variables"]}
+实随机变量的特征函数定义为
+\[
+\varphi_X(t)=\mathbb E(e^{itX}),\quad t\in\R.
+\]
+总有定义，因为 $|e^{itX}|=1$。复积分按实部、虚部分别积分。它连续，满足 $|\varphi_X(t)|\le1$、$\varphi_X(0)=1$，并且
+\[
+\begin{gathered}
+\varphi_{aX+b}(t)=e^{ibt}\varphi_X(at),\\
+\varphi_{X_1+\cdots+X_n}(t)
+=\prod_{j=1}^n\varphi_{X_j}(t)
+\quad\text{〔相互独立时〕}.
+\end{gathered}
+\]
+随机向量的定义是 $\varphi_X(t)=\mathbb E e^{it^\top X}$，$t\in\R^d$。
+% @proof
+\textbf{1. 连续性与界。} $t_n\to t$ 时，被积函数逐点收敛，由 $1$ 控制；控制收敛分别用于实部、虚部。绝对值界来自积分三角不等式。\dep{控制收敛；概率总质量为 $1$。}
+
+\textbf{2. 运算。} 仿射公式直接展开指数。独立和的指数为各指数的乘积，再用独立性使期望因子化。\dep{指数运算法则；独立性的可测变换与乘积期望。}
+% @end
+
+% @card {"id":"characteristic-uniqueness-levy","type":"theorem","title":"特征函数的唯一性与 Lévy 定理","fr":"Unicité et théorème de Lévy","refs":[["w4",140,141],["w4",155,155]],"requires":["characteristic-function"]}
+\textbf{唯一性：} 实变量或 $\R^d$ 随机向量具有相同特征函数，当且仅当具有相同分布。
+
+实值情形，若 $a<b$ 是 $F_X$ 的连续点，有反演公式
+\[
+\begin{aligned}
+&F_X(b)-F_X(a)\\
+&=\lim_{R\to\infty}
+\int_{-R}^{R}
+\frac{e^{-iat}-e^{-ibt}}{2\pi it}\varphi_X(t)\,\dd t.
+\end{aligned}
+\]
+$t=0$ 处用连续延拓。
+
+\textbf{Lévy 连续性定理：} 若 $\varphi_{X_n}(t)$ 在每个 $t\in\R^d$ 收敛到 $\varphi(t)$，且 $\varphi$ 在 $0$ 连续，则 $\varphi$ 是某个概率分布的特征函数，且 $X_n$ 依分布收敛到该分布。
+
+反向由依分布收敛的定义用于 $\cos(t^\top x)$、$\sin(t^\top x)$ 立即得到。上述反演与 Lévy 正向定理在手册中承认，不把证明路线当作完整证明。
+\dep{反演、唯一性与 Lévy 定理〔手册承认结果〕；依分布收敛定义见主题 13。}
+% @end
+
+% @card {"id":"gaussian-vector","type":"definition","title":"联合高斯与参数刻画","fr":"Vecteur gaussien","refs":[["w4",138,138],["w4",141,142]],"requires":["characteristic-function","characteristic-uniqueness-levy","covariance-matrix","usual-continuous-laws","parameter-derivative"]}
+$X\in\R^d$ 为高斯向量，是指每个 $a^\top X$ 都是正态变量，允许方差为零的常数。只知道每个坐标分别正态不足以推出联合高斯。
+
+若 $m=\mathbb EX$、$\Sigma=\Sigma_X$，则
+\[
+\varphi_X(t)=\exp\!\left(it^\top m-\tfrac12t^\top\Sigma t\right).
+\]
+因此分布由 $(m,\Sigma)$ 唯一确定，记为 $\mathcal N_d(m,\Sigma)$。
+% @proof
+\textbf{1. 一维特征函数。} 对标准正态密度 $g$，$g'(x)=-xg(x)$。含参积分求导与分部积分给出 $\varphi'(t)=-t\varphi(t)$，边界项因高斯衰减为零。由 $\varphi(0)=1$ 得 $\varphi(t)=e^{-t^2/2}$；仿射变换得到一般正态公式。\dep{含参求导，由 $|x|g(x)$ 控制；分部积分；一阶微分方程。}
+
+\textbf{2. 向量。} $t^\top X$ 正态，均值 $t^\top m$，方差 $t^\top\Sigma t$；把其一维特征函数在参数 $1$ 处求值。\dep{联合高斯定义；协方差二次型；一维正态公式。}
+
+\textbf{3. 唯一性。} 相同参数给出相同向量特征函数，故同分布。\dep{多维特征函数唯一性〔承认〕。}
+% @end
+
+% @card {"id":"gaussian-construction","type":"theorem","title":"高斯向量的构造与密度","fr":"Construction et densité gaussienne","refs":[["w4",142,143]],"requires":["gaussian-vector","change-variables","independence-factorization"]}
+给定 $m\in\R^d$ 及对称半正定矩阵 $\Sigma$，取 $\Sigma=AA^\top$。若 $Z_i$ 为独立标准正态，则
+\[
+X=m+AZ\sim\mathcal N_d(m,\Sigma).
+\]
+当 $\Sigma$ 正定时，令
+\[
+q(x)=(x-m)^\top\Sigma^{-1}(x-m),
+\]
+其密度为
+\[
+f_X(x)=\frac{e^{-q(x)/2}}
+{(2\pi)^{d/2}\sqrt{\det\Sigma}}.
+\]
+若 $\Sigma$ 奇异，分布集中于真仿射子空间 $m+\operatorname{Im}A$，对 $\lambda_d$ 无密度。这里用的是低维仿射子空间零测，而不是“内点为空就零测”。
+% @proof
+\textbf{1. 构造。} 谱定理提供平方根 $A$。独立标准正态的任意线性组合由特征函数乘法仍为正态，故 $X$ 联合高斯。线性变换给出均值 $m$、协方差 $AA^\top$。\dep{实对称矩阵谱定理〔线性代数〕；特征函数乘法；协方差变换。}
+
+\textbf{2. 密度。} 正定时 $A$ 可逆，对标准向量的乘积密度作仿射换元。Jacobian 为 $|\det A|=\sqrt{\det\Sigma}$，而 $\|A^{-1}(x-m)\|^2=q(x)$。\dep{独立密度乘积；换元公式。}
+
+\textbf{3. 退化。} 若 $\operatorname{rank}A<d$，旋转坐标后其像包含于一个坐标超平面，该超平面由 Tonelli 得零测；正交变换保持 Lebesgue 零测性。\dep{谱定理；Tonelli；换元。}
+% @end
+
+% @card {"id":"gaussian-independence","type":"theorem","title":"高斯情形：不相关等价于独立","fr":"Décorrélation et indépendance","refs":[["w4",144,145]],"requires":["gaussian-vector","covariance","characteristic-uniqueness-levy","conditional-properties","gaussian-stability"]}
+对于同一个联合高斯向量的两个坐标块，不相关等价于独立。也就是说，块间每一项协方差均为零，恰好等价于两块独立。这包含退化高斯情形。
+
+若 $(X,Y)$ 联合高斯且 $\operatorname{Var}(Y)>0$，则
+\[
+\begin{aligned}
+\mathbb E(X\mid Y)={}&\mathbb EX\\
+&+\frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(Y)}
+(Y-\mathbb EY).
+\end{aligned}
+\]
+因此联合高斯的条件均值确实等于线性回归预测。
+% @proof
+\textbf{1. 独立性。} 独立推出零协方差已知。反向中，块对角协方差使 $t^\top\Sigma t$ 分成两块之和，联合特征函数随之分解成两边缘特征函数的乘积。由多维唯一性得到乘积分布。\dep{高斯特征函数；特征函数唯一性；独立性判别。}
+
+\textbf{2. 条件均值。} 令 $a=\operatorname{Cov}(X,Y)/\operatorname{Var}(Y)$，$R=X-\mathbb EX-a(Y-\mathbb EY)$。$(R,Y)$ 联合高斯且协方差为零，所以独立；$\mathbb ER=0$，故对 $Y$ 条件化后余项消失。\dep{高斯的仿射稳定性；第 1 步；条件期望的独立性规则。}
+% @end
+
+% @card {"id":"gaussian-stability","type":"proposition","title":"高斯分布的仿射稳定性","fr":"Stabilité affine et sommes","refs":[["w4",145,146]],"requires":["gaussian-vector","covariance-matrix","characteristic-function"]}
+若 $X\sim\mathcal N_d(m,\Sigma)$，$B$ 为 $k\times d$ 确定矩阵，$c\in\R^k$，则
+\[
+BX+c\sim\mathcal N_k(Bm+c,B\Sigma B^\top).
+\]
+若 $X,Y$ 是相互独立的高斯向量，则
+\[
+X+Y\sim\mathcal N_d(m_X+m_Y,\Sigma_X+\Sigma_Y).
+\]
+分别高斯但彼此依赖的向量，其和不一定高斯；若已知它们联合高斯，则和仍高斯，但协方差还须加上交叉项。
+% @proof
+\textbf{1. 仿射。} 对每个 $a$，$a^\top(BX+c)=(B^\top a)^\top X+a^\top c$ 为正态；参数由期望与协方差变换确定。\dep{高斯定义；线性运算。}
+
+\textbf{2. 独立和。} 独立性使两个高斯特征函数相乘，指数相加，识别出参数相加的新高斯特征函数。\dep{特征函数乘法；唯一性。}
+% @end

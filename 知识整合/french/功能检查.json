@@ -1,0 +1,40 @@
+{
+  "version": "1.5.0",
+  "date": "2026-10-07",
+  "browser": "Local Chrome through 127.0.0.1 preview",
+  "screenshots": 0,
+  "html_sha256": "7faea2a475265c37229ea9bca6e078ee27797f8afa2319555e30101e096380b6",
+  "french_visible": true,
+  "chinese_hidden_in_french": true,
+  "chinese_restored": true,
+  "scroll_difference_px": 0.34375,
+  "original_geometry": {
+    "width": 418.60198974609375,
+    "height": 296.55120849609375
+  },
+  "compare_visible": true,
+  "expanded_state_preserved": true,
+  "desktop_viewport": [
+    1440,
+    950
+  ],
+  "compare_columns": "500.5px 500.5px",
+  "french_search": "« jacobienne » · 3 notions",
+  "original_search_finds_card": true,
+  "empty_search": true,
+  "clear_search_restores_chapter": true,
+  "saved_preference": "fr",
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_compare_columns": "324px",
+  "mobile_no_overflow": true,
+  "mobile_buttons_visible": true,
+  "vector_references": {
+    "duplicate_ids": 0,
+    "missing_uses": 0,
+    "black_emphasis_uses": 49858
+  },
+  "limits": "Targeted checks of new reading modes. No screenshots, full visual audit, print test, or original-source proofreading."
+}

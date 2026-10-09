@@ -1,0 +1,198 @@
+% @card {"id":"product-measure","type":"definition","title":"乘积 σ-代数与乘积测度","fr":"Tribu produit · Mesure produit","refs":[["w4",66,66],["cm4",4,4]],"requires":["generated-sigma","finite-sigma-finite"]}
+对可测空间 $(E,\T_E)$、$(F,\T_F)$，定义
+\[
+\T_E\otimes\T_F
+=\sigma(\{A\times B:A\in\T_E,\ B\in\T_F\}).
+\]
+若 $\mu,\nu$ 均 $\sigma$-有限，则存在唯一测度 $\mu\otimes\nu$，满足
+\[
+(\mu\otimes\nu)(A\times B)=\mu(A)\nu(B).
+\]
+采用 $0\cdot\infty=0$。特别地，$\B(\R)\otimes\B(\R)=\B(\R^2)$，$\lambda\otimes\lambda=\lambda_2$。
+
+存在唯一性是讲义定理 6.2；此处记录结论，不导入讲义所指的 TD 构造题解。
+% @end
+
+% @card {"id":"cm04-method","type":"proposition","title":"CM04 的使用顺序与坐标选择","fr":"Méthode du CM4","refs":[["cm4",2,3],["cm4",9,9],["cm4",23,25]],"requires":["tonelli","fubini","change-variables","polar-coordinates","cylindrical-spherical"]}
+CM04 明确以定理陈述、适用条件和使用方法为本次课程重点；技术性证明承认。阅读时可以先掌握以下顺序，再按需展开证明补充。
+
+\textbf{1. 决定能否换序。} 非负可测函数用 Tonelli；变号函数先考察 $|f|$ 的积分，确认有限后用 Fubini。
+
+\textbf{2. 写清区域。} 换序时对新外层变量固定取值，重新确定内层变量的区间。
+
+\textbf{3. 决定是否换坐标。} 圆盘、圆环或 $x^2+y^2$ 适合极坐标；绕轴对称且涉及高度 $z$，适合柱坐标；球或 $x^2+y^2+z^2$，适合球坐标。
+
+\textbf{4. 完整替换。} 核对微分同胚的区域、参数范围、被积函数及 Jacobian 绝对值。参数切口和退化位置须说明为什么可作为零测集忽略。
+\dep{CM04 的课程安排及方法总结；Tonelli、Fubini、换元定理。}
+% @end
+
+% @card {"id":"jacobian-inverse","type":"definition","title":"Jacobian 矩阵与逆向体积因子","fr":"Matrice jacobienne et inverse","refs":[["cm4",12,17]],"requires":["change-variables"]}
+对 $\Phi=(\Phi_1,\ldots,\Phi_d)$，Jacobian 矩阵是
+\[
+D\Phi(u)=\left(\frac{\partial\Phi_i}{\partial u_j}(u)\right)_{i,j}.
+\]
+行对应输出坐标，列对应输入坐标。若 $\Psi=\Phi^{-1}$，
+\[
+D\Psi(\Phi(u))=[D\Phi(u)]^{-1}.
+\]
+因此逆向体积因子是正向因子的倒数，但要在对应点求值。
+
+例：$\Phi(u,v)=(u+v,u-v)$，
+\[
+D\Phi=\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+\qquad |\det D\Phi|=2.
+\]
+于是 $\dd x\,\dd y=2\,\dd u\,\dd v$，反向则是 $\dd u\,\dd v=\tfrac12\,\dd x\,\dd y$。
+\dep{偏导数与 Jacobian 定义；链式法则；逆矩阵行列式；换元定理。}
+% @end
+
+% @card {"id":"measurable-sections","type":"proposition","title":"截面可测与截面测度公式","fr":"Coupes mesurables","refs":[["w4",66,67],["cm4",5,6]],"requires":["product-measure","preimage"]}
+对 $D\in\T_E\otimes\T_F$，定义
+\[
+\begin{gathered}
+D_x=\{y:(x,y)\in D\},\\
+D^y=\{x:(x,y)\in D\}.
+\end{gathered}
+\]
+每个截面分别属于 $\T_F,\T_E$。在 $\sigma$-有限测度下，$x\mapsto\nu(D_x)$ 与 $y\mapsto\mu(D^y)$ 可测，且
+\[
+\begin{aligned}
+(\mu\otimes\nu)(D)
+&=\int_E\nu(D_x)\,\dd\mu(x)\\
+&=\int_F\mu(D^y)\,\dd\nu(y).
+\end{aligned}
+\]
+% @proof
+\textbf{截面可测。}固定 $x$，满足 $D_x\in\T_F$ 的集合 $D$ 所成的族是一个 $\sigma$-代数，且包含所有矩形，因此包含乘积 $\sigma$-代数。
+\dep{截面保留补集与可数并；生成族最小性。}
+
+\textbf{测度公式的路线。}先在矩形上核对公式，再对有限测度块应用 Dynkin 方法，最后用 $\sigma$-有限覆盖和递增连续性推广。这是讲义性质 6.5 的证明路线，非完整技术证明。
+\dep{矩形上的乘积测度；Dynkin 定理；递增连续性。}
+% @end
+
+% @card {"id":"tonelli","type":"theorem","title":"Tonelli：非负函数可交换积分顺序","fr":"Théorème de Tonelli","refs":[["w4",67,68],["cm4",7,7]],"requires":["measurable-sections","monotone-convergence","simple-approximation"]}
+设两个测度空间均 $\sigma$-有限，$f:E\times F\to[0,\infty]$ 乘积可测，则
+\[
+\begin{aligned}
+&\int_{E\times F}f\,\dd(\mu\otimes\nu)\\
+&=\int_E\left(\int_F f(x,y)\,\dd\nu(y)\right)\dd\mu(x)\\
+&=\int_F\left(\int_E f(x,y)\,\dd\mu(x)\right)\dd\nu(y).
+\end{aligned}
+\]
+各积分允许为 $+\infty$，不必预先证明积分有限。有限个因子的乘积可逐次使用此定理。
+% @proof
+示性函数的情形正是截面测度公式；有限线性组合给出非负简单函数的情形。取 $s_n\uparrow f$，先对内层积分用单调收敛，再对外层积分用一次单调收敛，即得到一个顺序；交换空间角色得到另一个顺序。
+\dep{截面公式；简单积分线性；简单逼近；单调收敛定理。}
+% @end
+
+% @card {"id":"fubini","type":"theorem","title":"Fubini：先证明绝对可积","fr":"Théorème de Fubini","refs":[["w4",67,68],["cm4",8,9]],"requires":["tonelli","signed-integral"]}
+在同样的 $\sigma$-有限条件下，若实值 $f$ 乘积可测且
+\[
+\int_{E\times F}|f|\,\dd(\mu\otimes\nu)<\infty,
+\]
+则可以交换积分顺序，且得到有限的同一数值。
+
+截面函数仅保证对几乎处处的外层变量可积；可将例外集上的内层积分置零后进行外层积分。
+
+\textbf{实用顺序：}先对 $|f|\ge0$ 用 Tonelli 算出有限值，再对 $f$ 用 Fubini。
+% @proof
+将 $f=f^+-f^-$ 分解，对两部分分别应用 Tonelli。由于它们的总积分均有限，内层积分也几乎处处有限；此时可以合法相减，得到 $f$ 的公式。
+\dep{正负部；Tonelli；有限非负积分保证函数几乎处处有限。}
+% @end
+
+% @card {"id":"fubini-warning","type":"warning","title":"两次迭代积分存在，也未必能换序","fr":"Deux ordres, deux résultats","refs":[["w4",68,68],["cm4",11,11]],"requires":["fubini","measure-integral-examples"]}
+在 $(0,1)^2$ 上，
+\[
+f(x,y)=\frac{x^2-y^2}{(x^2+y^2)^2}.
+\]
+先对 $y$ 后对 $x$ 的迭代积分为 $\pi/4$，反过来为 $-\pi/4$。原因是 $\iint|f|=\infty$，Fubini 的条件不成立。
+
+级数也一样：在 $\N^2$ 上令
+\[
+a_{m,n}=\mathbf1_{\{m=n\}}-\mathbf1_{\{m=n+1\}}.
+\]
+先对 $m$ 求和再对 $n$ 求和为 $0$；反向为 $1$，而 $\sum_{m,n}|a_{m,n}|=\infty$。
+\dep{讲义注意 6.8、例 6.9；计数测度积分就是求和。}
+% @end
+
+% @card {"id":"integration-domain","type":"example","title":"换序的关键是重新描述同一个区域","fr":"Décrire le domaine avant d’intégrer","refs":[["w4",69,69],["cm4",10,10]],"requires":["tonelli","integral-on-sets"]}
+对 $D=\{(x,y):0\le x\le y\le1\}$，
+\[
+\begin{aligned}
+&\iint_D(x+y)\,\dd x\,\dd y\\
+&=\int_0^1\int_0^y(x+y)\,\dd x\,\dd y\\
+&=\int_0^1\int_x^1(x+y)\,\dd y\,\dd x
+=\frac12.
+\end{aligned}
+\]
+固定 $y$ 时 $x$ 走 $[0,y]$；固定 $x$ 时 $y$ 走 $[x,1]$。仅交换微分符号而保留旧上下限，会改变积分区域。
+\dep{区域截面；被积函数非负；Tonelli。此为讲义例 6.11。}
+% @end
+
+% @card {"id":"positive-convolution","type":"proposition","title":"卷积：平移后相乘，再积分","fr":"Convolution de fonctions positives","refs":[["w4",69,69],["cm4",24,24]],"requires":["tonelli","outer-invariance"]}
+对非负 Borel 可测 $f,g:\R\to[0,\infty]$，定义
+\[
+(f*g)(z)=\int_{\R}f(z-y)g(y)\,\dd y.
+\]
+它是扩展非负可测函数，且
+\[
+\int_{\R}(f*g)(z)\,\dd z
+=\left(\int_{\R}f\right)\left(\int_{\R}g\right).
+\]
+特别地，若 $f,g$ 的积分均为 $1$，卷积积分也为 $1$，因而可作为概率密度的候选。
+% @proof
+乘积被积函数非负可测，可用 Tonelli 换序；固定 $y$，令 $u=z-y$，由 Lebesgue 测度平移不变性，内层积分为 $\int f(u)\,\dd u$，再提出常数得到结论。
+\dep{可测函数的复合与乘积；Tonelli；平移不变性。}
+% @end
+
+% @card {"id":"change-variables","type":"theorem","title":"多元换元：必须使用 Jacobian 的绝对值","fr":"Changement de variables","refs":[["w4",70,71],["cm4",12,17]],"requires":["integral-on-sets","fubini"]}
+设 $U,V\subseteq\R^d$ 为开集，$\Phi:U\to V$ 是 $C^1$ 微分同胚，即 $\Phi$ 与逆映射均为 $C^1$。对非负或可积的可测函数 $f$，
+\[
+\int_V f(x)\,\dd x
+=\int_U f(\Phi(u))\,|\det D\Phi(u)|\,\dd u.
+\]
+必须同时转换区域、被积函数和体积因子。逆向换元使用逆映射的 Jacobian，不可混用。
+
+例如 $\Phi(u,v)=(u+v,u-v)$ 的行列式为 $-2$，所以面积因子是 $2$。映射 $(u,v)\mapsto(u^2,v)$ 在整个 $\R^2$ 上不单射，不能直接按微分同胚使用。
+
+讲义定理 6.14 将一般证明作为已知结果；其直观依据是可逆线性映射按 $|\det A|$ 缩放体积。
+% @end
+
+% @card {"id":"polar-coordinates","type":"example","title":"极坐标与高斯积分","fr":"Coordonnées polaires","refs":[["w4",71,72],["cm4",18,20]],"requires":["change-variables","tonelli"]}
+令 $x=r\cos\theta,\ y=r\sin\theta$，取 $r>0$、$0<\theta<2\pi$。Jacobian 的绝对值是 $r$：
+\[
+\dd x\,\dd y=r\,\dd r\,\dd\theta.
+\]
+参数域漏掉的射线在平面中零测，可在积分中忽略；原点处退化不影响公式。
+
+若 $I=\int_{\R}e^{-x^2}\,\dd x$，Tonelli 与极坐标给出
+\[
+I^2=\int_0^{2\pi}\int_0^\infty e^{-r^2}r\,\dd r\,\dd\theta
+=\pi,
+\qquad I=\sqrt\pi.
+\]
+\dep{换元定理；Tonelli；$\int_0^\infty e^{-r^2}r\,\dd r=1/2$。此为讲义例 6.16。}
+% @end
+
+% @card {"id":"cylindrical-spherical","type":"definition","title":"柱坐标、球坐标与角度约定","fr":"Coordonnées cylindriques et sphériques","refs":[["w4",71,73],["cm4",21,23]],"requires":["change-variables"]}
+\textbf{柱坐标：}
+\[
+\begin{gathered}
+(x,y,z)=(r\cos\theta,r\sin\theta,z),\\
+\dd x\,\dd y\,\dd z=r\,\dd r\,\dd\theta\,\dd z.
+\end{gathered}
+\]
+\textbf{球坐标：}取 $\rho>0$、$0<\theta<2\pi$、$0<\varphi<\pi$，
+\[
+\begin{aligned}
+x&=\rho\sin\varphi\cos\theta,\\
+y&=\rho\sin\varphi\sin\theta,\qquad z=\rho\cos\varphi.
+\end{aligned}
+\]
+其中 $\varphi$ 是与正 $z$ 轴的夹角，$\theta$ 是方位角；因此
+\[
+\dd x\,\dd y\,\dd z
+=\rho^2\sin\varphi\,\dd\rho\,\dd\theta\,\dd\varphi.
+\]
+退化轴及参数切口可作为零测边界处理。不同教材可能交换两个角的名称，使用前应核对坐标表达式。
+% @end

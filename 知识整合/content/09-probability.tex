@@ -1,0 +1,186 @@
+% @card {"id":"probability-conditioning","type":"definition","title":"概率空间、条件概率与 Bayes","fr":"Probabilité conditionnelle et Bayes","refs":[["w4",92,95]],"requires":["measure-definition","measure-properties"]}
+概率空间是满足 $\mathbb P(\Omega)=1$ 的测度空间 $(\Omega,\T,\mathbb P)$。事件为 $\T$ 中的集合。若 $\mathbb P(B)>0$，
+\[
+\mathbb P(A\mid B)=\frac{\mathbb P(A\cap B)}{\mathbb P(B)}.
+\]
+若 $(B_i)$ 是可数可测分割且各块概率为正，则
+\[
+\mathbb P(A)=\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i).
+\]
+若还满足 $\mathbb P(A)>0$，
+\[
+\mathbb P(B_j\mid A)
+=\frac{\mathbb P(A\mid B_j)\mathbb P(B_j)}
+{\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i)}.
+\]
+事件 $A,B$ 独立的通用定义是 $\mathbb P(A\cap B)=\mathbb P(A)\mathbb P(B)$，允许零概率事件。独立不等于互斥。
+% @proof
+\textbf{1. 全概率。} $A$ 是两两不交的 $A\cap B_i$ 的并，先用可数可加性，再代入条件概率定义。\dep{测度定义；条件概率定义。}
+
+\textbf{2. Bayes。} 把 $\mathbb P(B_j\mid A)$ 写成 $\mathbb P(A\cap B_j)/\mathbb P(A)$，分子用乘法公式，分母用全概率公式。\dep{条件概率定义；上一步。}
+% @end
+
+% @card {"id":"random-variable-law","type":"definition","title":"随机变量就是可测函数","fr":"Variable aléatoire et loi","refs":[["w4",96,97]],"requires":["measurable-function","pushforward"]}
+从概率空间到可测空间 $(E,\T_E)$ 的可测映射 $X$ 称为随机变量。其分布是像测度
+\[
+\mathbb P_X(A)=\mathbb P(X^{-1}(A))
+=\mathbb P(X\in A),\quad A\in\T_E.
+\]
+实随机变量的目标空间取 $(\R,\B(\R))$。$X$ 是函数，$\mathbb P_X$ 是测度；同分布不要求逐点相等，也不要求定义在同一概率空间上。
+
+\dep{像测度定义；原像保持不交并，故 $\mathbb P_X$ 可数可加且总质量为 $1$。}
+% @end
+
+% @card {"id":"distribution-function","type":"proposition","title":"分布函数与原子","fr":"Fonction de répartition","refs":[["w4",97,101]],"requires":["random-variable-law","increasing-continuity","decreasing-continuity","measure-uniqueness"]}
+实随机变量 $X$ 的分布函数为 $F_X(a)=\mathbb P(X\le a)$。它单调不减、右连续，且
+\[
+\begin{gathered}
+F_X(-\infty)=0,\qquad F_X(+\infty)=1,\\
+F_X(a-)=\mathbb P(X<a),\\
+F_X(a)-F_X(a-)=\mathbb P(X=a).
+\end{gathered}
+\]
+因此跳跃大小等于该点的概率质量；$F_X=F_Y$ 当且仅当 $\mathbb P_X=\mathbb P_Y$。连续分布函数只排除原子，并不保证存在密度，Cantor 分布就是例子。
+% @proof
+\textbf{1. 连续性。} 令 $a_n\downarrow a$，则 $\{X\le a_n\}\downarrow\{X\le a\}$；令 $b_n\uparrow a$ 且 $b_n<a$，则 $\{X\le b_n\}\uparrow\{X<a\}$。对这些事件用测度的单调连续性。\dep{概率测度有限；递增、递减连续性。}
+
+\textbf{2. 唯一性。} 相同分布函数意味着两概率测度在半直线 $(-\infty,a]$ 上相同。这些集合构成生成 $\B(\R)$ 的 $\pi$-系统，故测度在全部 Borel 集上相同。\dep{生成族；有限测度唯一性。}
+% @end
+
+% @card {"id":"probability-law-types","type":"definition","title":"离散、密度与奇异分布","fr":"Lois discrètes, à densité, singulières","refs":[["w4",101,102]],"requires":["random-variable-law","radon-nikodym","cantor-measure"]}
+若存在可数集 $S$ 满足 $\mathbb P(X\in S)=1$，则 $X$ 离散，
+\[
+\mathbb P_X=\sum_{x\in S}\mathbb P(X=x)\delta_x.
+\]
+若存在可测 $f_X\ge0$，$\int_{\R}f_X\,\dd x=1$，且
+\[
+\mathbb P(X\in A)=\int_A f_X\,\dd x,
+\]
+则称 $X$ 有密度。等价地，$\mathbb P_X\ll\lambda$，且 $f_X=\dd\mathbb P_X/\dd\lambda$，密度仅在几乎处处意义下唯一。\dep{Radon--Nikodym 定理。}
+
+离散和有密度不是穷尽分类：还可能混合，或奇异连续。取值空间是连续的，并不自动意味着分布有密度。
+% @end
+
+% @card {"id":"expectation-transfer","type":"theorem","title":"期望与转移公式","fr":"Espérance et théorème de transfert","refs":[["w4",103,105]],"requires":["random-variable-law","simple-approximation","monotone-convergence","signed-integral"]}
+若 $X$ 可积，定义 $\mathbb E X=\int_\Omega X\,\dd\mathbb P$。对可测 $g\ge0$（可取无穷）或满足 $\mathbb E|g(X)|<\infty$ 的 $g$，
+\[
+\mathbb E[g(X)]=\int_{\R}g(x)\,\dd\mathbb P_X(x).
+\]
+离散情形化为 $\sum_x g(x)\mathbb P(X=x)$；有密度时化为 $\int_{\R}g(x)f_X(x)\,\dd x$。一般像测度也满足此公式，不依赖总质量为 $1$。
+% @proof
+\textbf{1. 示性函数。} 对 $g=\mathbf1_A$，等式两边均为 $\mathbb P(X\in A)$。\dep{像测度定义；示性函数积分。}
+
+\textbf{2. 非负函数。} 先由线性性推广到非负简单函数，再取 $g_n\uparrow g$；复合后仍有 $g_n(X)\uparrow g(X)$，两边分别取极限。\dep{简单逼近；单调收敛定理。}
+
+\textbf{3. 可积函数。} 对 $g^+,g^-$ 分别应用第 2 步后相减；对 $|g|$ 的公式保证两边可积性等价。\dep{正负部分分解；绝对可积性。}
+% @end
+
+% @card {"id":"moments-variance","type":"proposition","title":"矩、方差与概率不等式","fr":"Moments, variance et inégalités","refs":[["w4",103,107]],"requires":["expectation-transfer","markov-chebyshev","holder","lp-inclusion-jensen"]}
+对 $p\ge1$，$\mathbb E|X|^p<\infty$ 表示 $p$ 阶绝对矩有限。概率空间上 $L^q\subset L^p$（$q>p$）。
+
+当 $X\in L^2$ 时，
+\[
+\begin{aligned}
+\operatorname{Var}(X)&=\mathbb E[(X-\mathbb EX)^2]\\
+&=\mathbb E(X^2)-(\mathbb EX)^2.
+\end{aligned}
+\]
+方差非负，等于零当且仅当 $X=\mathbb EX$ 几乎必然。
+\[
+\begin{gathered}
+\mathbb P(|X|\ge a)\le\frac{\mathbb E|X|^p}{a^p},\\
+\mathbb P(|X-\mathbb EX|\ge\varepsilon)
+\le\frac{\operatorname{Var}(X)}{\varepsilon^2}.
+\end{gathered}
+\]
+\dep{第一式由 Markov 用于 $|X|^p$；第二式用于中心化变量的平方。方差公式由展开平方与积分线性性，零方差判别由非负积分为零。}
+% @end
+
+% @card {"id":"usual-discrete-laws","type":"definition","title":"常见离散分布","fr":"Lois discrètes usuelles","refs":[["w4",108,108]],"requires":["probability-law-types","expectation-transfer","moments-variance"]}
+\textbf{Bernoulli：} $0\le p\le1$，$\mathbb P(X=1)=p$，$\mathbb P(X=0)=1-p$。均值 $p$，方差 $p(1-p)$。
+
+\textbf{二项分布：} $n\in\N$，$0\le p\le1$，
+\[
+\mathbb P(X=k)=\binom nk p^k(1-p)^{n-k},
+\quad 0\le k\le n.
+\]
+均值 $np$，方差 $np(1-p)$。
+
+\textbf{几何分布：} $0<p\le1$，采用从 $1$ 起计的约定，
+\[
+\mathbb P(X=k)=p(1-p)^{k-1},\quad k\ge1.
+\]
+均值 $1/p$，方差 $(1-p)/p^2$。
+
+\textbf{Poisson：} $\lambda>0$，
+\[
+\mathbb P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!},
+\quad k\in\N.
+\]
+均值、方差均为 $\lambda$。\dep{分布定义；矩由转移公式计算。}
+% @end
+
+% @card {"id":"usual-continuous-laws","type":"definition","title":"常见有密度分布","fr":"Lois à densité usuelles","refs":[["w4",108,108]],"requires":["probability-law-types","expectation-transfer","moments-variance"]}
+\textbf{均匀分布 $\mathcal U([a,b])$：} $a<b$，
+\[
+f(x)=\frac{\mathbf1_{[a,b]}(x)}{b-a}.
+\]
+均值 $(a+b)/2$，方差 $(b-a)^2/12$。
+
+\textbf{指数分布 $\mathcal E(\lambda)$：} $\lambda>0$，
+\[
+f(x)=\lambda e^{-\lambda x}\mathbf1_{(0,\infty)}(x).
+\]
+均值 $1/\lambda$，方差 $1/\lambda^2$。
+
+\textbf{正态分布 $\mathcal N(m,\sigma^2)$：} $\sigma>0$，
+\[
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}
+\exp\!\left(-\frac{(x-m)^2}{2\sigma^2}\right).
+\]
+均值 $m$，方差 $\sigma^2$；$\mathcal N(0,1)$ 称标准正态。后文允许退化情形 $\mathcal N(m,0)=\delta_m$，它没有 Lebesgue 密度。
+\dep{分布定义；转移公式给出矩，换元和高斯积分给出归一化。}
+% @end
+
+% @card {"id":"independent-variables","type":"theorem","title":"独立性及其判别","fr":"Indépendance et caractérisations","refs":[["w4",110,112]],"requires":["product-measure","measure-uniqueness","expectation-transfer","fubini","dominated-convergence"]}
+$X_1,\ldots,X_n$ 相互独立是指，对任意 Borel 集 $A_i$，
+\[
+\mathbb P(X_1\in A_1,\ldots,X_n\in A_n)
+=\prod_{i=1}^n\mathbb P(X_i\in A_i).
+\]
+等价于联合分布为边缘分布的乘积。对两个变量，又等价于对所有有界连续 $\varphi,\psi$，
+\[
+\mathbb E[\varphi(X)\psi(Y)]
+=\mathbb E[\varphi(X)]\mathbb E[\psi(Y)].
+\]
+独立且各自可积的 $X,Y$ 自动满足 $XY\in L^1$ 以及 $\mathbb E(XY)=\mathbb EX\,\mathbb EY$。两两独立一般不足以推出相互独立。
+% @proof
+\textbf{1. 联合分布。} 独立性恰好表示联合分布与乘积测度在矩形上相等；由 $\pi$-系统唯一性推广到全部 Borel 集。\dep{有限测度唯一性。}
+
+\textbf{2. 积分因子化。} 对乘积测度应用转移与 Fubini。若 $X,Y$ 可积，先以 Tonelli 得到 $\mathbb E|XY|=\mathbb E|X|\mathbb E|Y|<\infty$。\dep{Tonelli；Fubini。}
+
+\textbf{3. 连续函数判别的逆向。} 对每个 $a$，取在 $(-\infty,a]$ 上为 $1$、在 $[a+1/k,\infty)$ 上为 $0$、中间线性的连续函数，逼近 $\mathbf1_{(-\infty,a]}$。两坐标分别逼近并用控制收敛，得到下方矩形上的概率因子化，再用唯一性。\dep{控制收敛；矩形生成族。}
+
+这里仅逼近半直线示性函数，不假定任意 Borel 集示性函数都是连续函数列的逐点极限。
+% @end
+
+% @card {"id":"generating-function","type":"proposition","title":"整数值变量的概率生成函数","fr":"Fonction génératrice","refs":[["w4",113,115]],"requires":["expectation-transfer","independent-variables","monotone-convergence"]}
+若 $X\in\N$，定义（$0^0=1$）
+\[
+G_X(s)=\mathbb E(s^X)
+=\sum_{k=0}^{\infty}\mathbb P(X=k)s^k,\quad |s|\le1.
+\]
+其幂级数系数唯一确定分布，且
+\[
+\begin{gathered}
+\mathbb P(X=k)=G_X^{(k)}(0)/k!,\\
+G_X'(1-)=\mathbb EX,\\
+G_X''(1-)=\mathbb E[X(X-1)].
+\end{gathered}
+\]
+边界导数可理解为 $s\uparrow1$ 的极限，允许 $+\infty$。独立整数值变量满足 $G_{X+Y}=G_XG_Y$。
+% @proof
+\textbf{1. 系数与矩。} 在 $|s|<1$ 内逐项求导。令 $s\uparrow1$，各非负项递增，得到阶乘矩公式。\dep{幂级数求导定理〔分析课〕；单调收敛。}
+
+\textbf{2. 求和。} $s^{X+Y}=s^Xs^Y$；在整数值域上这两个因子均有界。由独立性取期望即可，不需要声称 $x\mapsto s^x$ 在整个 $\R$ 上有界。\dep{独立性下积分因子化。}
+% @end

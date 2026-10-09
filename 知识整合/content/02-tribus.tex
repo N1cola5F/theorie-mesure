@@ -1,0 +1,120 @@
+% @card {"id":"sigma-algebra","type":"definition","title":"σ-代数的公理与封闭性","fr":"Tribu / σ-algèbre","refs":[["cm2",7,10],["r2",2,2],["w4",17,18]],"requires":[]}
+集合族 $\T\subseteq\mathcal P(\Omega)$ 是 $\sigma$-代数，如果
+\[
+\begin{gathered}
+\varnothing\in\T,\\
+A\in\T\Rightarrow A^c\in\T,\\
+(A_n)\subseteq\T\Rightarrow\bigcup_nA_n\in\T.
+\end{gathered}
+\]
+由此推出 $\Omega\in\T$，并对可数交、有限并、有限交与差集封闭。
+
+最小的例子是 $\{\varnothing,\Omega\}$；最大的例子是 $\mathcal P(\Omega)$。$(\Omega,\T)$ 称为可测空间。
+% @proof
+\[
+\bigcap_n A_n=\left(\bigcup_n A_n^c\right)^c,
+\qquad A\setminus B=A\cap B^c.
+\]
+用补集和可数并公理即可推出交与差的封闭性。有限并可补充空集写成可数并。
+\dep{De Morgan 律；$\sigma$-代数公理；CM2 第 8–9 页。}
+% @end
+
+% @card {"id":"generated-sigma","type":"definition","title":"生成 σ-代数与最小性","fr":"Tribu engendrée","refs":[["cm2",12,17],["r2",3,3],["w4",19,21]],"requires":["sigma-algebra"]}
+任意集合族 $\mathcal G\subseteq\mathcal P(\Omega)$ 生成
+\[
+\sigma(\mathcal G)
+=\bigcap_{\substack{\T\text{ 为 }\sigma\text{-代数}\\\mathcal G\subseteq\T}}\T.
+\]
+这是包含 $\mathcal G$ 的最小 $\sigma$-代数。
+
+\textbf{最常用的推理：}
+\[
+\mathcal G\subseteq\mathcal S,\ \mathcal S\text{ 为 }\sigma\text{-代数}
+\ \Longrightarrow\ \sigma(\mathcal G)\subseteq\mathcal S.
+\]
+要证明两个生成 $\sigma$-代数相等，通常分别证明两个包含关系。
+% @end
+
+% @card {"id":"borel-generators","type":"proposition","title":"Borel 集与可数生成工具","fr":"Tribu borélienne","refs":[["cm2",19,22],["r2",3,4],["w4",21,24]],"requires":["generated-sigma"]}
+$\B(\R)=\sigma(\text{开集})$。下面各族均可单独生成 $\B(\R)$：
+\[
+\begin{gathered}
+\{(a,b):a<b\},\quad\{[a,b]:a<b\},\\
+\{(-\infty,a]:a\in\R\}.
+\end{gathered}
+\]
+端点可限制为有理数。开集、闭集、区间、单点、$\Q$ 及其补集都是 Borel 集。
+% @proof
+每个实数开集都可写成可数个有理端点开区间的并。对每个点选一个包含它、仍落在该开集内的有理端点区间即可。
+\dep{$\Q$ 的稠密性与可数性。}
+
+闭区间可从内部逼近开区间；半直线可通过差和可数并产生区间。反向包含关系来自这些生成元本身都是 Borel 集。
+\dep{生成族最小性；$\sigma$-代数封闭性；CM2 第 22 页。}
+% @end
+
+% @card {"id":"partition-sigma","type":"example","title":"有限分割：所有块的组合","fr":"Tribu engendrée par une partition","refs":[["td2",2,2],["answer2",2,2],["w4",124,125]],"requires":["generated-sigma","countability"]}
+若 $(A_1,\ldots,A_n)$ 是非空块组成的分割，则
+\[
+\begin{gathered}
+\sigma(A_1,\ldots,A_n)\\
+=\left\{\bigcup_{i\in J}A_i:J\subseteq\{1,\ldots,n\}\right\},\\
+|\sigma(A_1,\ldots,A_n)|=2^n.
+\end{gathered}
+\]
+例如三个块产生空集、三个单块、三个两块并以及全集，共八个可测集。
+
+\textbf{方法：}核验候选族是 $\sigma$-代数，再使用最小性和有限并封闭性证明相等；计数时用非空且不交保证不同选块方式产生不同集合。
+% @end
+
+% @card {"id":"cantor","type":"example","title":"Cantor 集：不可数但零测","fr":"Ensemble triadique de Cantor","refs":[["cm2",26,32],["w4",27,28]],"requires":["outer-properties","null-sets"]}
+从 $C_0=[0,1]$ 开始，反复移去每段的开中间三分之一，令 $C=\bigcap_{n\ge0}C_n$。
+
+$C_n$ 由 $2^n$ 个长度 $3^{-n}$ 的闭区间组成，因此
+\[
+0\le\lambda(C)\le\lambda(C_n)=\left(\frac23\right)^n\to0.
+\]
+$C$ 是闭集、零测集，却不可数。
+% @proof
+对二进制序列 $\omega\in\{0,1\}^{\N}$ 定义
+\[
+\Phi(\omega)=\sum_{n\ge0}\frac{2\omega_n}{3^{n+1}}.
+\]
+前 $m$ 位确定 $C_m$ 的一个闭区间，尾和在 $[0,3^{-m}]$ 中，因此 $\Phi(\omega)\in C$。
+
+两序列首次在第 $k$ 位不同，则首个差的大小为 $2/3^{k+1}$，尾部最多抵消 $1/3^{k+1}$，故两像不同。由 Cantor 对角线论证，二进制序列集不可数，故 $C$ 不可数。
+\dep{几何级数；单射比较基数；CM2 第 28–32 页。}
+% @end
+
+% @card {"id":"borel-lebesgue","type":"theorem","title":"Borel 可测与 Lebesgue 可测","fr":"Boréliens et Lebesgue-mesurables","refs":[["cm2",23,25],["td1",14,15],["w4",24,27]],"requires":["borel-generators","caratheodory-theorem","cantor"]}
+\[
+\B(\R)\subsetneq\M(\lambda^*).
+\]
+每个 Lebesgue 可测集 $E$ 都可以写成
+\[
+E=B\sqcup N,\qquad
+B\in\B(\R),\quad \lambda^*(N)=0.
+\]
+因此 Lebesgue 可测集可由 Borel 集加上零测部分得到；Borel 测度的完备化得到 Lebesgue 测度。
+
+\textbf{注意：}“可测”必须注明相对于哪个 $\sigma$-代数；零外测度集的所有子集 Lebesgue 可测，但不都为 Borel 集。
+% @proof
+包含关系：半直线满足 Carathéodory 判据，而满足判据的集合构成 $\sigma$-代数，所以它包含由半直线生成的 Borel 族。
+\dep{Carathéodory 定理；生成族最小性。}
+
+严格性可借 Cantor 集的子集与 Borel 集族的基数比较建立；此处仅记录结论，完整论证见 TD1 官方答案第 14–15 页。CM2 第 24 页所指 TD2 题名与当前题单不一致，阅读时以实际文件为准。
+% @end
+
+% @card {"id":"finite-cofinite","type":"warning","title":"有限并封闭不等于可数并封闭","fr":"Algèbre ≠ tribu","refs":[["td2",2,2],["answer2",5,5]],"requires":["sigma-algebra"]}
+在 $\N$ 上，有限集或余有限集构成的族
+\[
+\mathcal A=\{A\subseteq\N:A\text{ 有限或 }A^c\text{ 有限}\}
+\]
+对补集和有限并封闭，是集合代数，却不是 $\sigma$-代数。
+
+因为每个 $\{2k\}\in\mathcal A$，而
+\[
+\bigcup_{k\ge0}\{2k\}=\{0,2,4,\ldots\}
+\]
+及其补集均无限，不在 $\mathcal A$ 中。
+\dep{可数并公理；有限集的基本性质。}
+% @end

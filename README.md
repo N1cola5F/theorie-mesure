@@ -1,3 +1,6 @@
+<!-- semester-reader -->
+本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器](https://cuteyzm.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
+
 # 测度论 · Théorie de la mesure — 交互式双语文档站
 
 把原先的单文件 `mindmap_proba.html` 重构为基于 [VitePress](https://vitepress.dev/) 的交互式双语（法语 / 中文）测度论知识站：保留并升级数学公式与关系图，新增可缩放/可点击的概念地图、悬停定义，以及 5 个可调参数的数学动态演示，内置侧边栏导航与本地全文搜索。

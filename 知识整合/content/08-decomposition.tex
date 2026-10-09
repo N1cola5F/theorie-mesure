@@ -1,0 +1,69 @@
+% @card {"id":"density-absolute-continuity","type":"definition","title":"有密度与绝对连续","fr":"Densité · Continuité absolue","refs":[["w4",83,85]],"requires":["integral-on-sets","zero-integral","point-atoms"]}
+对非负可测 $g$，令 $\nu(A)=\int_Ag\,\dd\mu$，记 $\nu=g\mu$。若
+\[
+\mu(A)=0\ \Longrightarrow\ \nu(A)=0,
+\]
+则称 $\nu$ 对 $\mu$ 绝对连续，记 $\nu\ll\mu$。有密度必然绝对连续，因为零测集上的积分为零。
+
+对非负可测 $\varphi$，或两边绝对可积时，
+\[
+\int\varphi\,\dd\nu=\int\varphi g\,\dd\mu.
+\]
+这是对同一空间重加权，不同于通过映射改变空间的像测度公式。
+% @proof
+先对 $\varphi=\mathbf1_A$ 用密度定义，再由线性扩展到简单函数；简单逼近与单调收敛给出非负情形，最后对正负部相减。
+\dep{密度定义；简单逼近；单调收敛；正负部。}
+% @end
+
+% @card {"id":"singular-measures","type":"definition","title":"互相奇异、离散与无点原子","fr":"Mesures étrangères · Mesure diffuse","refs":[["w4",83,86]],"requires":["density-absolute-continuity","point-atoms"]}
+若存在可测集 $B$，使 $\mu(B)=0$ 且 $\nu(B^c)=0$，记 $\mu\perp\nu$，称两测度互相奇异。它表示测度可集中在互不相交的可测集合上，不能误解为拓扑支撑必不相交。
+
+离散测度集中于至多可数的点集；无点原子测度对每个可测单点赋零。二者不穷尽所有混合情况，例如 $\delta_0+\lambda$。
+
+离散测度与 Lebesgue 测度互相奇异。若同时 $\nu\ll\mu$ 与 $\nu\perp\mu$，则 $\nu=0$。
+\dep{可数集 Lebesgue 零测；绝对连续与互相奇异的定义。}
+% @end
+
+% @card {"id":"cantor-measure","type":"example","title":"Cantor 测度：无点原子却没有密度","fr":"Mesure singulière continue","refs":[["w4",87,89]],"requires":["cantor","singular-measures","decreasing-continuity"]}
+记 $C_k$ 为 Cantor 集第 $k$ 步近似。概率测度
+\[
+\mu_k(A)=(3/2)^k\lambda(A\cap C_k)
+\]
+在每个区间上的质量有极限，确定 Cantor 概率测度 $\nu_C$。它给 $C_k$ 的每个基本区间质量 $2^{-k}$。
+
+因此 $\nu_C(C)=1$、$\nu_C(\{x\})=0$，但 $\lambda(C)=0$，所以 $\nu_C\perp\lambda$。这种同时无点原子且奇异的测度称为奇异连续测度。
+% @proof
+由 $\nu_C(C_k)=1$ 和测度递减连续性，$\nu_C(C)=1$。若 $x\in C$，用含 $x$ 的基本区间估计 $\nu_C(\{x\})\le2^{-k}\to0$；$C$ 外质量为零。取奇异集 $B=C$ 即得 $\nu_C\perp\lambda$。
+\dep{基本区间质量；递减连续性；单调性；Cantor 集零测。测度存在性采用讲义命题 8.15。}
+% @end
+
+% @card {"id":"radon-nikodym","type":"theorem","title":"Radon–Nikodym：绝对连续等价于有密度","fr":"Théorème de Radon–Nikodym","refs":[["w4",85,85],["w4",89,89]],"requires":["density-absolute-continuity","finite-sigma-finite","hilbert-riesz"]}
+若 $\mu,\nu$ 均 $\sigma$-有限且 $\nu\ll\mu$，存在非负可测 $h$，使
+\[
+\nu(A)=\int_Ah\,\dd\mu,\qquad
+h=\frac{\dd\nu}{\dd\mu}.
+\]
+密度仅在 $\mu$-几乎处处意义下唯一，不要求逐点唯一。
+% @proof
+\textbf{有限测度下的路线。}在 $L^2(\mu+\nu)$ 上研究 $\ell(f)=\int f\,\dd\nu$。由 Riesz 表示得到 $k$，使 $\nu=k(\mu+\nu)$；利用 $0\le k<1$ 几乎处处，得到 $h=k/(1-k)$。一般情形按 $\sigma$-有限块推广。
+\dep{Cauchy–Schwarz；Riesz 表示；绝对连续性。这里只列讲义证明路线，完整构造不在本条展开。}
+% @end
+
+% @card {"id":"lebesgue-decomposition","type":"theorem","title":"Lebesgue 分解与实线上的三部分","fr":"Décomposition de Lebesgue","refs":[["w4",89,91]],"requires":["radon-nikodym","singular-measures","cantor-measure"]}
+对同一可测空间上的 $\sigma$-有限测度 $\mu,\nu$，存在唯一分解
+\[
+\nu=\nu_{\mathrm{ac}}+\nu_{\mathrm{s}},
+\qquad \nu_{\mathrm{ac}}\ll\mu,\quad\nu_{\mathrm{s}}\perp\mu.
+\]
+进一步，对 $\R$ 上的有限 Borel 测度，
+\[
+\nu=g\lambda+\sum_i p_i\delta_{x_i}+\nu_{\mathrm{sc}}.
+\]
+三项分别是有密度部分、离散部分和奇异连续部分；$g\ge0$ 可积，$p_i>0$ 且 $\sum_i p_i<\infty$。
+% @proof
+\textbf{第一步的路线。}对 $\nu\ll\mu+\nu$ 用 Radon–Nikodym，按密度是否等于 $1$ 区分奇异部分和绝对连续部分。这是讲义分解定理的证明路线。
+\dep{Radon–Nikodym；密度转移公式。}
+
+\textbf{实线上的细分。}有限测度中，质量至少 $1/n$ 的点只有有限多个，所以所有点原子构成至多可数集。将这些点的质量取出，剩余部分既无点原子又仍奇异。唯一性来自第一步分解以及各单点质量的确定性。
+\dep{有限性；单点可测；测度可数可加性。}
+% @end

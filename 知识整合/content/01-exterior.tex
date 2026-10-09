@@ -1,0 +1,163 @@
+% @card {"id":"countability","type":"definition","title":"分割与可数性","fr":"Partition · Dénombrabilité","refs":[["cm1",18,22],["w4",4,6]],"requires":[]}
+分割 $(A_i)_{i\in I}$ 的各块非空、两两不交，且 $\Omega=\bigcup_{i\in I}A_i$。
+
+集合至多可数，是指它为有限集或可与 $\N$ 的某个子集一一对应。$\N,\mathbb Z,\Q$ 都可数；$\R$ 不可数。
+
+\textbf{使用边界：}可数个可数集的并仍可数，但测度的可数可加性不能用于不可数并。
+\[
+\begin{gathered}
+\relax[0,1]=\bigcup_{x\in[0,1]}\{x\},\\
+\lambda(\{x\})=0,\quad\lambda([0,1])=1.
+\end{gathered}
+\]
+% @end
+
+% @card {"id":"set-limits","type":"definition","title":"集合的上极限与下极限","fr":"Limite supérieure · Limite inférieure","refs":[["cm1",23,30],["w4",6,8]],"requires":["countability"]}
+\[
+\begin{gathered}
+\limsup_n A_n=\bigcap_{N\ge1}\bigcup_{n\ge N}A_n,\\
+\liminf_n A_n=\bigcup_{N\ge1}\bigcap_{n\ge N}A_n.
+\end{gathered}
+\]
+$x\in\limsup A_n$：$x$ 属于无穷多个 $A_n$。
+
+$x\in\liminf A_n$：从某一项起，$x$ 属于所有 $A_n$。
+\[
+\begin{gathered}
+\liminf A_n\subseteq\limsup A_n,\\
+(\limsup A_n)^c=\liminf A_n^c.
+\end{gathered}
+\]
+% @proof
+\textbf{上极限。}“无穷多次”意味着对任意起点 $N$，总存在 $n\ge N$ 使 $x\in A_n$；将“任意”写成交，将“存在”写成并，即得公式。
+\dep{量词与集合运算的对应；CM1 第 27 页。}
+
+\textbf{下极限。}“最终总是”意味着存在 $N$，对任意 $n\ge N$ 都有 $x\in A_n$；交换两个量词的顺序便得到另一公式。
+\dep{CM1 第 28 页；补集关系使用 De Morgan 律。}
+% @end
+
+% @card {"id":"outer-definition","type":"definition","title":"用可数覆盖定义外测度","fr":"Mesure extérieure de Lebesgue","refs":[["cm1",34,35],["w4",8,9]],"requires":["countability"]}
+对任意 $E\subseteq\R$，定义
+\[
+\lambda^*(E)=
+\inf_{\substack{E\subseteq\bigcup_{n\ge1}I_n\\ I_n=(a_n,b_n)}}
+\sum_{n\ge1}(b_n-a_n).
+\]
+先用可数个开区间覆盖 $E$，计算覆盖的总长度，再取所有覆盖成本的下确界。
+
+\textbf{关键估计：}任意一个允许的覆盖都给出
+\[
+\lambda^*(E)\le\sum_{n\ge1}|I_n|.
+\]
+当 $\lambda^*(E)<\infty$ 时，给定 $\varepsilon>0$，可以找到成本小于 $\lambda^*(E)+\varepsilon$ 的覆盖。
+% @end
+
+% @card {"id":"outer-properties","type":"proposition","title":"外测度的三条基本性质","fr":"Monotonie · Sous-additivité","refs":[["cm1",36,39],["w4",9,10]],"requires":["outer-definition"]}
+\[
+\lambda^*(\varnothing)=0,\qquad
+E\subseteq F\Longrightarrow\lambda^*(E)\le\lambda^*(F).
+\]
+对任意集合序列 $(E_n)$，
+\[
+\lambda^*\!\left(\bigcup_{n\ge1}E_n\right)
+\le\sum_{n\ge1}\lambda^*(E_n).
+\]
+\textbf{注意：}此处集合不要求可测；结论是次可加，不是不交并的可加性。
+% @proof
+\textbf{1. 空集与单调性。}空集可被总长度任意小的开区间覆盖；$F$ 的覆盖也覆盖 $E\subseteq F$。分别使用下确界定义得出结论。
+\dep{外测度定义。}
+
+\textbf{2. 可数次可加性。}若右侧为无穷，不等式自动成立。否则给第 $n$ 个集合选择误差小于 $\varepsilon2^{-n}$ 的覆盖。把这些覆盖合并，仍为可数覆盖，且总成本不超过
+\[
+\sum_{n\ge1}\lambda^*(E_n)+\varepsilon.
+\]
+令 $\varepsilon\downarrow0$。
+\dep{下确界逼近；可数个可数集的并可数；非负级数。}
+% @end
+
+% @card {"id":"outer-invariance","type":"proposition","title":"平移、伸缩与区间长度","fr":"Invariance · Longueur des intervalles","refs":[["cm1",40,48],["w4",9,12]],"requires":["outer-properties"]}
+对 $t\in\R$、$c\ne0$，
+\[
+\lambda^*(E+t)=\lambda^*(E),\qquad
+\lambda^*(cE)=|c|\,\lambda^*(E).
+\]
+$c=0$ 时像为空集或单点集，外测度为零，单独处理以避免 $0\cdot\infty$。
+
+任意端点开闭形式的有界区间 $I$ 都满足
+\[
+\lambda^*(I)=\text{区间长度}.
+\]
+特别地，$\lambda^*(\{x\})=0$，$\lambda^*(\R)=+\infty$。
+% @proof
+\textbf{变换覆盖。}将覆盖区间逐一平移或缩放，得到一个方向的不等式；再施加逆变换，得到反向不等式。
+\dep{外测度的下确界定义；区间长度的变换。}
+
+\textbf{区间的下界。}对开区间内部的紧子区间取任意开覆盖，由紧致性选出有限子覆盖；有限覆盖的总长度至少等于被覆盖区间的长度。先取下确界，再让紧子区间逼近原区间。
+\dep{Heine–Borel 紧致性；CM1 第 43–48 页。}
+% @end
+
+% @card {"id":"null-sets","type":"example","title":"可数集零测，零测集未必可数","fr":"Ensembles négligeables","refs":[["cm1",50,52],["td1",2,2],["w4",12,13]],"requires":["outer-properties","outer-invariance"]}
+若 $\lambda^*(N)=0$，称 $N$ 为 Lebesgue 零测集。
+
+任意至多可数集 $D=\{x_n\}$ 满足
+\[
+0\le\lambda^*(D)
+\le\sum_n\lambda^*(\{x_n\})=0.
+\]
+零测集的子集、可数个零测集的并，仍然零测。
+
+\textbf{辨析：}$\Q$ 虽然在 $\R$ 中稠密，却是零测集；Cantor 集是不可数零测集。因此稠密性、基数与测度描述不同性质。
+\dep{单点外测度为零；单调性；可数次可加性。}
+% @end
+
+% @card {"id":"caratheodory-criterion","type":"definition","title":"Carathéodory 可测性判据","fr":"Critère de Carathéodory","refs":[["cm1",53,54],["w4",13,13]],"requires":["outer-properties"]}
+$A\subseteq\R$ 是 Lebesgue 可测集，当且仅当对\textbf{每个} $E\subseteq\R$，
+\[
+\lambda^*(E)=
+\lambda^*(E\cap A)+\lambda^*(E\setminus A).
+\]
+所有满足此条件的集合组成 $\M(\lambda^*)$。
+
+\textbf{证明时省一步：}由次可加性，“$\le$”总成立。因此只需验证对任意测试集 $E$ 的“$\ge$”。
+
+测试集 $E$ 不要求可测，也不只限于区间。
+% @end
+
+% @card {"id":"caratheodory-theorem","type":"theorem","title":"从外测度得到真正的测度","fr":"Théorème de Carathéodory","refs":[["cm1",57,66],["w4",13,15]],"requires":["caratheodory-criterion","sigma-algebra"]}
+$\M(\lambda^*)$ 是 $\R$ 上的 $\sigma$-代数，且
+\[
+\lambda=\lambda^*|_{\M(\lambda^*)}
+\]
+是一个完备测度。外测度为零的集合及其任意子集都在 $\M(\lambda^*)$ 中。
+
+\textbf{逻辑顺序：}任意集合有外测度；满足切割判据的集合可测；将外测度限制到这些集合，得到可数可加的测度。
+% @proof
+\textbf{证明路线。}先验证空集和补集，再将测试集依次按两个可测集切割，得到有限并封闭性。对可数不交并，先切割前 $n$ 项，再让 $n\to\infty$，与次可加性合并得到等式。一般并用差集去重。
+\dep{Carathéodory 判据；单调性与次可加性；CM1 第 58–64 页。}
+
+\textbf{零测集可测。}若 $\lambda^*(N)=0$，则
+\[
+\lambda^*(E\cap N)+\lambda^*(E\setminus N)
+\le0+\lambda^*(E).
+\]
+结合反向次可加不等式即得判据。任意 $N$ 的子集仍为零外测度，因此完备。
+\dep{单调性；判据；CM1 第 65–66 页。}
+% @end
+
+% @card {"id":"vitali","type":"theorem","title":"为什么不能测量所有子集","fr":"Ensemble de Vitali","refs":[["cm1",67,72],["w4",15,16]],"requires":["outer-invariance","caratheodory-theorem"]}
+不存在定义在 $\mathcal P(\R)$ 上、同时满足区间长度归一化、平移不变性和可数可加性的测度。
+
+Vitali 构造给出 $V\subseteq[0,1]$，使 $V$ 不是 Lebesgue 可测集。
+% @proof
+\textbf{1. 选代表。}在 $[0,1]$ 上令 $x\sim y\iff x-y\in\Q$，从每个等价类选一个代表构成 $V$。
+\dep{等价关系；选择公理。}
+
+\textbf{2. 构造可数不交平移。}对 $q\in\Q\cap[-1,1]$，各 $V+q$ 两两不交，且
+\[
+[0,1]\subseteq\bigcup_q(V+q)\subseteq[-1,2].
+\]
+\dep{代表唯一性；有理数可数；CM1 第 69–70 页。}
+
+\textbf{3. 两种矛盾。}若 $V$ 可测且 $\lambda(V)=0$，中间并集测度为零，与左包含矛盾；若 $\lambda(V)>0$，中间并集测度无穷，与右包含矛盾。
+\dep{平移不变性；可数可加性；单调性；区间测度。}
+% @end

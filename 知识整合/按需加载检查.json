@@ -1,0 +1,480 @@
+{
+  "version": "1.5.1",
+  "date": "2026-10-07",
+  "new_html": "测量理论_知识整合_按需加载.html",
+  "backup": "测量理论_知识整合_v1.5.0_备份.html",
+  "backup_and_old_sha256": "7faea2a475265c37229ea9bca6e078ee27797f8afa2319555e30101e096380b6",
+  "new_html_sha256": "66e63fcdf2cd4df4c95a04a1142c671b50e27cd515acf91431376aa576eb3265",
+  "preserved": {
+    "chinese_vector_fragments": 380,
+    "french_vector_fragments": 271,
+    "glyph_outlines": 8858,
+    "search_cards": 117,
+    "source_pdfs": 16,
+    "exact_payload_equality": true
+  },
+  "environment": {
+    "browser": "Chrome/154.0.8037.98",
+    "transport": "127.0.0.1 preview on this Windows host",
+    "screenshots": 0,
+    "scope": "Affected functionality and two representative chapter performance samples only; no full visual audit."
+  },
+  "browser": {
+    "browser": "Chrome/154.0.8037.98",
+    "initial": {
+      "mode": "zh",
+      "chapter": "#ch7",
+      "cards": 7,
+      "elements": 3896,
+      "uses": 811,
+      "glyphs": 420,
+      "frenchSymbols": 0,
+      "assets": 7,
+      "inactiveCards": 0,
+      "closedDetailAssets": 0,
+      "missingUseReferences": 0,
+      "duplicateIds": 0,
+      "visibleSvgBounds": [
+        {
+          "width": 337.5440368652344,
+          "height": 159.85565185546875
+        },
+        {
+          "width": 335.4720153808594,
+          "height": 142.3260955810547
+        }
+      ],
+      "searchIndexCards": 117,
+      "runtimeNetworkRequests": 0
+    },
+    "counts": {
+      "documents": 1,
+      "nodes": 10911,
+      "jsEventListeners": 29
+    },
+    "samples": [
+      {
+        "label": "ch7 zh → fr",
+        "handlerMs": 25.599999997764826,
+        "twoFramesMs": 148.09999999776483,
+        "styleMs": 84.89099999999999,
+        "layoutMs": 20.189,
+        "state": {
+          "mode": "fr",
+          "chapter": "#ch7",
+          "cards": 7,
+          "elements": 8217,
+          "uses": 3866,
+          "glyphs": 367,
+          "frenchSymbols": 7,
+          "assets": 7,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 507.4140625,
+              "height": 58.3359375
+            },
+            {
+              "width": 509.41015625,
+              "height": 297.3280029296875
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch7 fr → compare",
+        "handlerMs": 32.19999999925494,
+        "twoFramesMs": 131.89999999850988,
+        "styleMs": 70.387,
+        "layoutMs": 10.483000000000002,
+        "state": {
+          "mode": "compare",
+          "chapter": "#ch7",
+          "cards": 7,
+          "elements": 10438,
+          "uses": 4677,
+          "glyphs": 786,
+          "frenchSymbols": 7,
+          "assets": 14,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 337.5440368652344,
+              "height": 159.85565185546875
+            },
+            {
+              "width": 507.4140625,
+              "height": 58.3359375
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch7 compare → zh",
+        "handlerMs": 21.800000000745058,
+        "twoFramesMs": 34.600000001490116,
+        "styleMs": 6.676999999999989,
+        "layoutMs": 2.539999999999997,
+        "state": {
+          "mode": "zh",
+          "chapter": "#ch7",
+          "cards": 7,
+          "elements": 3896,
+          "uses": 811,
+          "glyphs": 420,
+          "frenchSymbols": 0,
+          "assets": 7,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 337.5440368652344,
+              "height": 159.85565185546875
+            },
+            {
+              "width": 335.4720153808594,
+              "height": 142.3260955810547
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch7 zh → zh",
+        "handlerMs": 0.09999999776482582,
+        "twoFramesMs": 10.800000000745058,
+        "styleMs": 0,
+        "layoutMs": 0,
+        "state": {
+          "mode": "zh",
+          "chapter": "#ch7",
+          "cards": 7,
+          "elements": 3896,
+          "uses": 811,
+          "glyphs": 420,
+          "frenchSymbols": 0,
+          "assets": 7,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 337.5440368652344,
+              "height": 159.85565185546875
+            },
+            {
+              "width": 335.4720153808594,
+              "height": 142.3260955810547
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch6 zh → fr",
+        "handlerMs": 42.5,
+        "twoFramesMs": 390.1000000014901,
+        "styleMs": 112.821,
+        "layoutMs": 16.165000000000013,
+        "state": {
+          "mode": "fr",
+          "chapter": "#ch6",
+          "cards": 12,
+          "elements": 17990,
+          "uses": 5792,
+          "glyphs": 708,
+          "frenchSymbols": 20,
+          "assets": 22,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 508.359375,
+              "height": 55.59375
+            },
+            {
+              "width": 418.60198974609375,
+              "height": 296.55120849609375
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch6 fr → compare",
+        "handlerMs": 64.10000000149012,
+        "twoFramesMs": 457.1000000014901,
+        "styleMs": 128.384,
+        "layoutMs": 18.331,
+        "state": {
+          "mode": "compare",
+          "chapter": "#ch6",
+          "cards": 12,
+          "elements": 22942,
+          "uses": 7904,
+          "glyphs": 1514,
+          "frenchSymbols": 20,
+          "assets": 34,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 337.11944580078125,
+              "height": 161.5133056640625
+            },
+            {
+              "width": 508.359375,
+              "height": 55.59375
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      },
+      {
+        "label": "ch6 compare → zh",
+        "handlerMs": 40.19999999925494,
+        "twoFramesMs": 75.19999999925494,
+        "styleMs": 18.245999999999984,
+        "layoutMs": 4.492999999999997,
+        "state": {
+          "mode": "zh",
+          "chapter": "#ch6",
+          "cards": 12,
+          "elements": 6826,
+          "uses": 2112,
+          "glyphs": 807,
+          "frenchSymbols": 0,
+          "assets": 12,
+          "inactiveCards": 0,
+          "closedDetailAssets": 0,
+          "missingUseReferences": 0,
+          "duplicateIds": 0,
+          "visibleSvgBounds": [
+            {
+              "width": 337.11944580078125,
+              "height": 161.5133056640625
+            },
+            {
+              "width": 337.6678466796875,
+              "height": 196.040771484375
+            }
+          ],
+          "searchIndexCards": 117,
+          "runtimeNetworkRequests": 0
+        }
+      }
+    ],
+    "proofOpen": {
+      "open": true,
+      "assets": 1
+    },
+    "proofRestored": {
+      "open": true,
+      "assets": 1
+    },
+    "proofClosed": {
+      "open": false,
+      "assets": 0
+    },
+    "positionDriftPx": -0.453125,
+    "extraLoaded": {
+      "open": true,
+      "assets": 1
+    },
+    "extraRestored": {
+      "open": true,
+      "assets": 1
+    },
+    "french": {
+      "mode": "fr",
+      "chapter": "#ch6",
+      "cards": 12,
+      "elements": 18683,
+      "uses": 6272,
+      "glyphs": 720,
+      "frenchSymbols": 21,
+      "assets": 23,
+      "inactiveCards": 0,
+      "closedDetailAssets": 0,
+      "missingUseReferences": 0,
+      "duplicateIds": 0,
+      "visibleSvgBounds": [
+        {
+          "width": 508.359375,
+          "height": 55.59375
+        },
+        {
+          "width": 508.765625,
+          "height": 154.32421875
+        }
+      ],
+      "searchIndexCards": 117,
+      "runtimeNetworkRequests": 0
+    },
+    "searchState": {
+      "results": 3,
+      "ids": [
+        "jacobian-inverse",
+        "change-variables",
+        "expectation-transfer"
+      ],
+      "cards": 0,
+      "vectors": 0,
+      "glyphs": 0
+    },
+    "searchJump": {
+      "hash": "#jacobian-inverse",
+      "visible": true,
+      "input": ""
+    },
+    "cleared": {
+      "mode": "fr",
+      "chapter": "#ch6",
+      "cards": 12,
+      "elements": 18683,
+      "uses": 6272,
+      "glyphs": 720,
+      "frenchSymbols": 21,
+      "assets": 23,
+      "inactiveCards": 0,
+      "closedDetailAssets": 0,
+      "missingUseReferences": 0,
+      "duplicateIds": 0,
+      "visibleSvgBounds": [
+        {
+          "width": 508.359375,
+          "height": 55.59375
+        },
+        {
+          "width": 508.765625,
+          "height": 154.32421875
+        }
+      ],
+      "searchIndexCards": 117,
+      "runtimeNetworkRequests": 0
+    },
+    "mobile": {
+      "assets": [
+        "product-measure-body-narrow",
+        "cm04-method-body-narrow",
+        "jacobian-inverse-body-narrow",
+        "measurable-sections-body-narrow",
+        "tonelli-body-narrow",
+        "fubini-body-narrow",
+        "fubini-warning-body-narrow",
+        "integration-domain-body-narrow",
+        "positive-convolution-body-narrow",
+        "change-variables-body-narrow",
+        "polar-coordinates-body-narrow",
+        "cylindrical-spherical-body-narrow"
+      ],
+      "horizontalOverflow": false,
+      "languageButtons": true
+    },
+    "mobileNavigation": {
+      "chapter": "#ch7",
+      "menuOpen": "false"
+    },
+    "printState": {
+      "cards": 117,
+      "proofVectors": 0
+    },
+    "afterPrint": {
+      "mode": "zh",
+      "chapter": "#ch7",
+      "cards": 7,
+      "elements": 3896,
+      "uses": 811,
+      "glyphs": 420,
+      "frenchSymbols": 0,
+      "assets": 7,
+      "inactiveCards": 0,
+      "closedDetailAssets": 0,
+      "missingUseReferences": 0,
+      "duplicateIds": 0,
+      "visibleSvgBounds": [
+        {
+          "width": 337.5440368652344,
+          "height": 159.85565185546875
+        },
+        {
+          "width": 335.4720153808594,
+          "height": 142.3260955810547
+        }
+      ],
+      "searchIndexCards": 117,
+      "runtimeNetworkRequests": 0
+    },
+    "preference": {
+      "mode": "fr",
+      "chapter": "#ch7",
+      "cards": 7,
+      "elements": 8217,
+      "uses": 3866,
+      "glyphs": 367,
+      "frenchSymbols": 7,
+      "assets": 7,
+      "inactiveCards": 0,
+      "closedDetailAssets": 0,
+      "missingUseReferences": 0,
+      "duplicateIds": 0,
+      "visibleSvgBounds": [
+        {
+          "width": 507.4140625,
+          "height": 58.3359375
+        },
+        {
+          "width": 509.41015625,
+          "height": 297.3280029296875
+        }
+      ],
+      "searchIndexCards": 117,
+      "runtimeNetworkRequests": 0
+    },
+    "load": {
+      "domContentLoadedMs": 284.4000000022352,
+      "loadMs": 292.80000000074506
+    },
+    "errors": []
+  },
+  "performance_baseline": "语言切换性能调查.json",
+  "measured_html_sha256": "2c39ab7d4263c1ed8b3a6e63111f8f2114524b1b89ad9a2ca311f25d28b075d6",
+  "final_smoke_check": {
+    "backupLink": 1,
+    "restored": {
+      "open": true,
+      "assets": 1
+    },
+    "dependency": {
+      "hash": "#signed-integral",
+      "chapter": "#ch5",
+      "cards": 20,
+      "inactiveCards": 0
+    },
+    "missingUseReferences": 0,
+    "errors": []
+  },
+  "final_build_note": "Final build adds a backup link to Sources; runtime, compiled payloads, and measured interaction code are unchanged.",
+  "limits": "Timings are local measurements through two animation frames, not guaranteed timings in the in-app browser. No screenshots or printed PDF verification were generated."
+}

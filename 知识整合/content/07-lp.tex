@@ -1,0 +1,107 @@
+% @card {"id":"lp-spaces","type":"definition","title":"Lp 范数与几乎处处等价类","fr":"Espaces Lp · Norme essentielle","refs":[["w4",76,77]],"requires":["signed-integral","zero-integral"]}
+对 $1\le p<\infty$，
+\[
+\begin{gathered}
+\|f\|_p=\left(\int|f|^p\,\dd\mu\right)^{1/p},\\
+L^p=\{f\text{ 可测}:\|f\|_p<\infty\}.
+\end{gathered}
+\]
+而
+\[
+\|f\|_\infty
+=\inf\{M\ge0:|f|\le M\ \mu\text{-p.p.}\}.
+\]
+在原始函数集合上它们只是半范数，因为 $\|f\|_p=0$ 只推出 $f=0$ 几乎处处。将几乎处处相等的函数视为同一个元素后，才得到赋范空间 $L^p$。
+
+本质上界忽略零测集上的值，通常不等于逐点上确界。
+% @end
+
+% @card {"id":"markov-chebyshev","type":"proposition","title":"Markov 与 Chebyshev：从积分控制尾部","fr":"Markov · Bienaymé–Tchebychev","refs":[["w4",77,78]],"requires":["positive-integral","simple-integral"]}
+若 $f\ge0$ 可测、$a>0$，则
+\[
+\mu(f\ge a)\le\frac1a\int f\,\dd\mu.
+\]
+对可测 $f$、实数 $c$ 及 $\varepsilon>0$，
+\[
+\mu(|f-c|\ge\varepsilon)
+\le\frac1{\varepsilon^2}\int|f-c|^2\,\dd\mu.
+\]
+后一式有用的有限上界需要 $f-c\in L^2$。无限测度空间中，$f\in L^2$ 未必保证减去非零常数后仍属 $L^2$。
+% @proof
+因为 $a\mathbf1_{\{f\ge a\}}\le f$，积分后除以 $a$ 即得 Markov。再把它用于非负函数 $|f-c|^2$ 和阈值 $\varepsilon^2$。
+\dep{积分单调性；示性函数积分；平方函数的单调性。}
+% @end
+
+% @card {"id":"holder","type":"theorem","title":"Hölder 与 Cauchy–Schwarz","fr":"Inégalité de Hölder","refs":[["w4",78,78],["w4",82,82]],"requires":["lp-spaces"]}
+若 $1<p,q<\infty$、$1/p+1/q=1$，$f\in L^p$、$g\in L^q$，则 $fg\in L^1$ 且
+\[
+\int|fg|\,\dd\mu\le\|f\|_p\|g\|_q.
+\]
+$p=q=2$ 即 Cauchy–Schwarz。端点情形为 $\int|fg|\le\|f\|_1\|g\|_\infty$。
+% @proof
+范数为零时结论直接成立。否则令 $u=|f|/\|f\|_p$、$v=|g|/\|g\|_q$，将 Young 不等式
+\[
+uv\le u^p/p+v^q/q
+\]
+积分，右侧为 $1/p+1/q=1$，再乘回两范数。Young 可由对数的凹性或幂函数的凸性证明。
+\dep{归一化；Young 不等式（凸性）；积分单调性。}
+% @end
+
+% @card {"id":"minkowski","type":"theorem","title":"Minkowski：Lp 的三角不等式","fr":"Inégalité de Minkowski","refs":[["w4",79,79]],"requires":["lp-spaces","integral-properties"]}
+对 $1\le p\le\infty$，$f,g\in L^p$ 蕴含 $f+g\in L^p$，且
+\[
+\|f+g\|_p\le\|f\|_p+\|g\|_p.
+\]
+% @proof
+当两范数 $a,b$ 均非零且 $p<\infty$ 时，令 $t=a/(a+b)$、$u=f/a$、$v=g/b$。由凸性，
+\[
+|tu+(1-t)v|^p\le t|u|^p+(1-t)|v|^p.
+\]
+积分后右侧为 $1$，乘回 $a+b$ 即得结论，同时保证和的可积性。零范数情形用几乎处处等价；$p=\infty$ 用本质上界直接估计。
+\dep{幂函数凸性；积分单调性；几乎处处等价类。}
+% @end
+
+% @card {"id":"lp-inclusion-jensen","type":"proposition","title":"有限测度上的包含与 Jensen 不等式","fr":"Inclusion Lp · Jensen","refs":[["w4",78,80]],"requires":["holder","lp-spaces"]}
+若 $0<\mu(E)<\infty$、$1\le q<p\le\infty$，则
+\[
+\|f\|_q\le\mu(E)^{1/q-1/p}\|f\|_p,
+\qquad L^p\subseteq L^q.
+\]
+这里 $1/\infty=0$。对无限测度，不能无条件套用此包含。
+
+若 $\varphi:\R\to\R$ 凸，$f,\varphi(f)$ 可积，则
+\[
+\varphi\left(\frac{\int f\,\dd\mu}{\mu(E)}\right)
+\le\frac{\int\varphi(f)\,\dd\mu}{\mu(E)}.
+\]
+凹函数的不等式方向相反。
+% @proof
+包含关系对 $|f|^q$ 与 $1$ 用 Hölder，再取 $q$ 次方根。Jensen 令 $m$ 为 $f$ 的平均值，在 $m$ 处取一条支撑直线 $\varphi(x)\ge\varphi(m)+a(x-m)$，积分后线性项为零。
+\dep{Hölder；凸函数的支撑直线性质；积分线性。}
+% @end
+
+% @card {"id":"lp-completeness","type":"theorem","title":"完备性、简单函数逼近与密度条件","fr":"Riesz–Fischer · Densité","refs":[["w4",81,82]],"requires":["minkowski","simple-approximation","dominated-convergence"]}
+对 $1\le p\le\infty$，$L^p$ 是 Banach 空间。对 $p<\infty$，属于 $L^p$ 的简单函数在 $L^p$ 中稠密。
+
+\textbf{条件说明：}稠密逼近首先要求简单函数属于 $L^p$；无限测度下，这不自动等于属于 $L^1$。如需同时可积，可先按 $\{1/m<|f|\le m\}$ 截断，再作简单逼近。
+% @proof
+\textbf{完备性的路线。}从 Cauchy 序列抽取子列 $g_n$，使 $\|g_{n+1}-g_n\|_p\le2^{-n}$。可求和的误差控制给出几乎处处极限及 $L^p$ 收敛，再以 Cauchy 性推广到原序列。这里只列讲义的证明路线。
+\dep{Minkowski；非负级数积分与 Fatou；Cauchy 序列性质。}
+
+\textbf{密度。}对 $f\ge0$ 取简单逼近 $s_n\uparrow f$。因为 $|f-s_n|^p\le|f|^p$ 可积，控制收敛给出 $\|f-s_n\|_p\to0$。有符号情形分别逼近正负部。
+\dep{简单逼近；控制收敛；Minkowski。}
+% @end
+
+% @card {"id":"hilbert-riesz","type":"theorem","title":"L2 的 Hilbert 结构与 Riesz 表示","fr":"Hilbert · Représentation de Riesz","refs":[["w4",81,82]],"requires":["holder","lp-completeness"]}
+在实 $L^2$ 上定义
+\[
+\langle f,g\rangle=\int fg\,\dd\mu.
+\]
+Cauchy–Schwarz 保证它有定义，按几乎处处等价取商后是内积；由完备性，$L^2$ 是 Hilbert 空间。
+
+对任意实 Hilbert 空间 $H$，每个连续线性泛函 $\ell$ 都可唯一表示为
+\[
+\ell(x)=\langle x,h\rangle,\qquad h\in H,
+\]
+且 $\|\ell\|=\|h\|$。这就是讲义定理 7.24，为后续 Radon–Nikodym 和条件期望提供工具。此处不展开其完整证明。
+% @end

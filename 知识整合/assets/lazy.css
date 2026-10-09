@@ -1,0 +1,16 @@
+/* Reader shell: vectors and inactive panes are absent until requested. */
+body[data-delivery=lazy] .lazy-asset:empty{display:none}
+body[data-delivery=lazy] .chapter{overflow-anchor:none}
+.search-heading{font-size:26px!important;margin:0 0 24px!important}
+.search-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.search-result{display:flex;flex-direction:column;gap:6px;padding:17px 22px;background:#fffdf8;border:1px solid var(--line);border-left:3px solid var(--burgundy);text-decoration:none!important}
+.search-result:hover{background:#f0eadb}
+.search-result small{color:var(--muted);font-size:12px}
+.search-result strong{font-size:19px;font-weight:bold;line-height:1.6}
+.search-result span{font-size:15px;color:#111}
+.search-result em{font-size:12px;font-style:normal;color:var(--burgundy)}
+@media print{
+  body[data-delivery=lazy] .search-results{display:none!important}
+  body[data-delivery=lazy] .compiled{display:block;max-width:455px;margin-left:0;margin-right:auto}
+  body[data-delivery=lazy] .source-extra:not([open]){display:none!important}
+}

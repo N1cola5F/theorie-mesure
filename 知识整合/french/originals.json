@@ -1,0 +1,1457 @@
+{
+  "schema_version": 1,
+  "policy": "Original PDF vector excerpts only. No translated or rewritten French course content.",
+  "cards": {
+    "countability": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.2"
+        },
+        {
+          "source": "w4",
+          "block": "1.5"
+        }
+      ]
+    },
+    "set-limits": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.8"
+        },
+        {
+          "source": "w4",
+          "block": "1.11"
+        }
+      ]
+    },
+    "outer-definition": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.15"
+        }
+      ]
+    },
+    "outer-properties": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.17"
+        }
+      ]
+    },
+    "outer-invariance": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.18"
+        },
+        {
+          "source": "w4",
+          "block": "1.22"
+        }
+      ]
+    },
+    "null-sets": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.24"
+        },
+        {
+          "source": "w4",
+          "block": "1.26"
+        }
+      ]
+    },
+    "caratheodory-criterion": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.27"
+        }
+      ]
+    },
+    "caratheodory-theorem": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.29"
+        }
+      ]
+    },
+    "vitali": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.31"
+        },
+        {
+          "source": "w4",
+          "block": "1.33"
+        }
+      ]
+    },
+    "sigma-algebra": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.1"
+        },
+        {
+          "source": "w4",
+          "block": "2.2"
+        }
+      ]
+    },
+    "generated-sigma": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.7"
+        },
+        {
+          "source": "w4",
+          "block": "2.8"
+        },
+        {
+          "source": "w4",
+          "block": "2.9"
+        },
+        {
+          "source": "w4",
+          "block": "2.10"
+        }
+      ]
+    },
+    "borel-generators": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.13"
+        },
+        {
+          "source": "w4",
+          "block": "2.19"
+        },
+        {
+          "source": "w4",
+          "block": "2.20"
+        }
+      ]
+    },
+    "partition-sigma": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.4"
+        }
+      ],
+      "note": {
+        "zh": "此中文条目的有限分割结论，对照手册中分割生成 σ-代数的原例。",
+        "fr": "Correspondance : exemple original d’une tribu engendrée par une partition finie."
+      }
+    },
+    "cantor": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.26"
+        },
+        {
+          "source": "w4",
+          "block": "2.27"
+        }
+      ]
+    },
+    "borel-lebesgue": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.22"
+        },
+        {
+          "source": "w4",
+          "block": "2.24"
+        }
+      ]
+    },
+    "finite-cofinite": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.1"
+        },
+        {
+          "source": "w4",
+          "block": "2.2"
+        }
+      ],
+      "note": {
+        "zh": "中文条目为补充反例，法语侧展示对应的原讲义公理与性质。",
+        "fr": "Le contre-exemple chinois est un complément ; les extraits donnent les axiomes et propriétés originaux."
+      }
+    },
+    "measure-definition": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.1"
+        }
+      ]
+    },
+    "finite-sigma-finite": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.1"
+        },
+        {
+          "source": "w4",
+          "block": "3.5"
+        }
+      ]
+    },
+    "point-atoms": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.7"
+        }
+      ]
+    },
+    "measure-properties": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.19"
+        }
+      ]
+    },
+    "increasing-continuity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.20"
+        }
+      ]
+    },
+    "decreasing-continuity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.20"
+        },
+        {
+          "source": "w4",
+          "block": "3.23"
+        }
+      ]
+    },
+    "subadditivity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.24"
+        }
+      ]
+    },
+    "borel-cantelli": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.26"
+        }
+      ]
+    },
+    "dynkin": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.10"
+        },
+        {
+          "source": "w4",
+          "block": "3.12"
+        }
+      ]
+    },
+    "measure-uniqueness": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.13"
+        }
+      ]
+    },
+    "preimage": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.2"
+        }
+      ]
+    },
+    "measurable-function": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.9"
+        },
+        {
+          "source": "w4",
+          "block": "4.10"
+        }
+      ]
+    },
+    "generator-test": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.15"
+        }
+      ]
+    },
+    "measurable-examples": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.17"
+        },
+        {
+          "source": "w4",
+          "block": "4.19"
+        },
+        {
+          "source": "w4",
+          "block": "4.20"
+        }
+      ]
+    },
+    "measurable-operations": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.13"
+        },
+        {
+          "source": "w4",
+          "block": "4.22"
+        },
+        {
+          "source": "w4",
+          "block": "4.23"
+        }
+      ]
+    },
+    "measurable-limits": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.25"
+        },
+        {
+          "source": "w4",
+          "block": "4.30"
+        }
+      ]
+    },
+    "simple-functions": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.1"
+        },
+        {
+          "source": "w4",
+          "block": "5.3"
+        }
+      ]
+    },
+    "simple-approximation": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.4"
+        }
+      ]
+    },
+    "pushforward": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.32"
+        }
+      ]
+    },
+    "preimage-generated": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.6"
+        }
+      ]
+    },
+    "lebesgue-composition": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.14"
+        }
+      ]
+    },
+    "extended-real-line": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "4.24"
+        }
+      ]
+    },
+    "almost-everywhere": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.18"
+        }
+      ]
+    },
+    "simple-integral": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.8"
+        }
+      ]
+    },
+    "positive-integral": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.11"
+        }
+      ]
+    },
+    "monotone-convergence": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.28"
+        }
+      ]
+    },
+    "measure-integral-examples": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.10"
+        },
+        {
+          "source": "w4",
+          "block": "5.19"
+        }
+      ]
+    },
+    "signed-integral": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.15"
+        }
+      ]
+    },
+    "integral-properties": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.22"
+        },
+        {
+          "source": "w4",
+          "block": "5.23"
+        }
+      ]
+    },
+    "integral-on-sets": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.18"
+        },
+        {
+          "source": "w4",
+          "block": "8.9"
+        }
+      ]
+    },
+    "zero-integral": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.24"
+        }
+      ]
+    },
+    "integrability-criteria": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.25"
+        }
+      ]
+    },
+    "fatou": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.31"
+        }
+      ]
+    },
+    "dominated-convergence": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.33"
+        }
+      ]
+    },
+    "convergence-choice": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.34"
+        },
+        {
+          "source": "w4",
+          "block": "5.32"
+        }
+      ]
+    },
+    "parameter-continuity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.38"
+        }
+      ]
+    },
+    "parameter-derivative": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.40"
+        },
+        {
+          "source": "w4",
+          "block": "5.41"
+        }
+      ]
+    },
+    "gamma-continuity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.39"
+        }
+      ]
+    },
+    "generalized-domination": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "5.35"
+        }
+      ]
+    },
+    "product-measure": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "6.1"
+        },
+        {
+          "source": "w4",
+          "block": "6.2"
+        }
+      ]
+    },
+    "measurable-sections": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "6.4"
+        },
+        {
+          "source": "w4",
+          "block": "6.5"
+        }
+      ]
+    },
+    "fubini-warning": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "6.8"
+        },
+        {
+          "source": "w4",
+          "block": "6.9"
+        }
+      ]
+    },
+    "positive-convolution": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "6.12"
+        }
+      ]
+    },
+    "change-variables": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "6.14"
+        }
+      ]
+    },
+    "lp-spaces": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.1"
+        },
+        {
+          "source": "w4",
+          "block": "7.2"
+        },
+        {
+          "source": "w4",
+          "block": "7.4"
+        },
+        {
+          "source": "w4",
+          "block": "7.5"
+        }
+      ]
+    },
+    "markov-chebyshev": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.7"
+        },
+        {
+          "source": "w4",
+          "block": "7.8"
+        }
+      ]
+    },
+    "holder": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.10"
+        }
+      ]
+    },
+    "minkowski": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.14"
+        }
+      ]
+    },
+    "lp-inclusion-jensen": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.11"
+        },
+        {
+          "source": "w4",
+          "block": "7.17"
+        }
+      ]
+    },
+    "lp-completeness": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.20"
+        },
+        {
+          "source": "w4",
+          "block": "7.25"
+        }
+      ]
+    },
+    "hilbert-riesz": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "7.23"
+        },
+        {
+          "source": "w4",
+          "block": "7.24"
+        }
+      ]
+    },
+    "density-absolute-continuity": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "8.4"
+        },
+        {
+          "source": "w4",
+          "block": "8.6"
+        },
+        {
+          "source": "w4",
+          "block": "8.7"
+        },
+        {
+          "source": "w4",
+          "block": "8.9"
+        }
+      ]
+    },
+    "singular-measures": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "8.12"
+        },
+        {
+          "source": "w4",
+          "block": "8.2"
+        },
+        {
+          "source": "w4",
+          "block": "8.3"
+        }
+      ]
+    },
+    "cantor-measure": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "8.16"
+        },
+        {
+          "source": "w4",
+          "block": "8.18"
+        },
+        {
+          "source": "w4",
+          "block": "8.20"
+        }
+      ]
+    },
+    "radon-nikodym": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "8.21"
+        }
+      ]
+    },
+    "lebesgue-decomposition": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "8.22"
+        },
+        {
+          "source": "w4",
+          "block": "8.24"
+        }
+      ]
+    },
+    "probability-conditioning": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.2"
+        },
+        {
+          "source": "w4",
+          "block": "9.9"
+        },
+        {
+          "source": "w4",
+          "block": "9.12"
+        },
+        {
+          "source": "w4",
+          "block": "9.16"
+        }
+      ]
+    },
+    "random-variable-law": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.19"
+        },
+        {
+          "source": "w4",
+          "block": "9.23"
+        }
+      ]
+    },
+    "distribution-function": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.26"
+        },
+        {
+          "source": "w4",
+          "block": "9.28"
+        },
+        {
+          "source": "w4",
+          "block": "9.30"
+        }
+      ]
+    },
+    "probability-law-types": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.32"
+        },
+        {
+          "source": "w4",
+          "block": "9.34"
+        },
+        {
+          "source": "w4",
+          "block": "9.35"
+        },
+        {
+          "source": "w4",
+          "block": "9.38"
+        }
+      ]
+    },
+    "expectation-transfer": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.44"
+        },
+        {
+          "source": "w4",
+          "block": "9.40"
+        },
+        {
+          "source": "w4",
+          "block": "9.45"
+        }
+      ]
+    },
+    "moments-variance": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.40"
+        },
+        {
+          "source": "w4",
+          "block": "9.42"
+        },
+        {
+          "source": "w4",
+          "block": "9.50"
+        },
+        {
+          "source": "w4",
+          "block": "9.51"
+        },
+        {
+          "source": "w4",
+          "block": "9.56"
+        }
+      ]
+    },
+    "usual-discrete-laws": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.58"
+        }
+      ]
+    },
+    "usual-continuous-laws": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.60"
+        }
+      ]
+    },
+    "independent-variables": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.63"
+        },
+        {
+          "source": "w4",
+          "block": "9.66"
+        },
+        {
+          "source": "w4",
+          "block": "9.67"
+        },
+        {
+          "source": "w4",
+          "block": "9.68"
+        }
+      ],
+      "note": {
+        "zh": "法语侧保留原证明；中文侧使用已标明的半直线逼近修正。",
+        "fr": "La preuve originale est conservée ; la colonne chinoise utilise l’approximation des demi-droites signalée."
+      }
+    },
+    "generating-function": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "9.73"
+        },
+        {
+          "source": "w4",
+          "block": "9.75"
+        },
+        {
+          "source": "w4",
+          "block": "9.77"
+        }
+      ]
+    },
+    "joint-marginal": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "10.1"
+        },
+        {
+          "source": "w4",
+          "block": "10.2"
+        },
+        {
+          "source": "w4",
+          "block": "10.7"
+        },
+        {
+          "source": "w4",
+          "block": "10.8"
+        },
+        {
+          "source": "w4",
+          "block": "10.10"
+        }
+      ]
+    },
+    "independence-factorization": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "10.12"
+        },
+        {
+          "source": "w4",
+          "block": "10.14"
+        }
+      ]
+    },
+    "covariance": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "10.16"
+        },
+        {
+          "source": "w4",
+          "block": "10.17"
+        },
+        {
+          "source": "w4",
+          "block": "10.19"
+        },
+        {
+          "source": "w4",
+          "block": "10.20"
+        },
+        {
+          "source": "w4",
+          "block": "10.21"
+        }
+      ]
+    },
+    "covariance-matrix": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "10.22"
+        },
+        {
+          "source": "w4",
+          "block": "10.24"
+        }
+      ]
+    },
+    "sum-convolution": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "10.29"
+        },
+        {
+          "source": "w4",
+          "block": "10.27"
+        }
+      ]
+    },
+    "conditional-expectation": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.3"
+        },
+        {
+          "source": "w4",
+          "block": "11.7"
+        }
+      ]
+    },
+    "conditional-properties": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.9"
+        },
+        {
+          "source": "w4",
+          "block": "11.12"
+        }
+      ]
+    },
+    "conditional-calculation": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.4"
+        },
+        {
+          "source": "w4",
+          "block": "11.13"
+        }
+      ]
+    },
+    "conditional-law": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.16"
+        },
+        {
+          "source": "w4",
+          "block": "11.18"
+        },
+        {
+          "source": "w4",
+          "block": "11.19"
+        },
+        {
+          "source": "w4",
+          "block": "11.20"
+        }
+      ]
+    },
+    "conditional-projection": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.6"
+        },
+        {
+          "source": "w4",
+          "block": "11.22"
+        }
+      ]
+    },
+    "linear-regression": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "11.25"
+        },
+        {
+          "source": "w4",
+          "block": "11.26"
+        }
+      ]
+    },
+    "characteristic-function": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.2"
+        },
+        {
+          "source": "w4",
+          "block": "12.7"
+        },
+        {
+          "source": "w4",
+          "block": "12.9"
+        }
+      ]
+    },
+    "characteristic-uniqueness-levy": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.13"
+        },
+        {
+          "source": "w4",
+          "block": "12.15"
+        },
+        {
+          "source": "w4",
+          "block": "13.33"
+        }
+      ]
+    },
+    "gaussian-vector": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.17"
+        },
+        {
+          "source": "w4",
+          "block": "12.18"
+        },
+        {
+          "source": "w4",
+          "block": "12.20"
+        }
+      ]
+    },
+    "gaussian-construction": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.23"
+        },
+        {
+          "source": "w4",
+          "block": "12.21"
+        },
+        {
+          "source": "w4",
+          "block": "12.22"
+        },
+        {
+          "source": "w4",
+          "block": "12.24"
+        },
+        {
+          "source": "w4",
+          "block": "12.25"
+        }
+      ],
+      "note": {
+        "zh": "法语侧保留手册原文，中文側补明退化情形所需的零测依据。",
+        "fr": "Le texte source est conservé ; la colonne chinoise précise la justification du cas dégénéré."
+      }
+    },
+    "gaussian-independence": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.26"
+        },
+        {
+          "source": "w4",
+          "block": "12.27"
+        },
+        {
+          "source": "w4",
+          "block": "12.28"
+        }
+      ]
+    },
+    "gaussian-stability": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "12.29"
+        },
+        {
+          "source": "w4",
+          "block": "12.30"
+        }
+      ]
+    },
+    "convergence-modes": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.1"
+        },
+        {
+          "source": "w4",
+          "block": "13.2"
+        },
+        {
+          "source": "w4",
+          "block": "13.3"
+        },
+        {
+          "source": "w4",
+          "block": "13.8"
+        }
+      ]
+    },
+    "cdf-convergence": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.10"
+        },
+        {
+          "source": "w4",
+          "block": "13.11"
+        },
+        {
+          "source": "w4",
+          "block": "13.26"
+        }
+      ]
+    },
+    "convergence-implications": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.14"
+        },
+        {
+          "source": "w4",
+          "block": "13.12"
+        },
+        {
+          "source": "w4",
+          "block": "13.15"
+        },
+        {
+          "source": "w4",
+          "block": "13.16"
+        }
+      ]
+    },
+    "convergence-counterexamples": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.17"
+        }
+      ],
+      "note": {
+        "zh": "法语原文保留手册的表述；中文侧包含已标明的反例修正。",
+        "fr": "La formulation originale est conservée ; la colonne chinoise contient la correction signalée."
+      }
+    },
+    "weak-law-large-numbers": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.19"
+        },
+        {
+          "source": "w4",
+          "block": "13.25"
+        }
+      ]
+    },
+    "strong-law-fourth-moment": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.21"
+        },
+        {
+          "source": "w4",
+          "block": "13.22"
+        }
+      ]
+    },
+    "central-limit-theorem": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.28"
+        },
+        {
+          "source": "w4",
+          "block": "13.30"
+        }
+      ]
+    },
+    "vector-convergence": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "13.34"
+        },
+        {
+          "source": "w4",
+          "block": "13.35"
+        },
+        {
+          "source": "w4",
+          "block": "13.37"
+        }
+      ]
+    },
+    "riemann-lebesgue": {
+      "extracts": [
+        {
+          "source": "cm3",
+          "pages": [
+            57
+          ],
+          "title": "Lien avec l’intégrale de Riemann"
+        }
+      ]
+    },
+    "integral-series": {
+      "extracts": [
+        {
+          "source": "cm3",
+          "pages": [
+            67
+          ],
+          "title": "Séries de fonctions positives"
+        }
+      ]
+    },
+    "parameter-derivative-example": {
+      "extracts": [
+        {
+          "source": "cm3",
+          "pages": [
+            80
+          ],
+          "title": "Exemple : dérivation sous le signe intégral"
+        }
+      ]
+    },
+    "cm04-method": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            2,
+            9,
+            23,
+            25
+          ],
+          "title": "Organisation du CM4 · Méthodes"
+        }
+      ]
+    },
+    "jacobian-inverse": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            15,
+            16
+          ],
+          "title": "Matrice jacobienne et inverse"
+        }
+      ]
+    },
+    "tonelli": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            7
+          ],
+          "title": "Théorème de Tonelli : fonctions positives"
+        },
+        {
+          "source": "w4",
+          "block": "6.6"
+        }
+      ]
+    },
+    "fubini": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            8,
+            9
+          ],
+          "title": "Théorème de Fubini : fonctions intégrables"
+        },
+        {
+          "source": "w4",
+          "block": "6.6"
+        }
+      ]
+    },
+    "integration-domain": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            10
+          ],
+          "title": "Exemple : changer l’ordre d’intégration"
+        }
+      ]
+    },
+    "polar-coordinates": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            18,
+            19,
+            20
+          ],
+          "title": "Coordonnées polaires · Intégrale gaussienne"
+        }
+      ]
+    },
+    "cylindrical-spherical": {
+      "extracts": [
+        {
+          "source": "cm4",
+          "pages": [
+            21,
+            22,
+            23
+          ],
+          "title": "Coordonnées cylindriques et sphériques"
+        }
+      ]
+    }
+  }
+}
