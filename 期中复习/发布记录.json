@@ -1,22 +1,22 @@
 {
   "repository": "N1cola5F/theorie-mesure",
-  "version": "1.0.0",
-  "release": "1.7.0",
+  "version": "1.0.1",
+  "release": "1.7.1",
   "date": "2026-10-11",
   "published": true,
   "main": {
-    "commit": "674473b4816d79d404a48a450a01c93d6bac2922",
+    "commit": "849b66cef0df8bf7b058ec02b8a34ce82b42d635",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 153 files changed, 98353 insertions(+), 30 deletions(-)"
+    "summary": " 281 files changed, 168432 insertions(+), 148 deletions(-)"
   },
   "gh_pages": {
-    "commit": "0c3fc3e26f83e6867a98268dc056f2c91d77f53f",
+    "commit": "7edbd233e7f3d0a02e7ee06d3aa01df615045093",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 149 files changed, 98283 insertions(+), 27 deletions(-)"
+    "summary": " 259 files changed, 166767 insertions(+), 31 deletions(-)"
   },
   "url": "https://n1cola5f.github.io/theorie-mesure/ds/"
 }
