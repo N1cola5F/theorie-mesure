@@ -1,0 +1,35 @@
+{
+  "id": "p12",
+  "title": "连续映射可测",
+  "number": 12,
+  "compiled": {
+    "wide": {
+      "src": "vectors/39cb8499114a19615b.svg",
+      "width": 340.72,
+      "height": 147.0
+    },
+    "narrow": {
+      "src": "vectors/280f7aa2b2eddd4c50.svg",
+      "width": 221.17,
+      "height": 240.2
+    }
+  },
+  "requires": [
+    "c2-07",
+    "c4-07"
+  ],
+  "card": "c4-08",
+  "title_fr": "3.3 12. Mesurabilité des fonctions continues",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-109ef7aa3d38aea9b6c7",
+      "page": 7,
+      "svg": {
+        "src": "vectors/4649968b9a88271ca6.svg",
+        "width": 516.795,
+        "height": 125.461
+      }
+    }
+  ]
+}

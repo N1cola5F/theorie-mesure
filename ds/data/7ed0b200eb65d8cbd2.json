@@ -1,0 +1,44 @@
+{
+  "id": "p13",
+  "title": "示性函数可测",
+  "number": 13,
+  "compiled": {
+    "wide": {
+      "src": "vectors/7e24793000e7fbbb48.svg",
+      "width": 340.72,
+      "height": 146.95
+    },
+    "narrow": {
+      "src": "vectors/5e2862904f1694cf1a.svg",
+      "width": 221.17,
+      "height": 221.55
+    }
+  },
+  "requires": [
+    "c2-01",
+    "c4-04"
+  ],
+  "card": "c4-09",
+  "title_fr": "3.4 13. Mesurabilité des fonctions indicatrices",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-1a55a6e0be71174a7e75",
+      "page": 7,
+      "svg": {
+        "src": "vectors/4e98d7c7c19f3d765f.svg",
+        "width": 516.795,
+        "height": 125.101
+      }
+    },
+    {
+      "key": "fr-a8c6415f1fe2c1a56852",
+      "page": 8,
+      "svg": {
+        "src": "vectors/5b55f3a52f03f97dd9.svg",
+        "width": 516.558,
+        "height": 34.306
+      }
+    }
+  ]
+}

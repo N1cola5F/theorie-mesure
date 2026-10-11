@@ -1,0 +1,46 @@
+{
+  "id": "p05",
+  "title": "有界开区间生成 Borel 族",
+  "number": 5,
+  "compiled": {
+    "wide": {
+      "src": "vectors/5d40b489211f37ed7b.svg",
+      "width": 340.72,
+      "height": 299.42
+    },
+    "narrow": {
+      "src": "vectors/9e1d96c6cdef7f56cc.svg",
+      "width": 221.17,
+      "height": 485.92
+    }
+  },
+  "requires": [
+    "c1-01",
+    "c2-01",
+    "c2-06",
+    "c2-07"
+  ],
+  "card": "c2-08",
+  "title_fr": "1.5 5. Génération de la tribu borélienne par les intervalles ouverts bornés",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-ef0803a5419cce97c635",
+      "page": 4,
+      "svg": {
+        "src": "vectors/ed9199677e617703e0.svg",
+        "width": 516.754,
+        "height": 437.237
+      }
+    },
+    {
+      "key": "fr-fd5e40574b58ea06b52f",
+      "page": 5,
+      "svg": {
+        "src": "vectors/9bd4a755c62e617dd7.svg",
+        "width": 515.894,
+        "height": 140.544
+      }
+    }
+  ]
+}

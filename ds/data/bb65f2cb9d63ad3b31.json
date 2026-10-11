@@ -1,0 +1,46 @@
+{
+  "id": "p09",
+  "title": "Borel–Cantelli 引理",
+  "number": 9,
+  "compiled": {
+    "wide": {
+      "src": "vectors/98421a7d8410bfd22d.svg",
+      "width": 340.72,
+      "height": 213.82
+    },
+    "narrow": {
+      "src": "vectors/7af6aae72acd829df6.svg",
+      "width": 221.17,
+      "height": 288.46
+    }
+  },
+  "requires": [
+    "c1-04",
+    "c3-06",
+    "c3-08",
+    "c3-09"
+  ],
+  "card": "c3-10",
+  "title_fr": "2.4 9. Lemme de Borel–Cantelli",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-426e946366196d1e052f",
+      "page": 6,
+      "svg": {
+        "src": "vectors/2fe24c009990efe310.svg",
+        "width": 516.525,
+        "height": 189.273
+      }
+    },
+    {
+      "key": "fr-3148f73157a7c01d359d",
+      "page": 7,
+      "svg": {
+        "src": "vectors/9897386b6f4ceb4f3a.svg",
+        "width": 516.795,
+        "height": 143.167
+      }
+    }
+  ]
+}

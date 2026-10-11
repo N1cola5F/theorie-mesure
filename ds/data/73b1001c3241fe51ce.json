@@ -1,0 +1,37 @@
+{
+  "id": "p11",
+  "title": "生成族判别",
+  "number": 11,
+  "compiled": {
+    "wide": {
+      "src": "vectors/dd12e0d229659a828a.svg",
+      "width": 340.72,
+      "height": 232.51
+    },
+    "narrow": {
+      "src": "vectors/d80cecff2068159058.svg",
+      "width": 221.17,
+      "height": 307.07
+    }
+  },
+  "requires": [
+    "c2-01",
+    "c2-06",
+    "c4-01",
+    "c4-04"
+  ],
+  "card": "c4-07",
+  "title_fr": "3.2 11. Caractérisation par une famille génératrice",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-386c88980e13248eb475",
+      "page": 7,
+      "svg": {
+        "src": "vectors/802719b82c5c64bb62.svg",
+        "width": 516.795,
+        "height": 179.15
+      }
+    }
+  ]
+}

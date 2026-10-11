@@ -1,0 +1,320 @@
+{
+  "chapter": 3,
+  "cards": [
+    {
+      "id": "c3-01",
+      "title": "测度、有限与 σ-有限",
+      "compiled": {
+        "wide": {
+          "src": "vectors/643c966e99e31d099d.svg",
+          "width": 340.72,
+          "height": 105.22
+        },
+        "narrow": {
+          "src": "vectors/688a79a9b95f703db4.svg",
+          "width": 221.17,
+          "height": 142.52
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure, mesure finie, mesure σ-finie, mesure de probabilité",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-93eb6c7f4495470a6de7",
+          "page": 5,
+          "svg": {
+            "src": "vectors/f6b407dfa9ebfb9f1c.svg",
+            "width": 515.276,
+            "height": 179.637
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-02",
+      "title": "Dirac 测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/6feff918c0d774963e.svg",
+          "width": 340.72,
+          "height": 102.0
+        },
+        "narrow": {
+          "src": "vectors/ea9985823f4ec90b17.svg",
+          "width": 221.17,
+          "height": 120.61
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure de Dirac",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-8eeec885bb71959b9eb6",
+          "page": 5,
+          "svg": {
+            "src": "vectors/1628e526f748103efd.svg",
+            "width": 515.276,
+            "height": 135.239
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-03",
+      "title": "本课程中的原子与弥散测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/e6c5972ee56c76801e.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/0ea5652f5199c83b9d.svg",
+          "width": 221.17,
+          "height": 161.1
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c8-09"
+      ],
+      "title_fr": "Définition – Atome et mesure diffuse",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-a345489bb42c4062d579",
+          "page": 5,
+          "svg": {
+            "src": "vectors/6c192d0e34ad5241bf.svg",
+            "width": 515.276,
+            "height": 79.507
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-04",
+      "title": "Rn 上的 Lebesgue 测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4a4f37fc44132f473e.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/66f1a30f474c5f3890.svg",
+          "width": 221.17,
+          "height": 142.45
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Mesure de Lebesgue sur Rn",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-8c7a64b3075a36edcf77",
+          "page": 5,
+          "svg": {
+            "src": "vectors/26d052d1fa51cad96a.svg",
+            "width": 515.276,
+            "height": 125.915
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-05",
+      "title": "相对于测度的零测集",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b13e1b2bfc780dc3b7.svg",
+          "width": 340.72,
+          "height": 68.91
+        },
+        "narrow": {
+          "src": "vectors/dfdd3c5b0809262026.svg",
+          "width": 221.17,
+          "height": 123.8
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Ensemble négligeable",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-1e8c6fb7f0688c67ca93",
+          "page": 5,
+          "svg": {
+            "src": "vectors/9b73da1012a9b0478e.svg",
+            "width": 515.276,
+            "height": 40.096
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-06",
+      "title": "测度的基本运算",
+      "compiled": {
+        "wide": {
+          "src": "vectors/2c03106df8c9ea8e4b.svg",
+          "width": 340.72,
+          "height": 106.5
+        },
+        "narrow": {
+          "src": "vectors/6910f6b1c3b85e598d.svg",
+          "width": 221.17,
+          "height": 143.8
+        }
+      },
+      "proof": 6,
+      "requires": [],
+      "title_fr": "Propriété – Propriétés élémentaires d’une mesure",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-21b5d4344c296f9db6d3",
+          "page": 5,
+          "svg": {
+            "src": "vectors/d62f30bc72a51a17d8.svg",
+            "width": 515.276,
+            "height": 183.274
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-07",
+      "title": "递增与递减连续性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/1763b2199549ae565e.svg",
+          "width": 340.72,
+          "height": 97.53
+        },
+        "narrow": {
+          "src": "vectors/69859d2208825e182e.svg",
+          "width": 221.17,
+          "height": 116.18
+        }
+      },
+      "proof": 7,
+      "requires": [],
+      "title_fr": "Propriété – Continuité croissante et décroissante",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-a85c59c79acbf5afce06",
+          "page": 6,
+          "svg": {
+            "src": "vectors/f1360a23709608f523.svg",
+            "width": 515.276,
+            "height": 149.445
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-08",
+      "title": "Boole 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/aee3b64770e485ff8c.svg",
+          "width": 340.72,
+          "height": 87.79
+        },
+        "narrow": {
+          "src": "vectors/7d841c53107fc85001.svg",
+          "width": 221.17,
+          "height": 124.15
+        }
+      },
+      "proof": 8,
+      "requires": [],
+      "title_fr": "Propriété – Sous-additivité dénombrable, inégalité de Boole",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-22270526cd74b73866a2",
+          "page": 6,
+          "svg": {
+            "src": "vectors/0206c205b3c2f2284d.svg",
+            "width": 515.276,
+            "height": 76.487
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-09",
+      "title": "上极限与下极限的可测性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/593e596beb2d230961.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/8f8056bdace02280a2.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c1-04",
+        "c2-02"
+      ],
+      "title_fr": "Propriété – Stabilité par limsup/liminf",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-ebf42f35aabf1c4a205c",
+          "page": 6,
+          "svg": {
+            "src": "vectors/df76f79037c83998ef.svg",
+            "width": 515.276,
+            "height": 50.113
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-10",
+      "title": "第一 Borel–Cantelli 引理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/2cde7675c9735ee6a2.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/49d64af9ab7e57df63.svg",
+          "width": 221.17,
+          "height": 123.22
+        }
+      },
+      "proof": 9,
+      "requires": [],
+      "title_fr": "Théorème – Lemme de Borel–Cantelli",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-575071ea225b5f5220df",
+          "page": 6,
+          "svg": {
+            "src": "vectors/575c9b2b67527aad25.svg",
+            "width": 515.276,
+            "height": 118.946
+          }
+        }
+      ]
+    }
+  ]
+}
