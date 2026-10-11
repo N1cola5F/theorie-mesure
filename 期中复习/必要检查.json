@@ -12,37 +12,85 @@
   "protected_files": 677,
   "runtime_math_renderer": false,
   "browser_checks": {
-  "scope": "Representative chapter, language modes, search, proof/dependency, mobile and one new PDF; no screenshots",
-  "initial": {
-    "cards": 0,
-    "inlineSVG": 0,
-    "images": 1
+    "scope": "Representative chapter, language modes, search, proof/dependency, mobile and one new PDF; no screenshots",
+    "initial": {
+      "cards": 0,
+      "inlineSVG": 0,
+      "images": 1
+    },
+    "initialPDFRequests": 0,
+    "modeTimesMs": {
+      "fr": 70,
+      "compare": 43,
+      "zh": 30
+    },
+    "searchJump": {
+      "hash": "#c6-05",
+      "target": true
+    },
+    "proof": {
+      "cards": 1,
+      "dependencies": 5,
+      "formulaImage": "vectors/a9b3825e79cd49540c.svg"
+    },
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "cards": 13,
+      "menuClosed": true,
+      "hasExercises": false
+    },
+    "td4PDFStatus": 200,
+    "pageErrors": [],
+    "failedRequests": []
   },
-  "initialPDFRequests": 0,
-  "modeTimesMs": {
-    "fr": 70,
-    "compare": 43,
-    "zh": 30
-  },
-  "searchJump": {
-    "hash": "#c6-05",
-    "target": true
-  },
-  "proof": {
-    "cards": 1,
-    "dependencies": 5,
-    "formulaImage": "vectors/a9b3825e79cd49540c.svg"
-  },
-  "mobile": {
-    "width": 390,
-    "scrollWidth": 390,
-    "cards": 13,
-    "menuClosed": true,
-    "hasExercises": false
-  },
-  "td4PDFStatus": 200,
-  "pageErrors": [],
-  "failedRequests": []
-},
-  "publication_checks": null
+  "publication_checks": {
+    "pages_status": "built",
+    "pages_commit": "0c3fc3e26f83e6867a98268dc056f2c91d77f53f",
+    "url": "https://n1cola5f.github.io/theorie-mesure/ds/",
+    "responses": [
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/ds/",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/ds/resource-manifest.json",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/ds/data/f2116ec4c1984a788b.json",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/ds/vectors/cf59be9d27dbe004e4.svg",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/ds/vectors/55d3d8ceca9f3850f7.svg",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/origin/%E6%8C%89%E5%91%A8%E5%88%92%E5%88%86/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+        "status": 200,
+        "method": "HEAD"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+        "status": 200,
+        "method": "GET"
+      },
+      {
+        "url": "https://n1cola5f.github.io/theorie-mesure/",
+        "status": 200,
+        "method": "HEAD"
+      }
+    ],
+    "existing_site_paths_preserved": true,
+    "scope": "Published entrance, manifest, chapter6, two vectors, TD4 PDF HEAD and retained reader/root"
+  }
 }

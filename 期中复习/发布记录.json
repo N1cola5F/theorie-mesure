@@ -5,18 +5,18 @@
   "date": "2026-10-11",
   "published": true,
   "main": {
-    "commit": "0c93a479146747f3f1ba1553300c36ade60fd79d",
+    "commit": "674473b4816d79d404a48a450a01c93d6bac2922",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 436 files changed, 262317 insertions(+), 10 deletions(-)"
+    "summary": " 153 files changed, 98353 insertions(+), 30 deletions(-)"
   },
   "gh_pages": {
-    "commit": "d46703fe3c524dff36406365f0dbe71fa5eb7dd7",
+    "commit": "0c3fc3e26f83e6867a98268dc056f2c91d77f53f",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 416 files changed, 260224 insertions(+)"
+    "summary": " 149 files changed, 98283 insertions(+), 27 deletions(-)"
   },
   "url": "https://n1cola5f.github.io/theorie-mesure/ds/"
 }

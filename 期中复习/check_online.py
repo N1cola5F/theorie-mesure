@@ -31,8 +31,9 @@ def main():
     old=fetch('../reader/').decode('utf-8');assert '1.6.1' in old
     fetch('../','HEAD')
     folder=ROOT/'tmp/github'/ (release['repository'].split('/')[-1]+'-pages')
-    diff=subprocess.check_output(['git','diff','--name-only','259036907d6b458cc518462b64c52446de0673dd',release['gh_pages']['commit']],cwd=folder,text=True,encoding='utf-8').splitlines()
-    assert all(p.startswith(('ds/','origin/')) or p=='.nojekyll' for p in diff),'Existing website file modified'
+    diff=subprocess.check_output(['git','diff','--name-only','-z','259036907d6b458cc518462b64c52446de0673dd',release['gh_pages']['commit']],cwd=folder,text=True,encoding='utf-8').split('\0')
+    unexpected=[p for p in diff if p and not (p.startswith(('ds/','origin/')) or p=='.nojekyll')]
+    assert not unexpected,'Existing website file modified: '+repr(unexpected[:5])
     result={'pages_status':build['status'],'pages_commit':build['commit'],'url':base,'responses':results,'existing_site_paths_preserved':True,'scope':'Published entrance, manifest, chapter6, two vectors, TD4 PDF HEAD and retained reader/root'}
     check=json.loads((BASE/'必要检查.json').read_text(encoding='utf-8'));check['publication_checks']=result
     (BASE/'必要检查.json').write_text(json.dumps(check,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

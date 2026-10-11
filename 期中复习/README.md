@@ -33,6 +33,8 @@ python 期中复习/check.py
 python 期中复习/publish.py --publish
 ```
 
+发布后运行 `python 期中复习/check_online.py` 保存少量公开资源证据；版本清单登记完成后，可用 `python 期中复习/publish.py --publish --finalize-records` 仅补推维护记录，不重发网站内容或改变发布记录所记的内容提交。
+
 本地预览：在仓库根目录运行 `python -m http.server 8765 --bind 127.0.0.1`，访问 `http://127.0.0.1:8765/site/ds/`。直接双击 file: 页面会受浏览器本地 fetch 限制，可用在线入口。字体和数学都预编译，线上读者不需要安装 LaTeX。
 
 若要更新全学期版，用它自己的维护流程；本次不重编其 117 个条目。已有发布器与远程 deploy.mjs 已加入保留 ds/ 的规则，后续重新部署不会遗漏期中版。
