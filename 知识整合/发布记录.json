@@ -1,21 +1,22 @@
 {
   "repository": "N1cola5F/theorie-mesure",
-  "version": "1.6.1",
-  "date": "2026-10-09",
+  "version": "1.7.0",
+  "release": "1.8.0",
+  "date": "2026-10-11",
   "published": true,
   "main": {
-    "commit": "9a3334b7ee9cfbe62c095c458f2d0324adbe8cc1",
+    "commit": "114ee7dbf12e22f5f5cfaa489bee949326fb7eb4",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 19 files changed, 5737 insertions(+), 236 deletions(-)"
+    "summary": " 118 files changed, 44272 insertions(+), 362 deletions(-)"
   },
   "gh_pages": {
-    "commit": "259036907d6b458cc518462b64c52446de0673dd",
+    "commit": "67e1558c795574a973ea678f4aa7caa614bc158a",
     "changed": true,
     "prepared": false,
     "pending_commits_before_push": 1,
-    "summary": " 3 files changed, 7 insertions(+), 7 deletions(-)"
+    "summary": " 85 files changed, 34070 insertions(+), 199 deletions(-)"
   },
   "url": "https://n1cola5f.github.io/theorie-mesure/reader/"
 }

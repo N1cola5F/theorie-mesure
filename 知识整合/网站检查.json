@@ -67,5 +67,57 @@
     "errors": [],
     "failed_requests": []
   },
-  "live": null
+  "live": {
+    "checked_at_utc": "2026-10-11T14:11:12+00:00",
+    "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+    "pages_build_status": "built",
+    "pages_commit": "67e1558c795574a973ea678f4aa7caa614bc158a",
+    "responses": [
+      {
+        "path": "reader/",
+        "status": 200,
+        "version": "1.7.0",
+        "bytes": 67093,
+        "same_as_local": true
+      },
+      {
+        "path": "chapters/2774e03ff53be433d5121515.json",
+        "status": 200,
+        "new_card_ds_marker": true
+      },
+      {
+        "path": "search/e104c0de5b9c8cb166178a4b.json",
+        "status": 200,
+        "ds_marked_cards": 70
+      },
+      {
+        "path": "assets/8ab068910c2a35d0a7a9d872.svg",
+        "status": 200,
+        "hash_matches": true
+      },
+      {
+        "path": "scripts/5ca0b478ebac022fbe89b71d.js",
+        "status": 200,
+        "hash_matches": true
+      },
+      {
+        "path": "styles/23dac76996dfcf7ea8d10882.css",
+        "status": 200,
+        "hash_matches": true
+      },
+      {
+        "path": "../origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+        "status": 200
+      },
+      {
+        "path": "ds/",
+        "status": 200,
+        "same_html_after_git_newline_normalization": true
+      },
+      {
+        "path": "site root",
+        "status": 200
+      }
+    ]
+  }
 }
