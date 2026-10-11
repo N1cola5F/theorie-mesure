@@ -104,7 +104,11 @@ def make_originals(indices,config,reuse):
     return cards,files
 
 def export_asset(path,folder):
-    content=path.read_bytes();hash_=hashlib.sha256(content).hexdigest()[:18]
+    content=path.read_bytes()
+    # Git normalises generated text to LF. Hash those exact published bytes too.
+    if path.suffix in {'.svg','.json','.css','.js'}:
+        content=content.replace(b'\r\n',b'\n')
+    hash_=hashlib.sha256(content).hexdigest()[:18]
     target=SITE/folder/(hash_+path.suffix);target.parent.mkdir(parents=True,exist_ok=True)
     if not target.exists():target.write_bytes(content)
     return target.relative_to(SITE).as_posix()

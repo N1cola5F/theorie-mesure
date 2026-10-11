@@ -20,9 +20,9 @@
   },
   "initialPDFRequests": 0,
   "modeTimesMs": {
-    "fr": 79,
+    "fr": 70,
     "compare": 43,
-    "zh": 36
+    "zh": 30
   },
   "searchJump": {
     "hash": "#c6-05",
