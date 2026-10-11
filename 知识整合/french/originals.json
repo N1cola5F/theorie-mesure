@@ -219,6 +219,10 @@
         {
           "source": "w4",
           "block": "3.7"
+        },
+        {
+          "source": "w4",
+          "block": "3.6"
         }
       ]
     },
@@ -740,6 +744,10 @@
     },
     "cantor-measure": {
       "extracts": [
+        {
+          "source": "w4",
+          "block": "8.15"
+        },
         {
           "source": "w4",
           "block": "8.16"
@@ -1397,6 +1405,10 @@
         {
           "source": "w4",
           "block": "6.6"
+        },
+        {
+          "source": "w4",
+          "block": "6.7"
         }
       ]
     },
@@ -1413,6 +1425,10 @@
         {
           "source": "w4",
           "block": "6.6"
+        },
+        {
+          "source": "w4",
+          "block": "6.7"
         }
       ]
     },
@@ -1450,6 +1466,46 @@
             23
           ],
           "title": "Coordonnées cylindriques et sphériques"
+        }
+      ]
+    },
+    "interval-length": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "1.14"
+        }
+      ]
+    },
+    "intersection-sigma": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "2.8"
+        }
+      ]
+    },
+    "lebesgue-rn": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.15"
+        }
+      ]
+    },
+    "measure-null-sets": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.17"
+        }
+      ]
+    },
+    "set-limits-measurable": {
+      "extracts": [
+        {
+          "source": "w4",
+          "block": "3.25"
         }
       ]
     }

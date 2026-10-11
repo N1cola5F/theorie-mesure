@@ -3,11 +3,13 @@
 \[
 \begin{aligned}
 f^{-1}(B^c)&=(f^{-1}(B))^c,\\
-f^{-1}\!\left(\bigcup_nB_n\right)&=\bigcup_nf^{-1}(B_n),\\
-f^{-1}\!\left(\bigcap_nB_n\right)&=\bigcap_nf^{-1}(B_n).
+f^{-1}\!\left(\bigcup_{i\in I}B_i\right)&=\bigcup_{i\in I}f^{-1}(B_i),\\
+f^{-1}\!\left(\bigcap_{i\in I}B_i\right)&=\bigcap_{i\in I}f^{-1}(B_i).
 \end{aligned}
 \]
 原像还保持差集和不交性。\textbf{这些公式不要求 $f$ 连续、可测或可逆。}
+
+这里 $I$ 是任意指标集，允许不可数；原像与并、交交换本身没有可数性限制。
 
 符号 $f^{-1}(B)$ 表示集合的原像，不表示逆函数。
 % @end
@@ -39,6 +41,8 @@ B\in\T_F\Longrightarrow f^{-1}(B)\in\T_E.
 % @card {"id":"measurable-examples","type":"example","title":"连续函数与示性函数","fr":"Continuité · Indicatrices","refs":[["cm2",69,71],["cm3",23,24],["w4",41,42]],"requires":["generator-test","vitali"]}
 连续函数 $\R^p\to\R^q$ 是 Borel 可测函数；实单调函数与常值函数也可测。
 
+更一般地，两个赋范线性空间分别配备 Borel $\sigma$-代数时，连续映射仍可测。
+
 对于 $A\subseteq E$，
 \[
 \mathbf1_A\text{ 可测}\iff A\in\T_E.
@@ -57,9 +61,9 @@ B\in\T_F\Longrightarrow f^{-1}(B)\in\T_E.
 
 对有限实值可测函数 $f,g$，
 \[
-f+g,\quad fg,\quad |f|,\quad\max(f,g),\quad\min(f,g)
+f+g,\quad fg,\quad af\ (a\in\R),\quad |f|,
 \]
-均可测。
+以及 $\max(f,g)$、$\min(f,g)$ 均可测。
 
 \textbf{边界：}若允许扩展实数，必须先处理 $\infty-\infty$ 等未定义运算，不能无条件套用有限实值版本。
 % @proof
@@ -88,6 +92,8 @@ f+g,\quad fg,\quad |f|,\quad\max(f,g),\quad\min(f,g)
 % @end
 
 % @card {"id":"simple-functions","type":"definition","title":"可测简单函数","fr":"Fonction étagée mesurable","refs":[["cm2",78,79],["cm3",33,35],["r3",6,6],["w4",45,45]],"requires":["measurable-examples","measurable-operations"]}
+\textbf{先分开两个定义。}简单函数（fonction étagée）是只取有限个实数值的函数。若不同的值是 $c_1,\ldots,c_m$，令 $A_k=\{s=c_k\}$，这些水平集组成分割，且 $s=\sum_k c_k\mathbf1_{A_k}$。它可测当且仅当每个 $A_k$ 可测。
+
 可测简单函数可写成
 \[
 s=\sum_{k=1}^{m}c_k\mathbf1_{A_k},
@@ -150,6 +156,8 @@ f^{-1}(\sigma(\mathcal G))
 这里 $f^{-1}(\mathcal G)$ 表示逐个生成元取原像后得到的集合族。
 
 若 $\mathcal S$ 是 $F$ 上的 $\sigma$-代数，则 $f^{-1}(\mathcal S)$ 自动是 $E$ 上的 $\sigma$-代数。此结论不预先要求 $f$ 可测。
+
+它也是使 $f:E\to(F,\mathcal S)$ 可测的\textbf{最小}出发 $\sigma$-代数：任何使 $f$ 可测的族，都必须包含每个 $f^{-1}(B)$，其中 $B\in\mathcal S$。
 % @proof
 \textbf{第一个包含。}原像保持空集、补集及可数并，故 $f^{-1}(\sigma(\mathcal G))$ 是包含 $f^{-1}(\mathcal G)$ 的 $\sigma$-代数，因此包含后者生成的 $\sigma$-代数。
 \dep{原像运算；生成族最小性。}

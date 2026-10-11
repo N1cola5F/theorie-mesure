@@ -21,16 +21,50 @@ Lebesgue 测度在 $\R$ 上不有限，但由 $\R=\bigcup_n[-n,n]$ 可知它是 
 计数测度在 $\N$ 上 $\sigma$-有限；在不可数全集的幂集上不是 $\sigma$-有限，因为有限测度的集合只能是有限集。
 % @end
 
-% @card {"id":"point-atoms","type":"definition","title":"本课程的原子是一个点","fr":"Atome ponctuel","refs":[["cm2",35,36],["w4",31,31]],"requires":["measure-definition"]}
+% @card {"id":"point-atoms","type":"definition","title":"本课程的原子是一个点","fr":"Atome ponctuel","refs":[["cm2",35,36],["w4",30,31]],"requires":["measure-definition"]}
 按 CM2 的约定，点 $x$ 是原子，如果 $\{x\}$ 可测且
 \[
 \mu(\{x\})>0.
 \]
-Dirac 测度 $\delta_{x_0}(A)=\mathbf1_A(x_0)$ 的原子为 $x_0$；Lebesgue 测度对每个单点赋零。
+在任意可测空间上，Dirac 测度定义为 $\delta_{x_0}(A)=\mathbf1_A(x_0)$，其中 $A\in\T$。若 $\{x_0\}$ 可测，则它在 $\delta_{x_0}$ 下质量为 $1$，故 $x_0$ 是原子；Lebesgue 测度对每个单点赋零。
+
+\textbf{弥散测度（mesure diffuse）：}没有点原子的测度。若所有单点都可测，等价于对每个 $x$ 都有 $\mu(\{x\})=0$。
+
+对至多可数的点族 $(x_i)$ 和非负权重 $(p_i)$，
+\[
+\mu(A)=\sum_i p_i\mathbf1_A(x_i)
+\]
+定义离散测度；它为概率测度当且仅当 $\sum_i p_i=1$。
 
 在 $\N$ 上，若 $\mu(A)=\sum_{n\in A}a_n$ 且 $a_n\ge0$，其点原子恰为 $\{n:a_n>0\}$。
 
 \textbf{术语边界：}一般测度论还使用“原子集合”的定义。本笔记按课程的点原子约定作答，不混用两种概念。
+% @end
+
+% @card {"id":"lebesgue-rn","type":"theorem","title":"Rn 上的 Lebesgue 测度：由长方体体积刻画","fr":"Mesure de Lebesgue sur Rn","refs":[["w4",33,33]],"requires":["measure-definition","borel-generators","outer-invariance"],"ds_added":true}
+对 $n\ge1$，在 $(\R^n,\B(\R^n))$ 上存在\textbf{唯一}测度 $\lambda_n$，使每个 $a_i<b_i$ 的闭长方体
+\[
+P=\prod_{i=1}^{n}[a_i,b_i]
+\]
+满足
+\[
+\lambda_n(P)=\prod_{i=1}^{n}(b_i-a_i).
+\]
+这就是 $\R^n$ 上的 Lebesgue 测度；当 $n=1$ 时常记为 $\lambda$ 或 $\dd x$。它把长度、面积、体积推广到所有 Borel 集。
+
+\textbf{范围：}此处先在 Borel $\sigma$-代数上陈述定理；加入零测集的全部子集后得到其完备化，不能把 Borel 集与所有 Lebesgue 可测集混为一谈。
+\dep{官方 DS 清单 c3-04；课程手册定理 3.15。这里记录存在唯一性结论，不新增指定证明。}
+% @end
+
+% @card {"id":"measure-null-sets","type":"definition","title":"一般测度下的零测集","fr":"Ensemble négligeable pour une mesure","refs":[["w4",33,33]],"requires":["measure-definition","null-sets"],"ds_added":true}
+在测度空间 $(\Omega,\T,\mu)$ 中，若 $A\in\T$ 且
+\[
+\mu(A)=0,
+\]
+则称 $A$ 为相对于 $\mu$ 的\textbf{零测集}（ensemble négligeable）。
+
+\textbf{必须注明测度。}例如 $\{0\}$ 相对于 Lebesgue 测度零测，却在 $\delta_0$ 下质量为 $1$。一般测度的定义要求 $A$ 可测；外测度可以直接作用于任意子集，这两个概念的定义域不同。
+\dep{官方 DS 清单 c3-05；课程手册定义 3.17；Dirac 测度定义。}
 % @end
 
 % @card {"id":"measure-properties","type":"proposition","title":"有限可加性、单调性与差集","fr":"Propriétés élémentaires","refs":[["cm2",37,40],["w4",34,34]],"requires":["measure-definition"]}
@@ -100,7 +134,26 @@ $B_n$ 两两不交、$B_n\subseteq A_n$，且它们的并与原来的并相同�
 \dep{先可数可加，再单调性；CM2 第 46 页。}
 % @end
 
-% @card {"id":"borel-cantelli","type":"theorem","title":"Borel–Cantelli 第一引理","fr":"Lemme de Borel–Cantelli","refs":[["cm2",47,48],["w4",36,36]],"requires":["set-limits","subadditivity"]}
+% @card {"id":"set-limits-measurable","type":"proposition","title":"可测集合序列的上、下极限仍可测","fr":"Stabilité par limsup et liminf","refs":[["w4",36,36]],"requires":["set-limits","sigma-algebra"],"ds_added":true}
+若 $(A_n)$ 是可测空间 $(\Omega,\T)$ 中的可测集合序列，则
+\[
+\limsup_n A_n\in\T,\qquad\liminf_n A_n\in\T.
+\]
+因此对它们使用测度之前，可测性已经有保证。
+\dep{官方 DS 清单 c3-09；课程手册性质 3.25。}
+% @proof
+把极限写成可数并、可数交：
+\[
+\begin{aligned}
+\limsup_n A_n&=\bigcap_N\bigcup_{n\ge N}A_n,\\
+\liminf_n A_n&=\bigcup_N\bigcap_{n\ge N}A_n.
+\end{aligned}
+\]
+内层及外层集合运算均保持可测性，故得到结论。
+\dep{集合极限的并交描述；$\sigma$-代数对可数并、可数交封闭。这是该性质的直接推导，非新增 DS 指定证明。}
+% @end
+
+% @card {"id":"borel-cantelli","type":"theorem","title":"Borel–Cantelli 第一引理","fr":"Lemme de Borel–Cantelli","refs":[["cm2",47,48],["w4",36,36]],"requires":["set-limits","set-limits-measurable","subadditivity"]}
 若 $(A_n)$ 为可测集序列且 $\sum_n\mu(A_n)<\infty$，则
 \[
 \mu(\limsup_n A_n)=0.

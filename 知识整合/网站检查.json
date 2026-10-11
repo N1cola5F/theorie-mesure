@@ -1,94 +1,71 @@
 {
-  "version": "1.6.1",
-  "date": "2026-10-09",
-  "scope": "GitHub account rename and address migration only; no repeated visual or interaction review.",
-  "repository": "N1cola5F/theorie-mesure",
-  "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
-  "previous_version": "1.6.0",
-  "previous_check": "维护记录/v1.6.0_网站检查.json",
-  "integrity": {
-    "unchanged_svg_assets": 651,
-    "unchanged_chapters": 13,
-    "unchanged_search_script_and_style": true,
-    "unchanged_pdfs": 17,
-    "unchanged_offline_html": 3,
-    "current_github_links": [
-      "https://github.com/N1cola5F/theorie-mesure/blob/main/reader-source/CHANGELOG.md",
-      "https://github.com/N1cola5F/theorie-mesure/blob/main/知识整合/README.md",
-      "https://github.com/N1cola5F/theorie-mesure/tree/main/reader-source/历史记录"
+  "version": "1.7.0",
+  "release": "1.8.0",
+  "date": "2026-10-11",
+  "checked_at_utc": "2026-10-11T14:07:49+00:00",
+  "scope": "Only DS mapping, affected links/search/layout, compile log, resources, and preserved inputs; no screenshots or mathematical/visual audit.",
+  "local": {
+    "cards": 122,
+    "chapters": 13,
+    "official_statements": 100,
+    "marked_cards": 70,
+    "added_cards": [
+      "interval-length",
+      "intersection-sigma",
+      "lebesgue-rn",
+      "measure-null-sets",
+      "set-limits-measurable"
     ],
-    "entry_bytes": 63270
+    "official_page_links": 108,
+    "designated_proof_links": 15,
+    "search_includes_ds_ids_in_both_languages": true,
+    "hashed_vectors": 672,
+    "latex_faults": 0,
+    "preserved_ds_and_inputs": 881,
+    "preserved_pdf_files": 45,
+    "preserved_offline_html": 3,
+    "entry_bytes": 67111
   },
-  "live": {
-    "checked_at_utc": "2026-10-09T10:55:45+00:00",
-    "url": "https://n1cola5f.github.io/theorie-mesure/reader/",
-    "version": "1.6.1",
-    "updated": "2026-10-09",
-    "pages_build_status": "built",
-    "pages_commit": "259036907d6b458cc518462b64c52446de0673dd",
-    "responses": [
-      {
-        "path": "reader/",
-        "status": 200,
-        "bytes": 63253,
-        "local_bytes": 63270,
-        "same_html_after_git_newline_normalization": true,
-        "sha256": "76ee3d95d75068c402a438e1db26fea1483f1906739d74290779ca622c4d41c7"
-      },
-      {
-        "path": "reader/chapters/1353f743a6a56ca80c44cdf1.json",
-        "status": 200,
-        "cards": 7
-      },
-      {
-        "path": "reader/styles/85b7b1f02af3444825b19590.css",
-        "status": 200,
-        "bytes": 20338,
-        "hash_matches": true
-      },
-      {
-        "path": "reader/scripts/bdedad2575af69b58f972d20.js",
-        "status": 200,
-        "bytes": 16354,
-        "hash_matches": true
-      },
-      {
-        "path": "reader/assets/c0e60efa9bc8beac1eaf8a8c.svg",
-        "status": 200,
-        "bytes": 63694,
-        "hash_matches": true
-      },
-      {
-        "path": "origin/index.json",
-        "status": 200,
-        "pdfs": 17
-      },
-      {
-        "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
-        "status": 200,
-        "content_length": 1625544,
-        "content_type": "application/pdf"
-      },
-      {
-        "path": "existing-site-root",
-        "status": 200,
-        "preserved_vitepress": true
-      },
-      {
-        "path": "reader-source/CHANGELOG.md",
-        "status": 200,
-        "repository": "N1cola5F/theorie-mesure"
-      },
-      {
-        "path": "知识整合/README.md",
-        "status": 200,
-        "repository": "N1cola5F/theorie-mesure"
-      },
-      {
-        "path": "reader-source/历史记录",
-        "status": 200,
-        "repository": "N1cola5F/theorie-mesure"
-      }
-    ]
-  }
+  "browser": {
+    "added": {
+      "ds": "DS · 清单内容Au programme",
+      "added": true,
+      "official": "../origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf#page=3",
+      "statement": "../ds/#c2-04",
+      "proof": "../ds/#p03",
+      "chineseImage": 341
+    },
+    "official_status": 200,
+    "counterpart_status": 200,
+    "compare": {
+      "mode": "compare",
+      "marked": true,
+      "chinese": 1,
+      "french": 1,
+      "frenchWidth": 474.5
+    },
+    "french_annotation": true,
+    "search_ds": {
+      "count": 70,
+      "allMarked": true
+    },
+    "search_id": {
+      "ids": [
+        "#lebesgue-rn"
+      ]
+    },
+    "statement_only": true,
+    "related_link": "#finite-sigma-finite",
+    "mobile": {
+      "width": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "badgeVisible": true,
+      "dsPanelWidth": 324
+    },
+    "pdf_auto_requests": 0,
+    "errors": [],
+    "failed_requests": []
+  },
+  "live": null
 }

@@ -1,6 +1,6 @@
 {
-  "version": "1.6.1",
-  "updated": "2026-10-09",
+  "version": "1.7.0",
+  "updated": "2026-10-11",
   "files": [
     {
       "path": "origin/output/pdf/TD02_前五题_原题与逐步解答.pdf",
@@ -10,6 +10,24 @@
       "fr_label": "TD2 — Réponses de travail, 1–5",
       "kind": "学习辅助",
       "fr_kind": "Notes de travail"
+    },
+    {
+      "path": "origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "sha256": "4cd5f1a88c7ba755504a4066b5f41975fd6cb263e94a691a4e29aaab9c9e4021",
+      "bytes": 303623,
+      "label": "Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "fr_label": "Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "sha256": "4e25cf08b585893ece02787cb9c2a9a2b0b8bf789493e6c758d3a3e011c1b556",
+      "bytes": 340578,
+      "label": "DS 官方知识清单与证明目录",
+      "fr_label": "Programme officiel du DS",
+      "kind": "官方考试范围",
+      "fr_kind": "Programme du DS"
     },
     {
       "path": "origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
@@ -75,6 +93,15 @@
       "fr_kind": "Cours"
     },
     {
+      "path": "origin/按周划分/W2/corrige/TD02_FR_corrige.pdf",
+      "sha256": "327da8549efeca7dc8f9129e9c4893ef4b6de7d1301d5e77d8eff25073a9d47b",
+      "bytes": 265268,
+      "label": "TD02_FR_corrige.pdf",
+      "fr_label": "TD02_FR_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W2/TD02_course_reminders_EN.pdf",
       "sha256": "81f88215914a1f5b5437ac342ab9f8123b80094eeaa2296abf059b5521d7b12e",
       "bytes": 79416,
@@ -120,6 +147,15 @@
       "fr_kind": "Cours"
     },
     {
+      "path": "origin/按周划分/W3/corrige/TD03_FR_corrige.pdf",
+      "sha256": "18f2ab04a2fdc23ff277f117202875bf5991820b07e12522c50928c31b8deae6",
+      "bytes": 245415,
+      "label": "TD03_FR_corrige.pdf",
+      "fr_label": "TD03_FR_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W3/Rappels_TD03_FR.pdf",
       "sha256": "94bcc627b14edd4ca34959efa31764e96c977dfeec20d3f706d93399058be331",
       "bytes": 321841,
@@ -147,6 +183,15 @@
       "fr_kind": "Diapositives"
     },
     {
+      "path": "origin/按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+      "sha256": "3a7e57a44d44b8d0ed7f205bdb2ac703bba34dcfc6f0dd95ad605ab439dc2731",
+      "bytes": 287726,
+      "label": "TD04_FR_integrales-multiples_corrige.pdf",
+      "fr_label": "TD04_FR_integrales-multiples_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
       "sha256": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
       "bytes": 1625544,
@@ -154,6 +199,15 @@
       "fr_label": "Manuel de mesure et probabilités",
       "kind": "课程手册 · 2026-09-29",
       "fr_kind": "Manuel · 2026-09-29"
+    },
+    {
+      "path": "origin/按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "sha256": "6514281f04a9c36029058d6e199e1596759feb85c507e6fab7ae4ff9ef62d341",
+      "bytes": 544241,
+      "label": "CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "fr_label": "CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
     }
   ]
 }

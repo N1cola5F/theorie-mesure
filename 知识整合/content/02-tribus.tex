@@ -9,6 +9,11 @@ A\in\T\Rightarrow A^c\in\T,\\
 \]
 由此推出 $\Omega\in\T$，并对可数交、有限并、有限交与差集封闭。
 
+对 $A,B\in\T$，对称差也可测：
+\[
+A\mathbin{\triangle}B=(A\setminus B)\cup(B\setminus A)\in\T.
+\]
+
 最小的例子是 $\{\varnothing,\Omega\}$；最大的例子是 $\mathcal P(\Omega)$。$(\Omega,\T)$ 称为可测空间。
 % @proof
 \[
@@ -19,7 +24,25 @@ A\in\T\Rightarrow A^c\in\T,\\
 \dep{De Morgan 律；$\sigma$-代数公理；CM2 第 8–9 页。}
 % @end
 
-% @card {"id":"generated-sigma","type":"definition","title":"生成 σ-代数与最小性","fr":"Tribu engendrée","refs":[["cm2",12,17],["r2",3,3],["w4",19,21]],"requires":["sigma-algebra"]}
+% @card {"id":"intersection-sigma","type":"proposition","title":"任意非空族 σ-代数的交仍是 σ-代数","fr":"Intersection de tribus","refs":[["w4",19,20]],"requires":["sigma-algebra"],"ds_added":true}
+设 $(\T_i)_{i\in I}$ 是\textbf{同一集合 $\Omega$ 上}的一族 $\sigma$-代数，且 $I\ne\varnothing$。则
+\[
+\T=\bigcap_{i\in I}\T_i
+\]
+仍是 $\Omega$ 上的 $\sigma$-代数。这里指标集 $I$ 可以不可数；取交不要求可数性。
+\dep{官方 DS 清单 c2-04；课程手册性质 2.8。}
+% @proof
+\textbf{1. 空集。}每个 $\T_i$ 都含空集，所以 $\varnothing\in\T$。
+\dep{$\sigma$-代数定义；集合交的定义。}
+
+\textbf{2. 补集。}若 $A\in\T$，则对每个 $i$ 都有 $A\in\T_i$，进而 $A^c\in\T_i$；故 $A^c\in\T$。
+\dep{每个 $\T_i$ 对补集封闭。}
+
+\textbf{3. 可数并。}若所有 $A_n\in\T$，则固定任意 $i$ 时，所有 $A_n\in\T_i$，所以 $\bigcup_n A_n\in\T_i$。对每个 $i$ 均成立，故该并属于 $\T$。
+\dep{每个 $\T_i$ 对可数并封闭；集合交的定义。}
+% @end
+
+% @card {"id":"generated-sigma","type":"definition","title":"生成 σ-代数与最小性","fr":"Tribu engendrée","refs":[["cm2",12,17],["r2",3,3],["w4",19,21]],"requires":["sigma-algebra","intersection-sigma"]}
 任意集合族 $\mathcal G\subseteq\mathcal P(\Omega)$ 生成
 \[
 \sigma(\mathcal G)
@@ -40,7 +63,7 @@ $\B(\R)=\sigma(\text{开集})$。下面各族均可单独生成 $\B(\R)$：
 \[
 \begin{gathered}
 \{(a,b):a<b\},\quad\{[a,b]:a<b\},\\
-\{(-\infty,a]:a\in\R\}.
+\{(-\infty,a]:a\in\R\},\quad\{(-\infty,a):a\in\R\}.
 \end{gathered}
 \]
 端点可限制为有理数。开集、闭集、区间、单点、$\Q$ 及其补集都是 Borel 集。

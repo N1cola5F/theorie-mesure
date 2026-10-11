@@ -1,5 +1,6 @@
 % @card {"id":"almost-everywhere","type":"definition","title":"几乎处处：允许一个零测例外集","fr":"Presque partout · p.p.","refs":[["cm3",9,9],["cm3",56,56],["w4",54,54]],"requires":["measure-definition","null-sets"]}
 在 $(E,\T,\mu)$ 上，性质在某个可测零测集 $N$ 之外成立，称它 $\mu$-几乎处处成立，记为 $\mu$-p.p. 或 $\mu$-a.e.。
+若 $\mu$ 是概率测度，同一概念称为几乎必然（presque sûrement，p.s.）。
 \[
 f=g\ \mu\text{-p.p.}
 \quad\Longleftrightarrow\quad
@@ -131,6 +132,12 @@ f=f^+-f^-,\qquad |f|=f^++f^-.
 \left|\int f\,\dd\mu\right|\le\int|f|\,\dd\mu.
 \]
 非负函数的可加性及非负齐次性可在扩展非负实数中使用。不能借线性形式制造 $\infty-\infty$。
+
+\textbf{零测修改不改变积分。}若 $f,g$ 都是非负可测函数，或都是可积实值函数，并且 $f=g$ 几乎处处，则
+\[
+\int f\,\dd\mu=\int g\,\dd\mu.
+\]
+非负情形允许积分为 $+\infty$。
 % @proof
 \textbf{非负情形。}分别取简单逼近 $s_n\uparrow f$、$t_n\uparrow g$，则 $s_n+t_n\uparrow f+g$。简单函数层面的可加性通过单调收敛传到一般非负函数；齐次性类似。
 \dep{简单逼近；简单积分性质；单调收敛。}
@@ -188,6 +195,8 @@ f=f^+-f^-,\qquad |f|=f^++f^-.
 所以 $f$ 可积。
 
 若 $\mu(E)<\infty$ 且 $|f|\le M<\infty$ 几乎处处，则 $\int|f|\,\dd\mu\le M\mu(E)$。
+
+\textbf{完整的可积性结论：}$f$ 可积当且仅当 $|f|$ 可积；可积函数必然几乎处处有限。对允许扩展值的版本，先在零测例外集上改为有限值；两个可积版本的和仍可积。
 
 \textbf{边界：}“有界”本身不够。$\R$ 上的常值函数 $1$ 有界，但 $\int_{\R}1\,\dd\lambda=\infty$。
 \dep{积分单调性；几乎处处不变性；常数函数积分。}
@@ -289,7 +298,7 @@ f_n,f\in L^1(\mu),\\
 % @end
 
 % @card {"id":"parameter-continuity","type":"theorem","title":"含参积分的连续性","fr":"Continuité sous le signe intégral","refs":[["cm3",75,76],["w4",64,64]],"requires":["dominated-convergence"]}
-令 $u$ 在实区间内变化，且
+令参数 $u$ 在某个赋范线性空间的子集 $U$ 中变化，$u_0\in U$，且
 \[
 F(u)=\int_E f(u,x)\,\dd\mu(x).
 \]
@@ -302,7 +311,7 @@ F(u)=\int_E f(u,x)\,\dd\mu(x).
 则 $F(u)\to F(u_0)$。局部的统一控制已经足够。
 % @proof
 任取 $u_n\to u_0$，最终各项位于该邻域。连续性给出 $f(u_n,x)\to f(u_0,x)$ 几乎处处，而共同上界使控制收敛适用，故 $F(u_n)\to F(u_0)$。
-\dep{控制收敛定理；实变量连续性的序列刻画。}
+\dep{控制收敛定理；赋范空间中连续性的序列刻画。官方 DS 清单采用在整个 $U$ 上有共同可积上界的版本；它尤其满足这里的局部条件。}
 % @end
 
 % @card {"id":"parameter-derivative","type":"theorem","title":"含参积分求导：控制导数并保证基点可积","fr":"Dérivation sous le signe intégral","refs":[["cm3",78,79],["w4",64,65]],"requires":["dominated-convergence","measurable-limits"]}
@@ -317,6 +326,8 @@ F(u)=\int_E f(u,x)\,\dd\mu(x).
 F'(u)=\int_E\partial_u f(u,x)\,\dd\mu(x).
 \]
 仅控制导数不能保证原积分存在，例如无限测度空间上的常数函数 $f(u,x)=1$。
+
+\textbf{官方清单的假设：}c5-17 直接要求每个 $u\in I$ 的 $f(u,\cdot)$ 可积，再配合上述可导性及统一控制导数的条件，得到同一求导结论。本条的基点可积条件说明这些截面可积性如何由较少的假设推出。
 % @proof
 \textbf{1. 保证积分有限。}中值定理给出
 \[

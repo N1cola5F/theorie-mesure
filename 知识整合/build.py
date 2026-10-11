@@ -64,6 +64,8 @@ def load_cards(config):
             assert s in config['sources'] and 1<=start<=end<=config['sources'][s]['pages']
     for s in config['sources'].values():
         assert len(PdfReader(ROOT/s['path']).pages)==s['pages'],'PDF page count changed'
+    from ds_scope import attach_ds_scope
+    attach_ds_scope(config,cards)
     return cards
 
 def typeset(cards,font_root,reuse):
@@ -160,9 +162,12 @@ def main():
                 'html_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'cards':len(cards),'chapters':len(config['chapters']),
                 'proofs':sum(bool(c['proof']) for c in cards),'compiled_fragments':len(fragments),'original_vector_fragments':len(original_files),
                 'delivery':'external-hashed-svg-and-chapter-json','search':'separate-index-loaded-on-first-search','source_files':origins,
-                'runtime_tex_compilation':False,'repository':config['hosting']['repository'],'pages_url':config['hosting']['pages_url']}
+                'runtime_tex_compilation':False,'repository':config['hosting']['repository'],'pages_url':config['hosting']['pages_url'],
+                'ds_scope':config.get('ds_scope',{}).get('summary')}
         (BASE/'网站构建记录.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-        print(json.dumps({k:v for k,v in report.items() if k!='source_files'},ensure_ascii=False,indent=2),flush=True);print(output,flush=True);return
+        summary={k:v for k,v in report.items() if k not in ['source_files','ds_scope']}
+        if report['ds_scope']:summary['ds_scope']={k:v for k,v in report['ds_scope'].items() if k!='mapping'}
+        print(json.dumps(summary,ensure_ascii=False,indent=2),flush=True);print(output,flush=True);return
     OUTPUT.write_text(render_book(BASE,config,cards,vectors,bank,args.font_root,originals,lazy=True),encoding='utf-8')
     report={'version':config['version'],'date':config['updated'],'cards':len(cards),'chapters':len(config['chapters']),
             'proofs':sum(bool(c['proof']) for c in cards),'compiled_fragments':len(fragments),'shared_glyphs':glyphs,

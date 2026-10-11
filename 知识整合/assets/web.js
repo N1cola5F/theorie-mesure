@@ -182,13 +182,14 @@
     navigation.forEach(a=>a.removeAttribute('aria-current'));results.hidden=true;empty.hidden=true;status.hidden=true;setBusy(true);
     try {
       const index=await searchData();if(ticket!==revision)return;
-      const found=index.filter(item=>{const text=readingMode==='fr' ? item.french : readingMode==='compare' ? item.chinese+' '+item.french : item.chinese;return terms.every(term=>text.includes(term));});
+      const found=index.filter(item=>{const text=readingMode==='fr' ? item.french : readingMode==='compare' ? item.chinese+' '+item.french : item.chinese;return terms.every(term=>term==='ds' ? item.ds_ids?.length>0 : text.includes(term));});
       const heading=readingMode==='fr' ? 'Résultats de recherche' : '搜索结果';
       const hint=readingMode==='fr' ? 'Ouvrir la notion dans son chapitre' : '点击条目，进入所在章节';
       results.innerHTML='<h1 class="search-heading">'+heading+'</h1><ol class="search-list">'+found.map(item=>{
         const chapterTitle=chapterById.get(item.chapter).querySelector('h1 '+(readingMode==='fr' ? '.lang-fr' : '.lang-zh')).textContent;
         const title=readingMode==='fr' ? item.original_title : item.title;
-        return '<li><a class="search-result" href="#'+item.id+'"><small>'+escape(chapterTitle)+'</small><strong>'+escape(title)+'</strong>'+(readingMode==='compare' ? '<span lang="fr">'+escape(item.original_title)+'</span>' : '')+'<em>'+hint+' ↗</em></a></li>';
+        const dsLabel=item.ds_ids?.length ? '<span class="ds-search-label">DS · '+item.ds_ids.map(escape).join(' / ')+(item.ds_added ? (readingMode==='fr' ? ' · Notion ajoutée' : ' · 清单补齐') : '')+'</span>' : '';
+        return '<li><a class="search-result" href="#'+item.id+'"><small>'+escape(chapterTitle)+'</small><strong>'+escape(title)+'</strong>'+dsLabel+(readingMode==='compare' ? '<span lang="fr">'+escape(item.original_title)+'</span>' : '')+'<em>'+hint+' ↗</em></a></li>';
       }).join('')+'</ol>';
       results.hidden=found.length===0;status.hidden=false;empty.hidden=found.length!==0;setBusy(false);
       status.textContent=readingMode==='fr' ? '« '+query+' » · '+found.length+' notions' : '“'+query+'” · 找到 '+found.length+' 个相关条目';

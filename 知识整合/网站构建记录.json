@@ -1,14 +1,14 @@
 {
-  "version": "1.6.1",
-  "date": "2026-10-09",
+  "version": "1.7.0",
+  "date": "2026-10-11",
   "html_file": "site/reader/index.html",
-  "html_bytes": 63270,
-  "html_sha256": "4d11f58e99c269efd662d993190bc18898cf4e7369950a4ed404a8e5dd7a7ad3",
-  "cards": 117,
+  "html_bytes": 67111,
+  "html_sha256": "94a4ed86a1cb674db98553cf9bea0586fa857b9474ab54a45459afaa2b7ad1a2",
+  "cards": 122,
   "chapters": 13,
-  "proofs": 73,
-  "compiled_fragments": 380,
-  "original_vector_fragments": 271,
+  "proofs": 75,
+  "compiled_fragments": 394,
+  "original_vector_fragments": 278,
   "delivery": "external-hashed-svg-and-chapter-json",
   "search": "separate-index-loaded-on-first-search",
   "source_files": [
@@ -20,6 +20,24 @@
       "fr_label": "TD2 — Réponses de travail, 1–5",
       "kind": "学习辅助",
       "fr_kind": "Notes de travail"
+    },
+    {
+      "path": "origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "sha256": "4cd5f1a88c7ba755504a4066b5f41975fd6cb263e94a691a4e29aaab9c9e4021",
+      "bytes": 303623,
+      "label": "Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "fr_label": "Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
+      "path": "origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "sha256": "4e25cf08b585893ece02787cb9c2a9a2b0b8bf789493e6c758d3a3e011c1b556",
+      "bytes": 340578,
+      "label": "DS 官方知识清单与证明目录",
+      "fr_label": "Programme officiel du DS",
+      "kind": "官方考试范围",
+      "fr_kind": "Programme du DS"
     },
     {
       "path": "origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
@@ -85,6 +103,15 @@
       "fr_kind": "Cours"
     },
     {
+      "path": "origin/按周划分/W2/corrige/TD02_FR_corrige.pdf",
+      "sha256": "327da8549efeca7dc8f9129e9c4893ef4b6de7d1301d5e77d8eff25073a9d47b",
+      "bytes": 265268,
+      "label": "TD02_FR_corrige.pdf",
+      "fr_label": "TD02_FR_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W2/TD02_course_reminders_EN.pdf",
       "sha256": "81f88215914a1f5b5437ac342ab9f8123b80094eeaa2296abf059b5521d7b12e",
       "bytes": 79416,
@@ -130,6 +157,15 @@
       "fr_kind": "Cours"
     },
     {
+      "path": "origin/按周划分/W3/corrige/TD03_FR_corrige.pdf",
+      "sha256": "18f2ab04a2fdc23ff277f117202875bf5991820b07e12522c50928c31b8deae6",
+      "bytes": 245415,
+      "label": "TD03_FR_corrige.pdf",
+      "fr_label": "TD03_FR_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W3/Rappels_TD03_FR.pdf",
       "sha256": "94bcc627b14edd4ca34959efa31764e96c977dfeec20d3f706d93399058be331",
       "bytes": 321841,
@@ -157,6 +193,15 @@
       "fr_kind": "Diapositives"
     },
     {
+      "path": "origin/按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+      "sha256": "3a7e57a44d44b8d0ed7f205bdb2ac703bba34dcfc6f0dd95ad605ab439dc2731",
+      "bytes": 287726,
+      "label": "TD04_FR_integrales-multiples_corrige.pdf",
+      "fr_label": "TD04_FR_integrales-multiples_corrige.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
+    },
+    {
       "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
       "sha256": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
       "bytes": 1625544,
@@ -164,9 +209,347 @@
       "fr_label": "Manuel de mesure et probabilités",
       "kind": "课程手册 · 2026-09-29",
       "fr_kind": "Manuel · 2026-09-29"
+    },
+    {
+      "path": "origin/按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "sha256": "6514281f04a9c36029058d6e199e1596759feb85c507e6fab7ae4ff9ef62d341",
+      "bytes": 544241,
+      "label": "CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "fr_label": "CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "kind": "原始资料",
+      "fr_kind": "Document original"
     }
   ],
   "runtime_tex_compilation": false,
   "repository": "N1cola5F/theorie-mesure",
-  "pages_url": "https://n1cola5f.github.io/theorie-mesure/reader/"
+  "pages_url": "https://n1cola5f.github.io/theorie-mesure/reader/",
+  "ds_scope": {
+    "statements": 100,
+    "mapped_cards": 70,
+    "existing_marked_cards": 65,
+    "added_cards": [
+      "interval-length",
+      "intersection-sigma",
+      "lebesgue-rn",
+      "measure-null-sets",
+      "set-limits-measurable"
+    ],
+    "proof_links": 15,
+    "statement_only_chapters": [
+      7,
+      8
+    ],
+    "official_source_sha256": "4e25cf08b585893ece02787cb9c2a9a2b0b8bf789493e6c758d3a3e011c1b556",
+    "mapping": {
+      "c1-01": [
+        "countability"
+      ],
+      "c1-02": [
+        "countability"
+      ],
+      "c1-03": [
+        "set-limits"
+      ],
+      "c1-04": [
+        "set-limits"
+      ],
+      "c1-05": [
+        "interval-length"
+      ],
+      "c1-06": [
+        "outer-definition"
+      ],
+      "c1-07": [
+        "outer-properties"
+      ],
+      "c1-08": [
+        "outer-invariance"
+      ],
+      "c1-09": [
+        "outer-invariance"
+      ],
+      "c1-10": [
+        "null-sets"
+      ],
+      "c1-11": [
+        "caratheodory-criterion"
+      ],
+      "c1-12": [
+        "caratheodory-theorem"
+      ],
+      "c1-13": [
+        "vitali"
+      ],
+      "c2-01": [
+        "sigma-algebra"
+      ],
+      "c2-02": [
+        "sigma-algebra"
+      ],
+      "c2-03": [
+        "generated-sigma"
+      ],
+      "c2-04": [
+        "intersection-sigma"
+      ],
+      "c2-05": [
+        "generated-sigma"
+      ],
+      "c2-06": [
+        "generated-sigma"
+      ],
+      "c2-07": [
+        "borel-generators"
+      ],
+      "c2-08": [
+        "borel-generators"
+      ],
+      "c2-09": [
+        "borel-generators"
+      ],
+      "c2-10": [
+        "borel-lebesgue"
+      ],
+      "c2-11": [
+        "borel-lebesgue"
+      ],
+      "c2-12": [
+        "cantor"
+      ],
+      "c2-13": [
+        "cantor"
+      ],
+      "c3-01": [
+        "measure-definition",
+        "finite-sigma-finite"
+      ],
+      "c3-02": [
+        "point-atoms"
+      ],
+      "c3-03": [
+        "point-atoms"
+      ],
+      "c3-04": [
+        "lebesgue-rn"
+      ],
+      "c3-05": [
+        "measure-null-sets"
+      ],
+      "c3-06": [
+        "measure-properties"
+      ],
+      "c3-07": [
+        "increasing-continuity",
+        "decreasing-continuity"
+      ],
+      "c3-08": [
+        "subadditivity"
+      ],
+      "c3-09": [
+        "set-limits-measurable"
+      ],
+      "c3-10": [
+        "borel-cantelli"
+      ],
+      "c4-01": [
+        "preimage"
+      ],
+      "c4-02": [
+        "preimage-generated"
+      ],
+      "c4-03": [
+        "preimage-generated"
+      ],
+      "c4-04": [
+        "measurable-function"
+      ],
+      "c4-05": [
+        "lebesgue-composition"
+      ],
+      "c4-06": [
+        "measurable-operations"
+      ],
+      "c4-07": [
+        "generator-test"
+      ],
+      "c4-08": [
+        "measurable-examples"
+      ],
+      "c4-09": [
+        "measurable-examples"
+      ],
+      "c4-10": [
+        "measurable-operations"
+      ],
+      "c4-11": [
+        "measurable-operations"
+      ],
+      "c4-12": [
+        "extended-real-line"
+      ],
+      "c4-13": [
+        "measurable-limits"
+      ],
+      "c4-14": [
+        "pushforward"
+      ],
+      "c5-01": [
+        "simple-functions"
+      ],
+      "c5-02": [
+        "simple-functions"
+      ],
+      "c5-03": [
+        "simple-approximation"
+      ],
+      "c5-04": [
+        "simple-integral"
+      ],
+      "c5-05": [
+        "positive-integral"
+      ],
+      "c5-06": [
+        "monotone-convergence"
+      ],
+      "c5-07": [
+        "signed-integral"
+      ],
+      "c5-08": [
+        "almost-everywhere",
+        "integral-on-sets"
+      ],
+      "c5-09": [
+        "integral-properties",
+        "integral-on-sets"
+      ],
+      "c5-10": [
+        "integral-properties"
+      ],
+      "c5-11": [
+        "zero-integral"
+      ],
+      "c5-12": [
+        "signed-integral",
+        "integrability-criteria"
+      ],
+      "c5-13": [
+        "monotone-convergence",
+        "integral-series"
+      ],
+      "c5-14": [
+        "fatou"
+      ],
+      "c5-15": [
+        "dominated-convergence"
+      ],
+      "c5-16": [
+        "parameter-continuity"
+      ],
+      "c5-17": [
+        "parameter-derivative"
+      ],
+      "c6-01": [
+        "product-measure"
+      ],
+      "c6-02": [
+        "product-measure"
+      ],
+      "c6-03": [
+        "measurable-sections"
+      ],
+      "c6-04": [
+        "measurable-sections"
+      ],
+      "c6-05": [
+        "tonelli",
+        "fubini"
+      ],
+      "c6-06": [
+        "tonelli",
+        "fubini"
+      ],
+      "c6-07": [
+        "change-variables"
+      ],
+      "c7-01": [
+        "lp-spaces"
+      ],
+      "c7-02": [
+        "lp-spaces"
+      ],
+      "c7-03": [
+        "lp-spaces"
+      ],
+      "c7-04": [
+        "markov-chebyshev"
+      ],
+      "c7-05": [
+        "markov-chebyshev"
+      ],
+      "c7-06": [
+        "holder"
+      ],
+      "c7-07": [
+        "lp-inclusion-jensen"
+      ],
+      "c7-08": [
+        "minkowski"
+      ],
+      "c7-09": [
+        "lp-inclusion-jensen"
+      ],
+      "c7-10": [
+        "lp-completeness"
+      ],
+      "c7-11": [
+        "hilbert-riesz"
+      ],
+      "c7-12": [
+        "hilbert-riesz"
+      ],
+      "c7-13": [
+        "lp-completeness"
+      ],
+      "c8-01": [
+        "singular-measures"
+      ],
+      "c8-02": [
+        "density-absolute-continuity"
+      ],
+      "c8-03": [
+        "density-absolute-continuity"
+      ],
+      "c8-04": [
+        "density-absolute-continuity"
+      ],
+      "c8-05": [
+        "density-absolute-continuity"
+      ],
+      "c8-06": [
+        "singular-measures"
+      ],
+      "c8-07": [
+        "cantor-measure"
+      ],
+      "c8-08": [
+        "cantor-measure"
+      ],
+      "c8-09": [
+        "cantor-measure"
+      ],
+      "c8-10": [
+        "cantor-measure"
+      ],
+      "c8-11": [
+        "radon-nikodym"
+      ],
+      "c8-12": [
+        "lebesgue-decomposition"
+      ],
+      "c8-13": [
+        "lebesgue-decomposition"
+      ]
+    },
+    "note": "Explicit statement correspondence; additional content/proofs within a card are not automatically required for DS."
+  }
 }

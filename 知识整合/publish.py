@@ -1,6 +1,6 @@
 """Publish the split reader without replacing the pre-existing GitHub Pages site."""
 from pathlib import Path
-import argparse,json,shutil,subprocess
+import argparse,json,re,shutil,subprocess
 
 ROOT=Path(__file__).resolve().parent.parent
 BASE=ROOT/'知识整合'
@@ -47,6 +47,8 @@ def source_copy(destination,repository,pages_url,previous_repositories=()):
 - reader/：已编译的静态站点，章节 JSON、完整搜索索引与 SVG 分开保存。
 - origin/：教师原 PDF 与资源页所需资料，index.json 记录原路径和 SHA-256。
 - 知识整合/：内容、原文映射、构建程序和界面脚本。
+- 知识整合/ds-map.json：官方 DS 清单编号到全学期卡片的明确对应关系。
+- 期中复习/：独立 DS 复习册的中法 LaTeX 正文、考试配置及维护程序。
 - reader-source/历史记录：不可覆盖的版本清单。
 
 本地 50 MiB 左右的旧 HTML 备份不进入在线仓库。在线阅读只请求当前章节与可见片段。
@@ -66,8 +68,10 @@ gh-pages 更新后由 GitHub Pages 自动发布。同一网址刷新即可阅读
         old_owner,old_name=old.split('/')
         text=text.replace('https://'+old_owner.lower()+'.github.io/'+old_name+'/',pages_url.removesuffix('reader/'))
         text=text.replace('https://github.com/'+old,'https://github.com/'+repository)
-    if marker not in text:
-        text=marker+'\n本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器]('+pages_url+') · [维护说明](reader-source/README.md)\n\n'+text
+    report=json.loads((BASE/'网站构建记录.json').read_text(encoding='utf-8'))
+    entry=marker+'\n全学期阅读器 v'+config['version']+'（'+str(report['chapters'])+' 个主题、'+str(report['cards'])+' 个条目，含 DS 清单标注）：[在线原文对照阅读器]('+pages_url+') · [维护说明](reader-source/README.md)\n'
+    if marker in text:text=re.sub(r'<!-- semester-reader -->\s*[^\n]*\n',lambda m:entry,text,count=1)
+    else:text=entry+'\n'+text
     readme.write_text(text,encoding='utf-8')
     deploy=destination/'deploy.mjs';text=deploy.read_text(encoding='utf-8')
     if 'cpSync' not in text:
@@ -90,21 +94,28 @@ def commit_push(folder,paths,message,publish):
 def main():
     config=json.loads((BASE/'course.json').read_text(encoding='utf-8'))
     hosting=config['hosting']
-    parser=argparse.ArgumentParser();parser.add_argument('--publish',action='store_true');parser.add_argument('--repo',default=hosting['repository']);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--publish',action='store_true');parser.add_argument('--repo',default=hosting['repository'])
+    parser.add_argument('--finalize-records',action='store_true',help='Sync evidence and the immutable material snapshot after deployment')
+    args=parser.parse_args()
     assert (ROOT/'site/reader/index.html').exists(),'Build the web reader first'
     assert args.repo==hosting['repository'],'Update hosting in course.json and rebuild before changing the target repository'
     assert json.loads((ROOT/'site/reader/resource-manifest.json').read_text(encoding='utf-8'))['version']==config['version'],'Stale site build'
     main_dir=ROOT/'tmp/github'/args.repo.split('/')[-1]
     pages_dir=ROOT/'tmp/github'/(args.repo.split('/')[-1]+'-pages')
     previous=hosting.get('previous_repositories',[])
-    checkout(args.repo,'main',main_dir,previous);checkout(args.repo,'gh-pages',pages_dir,previous)
+    checkout(args.repo,'main',main_dir,previous)
+    if args.finalize_records:
+        source_copy(main_dir,args.repo,hosting['pages_url'],previous)
+        print(json.dumps(commit_push(main_dir,['知识整合','reader-source','README.md','deploy.mjs'],'Record semester reader v'+config['version']+' release evidence and v'+config.get('repository_release',config['version'])+' material snapshot',args.publish),ensure_ascii=False,indent=2))
+        return # Keep the content-release commit in the release record; avoid self-referential hashes.
+    checkout(args.repo,'gh-pages',pages_dir,previous)
     for destination in [main_dir,pages_dir]:
         for directory in ['reader','origin','ds']:
             if (ROOT/'site'/directory).exists():shutil.copytree(ROOT/'site'/directory,destination/directory,dirs_exist_ok=True)
     source_copy(main_dir,args.repo,hosting['pages_url'],previous)
     (pages_dir/'.nojekyll').write_text('',encoding='utf-8')
     message='Publish semester reader v'+config['version']+' with on-demand resources'
-    result={'repository':args.repo,'version':config['version'],'date':config['updated'],'published':args.publish,
+    result={'repository':args.repo,'version':config['version'],'release':config.get('repository_release',config['version']),'date':config['updated'],'published':args.publish,
             'main':commit_push(main_dir,['reader','origin','知识整合','reader-source','README.md','deploy.mjs']+(['ds'] if (main_dir/'ds').exists() else []),message,args.publish),
             'gh_pages':commit_push(pages_dir,['reader','origin','.nojekyll']+(['ds'] if (pages_dir/'ds').exists() else []),message,args.publish),
             'url':hosting['pages_url']}

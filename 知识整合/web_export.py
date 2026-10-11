@@ -44,7 +44,7 @@ def export_resources(base,folder,config,chapters,assets,glyphs,index,font_root):
     shutil.copyfile(base/'assets/GUST-FONT-LICENSE.TXT',folder/'fonts/GUST-FONT-LICENSE.TXT')
     css=font_css+'\n'+'\n'.join((base/p).read_text(encoding='utf-8') for p in ['assets/style.css','assets/lazy.css','assets/web.css'])
     style=write_resource(folder,'styles',css,'css')
-    script=write_resource(folder,'scripts',(base/'assets/web.js').read_bytes(),'js')
+    script=write_resource(folder,'scripts',(base/'assets/web.js').read_text(encoding='utf-8'),'js')
     metadata=[{k:c[k] for k in ['id','chapter','type','title','fr','original_title']} for c in index]
     boot={'schema':1,'version':config['version'],'updated':config['updated'],'chapters':chapter_urls,'cards':metadata,'search':search['url'],'sources':'../origin/index.json'}
     (folder/'resource-manifest.json').write_text(json.dumps({'version':config['version'],'assets':resources,'chapters':chapter_urls,'search':search,'style':style,'script':script},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

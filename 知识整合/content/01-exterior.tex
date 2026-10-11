@@ -3,6 +3,8 @@
 
 集合至多可数，是指它为有限集或可与 $\N$ 的某个子集一一对应。$\N,\mathbb Z,\Q$ 都可数；$\R$ 不可数。
 
+按本课程定义，等价地说，存在单射 $E\to\N$，就称 $E$ 为可数集；因此有限集也算可数。$(0,1)$ 不可数，故 $\R$ 不可数。
+
 \textbf{使用边界：}可数个可数集的并仍可数，但测度的可数可加性不能用于不可数并。
 \[
 \begin{gathered}
@@ -36,7 +38,18 @@ $x\in\liminf A_n$：从某一项起，$x$ 属于所有 $A_n$。
 \dep{CM1 第 28 页；补集关系使用 De Morgan 律。}
 % @end
 
-% @card {"id":"outer-definition","type":"definition","title":"用可数覆盖定义外测度","fr":"Mesure extérieure de Lebesgue","refs":[["cm1",34,35],["w4",8,9]],"requires":["countability"]}
+% @card {"id":"interval-length","type":"definition","title":"区间长度：端点与无界情形","fr":"Longueur d’un intervalle","refs":[["w4",8,8]],"requires":[],"ds_added":true}
+若有界区间 $I\subseteq\R$ 的两端为 $a\le b$，定义
+\[
+\ell(I)=b-a.
+\]
+端点是否属于区间不影响长度；单点区间的长度为零。若 $I$ 是无界区间，定义 $\ell(I)=+\infty$。
+
+\textbf{与后续定理的区别：}这里先定义区间长度；“区间的 Lebesgue 外测度等于长度”还需要外测度的定义及区间覆盖定理。
+\dep{官方 DS 清单 c1-05；课程手册定义 1.14。}
+% @end
+
+% @card {"id":"outer-definition","type":"definition","title":"用可数覆盖定义外测度","fr":"Mesure extérieure de Lebesgue","refs":[["cm1",34,35],["w4",8,9]],"requires":["countability","interval-length"]}
 对任意 $E\subseteq\R$，定义
 \[
 \lambda^*(E)=

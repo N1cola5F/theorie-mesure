@@ -1,10 +1,10 @@
 {
   "method": "Original PDF vector content clipped, with black stroke emphasis; no OCR or retranscription.",
-  "mapped_cards": 117,
-  "unique_fragments": 271,
+  "mapped_cards": 122,
+  "unique_fragments": 278,
   "source_sha256": {
-    "cm4": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
     "cm3": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+    "cm4": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
     "w4": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89"
   },
   "excerpt_locations": [
@@ -79,6 +79,18 @@
         242.948
       ],
       "key": "fr-1039207fa5b1a7a0aa"
+    },
+    {
+      "card": "interval-length",
+      "source": "w4",
+      "page": 8,
+      "clip": [
+        40,
+        672.836,
+        555.276,
+        798.89
+      ],
+      "key": "fr-664142ebc2e1f9553f"
     },
     {
       "card": "outer-definition",
@@ -259,6 +271,18 @@
         329.625
       ],
       "key": "fr-5c9710a81b36bf6c60"
+    },
+    {
+      "card": "intersection-sigma",
+      "source": "w4",
+      "page": 19,
+      "clip": [
+        40,
+        318.522,
+        555.276,
+        798.89
+      ],
+      "key": "fr-0a5941b155c1df74d6"
     },
     {
       "card": "generated-sigma",
@@ -561,6 +585,42 @@
       "key": "fr-9412691ba1ba94c152"
     },
     {
+      "card": "point-atoms",
+      "source": "w4",
+      "page": 30,
+      "clip": [
+        40,
+        630.094,
+        555.276,
+        798.89
+      ],
+      "key": "fr-18bbcc425c2dc7b36f"
+    },
+    {
+      "card": "lebesgue-rn",
+      "source": "w4",
+      "page": 33,
+      "clip": [
+        40,
+        38.611,
+        555.276,
+        332.069
+      ],
+      "key": "fr-1d6c6c7f5b41d09c10"
+    },
+    {
+      "card": "measure-null-sets",
+      "source": "w4",
+      "page": 33,
+      "clip": [
+        40,
+        435.741,
+        555.276,
+        496.049
+      ],
+      "key": "fr-a814b43ef81836d3d5"
+    },
+    {
       "card": "measure-properties",
       "source": "w4",
       "page": 34,
@@ -655,6 +715,18 @@
         289.602
       ],
       "key": "fr-b45779cf0824c5e107"
+    },
+    {
+      "card": "set-limits-measurable",
+      "source": "w4",
+      "page": 36,
+      "clip": [
+        40,
+        290.602,
+        555.276,
+        399.01
+      ],
+      "key": "fr-20b0ef5cf9beed3b48"
     },
     {
       "card": "borel-cantelli",
@@ -1533,6 +1605,18 @@
       "key": "fr-82c4162c4bccbac142"
     },
     {
+      "card": "tonelli",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        224.547,
+        555.276,
+        347.733
+      ],
+      "key": "fr-3e523b32bdc5bdb114"
+    },
+    {
       "card": "fubini",
       "source": "cm4",
       "page": 8,
@@ -1579,6 +1663,18 @@
         223.547
       ],
       "key": "fr-82c4162c4bccbac142"
+    },
+    {
+      "card": "fubini",
+      "source": "w4",
+      "page": 68,
+      "clip": [
+        40,
+        224.547,
+        555.276,
+        347.733
+      ],
+      "key": "fr-3e523b32bdc5bdb114"
     },
     {
       "card": "fubini-warning",
@@ -1987,6 +2083,18 @@
         173.11
       ],
       "key": "fr-3af5d6dcd30bf8b144"
+    },
+    {
+      "card": "cantor-measure",
+      "source": "w4",
+      "page": 87,
+      "clip": [
+        40,
+        120.565,
+        555.276,
+        346.004
+      ],
+      "key": "fr-6931b5ded1cfe48bc0"
     },
     {
       "card": "cantor-measure",

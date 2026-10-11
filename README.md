@@ -3,7 +3,7 @@ DS 期中知识复习：[在线入口](https://n1cola5f.github.io/theorie-mesure
 <!-- /ds-reader -->
 
 <!-- semester-reader -->
-本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器](https://n1cola5f.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
+全学期阅读器 v1.7.0（13 个主题、122 个条目，含 DS 清单标注）：[在线原文对照阅读器](https://n1cola5f.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
 
 # 测度论 · Théorie de la mesure — 交互式双语文档站
 

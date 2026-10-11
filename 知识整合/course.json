@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version": "1.6.1",
-  "updated": "2026-10-09",
+  "version": "1.7.0",
+  "updated": "2026-10-11",
   "title": "测量理论",
   "subtitle": "Théorie de la mesure",
   "semester": "2026–2027 · Semestre 7",
-  "coverage": "W1 · W2 · W3 · W4 手册与 CM04",
+  "coverage": "W1 · W2 · W3 · W4 手册与 CM04 · DS 清单",
   "chapters": [
     {
       "id": "ch1",
@@ -226,23 +226,31 @@
       "kind": "W4 课堂幻灯片",
       "fr_label": "CM04 — Intégrales multiples",
       "fr_kind": "Diapositives"
+    },
+    "ds-programme": {
+      "label": "DS 官方知识清单与证明目录",
+      "path": "origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "pages": 15,
+      "kind": "官方考试范围",
+      "fr_label": "Programme officiel du DS",
+      "fr_kind": "Programme du DS"
     }
   },
   "roadmap": [],
   "release_notes": [
-    "GitHub 用户名改为 N1cola5F，在线入口及仓库维护链接同步更新。",
-    "发布地址集中在 course.json 的 hosting 配置，已有发布克隆同步更新 Git origin。",
-    "沿用 13 个主题、117 个条目、中法对照、原文重点强调与分文件按需加载；课程内容不变。",
-    "原 PDF 仍位于仓库 origin/，后续请收藏并使用新的在线地址。"
+    "逐条标注官方 DS 清单的全部 100 个知识陈述；每条标注带编号、官方 PDF 页码和独立 DS 复习册链接。",
+    "补齐区间长度、σ-代数的交、Rn 上的 Lebesgue 测度、一般测度零测集、集合上/下极限可测性 5 张基础卡片；同时补全相关已有定义和性质。",
+    "第 7、8 章清单内容标为仅要求知识陈述；15 个指定证明另有链接，卡片中的其余扩展不会自动标为必考。",
+    "搜索 DS 可列出标记卡片，按 c3-04 等官方编号定位；继续按章节加载、预编译矢量和可收缩目录。"
   ],
   "overview_intro": "从测度与积分，到随机变量与极限定理。沿着定义、定理与证明，逐章建立本学期的知识结构。",
   "scope_note": "本版整合 W1–W3、W4 上传的 157 页全学期课程手册及 25 页 CM04 幻灯片，覆盖 13 个主题。CM04 的课堂重点是多重积分；“W4 手册”表示资料来源，不表示后续章节已经授课。",
-  "coverage_fr": "W1 · W2 · W3 · Manuel W4 et CM04",
+  "coverage_fr": "W1 · W2 · W3 · Manuel W4 et CM04 · Programme DS",
   "release_notes_fr": [
-    "Le compte GitHub devient N1cola5F. Les adresses de lecture et les liens vers le dépôt sont mis à jour.",
-    "La configuration hosting de course.json regroupe les adresses de publication ; les clones existants utilisent la nouvelle origine Git.",
-    "Les 13 thèmes, 117 notions, textes originaux et modes de lecture restent inchangés.",
-    "Les PDF restent dans origin/. Utilisez désormais la nouvelle adresse de lecture."
+    "Les 100 énoncés officiels du DS sont repérés par leur numéro, leur page source et un lien vers le livret DS.",
+    "Cinq fiches fondamentales sont ajoutées : longueur d’un intervalle, intersection de tribus, mesure de Lebesgue sur Rn, ensembles négligeables pour une mesure et mesurabilité des limites d’ensembles.",
+    "Les chapitres 7 et 8 portent sur les énoncés uniquement. Les 15 preuves exigibles ont des liens distincts ; les compléments des fiches ne sont pas automatiquement exigibles.",
+    "La recherche accepte DS et les numéros officiels ; le chargement par chapitre et les vecteurs précompilés sont conservés."
   ],
   "hosting": {
     "repository": "N1cola5F/theorie-mesure",
@@ -250,5 +258,11 @@
     "previous_repositories": [
       "CuteYzm/theorie-mesure"
     ]
+  },
+  "repository_release": "1.8.0",
+  "ds_scope": {
+    "mapping": "ds-map.json",
+    "source": "ds-programme",
+    "book_url": "../ds/"
   }
 }

@@ -63,6 +63,22 @@ def render_book(base,config,cards,vectors,bank,font_root,originals,lazy=False,we
         return (f'<div class="compiled wide">{vectors[c["id"]+"-"+part+"-wide"]}</div>'
                 f'<div class="compiled narrow">{vectors[c["id"]+"-"+part+"-narrow"]}</div>'
                 f'<span class="sr-only">{esc(c[part])}</span>')
+    def ds_annotation(c):
+        matches=c.get('ds',[])
+        if not matches:return ''
+        scope=config['ds_scope'];source=config['sources'][scope['source']]
+        labels=[]
+        for match in matches:
+            pages='–'.join(map(str,[match['pages'][0],match['pages'][-1]])) if len(match['pages'])>1 else str(match['pages'][0])
+            related=(f'<span class="ds-related">{bi("此陈述另有内容见","Énoncé également traité dans")} '+', '.join(f'<a href="#{target}">{bi(index[target]["title"],index[target]["fr"])}</a>' for target in match['also'])+'</span>' if match['also'] else '')
+            labels.append(f'<li><a class="ds-statement" href="{esc(scope["book_url"])}#{match["id"]}"><code>{match["id"]}</code> {bi(match["title"],match["fr"])}</a><a class="ds-page" href="{esc(source["path"])}#page={match["pages"][0]}" target="_blank" rel="noopener">{bi("官方清单","Programme officiel")} · p. {pages} ↗</a>{related}</li>')
+        proof_numbers=sorted({m['proof'] for m in matches if m['proof']})
+        proof_links=''.join(f'<a href="{esc(scope["book_url"])}#p{n:02d}">{bi("指定证明","Preuve exigible")} {n:02d} ↗</a>' for n in proof_numbers)
+        qualifier=(bi('只要求知识陈述；本章不要求证明和 TD','Énoncés uniquement ; sans preuves ni exercices') if all(m['statements_only'] for m in matches) else bi('标记对应下列陈述；卡片内的扩展不自动列入 DS','Le repère vise les énoncés ci-dessous ; les compléments ne sont pas automatiquement exigibles'))
+        return (f'<aside class="ds-scope" aria-label="DS 官方知识清单对应"><div class="ds-heading"><strong class="ds-badge">DS · {bi("清单内容","Au programme")}</strong>'
+                +(f'<span class="ds-added">{bi("清单补齐","Notion ajoutée")}</span>' if c.get('ds_added') else '')
+                +f'</div><ul>{"".join(labels)}</ul><p class="ds-qualifier">{qualifier}</p>'
+                +(f'<div class="ds-proofs">{proof_links}</div>' if proof_links else '')+'</aside>')
     def card(c):
         proof=f'<details class="proof"><summary>证明与依据 <span>Preuve</span></summary>{texblock(c,"proof")}</details>' if c['proof'] else ''
         if lazy and c['proof']:
@@ -77,12 +93,12 @@ def render_book(base,config,cards,vectors,bank,font_root,originals,lazy=False,we
         deps=''.join(f'<a class="dep-link" href="#{d}">{bi(index[d]["title"],index[d]["fr"])}</a>' for d in c['requires'])
         return (f'<article class="card {c["type"]}" id="{c["id"]}" data-type="{c["type"]}" data-chapter="{c["chapter"]}">'
                 f'<div class="card-kicker">{bi(LABELS[c["type"]],FR_LABELS[c["type"]])} <span class="lang-zh">{esc(c["fr"])}</span><a class="anchor" href="#{c["id"]}" aria-label="定位到{esc(c["title"])}">#</a></div>'
-                f'<h3>{bi(c["title"],originals[c["id"]]["extracts"][0]["title"])}</h3>'
+                f'<h3>{bi(c["title"],originals[c["id"]]["extracts"][0]["title"])}</h3>{ds_annotation(c)}'
                 f'<div class="reading-columns"><div class="zh-reading" lang="zh-CN" data-pane="{c["id"]}:zh"><div class="reading-label">中文整合</div>{zh}</div><div class="fr-reading" lang="fr" data-pane="{c["id"]}:fr"><div class="reading-label">Français · Texte original</div>{fr}</div></div>'
                 f'<div class="card-meta"><div class="sources">{"".join(source_link(r) for r in c["refs"])}</div>'
                 +(f'<div class="dependencies"><span>{bi("依赖","Prérequis")}</span>{deps}</div>' if deps else '')
                 +f'<details class="tex-source" data-state="source"><summary>LaTeX 源文</summary>{source}</details></div></article>')
-    nav=''.join(f'<a class="nav-link" href="#{c["id"]}"><b>{c["number"]}</b><span>{bi(c["title"],c["fr"])}<small class="lang-zh">{esc(c["fr"])}</small></span><em>{bi(c["week"],c["week"].replace("手册","manuel"))}</em></a>' for c in config['chapters'])
+    nav=''.join(f'<a class="nav-link" href="#{c["id"]}"><b>{c["number"]}</b><span>{bi(c["title"],c["fr"])}<small class="lang-zh">{esc(c["fr"])}</small>'+('<small class="nav-ds">DS</small>' if any(x.get('ds') and x['chapter']==c['id'] for x in cards) else '')+f'</span><em>{bi(c["week"],c["week"].replace("手册","manuel"))}</em></a>' for c in config['chapters'])
     chapters=[]
     for ch in config['chapters']:
         selected=[c for c in cards if c['chapter']==ch['id']]
@@ -96,12 +112,17 @@ def render_book(base,config,cards,vectors,bank,font_root,originals,lazy=False,we
     roadmap_section=(f'<div class="section-label"><h2>本学期的后续章节</h2><span>Programme du semestre</span></div><p class="muted roadmap-note">后续章节仅列计划，暂不纳入本版知识正文。</p><ol class="roadmap">{roadmap}</ol>' if roadmap else
                      f'<div class="section-label"><h2>{bi("资料覆盖与授课进度","Périmètre des notes")}</h2><span>Programme du semestre</span></div><p class="muted roadmap-note">{bi(config.get("scope_note","课程手册的全部主题已建立，后续按新资料持续补充修订。"),"Les 13 thèmes du manuel sont disponibles. Le CM04 porte sur les intégrales multiples ; la disponibilité du manuel ne représente pas l’avancement des cours.")}</p>')
     rows=''.join(f'<tr><td>{bi(s["kind"],s.get("fr_kind",s["kind"]))}</td><td><a href="{esc(s["path"])}" target="_blank" rel="noopener">{bi(s["label"],s.get("fr_label",s["label"]))}</a></td><td>{s["pages"]} {bi("页","pages")}</td></tr>' for s in config['sources'].values())
+    ds_guide=''
+    if config.get('ds_scope'):
+        scope=config['ds_scope'];summary=scope['summary'];source=config['sources'][scope['source']]
+        ds_guide=f'''<div class="ds-guide"><strong class="ds-badge">DS · {bi("清单标注","Repères du programme")}</strong><p>{bi(f'官方知识清单的 {summary["statements"]} 个陈述已对应到本汇总的 {summary["mapped_cards"]} 张卡片，其中补齐 {len(summary["added_cards"])} 张基础知识卡片。点击编号进入 DS 对照册，点击页码查看官方清单。',f'Les {summary["statements"]} énoncés officiels sont repérés dans {summary["mapped_cards"]} fiches, dont {len(summary["added_cards"])} nouvelles notions. Le numéro ouvre le livret DS ; la page renvoie au programme officiel.')}</p><p>{bi('第 7、8 章只要求清单中的知识陈述；证明与 TD 范围截止多重积分。卡片中只有单独列出的 15 个指定证明属于证明清单。搜索“DS”查看全部标记，或输入 c3-04 等编号定位。','Les chapitres 7 et 8 concernent les énoncés uniquement. Le périmètre des preuves et TD s’arrête aux intégrales multiples ; seules les 15 preuves désignées sont exigibles. Recherchez « DS » ou un numéro, par exemple c3-04.')}</p><div class="ds-guide-links"><a href="{esc(scope["book_url"])}">{bi("独立 DS 复习册","Livret de révision DS")} ↗</a><a href="{esc(source["path"])}" target="_blank" rel="noopener">{bi("官方知识清单","Programme officiel")} ↗</a></div></div>'''
     overview=f'''<section class="chapter overview" id="overview"><header class="chapter-head overview-head">
 <div class="eyebrow">MA 7002 / 7003 · {esc(config['semester'])}</div>
 <h1><span class="heading-primary">{bi("测量理论","Théorie de la mesure")}</span><span class="heading-subtitle">{bi("知识整合","Notes de cours")}</span></h1><p class="chapter-fr lang-zh">Théorie de la mesure · Notes de cours</p>
 <p class="chapter-intro">{bi(config.get('overview_intro','从集合的长度，到可测函数与 Lebesgue 积分。沿着定义、定理与证明，逐章建立本学期的知识结构。'),"Mesure, intégration, variables aléatoires et théorèmes limites : un parcours de lecture par définitions, résultats et preuves.")}</p>
 <div class="edition"><span class="live-dot"></span>{bi("已整合","Sources")} {bi(config['coverage'],config.get('coverage_fr',config['coverage']))} <i></i> v{config['version']} <i></i> {bi("更新于","Mise à jour")} {config['updated']}</div></header>
 <div class="reading-guide">{bi("顶部一键选择中文、Français 或中法对照。法语正文为原 PDF 的矢量摘录，保留措辞、公式和编号；重点加黑加粗。","Choisissez 中文, Français ou Comparer en haut. Le texte français provient directement des PDF : formulation, formules et numérotation conservées, avec mise en noir et en gras des points essentiels.")}</div>
+{ds_guide}
 <div class="section-label"><h2>{bi("从这里开始","Commencer ici")}</h2><span>Parcours de lecture</span></div><div class="chapter-tiles">{tiles}</div>
 <div class="guide-row"><div><span class="guide-num">01</span><h3>{bi("先确认条件","Vérifier les hypothèses")}</h3><p>{bi("区分外测度与测度、有限与 σ-有限，并留意可数性和可测性。","Distinguez mesure extérieure et mesure, finitude et σ-finitude ; vérifiez dénombrabilité et mesurabilité.")}</p></div><div><span class="guide-num">02</span><h3>{bi("顺着依据读证明","Suivre les preuves")}</h3><p>{bi("展开证明查看推理，点击“依赖”回到前置知识，点击页码核对原讲义。","Dépliez les preuves et extraits complémentaires ; les prérequis et pages sources permettent de revenir aux textes.")}</p></div><div><span class="guide-num">03</span><h3>{bi("对照原文巩固","Comparer les deux lectures")}</h3><p>{bi("切换语言保留当前条目位置；对照模式同时显示中文整理与法语原文。","Le changement de langue conserve la notion en cours ; la comparaison affiche les notes chinoises et le texte français original.")}</p></div></div>
 {roadmap_section}
@@ -112,8 +133,9 @@ def render_book(base,config,cards,vectors,bank,font_root,originals,lazy=False,we
 <div class="resource-box"><h2>{bi("阅读与排版","Lecture et typographie")}</h2><p>{bi("中文正文与公式共用 XeLaTeX 配置；法语使用原 PDF 已编译的矢量字形，公式、文字、编号与原文件一致。加黑加粗只改变强调方式。页面离线可读，原始 PDF 链接需要保留仓库目录。","La version chinoise est compilée avec XeLaTeX. La version française réutilise les glyphes vectoriels des PDF, sans retranscrire le texte ni les formules ; seule leur mise en évidence change. La page se lit hors ligne.")}</p><p>{bi("中文、法语和对照模式分别检索相应正文。切换保留当前位置与展开状态；语言选择会在浏览器中保存。打印输出当前语言的内容。","La recherche suit la langue choisie. La comparaison permet de lire les deux colonnes ; position, extraits dépliés et préférence de langue sont conservés. L’impression suit le mode choisi.")}</p></div></section>'''
     if lazy:
         resources=resources.replace('</section>',f'<div class="resource-box"><h2>{bi("保留的旧版","Version précédente")}</h2><p><a href="测量理论_知识整合_v1.5.0_备份.html">{bi("打开 v1.5.0 完整备份","Ouvrir la copie complète v1.5.0")} ↗</a></p></div></section>')
-    data=[{'id':c['id'],'chapter':c['chapter'],'type':c['type'],'title':c['title'],'fr':c['fr'],'original_title':originals[c['id']]['extracts'][0]['title'],'text':c['title']+' '+c['fr']+' '+c['body']+' '+c['proof'],
-           'fr_text':c['fr']+' '+' '.join(e['title']+' '+' '.join(f['text'] for f in e['fragments']) for e in originals[c['id']]['extracts'])} for c in cards]
+    def ds_search(c):return ' DS '+' '.join(m['id']+' '+m['title']+' '+m['fr'] for m in c['ds']) if c.get('ds') else ''
+    data=[{'id':c['id'],'chapter':c['chapter'],'type':c['type'],'title':c['title'],'fr':c['fr'],'original_title':originals[c['id']]['extracts'][0]['title'],'text':c['title']+' '+c['fr']+' '+c['body']+' '+c['proof']+ds_search(c),
+           'fr_text':c['fr']+' '+' '.join(e['title']+' '+' '.join(f['text'] for f in e['fragments']) for e in originals[c['id']]['extracts'])+ds_search(c),'ds_ids':[m['id'] for m in c.get('ds',[])],'ds_added':bool(c.get('ds_added'))} for c in cards]
     if web_dir:
         from web_export import export_resources
         web=export_resources(base,web_dir,config,payloads,assets,glyphs,data,font_root)
