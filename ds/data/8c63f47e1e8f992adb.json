@@ -1,0 +1,44 @@
+{
+  "id": "p07",
+  "title": "测度的递增与递减连续性",
+  "number": 7,
+  "compiled": {
+    "wide": {
+      "src": "vectors/42bd1c1ac422fdacfb.svg",
+      "width": 340.72,
+      "height": 299.42
+    },
+    "narrow": {
+      "src": "vectors/5acc246aa0c975703e.svg",
+      "width": 221.17,
+      "height": 429.97
+    }
+  },
+  "requires": [
+    "c3-01",
+    "c3-06"
+  ],
+  "card": "c3-07",
+  "title_fr": "2.2 7. Continuité croissante et décroissante",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-ff91daabf44ea462729d",
+      "page": 5,
+      "svg": {
+        "src": "vectors/9dfc4b5b632d306827.svg",
+        "width": 515.894,
+        "height": 339.924
+      }
+    },
+    {
+      "key": "fr-53cfdafe79acd43bb00b",
+      "page": 6,
+      "svg": {
+        "src": "vectors/b817634099d0fa5ab5.svg",
+        "width": 516.525,
+        "height": 144.305
+      }
+    }
+  ]
+}

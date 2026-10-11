@@ -1,0 +1,37 @@
+{
+  "id": "p08",
+  "title": "Boole 不等式",
+  "number": 8,
+  "compiled": {
+    "wide": {
+      "src": "vectors/6bec1e040652416c95.svg",
+      "width": 340.72,
+      "height": 213.82
+    },
+    "narrow": {
+      "src": "vectors/b51a2870d92f3816c1.svg",
+      "width": 221.17,
+      "height": 269.77
+    }
+  },
+  "requires": [
+    "c2-02",
+    "c3-01",
+    "c3-06",
+    "c3-07"
+  ],
+  "card": "c3-08",
+  "title_fr": "2.3 8. Sous-additivité dénombrable, inégalité de Boole",
+  "source": "preuves",
+  "originals": [
+    {
+      "key": "fr-b2ec31e4c165924d2401",
+      "page": 6,
+      "svg": {
+        "src": "vectors/b7e4d8f6376a84a68e.svg",
+        "width": 516.525,
+        "height": 443.312
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-11",
+  "sources": {
+    "programme": {
+      "path": "按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方知识考纲与 15 证明清单",
+      "pages": 15,
+      "new": true,
+      "sha256": "4e25cf08b585893ece02787cb9c2a9a2b0b8bf789493e6c758d3a3e011c1b556",
+      "href": "../origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf"
+    },
+    "preuves": {
+      "path": "按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方 15 个证明全文",
+      "pages": 8,
+      "new": true,
+      "sha256": "4cd5f1a88c7ba755504a4066b5f41975fd6cb263e94a691a4e29aaab9c9e4021",
+      "href": "../origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf"
+    },
+    "cm1": {
+      "path": "按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "label": "CM01 · 外测度",
+      "new": false,
+      "pages": 73,
+      "sha256": "699cad327e3667679e4ce3c12d42bdaf53d575f048d1a5838301e38cb63f0dba",
+      "href": "../origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf"
+    },
+    "cm2": {
+      "path": "按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "label": "CM02 · 可测空间与测度",
+      "new": false,
+      "pages": 88,
+      "sha256": "b1ab000990c80622ae2079c299f30de7ecc060e0d86833f7ebae38804a1bc249",
+      "href": "../origin/按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf"
+    },
+    "cm3": {
+      "path": "按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "label": "CM03 · 可测函数与积分",
+      "new": false,
+      "pages": 84,
+      "sha256": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+      "href": "../origin/按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf"
+    },
+    "cm4": {
+      "path": "按周划分/W4/CM04_FR_integrales-multiples.pdf",
+      "label": "CM04 · 多重积分",
+      "new": false,
+      "pages": 25,
+      "sha256": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
+      "href": "../origin/按周划分/W4/CM04_FR_integrales-multiples.pdf"
+    },
+    "cm5": {
+      "path": "按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "label": "CM05 · Lᵖ 与测度分解",
+      "pages": 61,
+      "new": true,
+      "sha256": "6514281f04a9c36029058d6e199e1596759feb85c507e6fab7ae4ff9ef62d341",
+      "href": "../origin/按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf"
+    },
+    "handbook": {
+      "path": "按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+      "label": "课程手册（复习只取第 1–8 章）",
+      "pages": 157,
+      "new": false,
+      "sha256": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
+      "href": "../origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf"
+    },
+    "td1": {
+      "path": "按周划分/W1/TD01_FR.pdf",
+      "label": "TD1 原题",
+      "pages": 7,
+      "new": false,
+      "sha256": "606ddf6771970798a9437713b1b3cc3c5ced169c4b6face0aa8c3fdbd9dc47ef",
+      "href": "../origin/按周划分/W1/TD01_FR.pdf"
+    },
+    "td2": {
+      "path": "按周划分/W2/TD02_FR.pdf",
+      "label": "TD2 原题",
+      "pages": 6,
+      "new": false,
+      "sha256": "2af330be7e729165bb09b26121eeea7adee20ba45f82ebb99d0a1b437916e0ee",
+      "href": "../origin/按周划分/W2/TD02_FR.pdf"
+    },
+    "td3": {
+      "path": "按周划分/W3/TD03_FR.pdf",
+      "label": "TD3 原题",
+      "pages": 6,
+      "new": false,
+      "sha256": "2804ac8893f1adb2104b986380f4c4644c32600a675c45333b65ca4ac6d3cde9",
+      "href": "../origin/按周划分/W3/TD03_FR.pdf"
+    },
+    "corrige1": {
+      "path": "按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "label": "TD1 官方题目与答案",
+      "new": false,
+      "pages": 17,
+      "sha256": "b508db4edcd18d558684142190eff83e4b11b7ec38f9cd6fd279c60395e5f87b",
+      "href": "../origin/按周划分/W1/corrige/TD01_FR_corrige.pdf"
+    },
+    "corrige2": {
+      "path": "按周划分/W2/corrige/TD02_FR_corrige.pdf",
+      "label": "TD2 官方题目与答案",
+      "pages": 15,
+      "new": true,
+      "sha256": "327da8549efeca7dc8f9129e9c4893ef4b6de7d1301d5e77d8eff25073a9d47b",
+      "href": "../origin/按周划分/W2/corrige/TD02_FR_corrige.pdf"
+    },
+    "corrige3": {
+      "path": "按周划分/W3/corrige/TD03_FR_corrige.pdf",
+      "label": "TD3 官方题目与答案",
+      "pages": 14,
+      "new": true,
+      "sha256": "18f2ab04a2fdc23ff277f117202875bf5991820b07e12522c50928c31b8deae6",
+      "href": "../origin/按周划分/W3/corrige/TD03_FR_corrige.pdf"
+    },
+    "corrige4": {
+      "path": "按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+      "label": "TD4 官方题目与答案",
+      "pages": 15,
+      "new": true,
+      "sha256": "3a7e57a44d44b8d0ed7f205bdb2ac703bba34dcfc6f0dd95ad605ab439dc2731",
+      "href": "../origin/按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf"
+    }
+  }
+}

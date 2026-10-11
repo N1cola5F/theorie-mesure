@@ -1,0 +1,419 @@
+{
+  "chapter": 2,
+  "cards": [
+    {
+      "id": "c2-01",
+      "title": "σ-代数与可测空间",
+      "compiled": {
+        "wide": {
+          "src": "vectors/de3da480702b35375a.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/19d675f187d34592b3.svg",
+          "width": 221.17,
+          "height": 122.93
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu ou σ-algèbre",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-c5167388402d877718bf",
+          "page": 3,
+          "svg": {
+            "src": "vectors/f80373d02320b5a081.svg",
+            "width": 515.276,
+            "height": 110.719
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-02",
+      "title": "σ-代数的派生封闭性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/284f4e94c42b0ce501.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/05e6db45904a33bb87.svg",
+          "width": 221.17,
+          "height": 124.77
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-01"
+      ],
+      "title_fr": "Propriété – Propriétés élémentaires d’une tribu",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-1d5b42ef49a13d0dfba4",
+          "page": 3,
+          "svg": {
+            "src": "vectors/856450ee32b493833d.svg",
+            "width": 515.276,
+            "height": 110.387
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-03",
+      "title": "生成的 σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/76022b3385bfa883af.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/ad444a8908b61742be.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu engendrée par une famille de parties",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-7c574579fdee87acda40",
+          "page": 3,
+          "svg": {
+            "src": "vectors/a3cc265b4f3850d5cc.svg",
+            "width": 515.276,
+            "height": 52.05
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-04",
+      "title": "σ-代数的交",
+      "compiled": {
+        "wide": {
+          "src": "vectors/ade0399a27f4463c05.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/8ae3cb953acc0c749a.svg",
+          "width": 221.17,
+          "height": 122.93
+        }
+      },
+      "proof": 3,
+      "requires": [],
+      "title_fr": "Propriété – Intersection de tribus",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-a75abe9dc7450b1bddc8",
+          "page": 3,
+          "svg": {
+            "src": "vectors/4b8eed36854e70ace0.svg",
+            "width": 515.276,
+            "height": 169.16
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-05",
+      "title": "生成 σ-代数的交集描述",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0e37122ac340ffabf1.svg",
+          "width": 340.72,
+          "height": 97.08
+        },
+        "narrow": {
+          "src": "vectors/a5dd172110d80bf2ae.svg",
+          "width": 221.17,
+          "height": 134.35
+        }
+      },
+      "proof": 4,
+      "requires": [],
+      "title_fr": "Propriété – Description de la tribu engendrée",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-ce3acdabe812f2da9146",
+          "page": 4,
+          "svg": {
+            "src": "vectors/b96c03877c6afabb08.svg",
+            "width": 515.276,
+            "height": 73.11
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-06",
+      "title": "生成族方法的核心包含关系",
+      "compiled": {
+        "wide": {
+          "src": "vectors/7b7905260f45a6ed6c.svg",
+          "width": 340.72,
+          "height": 67.88
+        },
+        "narrow": {
+          "src": "vectors/56a5fd6cd484a64f45.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-03"
+      ],
+      "title_fr": "Propriété – Monotonie de la tribu engendrée",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-75e252870119e3ba28a2",
+          "page": 4,
+          "svg": {
+            "src": "vectors/7c39e81aee2878e4be.svg",
+            "width": 515.276,
+            "height": 125.22
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-07",
+      "title": "Borel σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/12be201c4d91dbb05f.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/5d4cfaca841014bd67.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu borélienne, borélien",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-7bee37a0a54abce078d2",
+          "page": 4,
+          "svg": {
+            "src": "vectors/3438a70a3b3469ee03.svg",
+            "width": 515.276,
+            "height": 51.497
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-08",
+      "title": "有界开区间生成 Borel 族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/ba4e93e1472f6a5503.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/5fa68da12c01094fd6.svg",
+          "width": 221.17,
+          "height": 123.84
+        }
+      },
+      "proof": 5,
+      "requires": [],
+      "title_fr": "Propriété – Génération de la tribu borélienne par les intervalles ouverts bornés",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-d131e3bc6cdc90affe08",
+          "page": 4,
+          "svg": {
+            "src": "vectors/22f990859fb2a4eac5.svg",
+            "width": 515.276,
+            "height": 68.622
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-09",
+      "title": "Borel 的其他生成族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/8f955eece732cc746d.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/37a3b6adea1a1692d6.svg",
+          "width": 221.17,
+          "height": 162.33
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-07"
+      ],
+      "title_fr": "Propriété – Autres familles génératrices de la tribu borélienne",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-f25dcdade1f30435efcb",
+          "page": 4,
+          "svg": {
+            "src": "vectors/c24e4a865e1ab8c513.svg",
+            "width": 515.276,
+            "height": 68.621
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-10",
+      "title": "Borel 集与 Lebesgue 可测集",
+      "compiled": {
+        "wide": {
+          "src": "vectors/7eea3899a9ef299a85.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/92b3370907a1117851.svg",
+          "width": 221.17,
+          "height": 142.49
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-05"
+      ],
+      "title_fr": "Propriété – Les boréliens sont Lebesgue-mesurables",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-cc2d96bf37e1480a3bc2",
+          "page": 4,
+          "svg": {
+            "src": "vectors/3d2ecea9467ae77ba6.svg",
+            "width": 515.276,
+            "height": 40.095
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-11",
+      "title": "可测集等于 Borel 集加零测余项",
+      "compiled": {
+        "wide": {
+          "src": "vectors/5418a6dd8c4ab3644e.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/4141dd960337446d31.svg",
+          "width": 221.17,
+          "height": 106.12
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-9b1efd0f89f904ade1ad",
+          "page": 4,
+          "svg": {
+            "src": "vectors/781324f57a0e3d1ae3.svg",
+            "width": 515.276,
+            "height": 62.013
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-12",
+      "title": "Cantor 集的构造",
+      "compiled": {
+        "wide": {
+          "src": "vectors/3e31143fcc2f8b8c4a.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/7475c06e91acc64a43.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Ensemble de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-65f0713914bc899fedd3",
+          "page": 4,
+          "svg": {
+            "src": "vectors/09aa477bfa801fae3d.svg",
+            "width": 515.276,
+            "height": 100.4
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2-13",
+      "title": "Cantor 集的重要反例作用",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4a35bdc6351a3069c4.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/0abaa797de6dec023a.svg",
+          "width": 221.17,
+          "height": 123.8
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-12",
+        "c8-09"
+      ],
+      "title_fr": "Propriété – L’ensemble de Cantor est fermé, non dénombrable, et négligeable",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-195da7ffa4ffc6383cbf",
+          "page": 4,
+          "svg": {
+            "src": "vectors/b7a59684768d0f997d.svg",
+            "width": 515.276,
+            "height": 174.793
+          }
+        }
+      ]
+    }
+  ]
+}
