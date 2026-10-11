@@ -36,6 +36,8 @@ def main():
             category = 'derived_solution' if '中文详解' in path.name else 'source_pdf'
         elif relative.parts[0] == '处理后_md':
             category = 'historical_transcription'
+        elif relative.parts[0]=='期中复习' or relative.parts[:2]==('site','ds') or path.name=='测量理论_DS期中复习.html':
+            category = 'ds_knowledge_reader'
         elif relative.parts[0] in {'知识整合', 'site'} or (path.name.startswith('测量理论_知识整合') and path.suffix.lower()=='.html'):
             category = 'knowledge_reader'
         elif relative.parts[0] == '参考html':

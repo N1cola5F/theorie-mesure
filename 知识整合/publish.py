@@ -56,9 +56,9 @@ def source_copy(destination,repository,pages_url,previous_repositories=()):
     python 知识整合/build.py --reuse
     python 知识整合/publish.py --publish
 
-发布器以正常提交更新 main 和 gh-pages，仅更新 reader 与 origin，不使用强制推送。
+发布器以正常提交更新 main 和 gh-pages，更新 reader、origin 并保留独立 ds，不使用强制推送。
 gh-pages 更新后由 GitHub Pages 自动发布。同一网址刷新即可阅读新版。
-现有 npm run deploy 也会保留 reader/ 和 origin/。
+现有 npm run deploy 也会保留 reader/、origin/ 和 ds/。
 '''.replace('ONLINE_READER_URL',pages_url),encoding='utf-8')
     readme=destination/'README.md';text=readme.read_text(encoding='utf-8')
     marker='<!-- semester-reader -->'
@@ -72,8 +72,9 @@ gh-pages 更新后由 GitHub Pages 自动发布。同一网址刷新即可阅读
     deploy=destination/'deploy.mjs';text=deploy.read_text(encoding='utf-8')
     if 'cpSync' not in text:
         text=text.replace('writeFileSync, rmSync','writeFileSync, rmSync, cpSync, existsSync')
-        text=text.replace("writeFileSync(`${DIST}/.nojekyll`, '')","// Keep the semester reader and source PDFs when the original site is rebuilt.\nfor (const directory of ['reader', 'origin']) {\n  if (existsSync(directory)) cpSync(directory, `${DIST}/${directory}`, { recursive: true })\n}\n\nwriteFileSync(`${DIST}/.nojekyll`, '')")
-        deploy.write_text(text,encoding='utf-8')
+        text=text.replace("writeFileSync(`${DIST}/.nojekyll`, '')","// Keep the course readers and source PDFs when the original site is rebuilt.\nfor (const directory of ['reader', 'origin', 'ds']) {\n  if (existsSync(directory)) cpSync(directory, `${DIST}/${directory}`, { recursive: true })\n}\n\nwriteFileSync(`${DIST}/.nojekyll`, '')")
+    text=text.replace("['reader', 'origin']","['reader', 'origin', 'ds']")
+    deploy.write_text(text,encoding='utf-8')
 
 def commit_push(folder,paths,message,publish):
     run('git','add','--',*paths,cwd=folder)
@@ -98,13 +99,14 @@ def main():
     previous=hosting.get('previous_repositories',[])
     checkout(args.repo,'main',main_dir,previous);checkout(args.repo,'gh-pages',pages_dir,previous)
     for destination in [main_dir,pages_dir]:
-        for directory in ['reader','origin']:shutil.copytree(ROOT/'site'/directory,destination/directory,dirs_exist_ok=True)
+        for directory in ['reader','origin','ds']:
+            if (ROOT/'site'/directory).exists():shutil.copytree(ROOT/'site'/directory,destination/directory,dirs_exist_ok=True)
     source_copy(main_dir,args.repo,hosting['pages_url'],previous)
     (pages_dir/'.nojekyll').write_text('',encoding='utf-8')
     message='Publish semester reader v'+config['version']+' with on-demand resources'
     result={'repository':args.repo,'version':config['version'],'date':config['updated'],'published':args.publish,
-            'main':commit_push(main_dir,['reader','origin','知识整合','reader-source','README.md','deploy.mjs'],message,args.publish),
-            'gh_pages':commit_push(pages_dir,['reader','origin','.nojekyll'],message,args.publish),
+            'main':commit_push(main_dir,['reader','origin','知识整合','reader-source','README.md','deploy.mjs']+(['ds'] if (main_dir/'ds').exists() else []),message,args.publish),
+            'gh_pages':commit_push(pages_dir,['reader','origin','.nojekyll']+(['ds'] if (pages_dir/'ds').exists() else []),message,args.publish),
             'url':hosting['pages_url']}
     (BASE/'发布记录.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2),flush=True)

@@ -1,0 +1,198 @@
+% 中文为逐步理解稿；法语证明始终使用 Preuves 原 PDF，不修改原文。
+% @note p01|外测度的基本性质
+\textbf{思路：覆盖能比较大小，合并覆盖能控制并集。}
+\begin{enumerate}
+\item 空集可被任意短的开区间覆盖，故 $0\le\lambda^*(\varnothing)\le\varepsilon$，令 $\varepsilon\downarrow0$。
+\dep{定义：外测度 c1-06；性质：非负数被任意正数控制则为零。}
+\item 若 $A\subseteq B$，每个覆盖 $B$ 的开区间族也覆盖 $A$，所以 $\lambda^*(A)$ 不大于该覆盖的总长度。对所有 $B$ 的覆盖取 inf，得 $\lambda^*(A)\le\lambda^*(B)$。
+\dep{定义：外测度；性质：对所有候选成立的下界不超过其下确界。}
+\item 对次可加性，若 $\sum_n\lambda^*(A_n)=\infty$，结论直接成立。否则给 $n\ge0$ 分配误差 $\varepsilon2^{-n-1}$，按 inf 的定义选择覆盖费用小于 $\lambda^*(A_n)+\varepsilon2^{-n-1}$ 的覆盖。
+\dep{分析性质：有限下确界可用任意正误差逼近；几何级数和为一。}
+\item 合并所有覆盖仍是可数覆盖，覆盖 $\bigcup_n A_n$，费用不超过 $\sum_n\lambda^*(A_n)+\varepsilon$。令误差趋零得到结论。
+\dep{性质：可数个可数族的并可数 c1-01；外测度定义。}
+\end{enumerate}
+\textbf{易漏点：}不保证最优覆盖存在；误差之和要有限且趋零。
+% @end
+% @note p02|平移与伸缩
+\textbf{思路：正向变换给一边，逆变换给另一边。}
+\begin{enumerate}
+\item 令 $\Phi(x)=ax+b$，先设 $a>0$。若 $I_i$ 覆盖 $E$，则 $\Phi(I_i)$ 覆盖 $\Phi(E)$，长度乘 $a$，故 $\lambda^*(aE+b)\le a\sum_i\ell(I_i)$。
+\dep{定义：外测度 c1-06；性质：正斜率仿射映射把开区间变为长度 a 倍的开区间。}
+\item 对 $E$ 的所有覆盖取 inf，得到 $\lambda^*(aE+b)\le a\lambda^*(E)$。
+\dep{分析性质：正数倍与下确界交换；上一步不等式。}
+\item 对 $aE+b$ 的覆盖用逆映射 $z\mapsto(z-b)/a$，长度乘 $1/a$。同样取 inf，得 $\lambda^*(E)\le\lambda^*(aE+b)/a$，合并即等式。
+\dep{性质：逆仿射变换；前两步的同一覆盖论证。}
+\item 若 $a<0$，区间端点交换而长度乘 $|a|$，正向和逆向论证仍成立。取 $a=1$ 就得到平移不变性。
+\dep{定义：区间长度 c1-05；性质：负斜率仅反转方向；特例外推。}
+\end{enumerate}
+\textbf{易漏点：}只变换一次只能证明不等式；$a\ne0$ 是逆变换存在的条件。
+% @end
+% @note p03|σ-代数的交
+\textbf{思路：把“属于交”展开为“属于每个成员”。}
+设 $\T=\bigcap_{i\in I}\T_i$，$I\ne\varnothing$，各族在同一底集上。
+\begin{enumerate}
+\item 每个 $\T_i$ 都含空集，故空集在交中。
+\dep{定义：σ-代数 c2-01；定义：交集。}
+\item 若 $A\in\T$，则每个 $\T_i$ 都含 $A$，也含 $A^c$，所以 $A^c\in\T$。
+\dep{定义：交集；公理：补集封闭。}
+\item 若每个 $A_n\in\T$，固定任意 $i$ 后所有 $A_n\in\T_i$，故 $\bigcup_n A_n\in\T_i$。对所有 $i$ 成立，因此并在交中。
+\dep{公理：可数并封闭；定义：交集。}
+\end{enumerate}
+三条公理都满足，故 $\T$ 是 σ-代数。
+\dep{定义：σ-代数。}
+\textbf{易漏点：}不能把结论直接换成“σ-代数的并也是σ-代数”。
+% @end
+% @note p04|生成 σ-代数的描述
+\textbf{思路：证明所有候选的交正是最小候选。}
+\begin{enumerate}
+\item 设 $\mathcal C$ 是所有包含 $\mathcal G$ 的 σ-代数。$\mathcal P(\Omega)\in\mathcal C$，故候选族不空。令 $\mathcal S=\bigcap_{\mathcal U\in\mathcal C}\mathcal U$。
+\dep{性质：幂集是 σ-代数；定义：候选族与交集。}
+\item $\mathcal S$ 是 σ-代数，因为它是非空族 σ-代数的交。
+\dep{性质：交保持 σ-代数 c2-04；指定证明 03。}
+\item 每个候选都包含 $\mathcal G$，故交也包含 $\mathcal G$。
+\dep{定义：交集；候选族的定义。}
+\item 任意包含 $\mathcal G$ 的 σ-代数 $\mathcal U$ 都在候选族中，所以 $\mathcal S\subseteq\mathcal U$。结合上两步，$\mathcal S$ 是最小候选，即 $\sigma(\mathcal G)$。
+\dep{定义：交集的包含关系；生成 σ-代数的最小性 c2-03。}
+\end{enumerate}
+\textbf{易漏点：}只证明交是 σ-代数，还没有证明它生成了指定族。
+% @end
+% @note p05|有界开区间生成 Borel 族
+\textbf{思路：双包含；难点是把开集写成可数并。}
+设 $\mathcal G$ 为所有有界开区间。
+\begin{enumerate}
+\item 每个生成区间是开集，故 $\mathcal G\subseteq\B(\R)$，从而 $\sigma(\mathcal G)\subseteq\B(\R)$。
+\dep{定义：Borel c2-07；性质：生成的最小性 c2-06。}
+\item 给定开集 $O$ 和 $x\in O$，选 $r_x>0$ 使 $(x-r_x,x+r_x)\subseteq O$。按有理数稠密性选有理 $q$，使 $|x-q|<r_x/2$，再选正有理 $\rho$ 满足 $|x-q|<\rho<r_x-|x-q|$。
+\dep{定义：开集；性质：Q 在 R 中稠密；三角不等式。}
+\item 此时 $x\in(q-\rho,q+\rho)\subseteq O$。所有包含于 $O$ 的这类区间的并等于 $O$，而 $(q,\rho)$ 的候选在 $\Q\times\Q_+$ 中，至多可数。
+\dep{前一步的包含关系；性质：两个可数集的直积可数 c1-01。}
+\item 每个区间属于 $\mathcal G$，可数并属于 $\sigma(\mathcal G)$。所以所有开集均在其中，进而 $\B(\R)\subseteq\sigma(\mathcal G)$。双包含得等号。
+\dep{σ-代数的可数并公理；Borel 定义；生成的最小性。}
+\end{enumerate}
+\textbf{易漏点：}使用任意实数端点的不可数并不能直接套 σ-代数公理。
+% @end
+% @note p06|测度的基本性质
+\textbf{思路：把集合拆成不交块，用可加性。}
+\begin{enumerate}
+\item 将有限个不交集补上无穷个空集，套可列可加性，得到有限可加性。
+\dep{定义：测度 c3-01；空集测度为零。}
+\item 若 $A\subseteq B$，有 $B=A\sqcup(B\setminus A)$，故 $\mu(B)=\mu(A)+\mu(B\setminus A)\ge\mu(A)$。
+\dep{性质：差集可测 c2-02；上一步有限可加；非负性。}
+\item 若再有 $\mu(A)<\infty$，可从分解式减去有限值，得 $\mu(B\setminus A)=\mu(B)-\mu(A)$。
+\dep{前一步分解等式；分析约定：可减去有限数，不能作无穷减无穷。}
+\item 若 $\mu(A),\mu(B)<\infty$，由 $A\cup B=A\sqcup(B\setminus A)$，并对 $A\cap B\subseteq B$ 应用上一步，得到二集合容斥公式。
+\dep{有限可加；差集公式；单调性保证交集测度有限。}
+\end{enumerate}
+\textbf{易漏点：}先证明差集公式，再用于容斥，可避免循环论证。
+% @end
+% @note p07|测度的递增与递减连续性
+\textbf{思路：递增拆成增量；递减转成有限集合内的补。}
+\begin{enumerate}
+\item 对 $A_n\uparrow$，设 $A_{-1}=\varnothing$，$D_n=A_n\setminus A_{n-1}$。$D_n$ 两两不交，$A_n=\bigsqcup_{k\le n}D_k$，总并也不变。
+\dep{集合性质：递增集合的不交增量分解；差集可测。}
+\item 有 $\mu(A_n)=\sum_{k\le n}\mu(D_k)$。让 $n\to\infty$，非负级数等于其部分和极限，可列可加性给 $\mu(\bigcup_n A_n)=\lim_n\mu(A_n)$。
+\dep{有限与可列可加；非负级数定义。}
+\item 对 $B_n\downarrow$，取 $m$ 使 $\mu(B_m)<\infty$，只看 $n\ge m$。令 $C_n=B_m\setminus B_n\uparrow$，并为 $B_m\setminus\bigcap_n B_n$。
+\dep{集合性质：递减族的补递增；丢掉有限项不改变交与极限。}
+\item 对 $C_n$ 应用递增连续性，再用有限测度中的差集公式减回 $\mu(B_m)$，即得递减结论。
+\dep{本证明第二步；差集公式 c3-06；有限性排除无穷减无穷。}
+\end{enumerate}
+\textbf{易漏点：}“某项有限”用于最后减法，不能省掉。
+% @end
+% @note p08|Boole 不等式
+\textbf{思路：把重复计数的部分去掉。}
+\begin{enumerate}
+\item 对有限个可测集，依次令 $D_1=A_1$、$D_k=A_k\setminus\bigcup_{j<k}A_j$。这些集合可测、不交，总并与原来相同，且 $D_k\subseteq A_k$。
+\dep{σ-代数的差集和有限并封闭；集合不交化。}
+\item 有 $\mu(\bigcup_{k=1}^n A_k)=\sum_{k=1}^n\mu(D_k)\le\sum_{k=1}^n\mu(A_k)$。
+\dep{有限可加性、单调性 c3-06。}
+\item 有限并随 $n$ 递增到总并，取极限得到可列不等式，右侧是非负级数的部分和极限。
+\dep{递增连续性 c3-07；非负级数定义。}
+\end{enumerate}
+\textbf{易漏点：}不能把有重叠的原集合直接代入可列可加等式。
+% @end
+% @note p09|Borel–Cantelli 引理
+\textbf{思路：上极限包含在每个尾部并中，尾部费用趋零。}
+\begin{enumerate}
+\item 令 $U_n=\bigcup_{k\ge n}A_k$，則 $L=\limsup A_n=\bigcap_n U_n$，这些集合可测且 $L\subseteq U_n$。
+\dep{集合上极限公式 c1-04；σ-代数封闭性 c2-02。}
+\item 对每个 $n$，$0\le\mu(L)\le\mu(U_n)\le\sum_{k\ge n}\mu(A_k)$。
+\dep{测度单调性 c3-06；Boole 不等式 c3-08。}
+\item 由假设 $\sum_k\mu(A_k)<\infty$，尾部和趋零，夹逼得 $\mu(L)=0$。
+\dep{分析性质：收敛非负级数尾部趋零；夹逼。}
+\end{enumerate}
+\textbf{易漏点：}这里无需独立性；不必调用可能引入额外有限性条件的递减连续性。
+% @end
+% @note p10|可测映射的复合
+\textbf{思路：目标可测集依次取两次原像。}
+设 $f:(E,\T_E)\to(F,\T_F)$、$g:(F,\T_F)\to(G,\T_G)$ 可测。
+\begin{enumerate}
+\item 对任意 $A\in\T_G$，有 $g^{-1}(A)\in\T_F$。
+\dep{定义：g 的可测性 c4-04。}
+\item 因 $f$ 可测，$f^{-1}(g^{-1}(A))\in\T_E$。
+\dep{定义：f 的可测性；前一步目标集合在中间 σ-代数中。}
+\item $(g\circ f)^{-1}(A)=f^{-1}(g^{-1}(A))$，故复合可测。
+\dep{原像复合恒等式 c4-01；可测映射定义。}
+\end{enumerate}
+\textbf{易漏点：}中间两个可测族必须匹配。
+% @end
+% @note p11|生成族判别
+\textbf{思路：把原像可测的目标集合收集成一个 σ-代数。}
+设 $\T_F=\sigma(\mathcal G)$。
+\begin{enumerate}
+\item 必要性：若 $f$ 可测，则 $\mathcal G\subseteq\T_F$ 的每个成员的原像可测。
+\dep{定义：可测性；生成族包含关系。}
+\item 充分性：令 $\mathcal C=\{B\subseteq F:f^{-1}(B)\in\T_E\}$。空集在其中，原像保持补和可数并，所以 $\mathcal C$ 是 σ-代数。
+\dep{原像运算 c4-01；源 σ-代数公理 c2-01。}
+\item 假设给出 $\mathcal G\subseteq\mathcal C$；生成的最小性推出 $\T_F=\sigma(\mathcal G)\subseteq\mathcal C$，即所有目标可测集的原像可测。
+\dep{性质：生成族最小性 c2-06；可测性定义。}
+\end{enumerate}
+\textbf{与原文的关系：}这是原文所用“原像与生成 σ-代数交换”的等价展开，避免把整个性质当黑箱。
+% @end
+% @note p12|连续映射可测
+\textbf{思路：开集原像为开集，检查生成元即可。}
+\begin{enumerate}
+\item 两个赋范空间都配备各自的 Borel σ-代数。目标开集的原像由连续性是源开集，因此属于源 Borel 族。
+\dep{连续性性质：开集原像为开集；Borel 定义 c2-07。}
+\item 目标开集族生成目标 Borel 族，故由生成族判别，$f$ 可测。
+\dep{定义：Borel；生成族判别 c4-07，指定证明 11。}
+\end{enumerate}
+\textbf{易漏点：}结论必须附“配备 Borel σ-代数”；不能对任意可测族照搬。
+% @end
+% @note p13|示性函数可测
+\textbf{思路：它只取 0 和 1，所有原像只会有四种。}
+设 $A\in\T$，$B\in\B(\R)$ 任意。
+\begin{enumerate}
+\item 根据 $B$ 是否含 $0$、$1$，$\mathbf1_A^{-1}(B)$ 分别为 $\varnothing,A,A^c,E$。
+\dep{定义：示性函数；集合原像 c4-01。}
+\item 四个集合都在 $\T$ 中，所以任意目标 Borel 集的原像可测，$\mathbf1_A$ 可测。
+\dep{假设 A 可测；σ-代数公理及全集可测 c2-01、c2-02；可测性定义。}
+\end{enumerate}
+\textbf{易漏点：}讨论的是目标集合含不含函数的两个值，不是讨论 $B$ 的形状。
+% @end
+% @note p14|可测函数的基本运算
+\textbf{思路：可测坐标组合，再复合连续运算。}
+\begin{enumerate}
+\item $f,g$ 实值可测，故 $x\mapsto(f(x),g(x))$ 作为到 $\R^2$ 的函数可测。
+\dep{性质：向量函数的坐标判别 c4-10。}
+\item $(u,v)\mapsto u+v$ 与 $(u,v)\mapsto uv$ 连续，因而 Borel 可测，与上一步复合得到 $f+g$、$fg$ 可测。
+\dep{连续函数可测 c4-08；可测复合 c4-06。}
+\item $u\mapsto\lambda u$ 和 $u\mapsto|u|$ 连续，与 $f$ 复合得 $\lambda f$、$|f|$ 可测。
+\dep{连续运算的性质；连续函数可测与可测复合。}
+\end{enumerate}
+\textbf{易漏点：}本条使用实值函数；扩展实数的未定义运算不能套用。
+% @end
+% @note p15|非负积分为零
+\textbf{思路：所有正值点都落在某个阈值层里。}
+\begin{enumerate}
+\item 设 $f\ge0$ 可测且 $\int f\dd\mu=0$。令 $A_n=\{f\ge1/n\}$，$n\ge1$。这些集合可测，并有 $f\ge(1/n)\mathbf1_{A_n}$。
+\dep{生成族可测性判别 c4-07；点值不等式；示性函数定义。}
+\item 单调性给 $0\le\mu(A_n)/n=\int(1/n)\mathbf1_{A_n}\dd\mu\le\int f\dd\mu=0$，故每个 $A_n$ 都零测。
+\dep{简单函数积分 c5-04；积分单调性 c5-10；非负性。}
+\item $\{f>0\}=\bigcup_{n\ge1}A_n$，Boole 不等式给该集合测度为零，即 $f=0$ 几乎处处。
+\dep{实数性质：每个正数至少为某个 1/n；Boole c3-08；几乎处处定义 c5-08。}
+\item 反向：若 $f=0$ 几乎处处，非负积分在零测修改下不变，故 $\int f=\int0=0$。
+\dep{性质：非负函数几乎处处相等的积分一致 c5-10；零函数积分定义。}
+\end{enumerate}
+\textbf{易漏点：}不能删去非负条件；$f$ 的积分为零不必推出它处处为零。
+% @end

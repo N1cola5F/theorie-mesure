@@ -1,0 +1,226 @@
+{
+  "chapter": 6,
+  "cards": [
+    {
+      "id": "c6-01",
+      "title": "乘积 σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/cf59be9d27dbe004e4.svg",
+          "width": 340.72,
+          "height": 67.88
+        },
+        "narrow": {
+          "src": "vectors/196be35d0a2accdf20.svg",
+          "width": 221.17,
+          "height": 86.4
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu produit",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-efdba1ea9d94d51f5d4f",
+          "page": 10,
+          "svg": {
+            "src": "vectors/a3b092ab1d3c631d71.svg",
+            "width": 515.276,
+            "height": 52.41
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-02",
+      "title": "乘积测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b951a241aed1d5a4a8.svg",
+          "width": 340.72,
+          "height": 106.5
+        },
+        "narrow": {
+          "src": "vectors/ec642a1bc7613a99eb.svg",
+          "width": 221.17,
+          "height": 142.85
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c3-01"
+      ],
+      "title_fr": "Théorème – Existence et unicité de la mesure produit",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-aab34664a4a9bfac3ee9",
+          "page": 10,
+          "svg": {
+            "src": "vectors/97cc99455925ad7885.svg",
+            "width": 515.276,
+            "height": 81.385
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-03",
+      "title": "集合的截面",
+      "compiled": {
+        "wide": {
+          "src": "vectors/498fdbcad9869bc23b.svg",
+          "width": 340.72,
+          "height": 67.84
+        },
+        "narrow": {
+          "src": "vectors/8727af4a568972a890.svg",
+          "width": 221.17,
+          "height": 105.0
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Coupes d’un ensemble",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-43e8b443042c5dee67b1",
+          "page": 10,
+          "svg": {
+            "src": "vectors/439ee965b3a1d87b3b.svg",
+            "width": 515.276,
+            "height": 83.423
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-04",
+      "title": "截面可测与区域体积",
+      "compiled": {
+        "wide": {
+          "src": "vectors/fe5f7b4bfeaadcc05a.svg",
+          "width": 340.72,
+          "height": 113.5
+        },
+        "narrow": {
+          "src": "vectors/4b65ff581eba759103.svg",
+          "width": 221.17,
+          "height": 127.45
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Mesurabilité des coupes",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-2332e87cc052998b8838",
+          "page": 10,
+          "svg": {
+            "src": "vectors/f7b50a58ef1574a436.svg",
+            "width": 515.276,
+            "height": 106.402
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-05",
+      "title": "Tonelli 与 Fubini 如何选",
+      "compiled": {
+        "wide": {
+          "src": "vectors/302ca5f22128e19f8d.svg",
+          "width": 340.72,
+          "height": 105.26
+        },
+        "narrow": {
+          "src": "vectors/7f6ed8b16473fca4ee.svg",
+          "width": 221.17,
+          "height": 142.56
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c5-12"
+      ],
+      "title_fr": "Théorème – Théorème de Fubini-Tonelli",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-f614030f8566bf2dc024",
+          "page": 10,
+          "svg": {
+            "src": "vectors/8416adb161beddb9bf.svg",
+            "width": 515.276,
+            "height": 125.166
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-06",
+      "title": "有限次多重积分",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4ae2f5fb62a47e9bb4.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/5bec0750671369b52e.svg",
+          "width": 221.17,
+          "height": 123.31
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Corollaire – Intégrales multiples en dimension finie",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-464c1153e3e66081e547",
+          "page": 10,
+          "svg": {
+            "src": "vectors/63d8a7ab37779803ea.svg",
+            "width": 515.276,
+            "height": 156.359
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6-07",
+      "title": "换元公式与 Jacobian",
+      "compiled": {
+        "wide": {
+          "src": "vectors/98ffabacf54a06c19a.svg",
+          "width": 340.72,
+          "height": 109.04
+        },
+        "narrow": {
+          "src": "vectors/662071bd458d26616f.svg",
+          "width": 221.17,
+          "height": 146.34
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Formule du changement de variable",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-9086354990f31ade8390",
+          "page": 11,
+          "svg": {
+            "src": "vectors/db9fee9fd87d94b4be.svg",
+            "width": 515.276,
+            "height": 130.083
+          }
+        }
+      ]
+    }
+  ]
+}

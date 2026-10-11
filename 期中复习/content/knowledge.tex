@@ -1,0 +1,616 @@
+% 每个条目与官方 Programme 的顺序一一对应；不是官方逐字译文。
+% @note c1-01|可数集
+\textbf{先理解对象。}可数说的是元素能否安排进自然数的编号表，不是长度大小。本课程用“存在单射 $E\to\N$”定义，因此\textbf{有限集也算可数}。
+\textbf{例子。}$\N,\Z,\Q$ 可数；可数集的子集、可数个可数集的并仍可数。后一个事实会让“双重编号的覆盖”仍成为合法的可数覆盖。
+\dep{定义：可数集；基础性质：可数集的可数并仍可数。}
+% @end
+% @note c1-02|实数不可数
+把区间 $(0,1)$ 中的数假设列成 $x_1,x_2,\ldots$，再构造一个数，其第 $n$ 位与 $x_n$ 的第 $n$ 位不同，就得到一个不在表中的数。\textbf{构造小数时要避开双重展开的歧义}，可只取数字 $1,2$。
+这里要记住结论：$(0,1)$ 不可数，故 $\R$ 不可数。这个论证\textbf{不在指定的 15 个证明中}。
+\dep{性质：Cantor 对角线论证；定义：可数集。}
+% @end
+% @note c1-03|集合的上极限与下极限
+固定一个点 $x$，观察它是否进入每个 $A_n$。\textbf{上极限：进入无限多次；下极限：从某一时刻起一直进入。}
+\[
+\begin{aligned}
+x\in\limsup A_n&\iff\forall n\ \exists m\ge n:\ x\in A_m,\\
+x\in\liminf A_n&\iff\exists n\ \forall m\ge n:\ x\in A_m.
+\end{aligned}
+\]
+例如 $A_{2n}=[0,1]$、$A_{2n+1}=[1,2]$，上极限是 $[0,2]$，下极限是 $\{1\}$。\textbf{两个量词的顺序决定含义}。
+\dep{定义：集合上极限、下极限。}
+% @end
+% @note c1-04|把量词写成并与交
+“存在”对应并，“对所有”对应交，因此
+\[
+\begin{aligned}
+\limsup A_n&=\bigcap_n\bigcup_{m\ge n}A_m,\\
+\liminf A_n&=\bigcup_n\bigcap_{m\ge n}A_m.
+\end{aligned}
+\]
+总有 $\liminf A_n\subseteq\limsup A_n$。若 $A_n$ 递增，两者均为 $\bigcup_n A_n$；递减时均为 $\bigcap_n A_n$。
+\dep{定义：条目 c1-03；性质：集合的并、交与量词。}
+% @end
+% @note c1-05|区间的长度
+有界区间两端为 $a\le b$，长度就是 $b-a$；开闭端点不改变长度。无界区间长度为 $+\infty$。
+后面覆盖集合时，\textbf{先把每个区间的长度相加，再对所有合法覆盖取下确界}，不是数区间的个数。
+\dep{定义：区间长度。}
+% @end
+% @note c1-06|Lebesgue 外测度
+\[
+\lambda^*(A)=\inf_{A\subseteq\bigcup_n I_n}\sum_n\ell(I_n),
+\]
+其中 $I_n$ 是开区间，覆盖至多可数。它对\textbf{任意子集}都有定义；覆盖可重叠，费用按总长度计算。下确界不一定由某个覆盖达到。
+直觉：用开区间把集合盖住，寻找尽可能低的覆盖费用。\textbf{外测度不是已经定义好的可列可加测度}。
+\dep{定义：区间长度、外测度；分析基础：下确界。}
+% @end
+% @note c1-07|外测度的三个基本性质
+空集外测度为零；包含关系给出单调性；对任意集合序列有
+\[
+\lambda^*\Bigl(\bigcup_n A_n\Bigr)\le\sum_n\lambda^*(A_n).
+\]
+\textbf{这里是不等式，没有要求集合可测或互不相交}。核心证明办法：给每个 $A_n$ 分配很小的覆盖误差，再把所有覆盖合在一起。
+\dep{定义：外测度 c1-06；指定证明 01。}
+% @end
+% @note c1-08|平移与伸缩
+对于 $a\ne0$ 和 $b\in\R$，
+\[
+\lambda^*(aA+b)=|a|\lambda^*(A).
+\]
+平移不改变长度；伸缩让长度乘 $|a|$，负号只翻转方向。\textbf{证明等式要做两个方向}：正向变换覆盖，再用逆变换把覆盖拉回。
+\dep{定义：区间长度、外测度；指定证明 02。}
+% @end
+% @note c1-09|区间的外测度等于长度
+\[
+\lambda^*([a,b])=\lambda^*((a,b))=b-a.
+\]
+不要将它当成外测度的定义：它是由覆盖定义推出的定理。单点的长度为零，于是改变有限个端点不影响外测度。
+\dep{定理：外测度在区间上的值；性质：外测度单调性与可列次可加性。}
+% @end
+% @note c1-10|零测集不一定是空集
+\textbf{零测}指 $\lambda^*(N)=0$。单点、有限集和可数集都是零测集，例如 $\Q$ 在 $\R$ 中稠密，却仍是零测集。
+\textbf{反向不成立}：Cantor 集不可数，但长度为零。元素很多与长度很大是两件事。
+\dep{定义：零测集；外测度区间定理与可列次可加性；Cantor 集性质 c2-13。}
+% @end
+% @note c1-11|Lebesgue 可测性的判据
+集合 $B$ 可测，意味着对\textbf{任意测试集合} $A\subseteq\R$，都能精确切分外测度：
+\[
+\lambda^*(A)=\lambda^*(A\cap B)+\lambda^*(A\cap B^c).
+\]
+并不是只检验 $A=B$，也不是只检验区间。次可加性自动给出一个方向；可测性要求反向也成立。
+\dep{定义：Lebesgue 可测集（Carathéodory 判据）；性质：外测度次可加性。}
+% @end
+% @note c1-12|从外测度得到真正的测度
+Carathéodory 定理说明可测集族 $\M(\lambda^*)$ 是 $\sigma$-代数，包含所有外测度为零的集合；$\lambda^*$ 限制到这个族上后成为\textbf{可列可加的测度}。
+这一步把“对任意集合计算覆盖费用”转成“在合适集合族上进行可加测量”。\textbf{Lebesgue 测度的完备性}也来自零测集的任意子集仍零测、仍可测。
+\dep{定理：Carathéodory；定义：可测判据 c1-11。}
+% @end
+% @note c1-13|Vitali 集：并非所有集合都可测
+Vitali 定理给出 $[0,1]$ 的一个非 Lebesgue 可测子集。因此
+\[
+\B(\R)\subseteq\M(\lambda^*)\subsetneq\mathcal P(\R).
+\]
+\textbf{外测度仍可对这个集合定义，但不能把任意集合都放进 Lebesgue 测度的定义域。}这里只要求掌握结论与作用，不要求 Vitali 构造的证明。
+\dep{定理：Vitali 集；性质：Borel 集 Lebesgue 可测 c2-10。}
+% @end
+% @note c2-01|σ-代数与可测空间
+一个 $\sigma$-代数 $\T\subseteq\mathcal P(\Omega)$ 必须含空集、对补集封闭、对\textbf{可数并}封闭。$(\Omega,\T)$ 是可测空间，尚未分配任何质量。
+最小例子是 $\{\varnothing,\Omega\}$，最大例子是 $\mathcal P(\Omega)$。\textbf{“有限并封闭”不足以成为 $\sigma$-代数}；无限集上的有限或余有限子集族是重要反例。
+\dep{定义：σ-代数、可测空间；例子：TD2 第 1.3 题。}
+% @end
+% @note c2-02|σ-代数的派生封闭性
+由补集和可数并，利用 De Morgan 律得到可数交；再得到有限并交、差集 $A\setminus B=A\cap B^c$ 和对称差。
+\textbf{不要求对不可数并封闭}。实际证明某个集合可测时，应把它写成已知可测集合的可数并、交、补，而不是直接宣布它“看起来可测”。
+\dep{定义：σ-代数 c2-01；集合性质：De Morgan 律。}
+% @end
+% @note c2-03|生成的 σ-代数
+$\sigma(\mathcal G)$ 是\textbf{包含生成族 $\mathcal G$ 的最小 $\sigma$-代数}。生成族本身通常不是 $\sigma$-代数。
+有限分割 $A_1,\ldots,A_n$ 生成的 $\sigma$-代数是所有块的并；当块非空且互不相交时共有 $2^n$ 个元素。
+\dep{定义：生成的 σ-代数；例子：TD2 第 1.1 题。}
+% @end
+% @note c2-04|σ-代数的交
+同一个底集上的\textbf{非空族} $\sigma$-代数的交仍是 $\sigma$-代数。理解方式：属于交，就意味着同时属于每一个成员。
+逐条核对空集、补集、可数并即可。\textbf{并集一般不成立}：不同 $\sigma$-代数的并可能不对并运算封闭。
+\dep{性质：σ-代数的交；定义：σ-代数；指定证明 03。}
+% @end
+% @note c2-05|生成 σ-代数的交集描述
+\[
+\sigma(\mathcal G)=\bigcap_{\substack{\mathcal U\text{ 为 σ-代数}\\\mathcal G\subseteq\mathcal U}}\mathcal U.
+\]
+右侧被交的族不空，因为 $\mathcal P(\Omega)$ 是其中一个成员。证明要核对\textbf{它是 $\sigma$-代数、包含生成族、比任何候选都小}，三点合起来才说明“最小”。
+\dep{定义：生成 σ-代数；性质：σ-代数的交；指定证明 04。}
+% @end
+% @note c2-06|生成族方法的核心包含关系
+只要 $\mathcal U$ 是 $\sigma$-代数且 $\mathcal G\subseteq\mathcal U$，就有 $\sigma(\mathcal G)\subseteq\mathcal U$。
+这一性质是后面证明 Borel 生成、原像判别的主工具。\textbf{先验证候选族确实是 $\sigma$-代数，再检查包含生成元}，不能省掉前半句。
+\dep{定义：最小的 σ-代数 c2-03。}
+% @end
+% @note c2-07|Borel σ-代数
+$\B(\R)$ 是由所有开集生成的 $\sigma$-代数。开集、闭集、单点、区间都是 Borel 集，但 Borel 集不只这些形状。
+\textbf{开集族不等于 Borel 族}：例如闭区间也是 Borel 集。底空间和拓扑必须说清楚，$\B(\R^n)$ 与 $\B(\R)$ 并非同一个集合族。
+\dep{定义：Borel σ-代数；性质：补集和生成 σ-代数。}
+% @end
+% @note c2-08|有界开区间生成 Borel 族
+所有有界开区间已足够生成 $\B(\R)$。一个方向：区间是开集。另一方向：\textbf{每个开集是可数个有理中心、有理半径开区间的并}。
+关键是\textbf{可数性}。只写“开集是开区间的并”还不够，因为 $\sigma$-代数仅保证可数并封闭。
+\dep{定义：Borel、σ-代数；性质：有理数的稠密性和可数性；指定证明 05。}
+% @end
+% @note c2-09|Borel 的其他生成族
+闭区间、左侧开半直线、左侧闭半直线也分别生成 $\B(\R)$。例如
+\[
+\B(\R)=\sigma\{(-\infty,a]:a\in\R\}.
+\]
+因此证明实值函数可测时，可以只检验 $\{f\le a\}$ 或 $\{f<a\}$ 等半直线原像，不必逐一处理所有 Borel 集。
+\dep{性质：Borel 的其他生成族；可测函数生成族判别 c4-07。}
+% @end
+% @note c2-10|Borel 集与 Lebesgue 可测集
+每个 Borel 集都是 Lebesgue 可测集。\textbf{不要把两种可测性混为一谈}：Lebesgue 可测族包含 Borel 族，还包含零测集的任意子集。
+在本课程中，“Borel 可测函数”以 Borel 族作为源空间可测族；“Lebesgue 可测函数”以 $\M(\lambda^*)$ 作为源空间可测族。
+\dep{性质：Borel 集 Lebesgue 可测；定义：Lebesgue 可测函数 c4-05。}
+% @end
+% @note c2-11|可测集等于 Borel 集加零测余项
+对 $E\in\M(\lambda^*)$，可找到 Borel 集 $B\subseteq E$ 与零测集 $N$，使 $E=B\sqcup N$。
+它解释为什么很多 Lebesgue 积分结论允许忽略零测余项。\textbf{这里的 $N$ 不必是 Borel 集}；否则会错误地推出所有 Lebesgue 可测集都是 Borel 集。
+\dep{定理：Lebesgue 可测集的 Borel 加零测分解。}
+% @end
+% @note c2-12|Cantor 集的构造
+从 $C_0=[0,1]$ 开始，每次删去每个剩余闭区间的中间开三分之一，令 $C=\bigcap_n C_n$。
+第 $n$ 步有 $2^n$ 段，每段长 $3^{-n}$。\textbf{端点保留}；先看有限阶段的形状，再理解无限交。
+\dep{定义：三分 Cantor 集；区间长度。}
+% @end
+% @note c2-13|Cantor 集的重要反例作用
+Cantor 集\textbf{闭、不可数、零测}。有限阶段的总长度为 $(2/3)^n\to0$，说明“零测”不意味着“可数”。
+它还将在第 8 章承载质量为 $1$ 的 Cantor 测度：\textbf{同一个集合对不同测度可以有完全不同的质量}。
+\dep{性质：Cantor 集；定义：构造 c2-12；Cantor 测度性质 c8-09。}
+% @end
+% @note c3-01|测度、有限与 σ-有限
+测度 $\mu:\T\to[0,+\infty]$ 要满足空集为零、\textbf{互不相交的可数并的质量等于质量之和}。
+有限是 $\mu(\Omega)<\infty$；$\sigma$-有限是底空间可被可数个有限测度集合覆盖。后者并不要求 $\mu(\Omega)$ 有限，例如 $\R$ 上 Lebesgue 测度。
+\textbf{概率测度只是总质量为 $1$ 的测度}，这个定义仍在 DS 考纲里；“不考概率”指后续概率章节。
+\dep{定义：测度、有限测度、σ-有限、概率测度。}
+% @end
+% @note c3-02|Dirac 测度
+\[
+\delta_x(A)=\begin{cases}1,&x\in A,\\0,&x\notin A.\end{cases}
+\]
+它把所有质量放在一点上。\textbf{定义对 $A\in\T$ 使用}；无需先要求单点 $\{x\}$ 本身可测，就能定义 $\delta_x$。
+\dep{定义：Dirac 测度；测度公理。}
+% @end
+% @note c3-03|本课程中的原子与弥散测度
+这里按官方考纲的\textbf{点原子}约定：若单点可测且 $\mu(\{x\})>0$，则称 $x$ 为原子。没有点原子称测度弥散；在单点都可测的常用空间中，就是每个单点质量均为零。
+Dirac 测度有点原子；Lebesgue 测度弥散。\textbf{弥散不等于有密度}：Cantor 测度也弥散，但没有相对于 Lebesgue 测度的密度。
+\dep{定义：考纲中的原子、弥散测度；例子：Cantor 测度 c8-09。}
+% @end
+% @note c3-04|Rn 上的 Lebesgue 测度
+$\lambda_n$ 是在 $\B(\R^n)$ 上给每个长方体分配通常体积的唯一测度：体积等于各边长度的乘积。
+一维是长度、二维是面积、三维是体积。\textbf{这是测度的定义对象与刻画定理，不是说所有子集都可测}。本条唯一性结论仍在清单中，移除的是独立的 $\pi$-系统唯一性推论。
+\dep{定理：Rn 上 Lebesgue 测度的存在唯一性与长方体体积。}
+% @end
+% @note c3-05|相对于测度的零测集
+在 $(\Omega,\T,\mu)$ 中，可测集 $N$ 若 $\mu(N)=0$，就叫 $\mu$-零测集。\textbf{一定要说明相对于哪个测度}。
+例如单点对 Lebesgue 测度零测，对该点的 Dirac 测度不零测。一般测度空间未必完备，零测集的任意子集未必都在 $\T$ 中。
+\dep{定义：μ-零测集；Dirac 与 Lebesgue 测度；完备性区别。}
+% @end
+% @note c3-06|测度的基本运算
+有限可加与单调性来自可列可加。集合差公式为
+\[
+\mu(B\setminus A)=\mu(B)-\mu(A),\quad A\subseteq B,
+\]
+\textbf{需要 $\mu(A)<\infty$}。二集合容斥公式按考纲要求 $A,B$ 都有限测度。\textbf{不能做 $\infty-\infty$}；写分解式 $\mu(B)=\mu(A)+\mu(B\setminus A)$ 总是更稳妥。
+\dep{性质：测度的基本性质；指定证明 06。}
+% @end
+% @note c3-07|递增与递减连续性
+\[
+\begin{aligned}
+A_n\uparrow A&\Rightarrow\mu(A_n)\uparrow\mu(A),\\
+B_n\downarrow B&\Rightarrow\mu(B_n)\downarrow\mu(B).
+\end{aligned}
+\]
+\textbf{第二行需要某个 $B_m$ 的测度有限}；第一行无需有限性。反例 $B_n=[n,\infty)$：交为空集，每项 Lebesgue 测度却都是无穷。
+\dep{性质：测度连续性；指定证明 07。}
+% @end
+% @note c3-08|Boole 不等式
+\[
+\mu\Bigl(\bigcup_n A_n\Bigr)\le\sum_n\mu(A_n).
+\]
+这里集合必须可测，但无需互不相交。\textbf{相交部分重复计费，只会让右侧更大}；证明可以把集合依次扣去已出现部分，再用可加性。
+\dep{性质：Boole 不等式；定义：测度；指定证明 08。}
+% @end
+% @note c3-09|上极限与下极限的可测性
+若所有 $A_n\in\T$，则集合的上极限和下极限也属于 $\T$。理由是它们可以写成可数并与可数交。
+\textbf{结论首先是可测性}；若要比较相应测度与 $\liminf\mu(A_n)$ 等，还必须另给定理和条件，不能仅靠符号相似。
+\dep{集合极限公式 c1-04；σ-代数封闭性 c2-02。}
+% @end
+% @note c3-10|第一 Borel–Cantelli 引理
+若 $\sum_n\mu(A_n)<\infty$，则 $\mu(\limsup A_n)=0$：几乎每个点只会落入有限多个 $A_n$。
+\textbf{不需要独立性，也不要求测度是概率测度}。证明控制“从第 $n$ 次以后至少出现一次”的尾部并，然后令尾部和趋零。
+\dep{定理：Borel–Cantelli；Boole 不等式；指定证明 09。}
+% @end
+% @note c4-01|原像运算是可测性的基础
+原像定义是 $f^{-1}(A)=\{x:f(x)\in A\}$，\textbf{不需要 $f$ 可逆}。它保持并、交、补、差；这些都是集合恒等式。
+例如 $f(x)=x^2$，$f^{-1}((-\infty,1])=[-1,1]$。判断可测性时是在源空间检查这个集合，而不是在目标空间检查 $f$ 的值。
+\dep{定义：集合原像；性质：原像与集合运算。}
+% @end
+% @note c4-02|目标 σ-代数的原像族
+若 $\T_F$ 是 $F$ 上的 $\sigma$-代数，则 $f^{-1}(\T_F)=\{f^{-1}(B):B\in\T_F\}$ 是 $E$ 上的 $\sigma$-代数。
+这是原像保持空集、补集与可数并的直接结果，\textbf{此处 $f$ 可以是任意映射}。
+\dep{性质：原像运算 c4-01；定义：σ-代数。}
+% @end
+% @note c4-03|原像与生成 σ-代数
+\[
+f^{-1}(\sigma(\mathcal G))=\sigma(f^{-1}(\mathcal G)).
+\]
+它说明“先由生成族扩展，再取原像”与“先取生成元的原像，再扩展”结果一致。\textbf{这是后面生成族判别的背景}，不在指定 15 个证明中。
+\dep{性质：生成 σ-代数的原像；定义：生成族。}
+% @end
+% @note c4-04|可测映射的定义
+\[
+\begin{gathered}
+f:(E,\T_E)\to(F,\T_F)\text{ 可测}\\
+\iff\forall B\in\T_F,\ f^{-1}(B)\in\T_E.
+\end{gathered}
+\]
+\textbf{两个可测族都是定义的一部分}；不标出它们就可能隐藏错误。可测性不要求连续，也不要求把源空间的可测集的\emph{像}送到可测集。
+\dep{定义：可测映射。}
+% @end
+% @note c4-05|Lebesgue 可测函数
+实值函数的 Lebesgue 可测性是从 $(\R,\M(\lambda^*))$ 到 $(\R,\B(\R))$ 的可测性。
+源空间换成 Borel 族时，才叫 Borel 可测函数。\textbf{所有 Borel 可测函数都 Lebesgue 可测，反向一般不成立}。
+\dep{定义：Lebesgue 可测函数；包含关系 c2-10。}
+% @end
+% @note c4-06|可测映射复合
+若 $f:(E,\T_E)\to(F,\T_F)$ 与 $g:(F,\T_F)\to(G,\T_G)$ 都可测，则 $g\circ f$ 可测。
+\textbf{中间空间的 $\sigma$-代数要一致}。证明用 $(g\circ f)^{-1}(A)=f^{-1}(g^{-1}(A))$，将两个可测性依次使用。
+\dep{定义：可测映射；原像复合恒等式；指定证明 10。}
+% @end
+% @note c4-07|只需检查生成元
+若 $\T_F=\sigma(\mathcal G)$，则 $f$ 可测当且仅当所有 $G\in\mathcal G$ 的原像可测。
+实值函数常检验 $\{f<a\}$ 或 $\{f\le a\}$。\textbf{生成族必须是目标空间的生成族}，不能任选几个集合就结束证明。
+\dep{性质：生成族判别；Borel 生成族 c2-09；指定证明 11。}
+% @end
+% @note c4-08|连续函数为什么可测
+赋予两个赋范空间各自的 Borel 族后，连续函数可测。原因：\textbf{开集的原像是开集，开集生成 Borel 族}。
+这让多项式、绝对值、加法与乘法成为后续可测运算的工具。反向不成立，例如 $\mathbf1_{[0,\infty)}$ 可测但在零点不连续。
+\dep{连续性的开集原像判别；生成族判别；指定证明 12。}
+% @end
+% @note c4-09|示性函数可测
+$\mathbf1_A$ 在 $A$ 上为 $1$、其余为 $0$。若 $A\in\T$，它可测；对任意目标 Borel 集，其原像只可能是 $\varnothing,A,A^c,E$。
+这是把\textbf{集合可测性转为函数可测性}的最简单桥梁，也为简单函数积分做准备。
+\dep{定义：示性函数、可测映射；指定证明 13。}
+% @end
+% @note c4-10|向量值函数按坐标判别
+$f=(f_1,\ldots,f_n):E\to\R^n$ 可测，当且仅当每个 $f_i$ 可测，目标赋予 $\B(\R^n)$。
+特别是把两个实值函数组成 $(f,g)$ 后，可与连续的加法、乘法映射复合。\textbf{先证明坐标可测，再使用复合}。
+\dep{性质：向量值可测函数的坐标判别；可测复合。}
+% @end
+% @note c4-11|可测函数的基本运算
+\textbf{实值}可测函数 $f,g$ 的和、积、实数倍、绝对值都可测。写法是先组成 $(f,g)$，再与连续函数 $(u,v)\mapsto u+v$ 或 $uv$ 复合。
+不要直接推广到任意扩展实值函数：$+\infty-\infty$ 等表达式可能无定义。
+\dep{坐标判别 c4-10、连续函数可测 c4-08、复合 c4-06；指定证明 14。}
+% @end
+% @note c4-12|扩展实数与其 Borel 族
+扩展实数是 $\overline\R=\R\cup\{-\infty,+\infty\}$。考纲的集合族为
+\[
+\B(\overline\R)=\{A\subseteq\overline\R:A\cap\R\in\B(\R)\}.
+\]
+\textbf{这里的“achevée”指加入无穷端点}，不要与某个测度的完备化混淆。它允许上确界或极限取无穷值。
+\dep{定义：扩展实数及其 Borel σ-代数。}
+% @end
+% @note c4-13|可数上确界与下确界
+可数族扩展实值可测函数的逐点 $\sup_n f_n$、$\inf_n f_n$ 可测。关键例子：
+\[
+\{\sup_n f_n>a\}=\bigcup_n\{f_n>a\}.
+\]
+于是 $\limsup f_n$、$\liminf f_n$ 以及存在的逐点极限也可测。\textbf{可数这个条件不能任意去掉}。
+\dep{性质：可数 sup、inf 可测；生成族判别；σ-代数的可数并交。}
+% @end
+% @note c4-14|像测度
+给定可测映射 $f$ 和源测度 $\mu$，像测度在目标集合 $B$ 上的质量是
+\[
+\mu_f(B)=\mu(f^{-1}(B)).
+\]
+\textbf{是原像的质量，不是 $\mu(f(B))$}。可测性保证原像在 $\mu$ 的定义域，原像保持不交并保证可列可加。
+\dep{定义：像测度；可测映射与原像运算。}
+% @end
+% @note c5-01|简单函数是积分的积木
+简单函数取有限多个实值，并可写成可测集示性函数的有限线性组合：$s=\sum_{k=1}^n a_k\mathbf1_{A_k}$，可把 $A_k$ 选为不交。
+\textbf{简单不等于连续，也不要求支集测度有限}。示性函数就是最基本的简单函数。
+\dep{定义：简单函数（fonction étagée）。}
+% @end
+% @note c5-02|简单函数可测
+每个示性函数可测，有限次实数倍与相加保持可测性，所以简单函数可测。
+这里要能说出论据，而不仅写“显然”。这也是为何简单函数表示必须用\textbf{可测集合}。
+\dep{示性函数可测 c4-09；运算稳定性 c4-11。}
+% @end
+% @note c5-03|非负可测函数的递增逼近
+任意 $f:E\to[0,+\infty]$ 可测，都有非负简单函数 $s_n\uparrow f$。一种构造是把函数值按越来越细的网格向下取整，并截断高值。
+\textbf{递增、从下方、简单函数}这三个词一起连接定义与极限。它不是说任意可测函数都能被简单函数一致逼近。
+\dep{定理：非负可测函数的简单函数逼近引理。}
+% @end
+% @note c5-04|非负简单函数的积分
+当 $s=\sum_k a_k\mathbf1_{A_k}\ge0$、$A_k$ 不交时，
+\[
+\int s\dd\mu=\sum_k a_k\mu(A_k).
+\]
+就是“每层高度乘这一层的质量”。积分可以为 $+\infty$；对零系数采用 $0\cdot\infty=0$ 的非负积分约定。特别地 $\int\mathbf1_A\dd\mu=\mu(A)$。
+\dep{定义：非负简单函数积分。}
+% @end
+% @note c5-05|一般非负函数积分的定义
+\[
+\int f\dd\mu=\sup_{\substack{0\le s\le f\\s\text{ 简单}}}\int s\dd\mu.
+\]
+\textbf{先定义非负积分，允许无穷；之后才谈可积。}把函数下面所有简单函数的积分汇总取上确界，不靠“正负抵消”得到一个数字。
+\dep{定义：非负可测函数积分；简单函数积分 c5-04。}
+% @end
+% @note c5-06|递增简单逼近计算积分
+若 $s_n\uparrow f$ 是非负简单函数逼近，则 $\int s_n\dd\mu\uparrow\int f\dd\mu$。
+它让上确界定义可由一个具体逼近序列实现。\textbf{这里尚是简单函数序列}；后面的单调收敛定理将推广到任意非负可测函数序列。
+\dep{性质：递增简单函数与积分极限。}
+% @end
+% @note c5-07|实值积分先分正负部分
+$f^+=\max(f,0)$、$f^-=\max(-f,0)$，满足 $f=f^+-f^-$、$|f|=f^++f^-$。本课程可积定义要求\textbf{两个非负积分都有限}，再令
+\[
+\int f\dd\mu=\int f^+\dd\mu-\int f^-\dd\mu.
+\]
+等价条件是 $\int|f|\dd\mu<\infty$。一个振荡积分“形式上抵消”不代表 Lebesgue 可积。
+\dep{定义：可积实值函数及积分；可积性 c5-12。}
+% @end
+% @note c5-08|集合上积分与几乎处处
+$\int_A f\dd\mu=\int f\mathbf1_A\dd\mu$。性质几乎处处成立，意味着只在一个\textbf{可测零测集合}内可能失败。
+\textbf{几乎处处不等于处处}，且相对于测度而言：$\mathbf1_{\{0\}}$ 对 Lebesgue 测度几乎处处为零，对 $\delta_0$ 不是。
+\dep{定义：集合上积分、presque partout；零测集与 Dirac 测度。}
+% @end
+% @note c5-09|积分的线性
+对于可积实值函数，可以对和、实数倍按线性运算；对于非负函数，也可相加及乘非负常数，允许积分无穷。
+\textbf{先确认适用情形}，再写 $\int(f+g)=\int f+\int g$。对一般非可积有符号函数，右侧可能是无定义的 $\infty-\infty$。
+\dep{性质：积分线性；定义：非负积分、可积实值积分。}
+% @end
+% @note c5-10|单调性与零测修改
+若 $0\le g\le f$，则 $\int g\dd\mu\le\int f\dd\mu$；对于可积实值函数也成立。非负函数或可积函数\textbf{几乎处处相等时积分相等}。
+这解释为什么修改单个 Lebesgue 零测点不影响积分，却可能影响相对于 Dirac 测度的积分。
+\dep{性质：积分单调性、几乎处处相等的积分一致。}
+% @end
+% @note c5-11|非负积分为零的含义
+对于非负可测 $f$，
+\[
+\int f\dd\mu=0\iff f=0\ \mu\text{-几乎处处}.
+\]
+\textbf{非负不可删除}：$f(x)=x$ 在 $[-1,1]$ 上的积分为零，却不是几乎处处零。正向用层集 $\{f\ge1/n\}$ 逐一排除正值质量。
+\dep{性质：非负积分为零；指定证明 15。}
+% @end
+% @note c5-12|可积性的常用判据
+实值 $f$ 可积当且仅当 $|f|$ 可积。若 $|f|\le g$ 且 $g$ 非负可积，则 $f$ 可积；有限非负积分也会排除在正测度集合上取无穷值。
+\textbf{先证明可积，再使用有符号积分公式}。单靠“每个点值有限”不够，例如 $1/x$ 在 $(0,1)$ 不可积。
+\dep{性质：可积性；积分单调性与非负积分。}
+% @end
+% @note c5-13|单调收敛定理
+若 $0\le f_n\uparrow f$ 且每项可测，则 $\int f_n\dd\mu\uparrow\int f\dd\mu$，\textbf{无需可积控制函数，结果允许无穷}。
+非负级数可逐项积分，就是对部分和使用该定理。递减版本不能直接照抄，尤其在无限测度空间上。
+\dep{定理：单调收敛及非负级数版本。}
+% @end
+% @note c5-14|Fatou 引理
+对非负可测 $f_n$，
+\[
+\int\liminf_n f_n\dd\mu\le\liminf_n\int f_n\dd\mu.
+\]
+\textbf{只有一个方向，不是极限与积分无条件交换}。例如 $f_n=n\mathbf1_{(0,1/n)}$ 逐点趋零、每项积分为 $1$，不等式严格。
+\dep{定理：Fatou 引理；例子：集中到零点附近的质量。}
+% @end
+% @note c5-15|控制收敛定理
+条件是可测、$f_n\to f$ 几乎处处，并有\textbf{同一个可积的} $g\ge0$ 满足所有 $n$ 的 $|f_n|\le g$。结论是 $f$ 可积、$\int f_n\to\int f$。
+“每个 $f_n$ 分别可积”或“每个分别有界”都不足够。找控制函数时必须确认其\textbf{不依赖 $n$ 且积分有限}。
+\dep{定理：控制收敛；可积性与几乎处处。}
+% @end
+% @note c5-16|积分号内的连续性
+$F(u)=\int f(u,x)\dd\mu(x)$ 连续，需要截面关于 $x$ 可测、关于 $u$ 几乎处处连续，以及\textbf{统一的可积控制函数} $g(x)$。
+理解为把 $u_n\to u_0$ 变成函数列，再使用控制收敛。统一控制只依赖积分变量，不能随参数失控。
+\dep{定理：积分号内连续性；控制收敛。}
+% @end
+% @note c5-17|积分号内求导
+要求 $x$ 截面可积，关于参数 $u$ 的函数几乎处处在开区间可导，并且\textbf{所有参数的偏导绝对值都被同一个可积函数控制}。此时
+\[
+F'(u)=\int\partial_u f(u,x)\dd\mu(x).
+\]
+\textbf{控制的是导数}，不能只控制原函数就宣布可求导；也要写明参数区间。
+\dep{定理：积分号内求导。}
+% @end
+% @note c6-01|乘积 σ-代数
+$\T_E\otimes\T_F=\sigma\{A\times B:A\in\T_E,B\in\T_F\}$。\textbf{长方形族只是生成元}，乘积可测集不一定是单个长方形。
+例如平面中的三角区域可通过可测不等式描述，随后用截面计算面积。
+\dep{定义：乘积 σ-代数；生成族。}
+% @end
+% @note c6-02|乘积测度
+若两个测度空间都\textbf{σ-有限}，则存在唯一乘积测度，使
+\[
+(\mu\otimes\nu)(A\times B)=\mu(A)\nu(B).
+\]
+这是从矩形面积推广到一般区域的测度。不能把这个公式直接用于不是直积形状的区域。
+\dep{定理：乘积测度存在唯一性；σ-有限定义 c3-01。}
+% @end
+% @note c6-03|集合的截面
+固定 $x$ 时 $D_x=\{y:(x,y)\in D\}$；固定 $y$ 时 $D^y=\{x:(x,y)\in D\}$。
+对 $D=\{0\le x\le y\le a\}$，固定 $y$ 后 $x$ 从 $0$ 到 $y$。\textbf{先说明固定哪个变量、剩下哪个变量变化}，再写积分限。
+\dep{定义：垂直截面与水平截面；例子：TD4 第 1.1 题。}
+% @end
+% @note c6-04|截面可测与区域体积
+乘积可测区域的各截面可测，且相应截面质量是可测函数。在 σ-有限的乘积测度情形，
+\[
+(\mu\otimes\nu)(D)=\int_E\nu(D_x)\dd\mu(x).
+\]
+这就是“把每一片的面积或长度累加”。\textbf{它来自对示性函数应用 Tonelli}，不是几何猜测。
+\dep{性质：截面可测及截面积分；Tonelli。}
+% @end
+% @note c6-05|Tonelli 与 Fubini 如何选
+\textbf{共同条件：乘积可测函数、两个测度 σ-有限。}Tonelli 用于 $f\ge0$，无须先证明可积，等式可取 $+\infty$。Fubini 用于有符号函数，要先证明 $\int|f|<\infty$。
+实用顺序：先检查符号；若有正负，先对 $|f|$ 用 Tonelli 确认可积，再对 $f$ 用 Fubini。\textbf{一个反常迭代积分存在，不能替代绝对可积条件}。
+\dep{定理：Fubini–Tonelli；可积性 c5-12。}
+% @end
+% @note c6-06|有限次多重积分
+对有限个 σ-有限空间，非负或可积函数可以通过多次积分计算，换序依次遵守 Tonelli 或 Fubini 的条件。
+\textbf{换序要同时重写区域}，不能只交换 $\dd x,\dd y$。例如 $0\le x\le y\le a$ 可写成先 $x\in[0,y]$，也可写成先 $y\in[x,a]$。
+\dep{推论：有限乘积上的多重积分；截面定义与 Fubini–Tonelli。}
+% @end
+% @note c6-07|换元公式与 Jacobian
+对开集间的 $C^1$ 微分同胚 $\Phi:U\to\Omega$，以及非负或可积 $f$，
+\[
+\int_\Omega f(x)\dd x=\int_U f(\Phi(u))\,|\det D\Phi(u)|\dd u.
+\]
+\textbf{区域、函数、体积因子三个都要换}。Jacobian 取绝对值；极坐标因子是 $r$。极坐标要避开原点和重复角度，遗漏的零测边界可另行说明。
+\dep{定理：换元公式；几乎处处不改变积分。}
+% @end
+% @note c7-01|Lp 的对象与指数
+对 $1\le p<\infty$，要求 $\int|f|^p\dd\mu<\infty$，并定义 $\|f\|_p=(\int|f|^p\dd\mu)^{1/p}$。
+考纲先用 $L^p$ 记函数集合，谈 Banach、Hilbert 时须按\textbf{几乎处处相等取等价类}。$p=\infty$ 另用本质有界定义。
+\dep{定义：Lp；几乎处处等价关系；分离性 c7-03。}
+% @end
+% @note c7-02|L∞ 与本质上界
+$L^\infty$ 中的函数只要求\textbf{几乎处处有界}；范数是忽略零测集合后的最小界，即 $\operatorname*{ess\,sup}|f|$。
+对 Lebesgue 测度，单点上任意大的取值不影响该范数；这与普通的逐点上确界不同。
+\dep{定义：L∞；性质：零测修改。}
+% @end
+% @note c7-03|为什么先是半范数
+对有限 $p$，$\|f\|_p=0$ 当且仅当 $f=0$ 几乎处处，\textbf{不必处处为零}。所以在实际函数集合上只是半范数。
+把几乎处处相同的函数视为一个元素后，分离性成立，得到真正的范数空间。说 $L^p$ 是 Banach 时要理解这个约定。
+\dep{性质：Lp 的分离性；非负积分为零 c5-11。}
+% @end
+% @note c7-04|Markov 不等式
+对 $f\ge0$ 可测、$a>0$，
+\[
+\mu(f\ge a)\le\frac1a\int f\dd\mu.
+\]
+高于阈值的那部分至少贡献“阈值乘质量”。不要求概率测度；积分若无穷，不等式仍成立，但不能给出有限控制。
+\dep{性质：Markov 不等式；积分单调性。}
+% @end
+% @note c7-05|Chebyshev 不等式
+对于 $f\in L^2$、$c\in\R$、$\varepsilon>0$，
+\[
+\mu(|f-c|\ge\varepsilon)\le\frac1{\varepsilon^2}\int(f-c)^2\dd\mu.
+\]
+它是对 $(f-c)^2$ 使用 Markov。\textbf{$c$ 不必是均值}；在无限测度空间上右侧也可能无穷，不能擅自声称 $f-c\in L^2$。
+\dep{性质：Bienaymé–Tchebychev；Markov。}
+% @end
+% @note c7-06|Hölder 不等式
+共轭指数 $p,q\in(1,\infty)$ 满足 $1/p+1/q=1$。若 $f\in L^p,g\in L^q$，则 $fg\in L^1$ 且
+\[
+\int|fg|\dd\mu\le\|f\|_p\|g\|_q.
+\]
+\textbf{指数和等于一指倒数相加}，不是 $p+q=1$。$p=q=2$ 给出 Cauchy–Schwarz。
+\dep{性质：Hölder 不等式；定义：共轭指数。}
+% @end
+% @note c7-07|有限测度空间上的 Lp 包含
+若\textbf{$\mu(\Omega)<\infty$} 且 $1\le q<p\le\infty$，则 $L^p\subseteq L^q$。
+条件不能删去：$\R$ 上 $1/(1+|x|)$ 属于 $L^2$ 却不属于 $L^1$。也不要把包含方向倒过来。
+\dep{推论：有限测度空间上的 Lp 包含；Hölder。}
+% @end
+% @note c7-08|Minkowski 不等式
+对于 $p\ge1$，$f,g\in L^p$ 时 $f+g\in L^p$，并有 $\|f+g\|_p\le\|f\|_p+\|g\|_p$。
+它就是 $L^p$ 范数的三角不等式。\textbf{不要与 Hölder 混淆}：Hölder 控制乘积积分，Minkowski 控制和的范数。
+\dep{性质：Minkowski 不等式。}
+% @end
+% @note c7-09|Jensen 不等式
+若 $0<\mu(\Omega)<\infty$、$f$ 可积、$\varphi$ 凸且 $\varphi(f)$ 可积，则
+\[
+\varphi\!\left(\frac{\int f\dd\mu}{\mu(\Omega)}\right)\le
+\frac{\int\varphi(f)\dd\mu}{\mu(\Omega)}.
+\]
+\textbf{一般测度必须归一化}；总质量为 $1$ 时才可去掉分母。不要漏掉凸性和可积性。
+\dep{性质：Jensen 不等式。}
+% @end
+% @note c7-10|Riesz–Fischer：Lp 完备
+对 $1\le p\le\infty$，按几乎处处等价类理解的 $L^p$ 是 Banach 空间。
+\textbf{完备}意味着每个范数意义下的 Cauchy 列都有空间内的范数极限，不等于“所有函数列都收敛”，也不等于“逐点收敛”。
+\dep{定理：Riesz–Fischer；定义：Banach、Cauchy 列。}
+% @end
+% @note c7-11|L2 是 Hilbert 空间
+在等价类上，$\langle f,g\rangle=\int fg\dd\mu$ 是内积；相应范数就是 $\|f\|_2$。完备性使 $L^2$ 成为 Hilbert 空间。
+内积积分的存在来自 Hölder。\textbf{一般 $L^p$ 的范数不都来自内积}；本条专指 $p=2$。
+\dep{性质：L2 是 Hilbert；Hölder、Riesz–Fischer。}
+% @end
+% @note c7-12|Riesz 表示定理
+实 Hilbert 空间 $H$ 上每个\textbf{连续线性泛函} $\ell$ 都可唯一写为 $\ell(x)=\langle x,h\rangle$，某个 $h\in H$，且 $\|\ell\|=\|h\|$。
+“连续”“线性”“唯一”都属结论的精确表述。不要与 $L^p$ 完备性的 Riesz–Fischer 定理混为一个定理。
+\dep{定理：Hilbert 空间的 Riesz 表示。}
+% @end
+% @note c7-13|Lp 中简单函数的稠密性
+对于\textbf{$1\le p<\infty$}，每个 $f\in L^p$ 都可用属于 $L^p$ 的简单函数 $s_n$ 在 $p$-范数中逼近：$\|s_n-f\|_p\to0$。
+按“简单函数可积”的原文表述，选逼近时可用截断及有限测度支集保证所需可积性。\textbf{不要把该条原封不动扩展到 $p=\infty$}。
+\dep{定理：Lp 稠密性；考纲所列指数范围。}
+% @end
+% @note c8-01|离散测度
+离散测度的全部质量集中在一个\textbf{至多可数的点原子集合}上，可写成
+\[
+\mu=\sum_{x\in S}\mu(\{x\})\delta_x.
+\]
+质量系数非负；具体空间需满足相关单点可测的约定。“纯原子”在考纲里允许更一般的原子集合，不应随意互换术语。
+\dep{定义：离散测度；点原子约定 c3-03。}
+% @end
+% @note c8-02|有密度的测度
+对非负可测 $g$，定义 $\nu(A)=\int_A g\dd\mu$，记 $\nu=g\cdot\mu$，$g=\dd\nu/\dd\mu$。
+\textbf{密度总是相对于某个基准测度}。若基准是 Lebesgue 测度，$g=2\mathbf1_{[0,1]}$ 产生总质量 $2$，不是概率测度。
+\dep{定义：密度测度；集合上积分。}
+% @end
+% @note c8-03|绝对连续是零测集关系
+$\nu\ll\mu$ 意味着对所有可测 $A$，$\mu(A)=0\Rightarrow\nu(A)=0$。
+\textbf{箭头有方向}；不表示数值连续，不表示 $\nu(A)\le\mu(A)$，也不自动给出任何密度，密度的逆向结论还需要 Radon–Nikodym 条件。
+\dep{定义：绝对连续；Radon–Nikodym 定理 c8-11。}
+% @end
+% @note c8-04|有密度推出绝对连续
+若 $\nu=g\cdot\mu$，在 $\mu$-零测集 $A$ 上的积分为零，所以 $\nu(A)=0$，即 $\nu\ll\mu$。
+这个方向不需要先套用 Radon–Nikodym。\textbf{逆方向按考纲需两测度 σ-有限}。
+\dep{性质：有密度测度绝对连续；零测集上非负积分为零。}
+% @end
+% @note c8-05|密度的积分转移
+对 $\nu=g\cdot\mu$，非负可测 $\varphi$ 满足
+\[
+\int\varphi\dd\nu=\int\varphi g\dd\mu.
+\]
+对实值 $\varphi$，可积性也由 $\varphi g$ 的可积性对应。\textbf{这不是变量换元}：变量没变，是把测度换成基准测度加权。
+\dep{性质：密度测度的转移公式。}
+% @end
+% @note c8-06|互相奇异
+$\mu\perp\nu$ 意味着存在可测 $B$，使 $\mu(B)=0$ 且 $\nu(B^c)=0$：二者质量集中在可测的互不相交部分。
+例如 $\delta_0\perp\lambda$。\textbf{这不是“质量值不同”}，也不需要两个测度的拓扑支集互不相交。
+\dep{定义：互相奇异测度；Dirac 与 Lebesgue 测度。}
+% @end
+% @note c8-07|Cantor 测度的构造
+在第 $k$ 阶段的 $C_k$ 上放均匀密度，定义 $\mu_k(A)=(3/2)^k\lambda(A\cap C_k)$，其总质量为 $1$。
+考纲结论：存在唯一概率测度 $\nu_C$，每个区间 $I$ 的质量为 $\lim_k\mu_k(I)$。\textbf{这不是任意集合都可直接交换极限与测度}。
+\dep{性质：Cantor 测度构造；Cantor 阶段长度 c2-12。}
+% @end
+% @note c8-08|Cantor 测度的定义
+上一条唯一构造出的概率测度记作 $\nu_C$。它把质量分配到 Cantor 集上，\textbf{测度 $\nu_C$ 与集合 $C$ 是不同对象}。
+记住它的用途：提供“弥散却没有 Lebesgue 密度”的例子。
+\dep{定义：Cantor 测度；构造性质 c8-07。}
+% @end
+% @note c8-09|Cantor 测度的三个性质
+\textbf{总质量为 $1$、弥散、与 Lebesgue 测度互相奇异}。尤其 $\nu_C(C)=1$，而 $\lambda(C)=0$。
+若它有 Lebesgue 密度，就应对 $\lambda$ 绝对连续，于是 $C$ 的质量必须零，矛盾。它也不是离散测度，因为每个点的质量都零。
+\dep{定理：Cantor 测度性质；密度推出绝对连续；离散测度定义。}
+% @end
+% @note c8-10|奇异连续测度
+在 $(\R,\B(\R))$ 上，同时弥散且与 $\lambda$ 奇异的测度叫\textbf{奇异连续测度}，Cantor 测度是典型例子。
+“连续”在这里不是指有一个连续密度函数；恰恰可能完全没有 Lebesgue 密度。
+\dep{定义：奇异连续测度；Cantor 测度性质。}
+% @end
+% @note c8-11|Radon–Nikodym 定理
+若 $\mu,\nu$ 都\textbf{σ-有限}且 $\nu\ll\mu$，则有非负可测 $h$ 使 $\nu(A)=\int_A h\dd\mu$；$h$ \textbf{在 μ-几乎处处意义下唯一}。
+该密度记 $h=\dd\nu/\dd\mu$。完整表述要保留 σ-有限、绝对连续与唯一性的意义，不能写成“所有测度都有密度”。
+\dep{定理：Radon–Nikodym。}
+% @end
+% @note c8-12|Lebesgue 分解定理
+对 σ-有限的 $\mu,\nu$，存在唯一分解
+\[
+\nu=\nu_{\rm ac}+\nu_{\rm sing},\quad
+\nu_{\rm ac}\ll\mu,\quad\nu_{\rm sing}\perp\mu.
+\]
+两个部分都是测度，\textbf{相对于同一个基准 μ}定义。绝对连续部分再可由 Radon–Nikodym 写成密度。
+\dep{定理：Lebesgue 分解；绝对连续、互相奇异定义。}
+% @end
+% @note c8-13|实数上有限测度的三部分
+相对于 Lebesgue 测度，有限测度可唯一分为\textbf{有密度、离散、奇异连续}三部分：
+\[
+\nu=g\cdot\lambda+\sum_i p_i\delta_{x_i}+\nu_{\rm sc}.
+\]
+其中 $g\ge0$ 可积，点至多可数、不同，$p_i>0$ 且 $\sum_i p_i<\infty$。唯一性允许密度在零测集上变化和点的重新排列。
+\dep{推论：有限测度的三部分分解；Lebesgue 分解与点原子。}
+% @end

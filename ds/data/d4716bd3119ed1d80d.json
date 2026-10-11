@@ -1,0 +1,807 @@
+[
+  {
+    "id": "c1-01",
+    "title": "可数集",
+    "title_fr": "Définition – Ensemble dénombrable",
+    "chapter": 1,
+    "text": "Définition – Ensemble dénombrable\nSoit E un ensemble. On dit que E est dénombrable s’il existe φ:E →N injective.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{先理解对象。}可数说的是元素能否安排进自然数的编号表，不是长度大小。本课程用“存在单射 $E\\to\\N$”定义，因此\\textbf{有限集也算可数}。\n\\textbf{例子。}$\\N,\\Z,\\Q$ 可数；可数集的子集、可数个可数集的并仍可数。后一个事实会让“双重编号的覆盖”仍成为合法的可数覆盖。\n\\dep{定义：可数集；基础性质：可数集的可数并仍可数。}"
+  },
+  {
+    "id": "c1-02",
+    "title": "实数不可数",
+    "title_fr": "Propriété – Non-dénombrabilité de R : argument diagonal de Cantor",
+    "chapter": 1,
+    "text": "Propriété – Non-dénombrabilité de R : argument diagonal de Cantor\nL’intervalle ]0,1[, et donc R, n’est pas dénombrable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n把区间 $(0,1)$ 中的数假设列成 $x_1,x_2,\\ldots$，再构造一个数，其第 $n$ 位与 $x_n$ 的第 $n$ 位不同，就得到一个不在表中的数。\\textbf{构造小数时要避开双重展开的歧义}，可只取数字 $1,2$。\n这里要记住结论：$(0,1)$ 不可数，故 $\\R$ 不可数。这个论证\\textbf{不在指定的 15 个证明中}。\n\\dep{性质：Cantor 对角线论证；定义：可数集。}"
+  },
+  {
+    "id": "c1-03",
+    "title": "集合的上极限与下极限",
+    "title_fr": "Définition – Limite supérieure et limite inférieure d’une suite d’ensembles",
+    "chapter": 1,
+    "text": "Définition – Limite supérieure et limite inférieure d’une suite d’ensembles\nSoit (A n ) n∈N une suite de parties d’un ensemble Ω. On appelle :\n— limite supérieure de (A n ) n∈N l’ensemble des éléments qui appartiennent à une infinité de A n :\nlimsupA ={ω ∈Ω|ω ∈A pour une infinité d’indices n}={ω ∈Ω|∀i∈N, ∃j ≥i, ω ∈A };\nn n j\nn∈N\n— limite inférieure de (A n ) n∈N l’ensemble des éléments qui appartiennent à tous les A n sauf un nombre fini\nd’entre eux :\nliminfA ={ω ∈Ω|ω ∈A pour tout n assez grand}={ω ∈Ω|∃i∈N, ∀j ≥i, ω ∈A }.\nn n j\nn∈N\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n固定一个点 $x$，观察它是否进入每个 $A_n$。\\textbf{上极限：进入无限多次；下极限：从某一时刻起一直进入。}\n\\[\n\\begin{aligned}\nx\\in\\limsup A_n&\\iff\\forall n\\ \\exists m\\ge n:\\ x\\in A_m,\\\\\nx\\in\\liminf A_n&\\iff\\exists n\\ \\forall m\\ge n:\\ x\\in A_m.\n\\end{aligned}\n\\]\n例如 $A_{2n}=[0,1]$、$A_{2n+1}=[1,2]$，上极限是 $[0,2]$，下极限是 $\\{1\\}$。\\textbf{两个量词的顺序决定含义}。\n\\dep{定义：集合上极限、下极限。}"
+  },
+  {
+    "id": "c1-04",
+    "title": "把量词写成并与交",
+    "title_fr": "Propriété – Description par réunion et intersection",
+    "chapter": 1,
+    "text": "Propriété – Description par réunion et intersection\nSoit (A n ) n∈N une suite de parties de Ω. Alors :\n\\ (cid:16) [ (cid:17) [ (cid:16) \\ (cid:17)\nlimsupA = A , liminfA = A .\nn m n m\nn∈N\nn∈N m≥n\nn∈N\nn∈N m≥n\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n“存在”对应并，“对所有”对应交，因此\n\\[\n\\begin{aligned}\n\\limsup A_n&=\\bigcap_n\\bigcup_{m\\ge n}A_m,\\\\\n\\liminf A_n&=\\bigcup_n\\bigcap_{m\\ge n}A_m.\n\\end{aligned}\n\\]\n总有 $\\liminf A_n\\subseteq\\limsup A_n$。若 $A_n$ 递增，两者均为 $\\bigcup_n A_n$；递减时均为 $\\bigcap_n A_n$。\n\\dep{定义：条目 c1-03；性质：集合的并、交与量词。}"
+  },
+  {
+    "id": "c1-05",
+    "title": "区间的长度",
+    "title_fr": "Définition – Longueur d’un intervalle",
+    "chapter": 1,
+    "text": "Définition – Longueur d’un intervalle\nSi I est un intervalle borné de R ayant pour extrémités a≤b (qu’elles appartiennent ou non à I), on note\nℓ(I):=b−a.\nPour un intervalle non borné, on pose ℓ(I):=+∞.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n有界区间两端为 $a\\le b$，长度就是 $b-a$；开闭端点不改变长度。无界区间长度为 $+\\infty$。\n后面覆盖集合时，\\textbf{先把每个区间的长度相加，再对所有合法覆盖取下确界}，不是数区间的个数。\n\\dep{定义：区间长度。}"
+  },
+  {
+    "id": "c1-06",
+    "title": "Lebesgue 外测度",
+    "title_fr": "Définition – Mesure extérieure de Lebesgue",
+    "chapter": 1,
+    "text": "Définition – Mesure extérieure de Lebesgue\nPour toute partie A⊂R, on pose\n( (cid:12) )\nX (cid:12) [\nλ∗(A):=inf ℓ(I ) (cid:12) A⊂ I , I intervalle ouvert ,\ni (cid:12) i i\ni∈N (cid:12) i∈N\nla borne inférieure étant prise sur tous les recouvrements dénombrables de A par des intervalles ouverts. Le nombre\nλ∗(A)∈[0,+∞] est appelé mesure extérieure de A.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\lambda^*(A)=\\inf_{A\\subseteq\\bigcup_n I_n}\\sum_n\\ell(I_n),\n\\]\n其中 $I_n$ 是开区间，覆盖至多可数。它对\\textbf{任意子集}都有定义；覆盖可重叠，费用按总长度计算。下确界不一定由某个覆盖达到。\n直觉：用开区间把集合盖住，寻找尽可能低的覆盖费用。\\textbf{外测度不是已经定义好的可列可加测度}。\n\\dep{定义：区间长度、外测度；分析基础：下确界。}"
+  },
+  {
+    "id": "c1-07",
+    "title": "外测度的三个基本性质",
+    "title_fr": "Propriété – Premières propriétés de λ∗",
+    "chapter": 1,
+    "text": "Propriété – Premières propriétés de λ∗\nLa mesure extérieure de Lebesgue vérifie :\n1. λ∗(∅)=0;\n2. croissance : A⊂B ⇒λ∗(A)≤λ∗(B);\n3. σ-sous-additivité : pour toute suite (A n ) n∈N de parties de R,\n(cid:16)[ (cid:17) X\nλ∗ A ≤ λ∗(A ).\nn n\nn n\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n空集外测度为零；包含关系给出单调性；对任意集合序列有\n\\[\n\\lambda^*\\Bigl(\\bigcup_n A_n\\Bigr)\\le\\sum_n\\lambda^*(A_n).\n\\]\n\\textbf{这里是不等式，没有要求集合可测或互不相交}。核心证明办法：给每个 $A_n$ 分配很小的覆盖误差，再把所有覆盖合在一起。\n\\dep{定义：外测度 c1-06；指定证明 01。}"
+  },
+  {
+    "id": "c1-08",
+    "title": "平移与伸缩",
+    "title_fr": "Propriété – Invariance de λ∗ par translation et par homothétie",
+    "chapter": 1,
+    "text": "Propriété – Invariance de λ∗ par translation et par homothétie\nPour toute partie E ⊂R :\n1. pour tout x∈R, en notant x+E :={x+y |y ∈E}, on a λ∗(x+E)=λ∗(E);\n2. pour tout a∈R∗ et tout b∈R, en notant aE+b:={ay+b|y ∈E}, on a λ∗(aE+b)=|a|λ∗(E).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于 $a\\ne0$ 和 $b\\in\\R$，\n\\[\n\\lambda^*(aA+b)=|a|\\lambda^*(A).\n\\]\n平移不改变长度；伸缩让长度乘 $|a|$，负号只翻转方向。\\textbf{证明等式要做两个方向}：正向变换覆盖，再用逆变换把覆盖拉回。\n\\dep{定义：区间长度、外测度；指定证明 02。}"
+  },
+  {
+    "id": "c1-09",
+    "title": "区间的外测度等于长度",
+    "title_fr": "Théorème – Valeur de λ∗ sur les intervalles",
+    "chapter": 1,
+    "text": "Théorème – Valeur de λ∗ sur les intervalles\nPour tous réels a≤b, λ∗([a,b])=λ∗(]a,b[)=b−a.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\lambda^*([a,b])=\\lambda^*((a,b))=b-a.\n\\]\n不要将它当成外测度的定义：它是由覆盖定义推出的定理。单点的长度为零，于是改变有限个端点不影响外测度。\n\\dep{定理：外测度在区间上的值；性质：外测度单调性与可列次可加性。}"
+  },
+  {
+    "id": "c1-10",
+    "title": "零测集不一定是空集",
+    "title_fr": "Définition – Ensemble négligeable",
+    "chapter": 1,
+    "text": "Définition – Ensemble négligeable\nUne partie N ⊂R est dite négligeable si sa mesure extérieure de Lebesgue est nulle, c’est-à-dire si λ∗(N)=0. En\nparticulier, les singletons, Q et plus généralement toutes les parties dénombrables de R sont négligeables.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{零测}指 $\\lambda^*(N)=0$。单点、有限集和可数集都是零测集，例如 $\\Q$ 在 $\\R$ 中稠密，却仍是零测集。\n\\textbf{反向不成立}：Cantor 集不可数，但长度为零。元素很多与长度很大是两件事。\n\\dep{定义：零测集；外测度区间定理与可列次可加性；Cantor 集性质 c2-13。}"
+  },
+  {
+    "id": "c1-11",
+    "title": "Lebesgue 可测性的判据",
+    "title_fr": "Définition – Ensembles Lebesgue-mesurables",
+    "chapter": 1,
+    "text": "Définition – Ensembles Lebesgue-mesurables\nUne partie B ⊂R est dite Lebesgue-mesurable si\n∀A⊂R, λ∗(A)=λ∗(A∩B)+λ∗(A∩Bc).\nOn note M(λ∗) l’ensemble des parties Lebesgue-mesurables de R.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n集合 $B$ 可测，意味着对\\textbf{任意测试集合} $A\\subseteq\\R$，都能精确切分外测度：\n\\[\n\\lambda^*(A)=\\lambda^*(A\\cap B)+\\lambda^*(A\\cap B^c).\n\\]\n并不是只检验 $A=B$，也不是只检验区间。次可加性自动给出一个方向；可测性要求反向也成立。\n\\dep{定义：Lebesgue 可测集（Carathéodory 判据）；性质：外测度次可加性。}"
+  },
+  {
+    "id": "c1-12",
+    "title": "从外测度得到真正的测度",
+    "title_fr": "Théorème – Théorème de Carathéodory",
+    "chapter": 1,
+    "text": "Théorème – Théorème de Carathéodory\nM(λ∗) contient ∅, est stable par complémentation et par réunion dénombrable; il contient également toute partie de\nmesure extérieure nulle. De plus, la restriction de λ∗ à M(λ∗) est additive sur les réunions dénombrables disjointes :\nsi (B n ) n∈N sont des éléments de M(λ∗) deux à deux disjoints, alors λ∗(cid:0)S n B n (cid:1) = P n λ∗(B n ).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\nCarathéodory 定理说明可测集族 $\\M(\\lambda^*)$ 是 $\\sigma$-代数，包含所有外测度为零的集合；$\\lambda^*$ 限制到这个族上后成为\\textbf{可列可加的测度}。\n这一步把“对任意集合计算覆盖费用”转成“在合适集合族上进行可加测量”。\\textbf{Lebesgue 测度的完备性}也来自零测集的任意子集仍零测、仍可测。\n\\dep{定理：Carathéodory；定义：可测判据 c1-11。}"
+  },
+  {
+    "id": "c1-13",
+    "title": "Vitali 集：并非所有集合都可测",
+    "title_fr": "Théorème – Ensemble de Vitali",
+    "chapter": 1,
+    "text": "Théorème – Ensemble de Vitali\nIl existe une partie F de [0,1] qui n’est pas Lebesgue-mesurable, c’est-à-dire F ∈/ M(λ∗). En particulier, M(λ∗)⊊\nP(R).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\nVitali 定理给出 $[0,1]$ 的一个非 Lebesgue 可测子集。因此\n\\[\n\\B(\\R)\\subseteq\\M(\\lambda^*)\\subsetneq\\mathcal P(\\R).\n\\]\n\\textbf{外测度仍可对这个集合定义，但不能把任意集合都放进 Lebesgue 测度的定义域。}这里只要求掌握结论与作用，不要求 Vitali 构造的证明。\n\\dep{定理：Vitali 集；性质：Borel 集 Lebesgue 可测 c2-10。}"
+  },
+  {
+    "id": "c2-01",
+    "title": "σ-代数与可测空间",
+    "title_fr": "Définition – Tribu ou σ-algèbre",
+    "chapter": 2,
+    "text": "Définition – Tribu ou σ-algèbre\nSoit Ω un ensemble. Une partie T de P(Ω) est appelée tribu (ou σ-algèbre) sur Ω si :\n— ∅∈T ;\n— si A∈T, alors Ac ∈T (stabilité par complémentation);\nS\n— si (A n ) n∈N est une famille d’éléments de T, alors n∈N A n ∈T (stabilité par réunion dénombrable).\nLe couple (Ω,T) est appelé espace mesurable, ou, dans un contexte probabiliste, espace probabilisable. Les\néléments de T sont appelés parties mesurables, ou, dans un contexte probabiliste, événements.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n一个 $\\sigma$-代数 $\\T\\subseteq\\mathcal P(\\Omega)$ 必须含空集、对补集封闭、对\\textbf{可数并}封闭。$(\\Omega,\\T)$ 是可测空间，尚未分配任何质量。\n最小例子是 $\\{\\varnothing,\\Omega\\}$，最大例子是 $\\mathcal P(\\Omega)$。\\textbf{“有限并封闭”不足以成为 $\\sigma$-代数}；无限集上的有限或余有限子集族是重要反例。\n\\dep{定义：\\ensuremath{\\sigma}-代数、可测空间；例子：TD2 第 1.3 题。}"
+  },
+  {
+    "id": "c2-02",
+    "title": "σ-代数的派生封闭性",
+    "title_fr": "Propriété – Propriétés élémentaires d’une tribu",
+    "chapter": 2,
+    "text": "Propriété – Propriétés élémentaires d’une tribu\nSoit T une tribu sur Ω. Alors :\n1. Ω∈T ;\n2. T est stable par intersection dénombrable;\n3. T est stable par réunion et intersection finies;\n4. si A,B ∈T, alors\nA\\B ∈T et A△B ∈T.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n由补集和可数并，利用 De Morgan 律得到可数交；再得到有限并交、差集 $A\\setminus B=A\\cap B^c$ 和对称差。\n\\textbf{不要求对不可数并封闭}。实际证明某个集合可测时，应把它写成已知可测集合的可数并、交、补，而不是直接宣布它“看起来可测”。\n\\dep{定义：\\ensuremath{\\sigma}-代数 c2-01；集合性质：De Morgan 律。}"
+  },
+  {
+    "id": "c2-03",
+    "title": "生成的 σ-代数",
+    "title_fr": "Définition – Tribu engendrée par une famille de parties",
+    "chapter": 2,
+    "text": "Définition – Tribu engendrée par une famille de parties\nSoit Ω un ensemble, G ⊂P(Ω). On appelle tribu engendrée par G, notée σ(G), la plus petite tribu (au sens de\nl’inclusion) contenant G.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\sigma(\\mathcal G)$ 是\\textbf{包含生成族 $\\mathcal G$ 的最小 $\\sigma$-代数}。生成族本身通常不是 $\\sigma$-代数。\n有限分割 $A_1,\\ldots,A_n$ 生成的 $\\sigma$-代数是所有块的并；当块非空且互不相交时共有 $2^n$ 个元素。\n\\dep{定义：生成的 \\ensuremath{\\sigma}-代数；例子：TD2 第 1.1 题。}"
+  },
+  {
+    "id": "c2-04",
+    "title": "σ-代数的交",
+    "title_fr": "Propriété – Intersection de tribus",
+    "chapter": 2,
+    "text": "Propriété – Intersection de tribus\nSoit Ω un ensemble et soit (T ) une famille non vide de tribus sur Ω. Alors\ni i∈I\n\\\nT\ni\ni∈I\nest encore une tribu sur Ω.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n同一个底集上的\\textbf{非空族} $\\sigma$-代数的交仍是 $\\sigma$-代数。理解方式：属于交，就意味着同时属于每一个成员。\n逐条核对空集、补集、可数并即可。\\textbf{并集一般不成立}：不同 $\\sigma$-代数的并可能不对并运算封闭。\n\\dep{性质：\\ensuremath{\\sigma}-代数的交；定义：\\ensuremath{\\sigma}-代数；指定证明 03。}"
+  },
+  {
+    "id": "c2-05",
+    "title": "生成 σ-代数的交集描述",
+    "title_fr": "Propriété – Description de la tribu engendrée",
+    "chapter": 2,
+    "text": "Propriété – Description de la tribu engendrée\nSoit Ω un ensemble, G ⊂P(Ω). Alors\n\\\nσ(G)= T′.\nT′ tribu\nG⊂T′\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\sigma(\\mathcal G)=\\bigcap_{\\substack{\\mathcal U\\text{ 为 \\ensuremath{\\sigma}-代数}\\\\\\mathcal G\\subseteq\\mathcal U}}\\mathcal U.\n\\]\n右侧被交的族不空，因为 $\\mathcal P(\\Omega)$ 是其中一个成员。证明要核对\\textbf{它是 $\\sigma$-代数、包含生成族、比任何候选都小}，三点合起来才说明“最小”。\n\\dep{定义：生成 \\ensuremath{\\sigma}-代数；性质：\\ensuremath{\\sigma}-代数的交；指定证明 04。}"
+  },
+  {
+    "id": "c2-06",
+    "title": "生成族方法的核心包含关系",
+    "title_fr": "Propriété – Monotonie de la tribu engendrée",
+    "chapter": 2,
+    "text": "Propriété – Monotonie de la tribu engendrée\nSoit Ω un ensemble, soit A⊆P(Ω) et soit U une tribu sur Ω. Si\nA⊆U,\nalors\nσ(A)⊆U.\nAutrement dit : dès qu’une tribu contient les générateurs, elle contient automatiquement toute la tribu engendrée\npar ces générateurs.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n只要 $\\mathcal U$ 是 $\\sigma$-代数且 $\\mathcal G\\subseteq\\mathcal U$，就有 $\\sigma(\\mathcal G)\\subseteq\\mathcal U$。\n这一性质是后面证明 Borel 生成、原像判别的主工具。\\textbf{先验证候选族确实是 $\\sigma$-代数，再检查包含生成元}，不能省掉前半句。\n\\dep{定义：最小的 \\ensuremath{\\sigma}-代数 c2-03。}"
+  },
+  {
+    "id": "c2-07",
+    "title": "Borel σ-代数",
+    "title_fr": "Définition – Tribu borélienne, borélien",
+    "chapter": 2,
+    "text": "Définition – Tribu borélienne, borélien\nSoitO l’ensembledesouvertsdeR(pourlavaleurabsolue).Onappelletribu boréliennedeRlatribuB(R):=σ(O)\nengendrée par O. Les éléments de cette tribu sont appelés boréliens.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\B(\\R)$ 是由所有开集生成的 $\\sigma$-代数。开集、闭集、单点、区间都是 Borel 集，但 Borel 集不只这些形状。\n\\textbf{开集族不等于 Borel 族}：例如闭区间也是 Borel 集。底空间和拓扑必须说清楚，$\\B(\\R^n)$ 与 $\\B(\\R)$ 并非同一个集合族。\n\\dep{定义：Borel \\ensuremath{\\sigma}-代数；性质：补集和生成 \\ensuremath{\\sigma}-代数。}"
+  },
+  {
+    "id": "c2-08",
+    "title": "有界开区间生成 Borel 族",
+    "title_fr": "Propriété – Génération de la tribu borélienne par les intervalles ouverts bornés",
+    "chapter": 2,
+    "text": "Propriété – Génération de la tribu borélienne par les intervalles ouverts bornés\nLa tribu borélienne de R est engendrée par les intervalles ouverts bornés :\nB(R)=σ (cid:0) {]a,b[:a<b} (cid:1) .\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n所有有界开区间已足够生成 $\\B(\\R)$。一个方向：区间是开集。另一方向：\\textbf{每个开集是可数个有理中心、有理半径开区间的并}。\n关键是\\textbf{可数性}。只写“开集是开区间的并”还不够，因为 $\\sigma$-代数仅保证可数并封闭。\n\\dep{定义：Borel、\\ensuremath{\\sigma}-代数；性质：有理数的稠密性和可数性；指定证明 05。}"
+  },
+  {
+    "id": "c2-09",
+    "title": "Borel 的其他生成族",
+    "title_fr": "Propriété – Autres familles génératrices de la tribu borélienne",
+    "chapter": 2,
+    "text": "Propriété – Autres familles génératrices de la tribu borélienne\nOn a également\nB(R)=σ (cid:0) {[a,b]:a<b} (cid:1) =σ (cid:0) {]−∞,a]:a∈R} (cid:1) =σ (cid:0) {]−∞,a[:a∈R} (cid:1) .\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n闭区间、左侧开半直线、左侧闭半直线也分别生成 $\\B(\\R)$。例如\n\\[\n\\B(\\R)=\\sigma\\{(-\\infty,a]:a\\in\\R\\}.\n\\]\n因此证明实值函数可测时，可以只检验 $\\{f\\le a\\}$ 或 $\\{f<a\\}$ 等半直线原像，不必逐一处理所有 Borel 集。\n\\dep{性质：Borel 的其他生成族；可测函数生成族判别 c4-07。}"
+  },
+  {
+    "id": "c2-10",
+    "title": "Borel 集与 Lebesgue 可测集",
+    "title_fr": "Propriété – Les boréliens sont Lebesgue-mesurables",
+    "chapter": 2,
+    "text": "Propriété – Les boréliens sont Lebesgue-mesurables\nB(R)⊂M(λ∗) : tout borélien est Lebesgue-mesurable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n每个 Borel 集都是 Lebesgue 可测集。\\textbf{不要把两种可测性混为一谈}：Lebesgue 可测族包含 Borel 族，还包含零测集的任意子集。\n在本课程中，“Borel 可测函数”以 Borel 族作为源空间可测族；“Lebesgue 可测函数”以 $\\M(\\lambda^*)$ 作为源空间可测族。\n\\dep{性质：Borel 集 Lebesgue 可测；定义：Lebesgue 可测函数 c4-05。}"
+  },
+  {
+    "id": "c2-11",
+    "title": "可测集等于 Borel 集加零测余项",
+    "title_fr": "Théorème – Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près",
+    "chapter": 2,
+    "text": "Théorème – Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près\nSoit E ∈M(λ∗). Il existe un borélien B ∈B(R) et un ensemble N ⊂R de mesure extérieure nulle tels que\nE =B⊔N (réunion disjointe), B ⊂E.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 $E\\in\\M(\\lambda^*)$，可找到 Borel 集 $B\\subseteq E$ 与零测集 $N$，使 $E=B\\sqcup N$。\n它解释为什么很多 Lebesgue 积分结论允许忽略零测余项。\\textbf{这里的 $N$ 不必是 Borel 集}；否则会错误地推出所有 Lebesgue 可测集都是 Borel 集。\n\\dep{定理：Lebesgue 可测集的 Borel 加零测分解。}"
+  },
+  {
+    "id": "c2-12",
+    "title": "Cantor 集的构造",
+    "title_fr": "Définition – Ensemble de Cantor",
+    "chapter": 2,
+    "text": "Définition – Ensemble de Cantor\nOn construit une suite (C n ) n∈N de parties fermées de [0,1] par récurrence : C 0 =[0,1], et C n+1 s’obtient en retirant,\nau milieu de chaque intervalle constituant C , son tiers central ouvert. Ainsi\nn\nh i h i h i h i h i h i\nC = 0,1 ∪ 2,1 , C = 0,1 ∪ 2,1 ∪ 2,7 ∪ 8,1 , ...\n1 3 3 2 9 9 3 3 9 9\nT\nL’ensemble triadique de Cantor est C := C .\nn∈N n\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n从 $C_0=[0,1]$ 开始，每次删去每个剩余闭区间的中间开三分之一，令 $C=\\bigcap_n C_n$。\n第 $n$ 步有 $2^n$ 段，每段长 $3^{-n}$。\\textbf{端点保留}；先看有限阶段的形状，再理解无限交。\n\\dep{定义：三分 Cantor 集；区间长度。}"
+  },
+  {
+    "id": "c2-13",
+    "title": "Cantor 集的重要反例作用",
+    "title_fr": "Propriété – L’ensemble de Cantor est fermé, non dénombrable, et négligeable",
+    "chapter": 2,
+    "text": "Propriété – L’ensemble de Cantor est fermé, non dénombrable, et négligeable\nL’ensemble C vérifie :\n1. C est un fermé de R, donc C ∈B(R);\n2. C n’est pas dénombrable;\n3. λ(C)=0.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\nCantor 集\\textbf{闭、不可数、零测}。有限阶段的总长度为 $(2/3)^n\\to0$，说明“零测”不意味着“可数”。\n它还将在第 8 章承载质量为 $1$ 的 Cantor 测度：\\textbf{同一个集合对不同测度可以有完全不同的质量}。\n\\dep{性质：Cantor 集；定义：构造 c2-12；Cantor 测度性质 c8-09。}"
+  },
+  {
+    "id": "c3-01",
+    "title": "测度、有限与 σ-有限",
+    "title_fr": "Définition – Mesure, mesure finie, mesure σ-finie, mesure de probabilité",
+    "chapter": 3,
+    "text": "Définition – Mesure, mesure finie, mesure σ-finie, mesure de probabilité\nSoit (Ω,T) un espace mesurable. Soit µ:T →R+∪{+∞} une application. On dit que µ est une mesure si :\n1. µ(∅)=0;\n(cid:0)S (cid:1)\n2. pour toute famille (A n ) n∈N d’éléments de T deux à deux incompatibles (i.e. disjoints), on a µ n∈N A n =\nP\nµ(A ) (σ-additivité).\nn∈N n\nOn dit de plus que µ est :\n— une mesure finie si µ(Ω)<+∞;\nS\n— une mesure σ-finie s’il existe une famille (A n ) n∈N d’éléments de T vérifiant n A n =Ω et µ(A n )<+∞ pour\ntout n;\n— une mesure de probabilité (ou probabilité) si µ(Ω)=1.\nLe triplet (Ω,T,µ) est appelé espace mesuré; lorsque µ est une probabilité, on parle d’espace probabilisé et on\nnote en général P plutôt que µ.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n测度 $\\mu:\\T\\to[0,+\\infty]$ 要满足空集为零、\\textbf{互不相交的可数并的质量等于质量之和}。\n有限是 $\\mu(\\Omega)<\\infty$；$\\sigma$-有限是底空间可被可数个有限测度集合覆盖。后者并不要求 $\\mu(\\Omega)$ 有限，例如 $\\R$ 上 Lebesgue 测度。\n\\textbf{概率测度只是总质量为 $1$ 的测度}，这个定义仍在 DS 考纲里；“不考概率”指后续概率章节。\n\\dep{定义：测度、有限测度、\\ensuremath{\\sigma}-有限、概率测度。}"
+  },
+  {
+    "id": "c3-02",
+    "title": "Dirac 测度",
+    "title_fr": "Définition – Mesure de Dirac",
+    "chapter": 3,
+    "text": "Définition – Mesure de Dirac\nSoit (Ω,T) un espace mesurable et soit x∈Ω. La mesure de Dirac en x, notée δ , est définie par\nx\n(\n1 si x∈A,\nδ (A):= A∈T.\nx\n0 si x∈/ A,\nPlus généralement, si (x ) est une famille au plus dénombrable de points de Ω et (p ) des réels positifs,\ni i∈I i i∈I\nP P\nµ := p δ (c’est-à-dire µ(A) = p 1 (x )) est une mesure sur (Ω,T), dite discrète; c’est une mesure\ni∈I i xi\nP\ni∈I i A i\nde probabilité si et seulement si p =1. La notion plus générale de mesure purement atomique sera précisée au\ni i\nChapitre « Décomposition des mesures ».\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\delta_x(A)=\\begin{cases}1,&x\\in A,\\\\0,&x\\notin A.\\end{cases}\n\\]\n它把所有质量放在一点上。\\textbf{定义对 $A\\in\\T$ 使用}；无需先要求单点 $\\{x\\}$ 本身可测，就能定义 $\\delta_x$。\n\\dep{定义：Dirac 测度；测度公理。}"
+  },
+  {
+    "id": "c3-03",
+    "title": "本课程中的原子与弥散测度",
+    "title_fr": "Définition – Atome et mesure diffuse",
+    "chapter": 3,
+    "text": "Définition – Atome et mesure diffuse\nSoit (Ω,T,µ) un espace mesuré. Un élément x∈Ω est appelé atome de µ lorsque son singleton est mesurable et\nµ({x})>0.\nOn dit que µ est diffuse si elle n’a aucun atome.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n这里按官方考纲的\\textbf{点原子}约定：若单点可测且 $\\mu(\\{x\\})>0$，则称 $x$ 为原子。所有单点可测且质量均为零时称测度弥散。\nDirac 测度有点原子；Lebesgue 测度弥散。\\textbf{弥散不等于有密度}：Cantor 测度也弥散，但没有相对于 Lebesgue 测度的密度。\n\\dep{定义：考纲中的原子、弥散测度；例子：Cantor 测度 c8-09。}"
+  },
+  {
+    "id": "c3-04",
+    "title": "Rn 上的 Lebesgue 测度",
+    "title_fr": "Théorème – Mesure de Lebesgue sur Rn",
+    "chapter": 3,
+    "text": "Théorème – Mesure de Lebesgue sur Rn\nSoit n≥1; on considère l’espace mesurable (Rn,B(Rn)). Il existe une unique mesure λ (notée simplement λ ou dx\nn\nlorsque n=1), appelée mesure de Lebesgue, vérifiant :\nn\nY\n∀P =[a ,b ]×···×[a ,b ]∈B(Rn), λ (P)= (b −a ),\n1 1 n n n i i\ni=1\noù a <b ,...,a <b . Autrement dit, λ prolonge à tous les boréliens la notion usuelle de longueur, d’aire ou de\n1 1 n n n\nvolume d’un pavé.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\lambda_n$ 是在 $\\B(\\R^n)$ 上给每个长方体分配通常体积的唯一测度：体积等于各边长度的乘积。\n一维是长度、二维是面积、三维是体积。\\textbf{这是测度的定义对象与刻画定理，不是说所有子集都可测}。本条唯一性结论仍在清单中，移除的是独立的 $\\pi$-系统唯一性推论。\n\\dep{定理：Rn 上 Lebesgue 测度的存在唯一性与长方体体积。}"
+  },
+  {
+    "id": "c3-05",
+    "title": "相对于测度的零测集",
+    "title_fr": "Définition – Ensemble négligeable",
+    "chapter": 3,
+    "text": "Définition – Ensemble négligeable\nSoit (Ω,T,µ) un espace mesuré. Soit A∈T. On dit que A est négligeable (pour µ) si µ(A)=0.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n在 $(\\Omega,\\T,\\mu)$ 中，可测集 $N$ 若 $\\mu(N)=0$，就叫 $\\mu$-零测集。\\textbf{一定要说明相对于哪个测度}。\n例如单点对 Lebesgue 测度零测，对该点的 Dirac 测度不零测。一般测度空间未必完备，零测集的任意子集未必都在 $\\T$ 中。\n\\dep{定义：\\ensuremath{\\mu}-零测集；Dirac 与 Lebesgue 测度；完备性区别。}"
+  },
+  {
+    "id": "c3-06",
+    "title": "测度的基本运算",
+    "title_fr": "Propriété – Propriétés élémentaires d’une mesure",
+    "chapter": 3,
+    "text": "Propriété – Propriétés élémentaires d’une mesure\nSoit (Ω,T,µ) un espace mesuré. Alors :\n1. (additivité finie) pour (A ) une famille finie d’événements deux à deux incompatibles, µ(\nSn\nA ) =\ni 1≤i≤n i=1 i\nPn\nµ(A ); en particulier, si A,B sont incompatibles, µ(A∪B)=µ(A)+µ(B);\ni=1 i\n2. (croissance) si A⊂B (avec A,B ∈T), alors µ(A)≤µ(B); en particulier si µ(B)<+∞ alors µ(A)<+∞;\n3. (formule du crible à deux termes) si A,B sont de mesure finie, A ∪ B est de mesure finie et µ(A ∪ B) =\nµ(A)+µ(B)−µ(A∩B);\n4. (différence propre) si A⊂B, alors µ(B\\A)=µ(B)−µ(A) dès que µ(A)<+∞.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n有限可加与单调性来自可列可加。集合差公式为\n\\[\n\\mu(B\\setminus A)=\\mu(B)-\\mu(A),\\quad A\\subseteq B,\n\\]\n\\textbf{需要 $\\mu(A)<\\infty$}。二集合容斥公式按考纲要求 $A,B$ 都有限测度。\\textbf{不能做 $\\infty-\\infty$}；写分解式 $\\mu(B)=\\mu(A)+\\mu(B\\setminus A)$ 总是更稳妥。\n\\dep{性质：测度的基本性质；指定证明 06。}"
+  },
+  {
+    "id": "c3-07",
+    "title": "递增与递减连续性",
+    "title_fr": "Propriété – Continuité croissante et décroissante",
+    "chapter": 3,
+    "text": "Propriété – Continuité croissante et décroissante\nSoit (Ω,T,µ) un espace mesuré.\n1. Si (A n ) n∈N est une suite croissante d’événements (i.e. A n ⊂A n+1 pour tout n), alors\n(cid:16) [ (cid:17)\nµ A = lim µ(A ).\nn n\nn→+∞\nn∈N\n2. Si (B n ) n∈N est une suite décroissante d’événements et s’il existe m tel que µ(B m )<+∞, alors\n(cid:16) \\ (cid:17)\nµ B = lim µ(B ).\nn n\nn→+∞\nn∈N\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\begin{aligned}\nA_n\\uparrow A&\\Rightarrow\\mu(A_n)\\uparrow\\mu(A),\\\\\nB_n\\downarrow B&\\Rightarrow\\mu(B_n)\\downarrow\\mu(B).\n\\end{aligned}\n\\]\n\\textbf{第二行需要某个 $B_m$ 的测度有限}；第一行无需有限性。反例 $B_n=[n,\\infty)$：交为空集，每项 Lebesgue 测度却都是无穷。\n\\dep{性质：测度连续性；指定证明 07。}"
+  },
+  {
+    "id": "c3-08",
+    "title": "Boole 不等式",
+    "title_fr": "Propriété – Sous-additivité dénombrable, inégalité de Boole",
+    "chapter": 3,
+    "text": "Propriété – Sous-additivité dénombrable, inégalité de Boole\nSoit (Ω,T,µ) un espace mesuré, soit (A n ) n∈N une famille d’événements. Alors\n(cid:16) [ (cid:17) X\nµ A ≤ µ(A ).\nn n\nn∈N n∈N\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\mu\\Bigl(\\bigcup_n A_n\\Bigr)\\le\\sum_n\\mu(A_n).\n\\]\n这里集合必须可测，但无需互不相交。\\textbf{相交部分重复计费，只会让右侧更大}；证明可以把集合依次扣去已出现部分，再用可加性。\n\\dep{性质：Boole 不等式；定义：测度；指定证明 08。}"
+  },
+  {
+    "id": "c3-09",
+    "title": "上极限与下极限的可测性",
+    "title_fr": "Propriété – Stabilité par limsup/liminf",
+    "chapter": 3,
+    "text": "Propriété – Stabilité par limsup/liminf\nSoit (Ω,T) un espace mesurable, soit (A n ) n∈N une suite d’éléments de T. Alors limsup n A n et liminf n A n appar-\ntiennent à T.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若所有 $A_n\\in\\T$，则集合的上极限和下极限也属于 $\\T$。理由是它们可以写成可数并与可数交。\n\\textbf{结论首先是可测性}；若要比较相应测度与 $\\liminf\\mu(A_n)$ 等，还必须另给定理和条件，不能仅靠符号相似。\n\\dep{集合极限公式 c1-04；\\ensuremath{\\sigma}-代数封闭性 c2-02。}"
+  },
+  {
+    "id": "c3-10",
+    "title": "第一 Borel–Cantelli 引理",
+    "title_fr": "Théorème – Lemme de Borel–Cantelli",
+    "chapter": 3,
+    "text": "Théorème – Lemme de Borel–Cantelli\nSoit (Ω,T,µ) un espace mesuré, soit (A n ) n∈N une suite d’éléments de T. Si\nX\nµ(A )<+∞,\nn\nn∈N\nalors\n(cid:0) (cid:1)\nµ limsupA =0.\nn\nn\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $\\sum_n\\mu(A_n)<\\infty$，则 $\\mu(\\limsup A_n)=0$：几乎每个点只会落入有限多个 $A_n$。\n\\textbf{不需要独立性，也不要求测度是概率测度}。证明控制“从第 $n$ 次以后至少出现一次”的尾部并，然后令尾部和趋零。\n\\dep{定理：Borel–Cantelli；Boole 不等式；指定证明 09。}"
+  },
+  {
+    "id": "c4-01",
+    "title": "原像运算是可测性的基础",
+    "title_fr": "Propriété – Propriétés algébriques de l’image réciproque",
+    "chapter": 4,
+    "text": "Propriété – Propriétés algébriques de l’image réciproque\nSoient E,F deux ensembles, f :E →F une application. Alors :\n1. f−1(∅)=∅ et f−1(F)=E;\n2. pour tout B ⊂F, f−1(Bc)= (cid:0) f−1(B) (cid:1)c ;\n3. pour toute famille (B ) de parties de F, f−1(cid:0)S B (cid:1) = S f−1(B ) et f−1(cid:0)T B (cid:1) = T f−1(B ).\ni i∈I i∈I i i∈I i i∈I i i∈I i\nDe plus, si les B sont deux à deux disjoints, les f−1(B ) le sont également.\ni i\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n原像定义是 $f^{-1}(A)=\\{x:f(x)\\in A\\}$，\\textbf{不需要 $f$ 可逆}。它保持并、交、补、差；这些都是集合恒等式。\n例如 $f(x)=x^2$，$f^{-1}((-\\infty,1])=[-1,1]$。判断可测性时是在源空间检查这个集合，而不是在目标空间检查 $f$ 的值。\n\\dep{定义：集合原像；性质：原像与集合运算。}"
+  },
+  {
+    "id": "c4-02",
+    "title": "目标 σ-代数的原像族",
+    "title_fr": "Propriété – Stabilité d’une tribu par image réciproque",
+    "chapter": 4,
+    "text": "Propriété – Stabilité d’une tribu par image réciproque\nSoit E un ensemble, soit (F,S) un espace mesurable, soit f :E →F. Alors\nf−1(S):={f−1(B)|B ∈S}\nest une tribu sur E. De plus, c’est la plus petite tribu sur E qui rende f mesurable comme application de E\nvers (F,S).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $\\T_F$ 是 $F$ 上的 $\\sigma$-代数，则 $f^{-1}(\\T_F)=\\{f^{-1}(B):B\\in\\T_F\\}$ 是 $E$ 上的 $\\sigma$-代数。\n这是原像保持空集、补集与可数并的直接结果，\\textbf{此处 $f$ 可以是任意映射}。\n\\dep{性质：原像运算 c4-01；定义：\\ensuremath{\\sigma}-代数。}"
+  },
+  {
+    "id": "c4-03",
+    "title": "原像与生成 σ-代数",
+    "title_fr": "Propriété – Tribu engendrée et image réciproque",
+    "chapter": 4,
+    "text": "Propriété – Tribu engendrée et image réciproque\nSoient E,F deux ensembles, f :E →F une application, G une partie de P(F). Alors :\nf−1(cid:0) σ(G) (cid:1) =σ (cid:0) f−1(G) (cid:1) .\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\nf^{-1}(\\sigma(\\mathcal G))=\\sigma(f^{-1}(\\mathcal G)).\n\\]\n它说明“先由生成族扩展，再取原像”与“先取生成元的原像，再扩展”结果一致。\\textbf{这是后面生成族判别的背景}，不在指定 15 个证明中。\n\\dep{性质：生成 \\ensuremath{\\sigma}-代数的原像；定义：生成族。}"
+  },
+  {
+    "id": "c4-04",
+    "title": "可测映射的定义",
+    "title_fr": "Définition – Fonction mesurable",
+    "chapter": 4,
+    "text": "Définition – Fonction mesurable\nSoient (E,T ) et (F,T ) deux espaces mesurables. Soit f :E →F une application. On dit que f est mesurable si\nE F\n∀Σ∈T , f−1(Σ)∈T .\nF E\nLorsque T et T sont les tribus boréliennes de E et F, on dit aussi que f est borélienne.\nE F\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\begin{gathered}\nf:(E,\\T_E)\\to(F,\\T_F)\\text{ 可测}\\\\\n\\iff\\forall B\\in\\T_F,\\ f^{-1}(B)\\in\\T_E.\n\\end{gathered}\n\\]\n\\textbf{两个可测族都是定义的一部分}；不标出它们就可能隐藏错误。可测性不要求连续，也不要求把源空间的可测集的\\emph{像}送到可测集。\n\\dep{定义：可测映射。}"
+  },
+  {
+    "id": "c4-05",
+    "title": "Lebesgue 可测函数",
+    "title_fr": "Définition – Fonction Lebesgue-mesurable",
+    "chapter": 4,
+    "text": "Définition – Fonction Lebesgue-mesurable\nUne fonction f :R→R est dite Lebesgue-mesurable lorsqu’elle est mesurable de\n(R,M(λ∗)) dans (R,B(R)),\nc’est-à-dire lorsque\n∀B ∈B(R), f−1(B)∈M(λ∗).\nEn particulier, toute fonction borélienne f :R→R est Lebesgue-mesurable puisque B(R)⊆M(λ∗).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n实值函数的 Lebesgue 可测性是从 $(\\R,\\M(\\lambda^*))$ 到 $(\\R,\\B(\\R))$ 的可测性。\n源空间换成 Borel 族时，才叫 Borel 可测函数。\\textbf{所有 Borel 可测函数都 Lebesgue 可测，反向一般不成立}。\n\\dep{定义：Lebesgue 可测函数；包含关系 c2-10。}"
+  },
+  {
+    "id": "c4-06",
+    "title": "可测映射复合",
+    "title_fr": "Propriété – Stabilité par composition",
+    "chapter": 4,
+    "text": "Propriété – Stabilité par composition\nSoient (E,T ), (F,T ), (G,T ) trois espaces mesurables, f : E → F et g : F → G mesurables. Alors g ◦f est\nE F G\nmesurable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $f:(E,\\T_E)\\to(F,\\T_F)$ 与 $g:(F,\\T_F)\\to(G,\\T_G)$ 都可测，则 $g\\circ f$ 可测。\n\\textbf{中间空间的 $\\sigma$-代数要一致}。证明用 $(g\\circ f)^{-1}(A)=f^{-1}(g^{-1}(A))$，将两个可测性依次使用。\n\\dep{定义：可测映射；原像复合恒等式；指定证明 10。}"
+  },
+  {
+    "id": "c4-07",
+    "title": "只需检查生成元",
+    "title_fr": "Propriété – Caractérisation par une famille génératrice",
+    "chapter": 4,
+    "text": "Propriété – Caractérisation par une famille génératrice\nSoient (E,T ) et (F,T ) deux espaces mesurables, f :E →F, et G une partie de T engendrant T . Alors f est\nE F F F\nmesurable si et seulement si f−1(G)∈T pour tout G∈G.\nE\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $\\T_F=\\sigma(\\mathcal G)$，则 $f$ 可测当且仅当所有 $G\\in\\mathcal G$ 的原像可测。\n实值函数常检验 $\\{f<a\\}$ 或 $\\{f\\le a\\}$。\\textbf{生成族必须是目标空间的生成族}，不能任选几个集合就结束证明。\n\\dep{性质：生成族判别；Borel 生成族 c2-09；指定证明 11。}"
+  },
+  {
+    "id": "c4-08",
+    "title": "连续函数为什么可测",
+    "title_fr": "Propriété – Mesurabilité des fonctions continues",
+    "chapter": 4,
+    "text": "Propriété – Mesurabilité des fonctions continues\nSoient (E,T ) et (F,T ) deux espaces vectoriels normés munis de leur tribu borélienne. Toute application continue\nE F\nf :E →F est mesurable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n赋予两个赋范空间各自的 Borel 族后，连续函数可测。原因：\\textbf{开集的原像是开集，开集生成 Borel 族}。\n这让多项式、绝对值、加法与乘法成为后续可测运算的工具。反向不成立，例如 $\\mathbf1_{[0,\\infty)}$ 可测但在零点不连续。\n\\dep{连续性的开集原像判别；生成族判别；指定证明 12。}"
+  },
+  {
+    "id": "c4-09",
+    "title": "示性函数可测",
+    "title_fr": "Propriété – Mesurabilité des indicatrices",
+    "chapter": 4,
+    "text": "Propriété – Mesurabilité des indicatrices\nSoit (E,T) un espace mesurable, soit A∈T. Alors 1 est mesurable.\nA\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\mathbf1_A$ 在 $A$ 上为 $1$、其余为 $0$。若 $A\\in\\T$，它可测；对任意目标 Borel 集，其原像只可能是 $\\varnothing,A,A^c,E$。\n这是把\\textbf{集合可测性转为函数可测性}的最简单桥梁，也为简单函数积分做准备。\n\\dep{定义：示性函数、可测映射；指定证明 13。}"
+  },
+  {
+    "id": "c4-10",
+    "title": "向量值函数按坐标判别",
+    "title_fr": "Propriété – Caractérisation des fonctions mesurables à valeurs vectorielles",
+    "chapter": 4,
+    "text": "Propriété – Caractérisation des fonctions mesurables à valeurs vectorielles\nSoit (E,T) un espace mesurable, n≥1, f =(f ,...,f ):E →Rn (Rn muni de sa tribu borélienne). Alors f est\n1 n\nmesurable si et seulement si chaque f :E →R est mesurable.\ni\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$f=(f_1,\\ldots,f_n):E\\to\\R^n$ 可测，当且仅当每个 $f_i$ 可测，目标赋予 $\\B(\\R^n)$。\n特别是把两个实值函数组成 $(f,g)$ 后，可与连续的加法、乘法映射复合。\\textbf{先证明坐标可测，再使用复合}。\n\\dep{性质：向量值可测函数的坐标判别；可测复合。}"
+  },
+  {
+    "id": "c4-11",
+    "title": "可测函数的基本运算",
+    "title_fr": "Propriété – Stabilité par opérations usuelles",
+    "chapter": 4,
+    "text": "Propriété – Stabilité par opérations usuelles\nSoit (E,T) un espace mesurable, λ∈R, f,g :E →R mesurables. Alors f +g, fg, λf, |f| sont mesurables.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{实值}可测函数 $f,g$ 的和、积、实数倍、绝对值都可测。写法是先组成 $(f,g)$，再与连续函数 $(u,v)\\mapsto u+v$ 或 $uv$ 复合。\n不要直接推广到任意扩展实值函数：$+\\infty-\\infty$ 等表达式可能无定义。\n\\dep{坐标判别 c4-10、连续函数可测 c4-08、复合 c4-06；指定证明 14。}"
+  },
+  {
+    "id": "c4-12",
+    "title": "扩展实数与其 Borel 族",
+    "title_fr": "Définition – Droite réelle achevée, tribu borélienne achevée",
+    "chapter": 4,
+    "text": "Définition – Droite réelle achevée, tribu borélienne achevée\nOn appelle droite réelle achevée l’ensemble R = R∪{−∞,+∞}, notée aussi [−∞,+∞]. On appelle tribu\nborélienne achevée l’ensemble\nB(R):={A⊂R|A∩R∈B(R)},\noù B(R) désigne la tribu borélienne de R.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n扩展实数是 $\\overline\\R=\\R\\cup\\{-\\infty,+\\infty\\}$。考纲的集合族为\n\\[\n\\B(\\overline\\R)=\\{A\\subseteq\\overline\\R:A\\cap\\R\\in\\B(\\R)\\}.\n\\]\n\\textbf{这里的“achevée”指加入无穷端点}，不要与某个测度的完备化混淆。它允许上确界或极限取无穷值。\n\\dep{定义：扩展实数及其 Borel \\ensuremath{\\sigma}-代数。}"
+  },
+  {
+    "id": "c4-13",
+    "title": "可数上确界与下确界",
+    "title_fr": "Propriété – Stabilité par sup et inf dénombrables",
+    "chapter": 4,
+    "text": "Propriété – Stabilité par sup et inf dénombrables\nSoit (E,T) un espace mesurable, soit (f ) une famille de fonctions mesurables E →R:=R∪{−∞,+∞} (muni\nn n≥1\nde la tribu borélienne achevée de la Définition « Droite réelle achevée, tribu borélienne achevée »). Alors sup f\nn≥1 n\net inf f sont mesurables.\nn≥1 n\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n可数族扩展实值可测函数的逐点 $\\sup_n f_n$、$\\inf_n f_n$ 可测。关键例子：\n\\[\n\\{\\sup_n f_n>a\\}=\\bigcup_n\\{f_n>a\\}.\n\\]\n于是 $\\limsup f_n$、$\\liminf f_n$ 以及存在的逐点极限也可测。\\textbf{可数这个条件不能任意去掉}。\n\\dep{性质：可数 sup、inf 可测；生成族判别；\\ensuremath{\\sigma}-代数的可数并交。}"
+  },
+  {
+    "id": "c4-14",
+    "title": "像测度",
+    "title_fr": "Définition – Mesure image",
+    "chapter": 4,
+    "text": "Définition – Mesure image\nSoit f : (E,T ) → (F,T ) une application mesurable, µ une mesure sur (E,T ). La mesure image de µ par f,\nE F E\nnotée f(µ) ou µ , est la mesure sur (F,T ) définie par f(µ)(B):=µ(f−1(B)) pour B ∈T .\nf F F\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n给定可测映射 $f$ 和源测度 $\\mu$，像测度在目标集合 $B$ 上的质量是\n\\[\n\\mu_f(B)=\\mu(f^{-1}(B)).\n\\]\n\\textbf{是原像的质量，不是 $\\mu(f(B))$}。可测性保证原像在 $\\mu$ 的定义域，原像保持不交并保证可列可加。\n\\dep{定义：像测度；可测映射与原像运算。}"
+  },
+  {
+    "id": "c5-01",
+    "title": "简单函数是积分的积木",
+    "title_fr": "Définition – Fonction étagée",
+    "chapter": 5,
+    "text": "Définition – Fonction étagée\nSoit (E,T) un espace mesurable, soit f : E → R. On dit que f est simple ou étagée s’il existe une famille\n(A ) ∈Tn d’ensembles mesurables deux à deux disjoints et (x ) ∈Rn tels que\nk 1≤k≤n k 1≤k≤n\nn\nX\nf = x 1 .\nk Ak\nk=1\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n简单函数取有限多个实值，并可写成可测集示性函数的有限线性组合：$s=\\sum_{k=1}^n a_k\\mathbf1_{A_k}$，可把 $A_k$ 选为不交。\n\\textbf{简单不等于连续，也不要求支集测度有限}。示性函数就是最基本的简单函数。\n\\dep{定义：简单函数（fonction étagée）。}"
+  },
+  {
+    "id": "c5-02",
+    "title": "简单函数可测",
+    "title_fr": "Propriété – Mesurabilité des fonctions étagées",
+    "chapter": 5,
+    "text": "Propriété – Mesurabilité des fonctions étagées\nToute fonction étagée est mesurable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n每个示性函数可测，有限次实数倍与相加保持可测性，所以简单函数可测。\n这里要能说出论据，而不仅写“显然”。这也是为何简单函数表示必须用\\textbf{可测集合}。\n\\dep{示性函数可测 c4-09；运算稳定性 c4-11。}"
+  },
+  {
+    "id": "c5-03",
+    "title": "非负可测函数的递增逼近",
+    "title_fr": "Théorème – Lemme d’approximation",
+    "chapter": 5,
+    "text": "Théorème – Lemme d’approximation\nSoit (E,T) un espace mesurable, soit f :E →[0,+∞] mesurable. Il existe une suite (f ) de fonctions étagées\nn n≥1\npositives qui converge simplement en croissant vers f.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n任意 $f:E\\to[0,+\\infty]$ 可测，都有非负简单函数 $s_n\\uparrow f$。一种构造是把函数值按越来越细的网格向下取整，并截断高值。\n\\textbf{递增、从下方、简单函数}这三个词一起连接定义与极限。它不是说任意可测函数都能被简单函数一致逼近。\n\\dep{定理：非负可测函数的简单函数逼近引理。}"
+  },
+  {
+    "id": "c5-04",
+    "title": "非负简单函数的积分",
+    "title_fr": "Définition – Intégrale d’une fonction étagée positive",
+    "chapter": 5,
+    "text": "Définition – Intégrale d’une fonction étagée positive\nSoit(Ω,T,µ)unespacemesuré,soit(A ,...,A )unepartition(finie)deΩpardesélémentsdeT,soientx ,...,x ∈\n1 n 1 n\nR+. On pose f = Pn x 1 . L’intégrale de f est le réel positif\nk=1 k Ak\nZ X n (cid:16) Z (cid:17)\nfdµ:= x µ(A ) notée aussi fdµ .\nk k\nΩ k=1\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n当 $s=\\sum_k a_k\\mathbf1_{A_k}\\ge0$、$A_k$ 不交时，\n\\[\n\\int s\\dd\\mu=\\sum_k a_k\\mu(A_k).\n\\]\n就是“每层高度乘这一层的质量”。积分可以为 $+\\infty$；对零系数采用 $0\\cdot\\infty=0$ 的非负积分约定。特别地 $\\int\\mathbf1_A\\dd\\mu=\\mu(A)$。\n\\dep{定义：非负简单函数积分。}"
+  },
+  {
+    "id": "c5-05",
+    "title": "一般非负函数积分的定义",
+    "title_fr": "Définition – Intégrale d’une fonction mesurable positive",
+    "chapter": 5,
+    "text": "Définition – Intégrale d’une fonction mesurable positive\nSoit (Ω,T,µ) un espace mesuré, soit f :Ω→[0,+∞] mesurable. On appelle intégrale de f par rapport à µ :\nZ (cid:26)Z (cid:12) (cid:27)\n(cid:12)\nfdµ:=sup Sdµ (cid:12) 0≤S ≤f, S étagée ∈[0,+∞].\n(cid:12)\nΩ Ω\nR\nSi fdµ<+∞, on dit que f est µ-intégrable.\nΩ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\[\n\\int f\\dd\\mu=\\sup_{\\substack{0\\le s\\le f\\\\s\\text{ 简单}}}\\int s\\dd\\mu.\n\\]\n\\textbf{先定义非负积分，允许无穷；之后才谈可积。}把函数下面所有简单函数的积分汇总取上确界，不靠“正负抵消”得到一个数字。\n\\dep{定义：非负可测函数积分；简单函数积分 c5-04。}"
+  },
+  {
+    "id": "c5-06",
+    "title": "递增简单逼近计算积分",
+    "title_fr": "Propriété – Limite croissante et intégrale",
+    "chapter": 5,
+    "text": "Propriété – Limite croissante et intégrale\nSoit(Ω,T,µ)unespacemesuré,soit(f ) unesuitecroissantedefonctionsétagéespositivesconvergeantsimplement\nn n≥1\nR R\nvers f. Alors lim f dµ= fdµ.\nn→+∞ Ω n Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $s_n\\uparrow f$ 是非负简单函数逼近，则 $\\int s_n\\dd\\mu\\uparrow\\int f\\dd\\mu$。\n它让上确界定义可由一个具体逼近序列实现。\\textbf{这里尚是简单函数序列}；后面的单调收敛定理将推广到任意非负可测函数序列。\n\\dep{性质：递增简单函数与积分极限。}"
+  },
+  {
+    "id": "c5-07",
+    "title": "实值积分先分正负部分",
+    "title_fr": "Définition – Intégrale d’une fonction mesurable réelle",
+    "chapter": 5,
+    "text": "Définition – Intégrale d’une fonction mesurable réelle\nSoit (Ω,T,µ) un espace mesuré, soit f :Ω→R mesurable. On pose f+ =max(f,0), f− =max(−f,0) (de sorte que\nf = f+−f− et |f| = f++f−) : ce sont deux fonctions mesurables positives. On dit que f est µ-intégrable si\nR f+dµ<+∞ et R f−dµ<+∞, et l’on définit alors\nΩ Ω\nZ Z Z\nfdµ:= f+dµ− f−dµ.\nΩ Ω Ω\nOn note L1(Ω,µ) l’ensemble des fonctions µ-intégrables sur Ω (cette notation sera reprise et généralisée aux espaces\nLp, p≥1, au Chapitre « Espaces Lp »).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$f^+=\\max(f,0)$、$f^-=\\max(-f,0)$，满足 $f=f^+-f^-$、$|f|=f^++f^-$。本课程可积定义要求\\textbf{两个非负积分都有限}，再令\n\\[\n\\int f\\dd\\mu=\\int f^+\\dd\\mu-\\int f^-\\dd\\mu.\n\\]\n等价条件是 $\\int|f|\\dd\\mu<\\infty$。一个振荡积分“形式上抵消”不代表 Lebesgue 可积。\n\\dep{定义：可积实值函数及积分；可积性 c5-12。}"
+  },
+  {
+    "id": "c5-08",
+    "title": "集合上积分与几乎处处",
+    "title_fr": "Définition – Intégrale sur un événement, presque partout",
+    "chapter": 5,
+    "text": "Définition – Intégrale sur un événement, presque partout\nSoit(Ω,T,µ)unespacemesuré,f :Ω→R,A∈T.Onappelleintégraledef surAlaquantité R fdµ:= R f·1 dµ.\nA Ω A\nOn dit qu’une propriété P est vraie presque partout (p.p.) sur Ω s’il existe N ∈T avec µ(N)=0 tel que P(x)\nsoit vraie pour tout x∈/ N; lorsque µ est une probabilité, on dit presque sûrement (p.s.).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\int_A f\\dd\\mu=\\int f\\mathbf1_A\\dd\\mu$。性质几乎处处成立，意味着只在一个\\textbf{可测零测集合}内可能失败。\n\\textbf{几乎处处不等于处处}，且相对于测度而言：$\\mathbf1_{\\{0\\}}$ 对 Lebesgue 测度几乎处处为零，对 $\\delta_0$ 不是。\n\\dep{定义：集合上积分、presque partout；零测集与 Dirac 测度。}"
+  },
+  {
+    "id": "c5-09",
+    "title": "积分的线性",
+    "title_fr": "Propriété – Linéarité de l’intégrale",
+    "chapter": 5,
+    "text": "Propriété – Linéarité de l’intégrale\nSoit (Ω,T,µ) un espace mesuré.\n1. Si f,g : Ω → [0,+∞] sont mesurables, ou si f,g : Ω → R sont mesurables et intégrables, alors f + g est\nrespectivement positive mesurable ou intégrable, et\nZ Z Z\n(f +g)dµ= fdµ+ gdµ.\nΩ Ω Ω\n2. Si f ≥ 0 est mesurable et λ ≥ 0, ou si f : Ω → R est intégrable et λ ∈ R, alors λf est respectivement positive\nmesurable ou intégrable, et\nZ Z\nλfdµ=λ fdµ.\nΩ Ω\n3. Si A,B ∈T sont disjoints et si f est positive mesurable, ou si f :Ω→R est intégrable, alors\nZ Z Z\nfdµ= fdµ+ fdµ.\nA∪B A B\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于可积实值函数，可以对和、实数倍按线性运算；对于非负函数，也可相加及乘非负常数，允许积分无穷。\n\\textbf{先确认适用情形}，再写 $\\int(f+g)=\\int f+\\int g$。对一般非可积有符号函数，右侧可能是无定义的 $\\infty-\\infty$。\n\\dep{性质：积分线性；定义：非负积分、可积实值积分。}"
+  },
+  {
+    "id": "c5-10",
+    "title": "单调性与零测修改",
+    "title_fr": "Propriété – Monotonie",
+    "chapter": 5,
+    "text": "Propriété – Monotonie\nSoit (Ω,T,µ) un espace mesuré.\nZ\n1. Si f :Ω→[0,+∞] est mesurable, alors fdµ≥0.\nΩ\n2. Si 0≤g ≤f avec f,g :Ω→[0,+∞] mesurables, ou si f,g :Ω→R sont intégrables et g ≤f, alors\nZ Z\ngdµ≤ fdµ.\nΩ Ω\n3. Si f et g sont deux fonctions mesurables positives, ou deux fonctions intégrables, et si f =g presque partout, alors\nZ Z\nfdµ= gdµ.\nΩ Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $0\\le g\\le f$，则 $\\int g\\dd\\mu\\le\\int f\\dd\\mu$；对于可积实值函数也成立。非负函数或可积函数\\textbf{几乎处处相等时积分相等}。\n这解释为什么修改单个 Lebesgue 零测点不影响积分，却可能影响相对于 Dirac 测度的积分。\n\\dep{性质：积分单调性、几乎处处相等的积分一致。}"
+  },
+  {
+    "id": "c5-11",
+    "title": "非负积分为零的含义",
+    "title_fr": "Propriété – Espérance et nullité presque partout",
+    "chapter": 5,
+    "text": "Propriété – Espérance et nullité presque partout\nSoit (Ω,T,µ) un espace mesuré, f :Ω→[0,+∞] mesurable. Alors\nZ\nfdµ=0 ⇐⇒ f =0 presque partout.\nΩ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于非负可测 $f$，\n\\[\n\\int f\\dd\\mu=0\\iff f=0\\ \\mu\\text{-几乎处处}.\n\\]\n\\textbf{非负不可删除}：$f(x)=x$ 在 $[-1,1]$ 上的积分为零，却不是几乎处处零。正向用层集 $\\{f\\ge1/n\\}$ 逐一排除正值质量。\n\\dep{性质：非负积分为零；指定证明 15。}"
+  },
+  {
+    "id": "c5-12",
+    "title": "可积性的常用判据",
+    "title_fr": "Propriété – Intégrabilité",
+    "chapter": 5,
+    "text": "Propriété – Intégrabilité\nSoit (Ω,T,µ) un espace mesuré, f,g :Ω→R mesurables. Alors :\n1. f est µ-intégrable si et seulement si |f| l’est;\n2. si f est µ-intégrable, alors f est finie presque partout;\n3. si |f|≤g avec g intégrable, alors f est intégrable;\n4. si f,g sont intégrables, elles admettent des versions à valeurs réelles presque partout; la somme de telles versions\nest intégrable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n实值 $f$ 可积当且仅当 $|f|$ 可积。若 $|f|\\le g$ 且 $g$ 非负可积，则 $f$ 可积；有限非负积分也会排除在正测度集合上取无穷值。\n\\textbf{先证明可积，再使用有符号积分公式}。单靠“每个点值有限”不够，例如 $1/x$ 在 $(0,1)$ 不可积。\n\\dep{性质：可积性；积分单调性与非负积分。}"
+  },
+  {
+    "id": "c5-13",
+    "title": "单调收敛定理",
+    "title_fr": "Théorème – Théorème de convergence monotone",
+    "chapter": 5,
+    "text": "Théorème – Théorème de convergence monotone\nSoit(Ω,T,µ)unespacemesuré,soit(f ) unesuitecroissantedefonctionsmesurablesΩ→[0,+∞],convergeant\nn n≥1\nsimplement vers f. Alors f est mesurable et\nZ Z\nfdµ= lim f dµ (égalité dans [0,+∞]).\nn\nn→+∞\nΩ Ω\nR P P R\nVersion « série » : pour (g ) mesurables positives, g dµ= g dµ.\nn n≥1 Ω n≥1 n n≥1 Ω n\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $0\\le f_n\\uparrow f$ 且每项可测，则 $\\int f_n\\dd\\mu\\uparrow\\int f\\dd\\mu$，\\textbf{无需可积控制函数，结果允许无穷}。\n非负级数可逐项积分，就是对部分和使用该定理。递减版本不能直接照抄，尤其在无限测度空间上。\n\\dep{定理：单调收敛及非负级数版本。}"
+  },
+  {
+    "id": "c5-14",
+    "title": "Fatou 引理",
+    "title_fr": "Théorème – Lemme de Fatou",
+    "chapter": 5,
+    "text": "Théorème – Lemme de Fatou\nSoit (Ω,T,µ) un espace mesuré, (f ) mesurables à valeurs dans [0,+∞]. Alors\nn n≥1\nZ Z\nliminff dµ ≤ liminf f dµ.\nn n\nΩ n≥1 n≥1 Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对非负可测 $f_n$，\n\\[\n\\int\\liminf_n f_n\\dd\\mu\\le\\liminf_n\\int f_n\\dd\\mu.\n\\]\n\\textbf{只有一个方向，不是极限与积分无条件交换}。例如 $f_n=n\\mathbf1_{(0,1/n)}$ 逐点趋零、每项积分为 $1$，不等式严格。\n\\dep{定理：Fatou 引理；例子：集中到零点附近的质量。}"
+  },
+  {
+    "id": "c5-15",
+    "title": "控制收敛定理",
+    "title_fr": "Théorème – Théorème de convergence dominée",
+    "chapter": 5,
+    "text": "Théorème – Théorème de convergence dominée\nSoit (Ω,T,µ) un espace mesuré, (f ) mesurables Ω→R, telles que :\nn n≥1\n1. (f ) converge simplement presque partout vers f;\nn\n2. (hypothèse de domination) il existe g :Ω→[0,+∞] intégrable telle que |f |≤g pour tout n.\nn\nZ Z\nAlors f est intégrable et fdµ= lim f dµ.\nn\nn→+∞\nΩ Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n条件是可测、$f_n\\to f$ 几乎处处，并有\\textbf{同一个可积的} $g\\ge0$ 满足所有 $n$ 的 $|f_n|\\le g$。结论是 $f$ 可积、$\\int f_n\\to\\int f$。\n“每个 $f_n$ 分别可积”或“每个分别有界”都不足够。找控制函数时必须确认其\\textbf{不依赖 $n$ 且积分有限}。\n\\dep{定理：控制收敛；可积性与几乎处处。}"
+  },
+  {
+    "id": "c5-16",
+    "title": "积分号内的连续性",
+    "title_fr": "Théorème – Continuité sous le signe intégral",
+    "chapter": 5,
+    "text": "Théorème – Continuité sous le signe intégral\nSoit (E,∥·∥) un espace vectoriel normé, U ⊂E, u ∈U, f :U ×Ω→R telle que :\n0\n1. pour tout u∈U, x7→f(u,x) est mesurable;\n2. pour µ-presque tout x, u7→f(u,x) est continue en u ;\n0\n3. (domination) il existe g ∈L1(Ω,µ) positive telle que |f(u,x)|≤g(x) pour tout u∈U, µ-p.p.\nR\nAlors F(u):= f(u,x)dµ(x) est bien définie pour tout u∈U, et continue en u .\nΩ 0\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$F(u)=\\int f(u,x)\\dd\\mu(x)$ 连续，需要截面关于 $x$ 可测、关于 $u$ 几乎处处连续，以及\\textbf{统一的可积控制函数} $g(x)$。\n理解为把 $u_n\\to u_0$ 变成函数列，再使用控制收敛。统一控制只依赖积分变量，不能随参数失控。\n\\dep{定理：积分号内连续性；控制收敛。}"
+  },
+  {
+    "id": "c5-17",
+    "title": "积分号内求导",
+    "title_fr": "Théorème – Dérivabilité sous le signe intégral",
+    "chapter": 5,
+    "text": "Théorème – Dérivabilité sous le signe intégral\nSoit I ⊂R un intervalle ouvert, f :I×Ω→R telle que :\n1. pour tout u∈I, x7→f(u,x) est dans L1(Ω,µ);\n∂f\n2. pour µ-presque tout x, u7→f(u,x) est dérivable sur I tout entier, de dérivée notée (u,x);\n∂u\n(cid:12)∂f (cid:12)\n3. (domination) il existe g ∈L1(Ω,µ) positive telle que (cid:12) (u,x)(cid:12)≤g(x) pour tout u∈I, µ-p.p.\n∂u\nAlors F(u):= R f(u,x)dµ(x) est dérivable sur I tout entier, de dérivée F′(u)= R ∂f (u,x)dµ(x) pour tout u∈I.\nΩ Ω ∂u\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n要求 $x$ 截面可积，关于参数 $u$ 的函数几乎处处在开区间可导，并且\\textbf{所有参数的偏导绝对值都被同一个可积函数控制}。此时\n\\[\nF'(u)=\\int\\partial_u f(u,x)\\dd\\mu(x).\n\\]\n\\textbf{控制的是导数}，不能只控制原函数就宣布可求导；也要写明参数区间。\n\\dep{定理：积分号内求导。}"
+  },
+  {
+    "id": "c6-01",
+    "title": "乘积 σ-代数",
+    "title_fr": "Définition – Tribu produit",
+    "chapter": 6,
+    "text": "Définition – Tribu produit\nSoient (E,T ) et (F,T ) deux espaces mesurables. On appelle tribu produit sur E×F, notée T ⊗T , la tribu\nE F E F\nengendrée par les pavés (A×B) .\nA∈TE,B∈TF\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\T_E\\otimes\\T_F=\\sigma\\{A\\times B:A\\in\\T_E,B\\in\\T_F\\}$。\\textbf{长方形族只是生成元}，乘积可测集不一定是单个长方形。\n例如平面中的三角区域可通过可测不等式描述，随后用截面计算面积。\n\\dep{定义：乘积 \\ensuremath{\\sigma}-代数；生成族。}"
+  },
+  {
+    "id": "c6-02",
+    "title": "乘积测度",
+    "title_fr": "Théorème – Existence et unicité de la mesure produit",
+    "chapter": 6,
+    "text": "Théorème – Existence et unicité de la mesure produit\nSoient (E,T ,µ) et (F,T ,ν) deux espaces mesurés σ-finis. Il existe une unique mesure µ⊗ν sur (E×F,T ⊗T )\nE F E F\ntelle que\n(µ⊗ν)(A×B)=µ(A)ν(B)\npour tous A∈T et B ∈T . Elle est appelée mesure produit de µ et ν.\nE F\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若两个测度空间都\\textbf{\\ensuremath{\\sigma}-有限}，则存在唯一乘积测度，使\n\\[\n(\\mu\\otimes\\nu)(A\\times B)=\\mu(A)\\nu(B).\n\\]\n这是从矩形面积推广到一般区域的测度。不能把这个公式直接用于不是直积形状的区域。\n\\dep{定理：乘积测度存在唯一性；\\ensuremath{\\sigma}-有限定义 c3-01。}"
+  },
+  {
+    "id": "c6-03",
+    "title": "集合的截面",
+    "title_fr": "Définition – Coupes d’un ensemble",
+    "chapter": 6,
+    "text": "Définition – Coupes d’un ensemble\nPour D ⊂E×F et x∈E, on appelle coupe verticale de D en x l’ensemble\nD :={y ∈F |(x,y)∈D}.\nx\nDe même, pour y ∈F, on définit la coupe horizontale Dy :={x∈E |(x,y)∈D}.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n固定 $x$ 时 $D_x=\\{y:(x,y)\\in D\\}$；固定 $y$ 时 $D^y=\\{x:(x,y)\\in D\\}$。\n对 $D=\\{0\\le x\\le y\\le a\\}$，固定 $y$ 后 $x$ 从 $0$ 到 $y$。\\textbf{先说明固定哪个变量、剩下哪个变量变化}，再写积分限。\n\\dep{定义：垂直截面与水平截面；例子：TD4 第 1.1 题。}"
+  },
+  {
+    "id": "c6-04",
+    "title": "截面可测与区域体积",
+    "title_fr": "Propriété – Mesurabilité des coupes",
+    "chapter": 6,
+    "text": "Propriété – Mesurabilité des coupes\nSi D ∈T ⊗T , alors D ∈T pour tout x∈E et Dy ∈T pour tout y ∈F. De plus, les applications\nE F x F E\nx7−→ν(D ), y 7−→µ(Dy)\nx\nsont mesurables, et\nZ Z\n(µ⊗ν)(D)= ν(D )dµ(x)= µ(Dy)dν(y).\nx\nE F\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n乘积可测区域的各截面可测，且相应截面质量是可测函数。在 \\ensuremath{\\sigma}-有限的乘积测度情形，\n\\[\n(\\mu\\otimes\\nu)(D)=\\int_E\\nu(D_x)\\dd\\mu(x).\n\\]\n这就是“把每一片的面积或长度累加”。\\textbf{它来自对示性函数应用 Tonelli}，不是几何猜测。\n\\dep{性质：截面可测及截面积分；Tonelli。}"
+  },
+  {
+    "id": "c6-05",
+    "title": "Tonelli 与 Fubini 如何选",
+    "title_fr": "Théorème – Théorème de Fubini-Tonelli",
+    "chapter": 6,
+    "text": "Théorème – Théorème de Fubini-Tonelli\nSoient (E,T ,µ), (F,T ,ν) deux espaces mesurés σ-finis.\nE F\n— (Tonelli, cas positif) Si f :E×F →[0,+∞] est mesurable, alors\nZ Z (cid:16)Z (cid:17) Z (cid:16)Z (cid:17)\nfd(µ⊗ν)= f(x,y)dν(y) dµ(x)= f(x,y)dµ(x) dν(y).\nE×F E F F E\n— (Fubini, cas intégrable) Si f :E×F →R est mesurable et R |f|d(µ⊗ν)<+∞, alors les mêmes égalités\nE×F\nR\nsont vraies (les fonctions x7→ f(x,y)dν(y) etc. étant définies pour presque tout x).\nF\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{共同条件：乘积可测函数、两个测度 \\ensuremath{\\sigma}-有限。}Tonelli 用于 $f\\ge0$，无须先证明可积，等式可取 $+\\infty$。Fubini 用于有符号函数，要先证明 $\\int|f|<\\infty$。\n实用顺序：先检查符号；若有正负，先对 $|f|$ 用 Tonelli 确认可积，再对 $f$ 用 Fubini。\\textbf{一个反常迭代积分存在，不能替代绝对可积条件}。\n\\dep{定理：Fubini–Tonelli；可积性 c5-12。}"
+  },
+  {
+    "id": "c6-06",
+    "title": "有限次多重积分",
+    "title_fr": "Corollaire – Intégrales multiples en dimension finie",
+    "chapter": 6,
+    "text": "Corollaire – Intégrales multiples en dimension finie\nPar récurrence, Tonelli et Fubini s’appliquent à un produit fini d’espaces mesurés σ-finis. En particulier, pour une\nfonction positive sur Rn (ou intégrable sur Rn), on peut calculer\nZ\nf(x ,...,x )dx ···dx\n1 n 1 n\nRn\npar n intégrations successives, dans n’importe quel ordre autorisé par Tonelli ou Fubini.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对有限个 \\ensuremath{\\sigma}-有限空间，非负或可积函数可以通过多次积分计算，换序依次遵守 Tonelli 或 Fubini 的条件。\n\\textbf{换序要同时重写区域}，不能只交换 $\\dd x,\\dd y$。例如 $0\\le x\\le y\\le a$ 可写成先 $x\\in[0,y]$，也可写成先 $y\\in[x,a]$。\n\\dep{推论：有限乘积上的多重积分；截面定义与 Fubini–Tonelli。}"
+  },
+  {
+    "id": "c6-07",
+    "title": "换元公式与 Jacobian",
+    "title_fr": "Théorème – Formule du changement de variable",
+    "chapter": 6,
+    "text": "Théorème – Formule du changement de variable\nSoient U,Ω deux ouverts de Rn et\nΦ:U →Ω, Φ(u ,...,u )=(x ,...,x ),\n1 n 1 n\nun C1-difféomorphisme. Si f :Ω→R est mesurable, positive ou intégrable, alors\nZ Z\n(cid:0) (cid:1)(cid:12) (cid:12)\nf(x\n1\n,...,x\nn\n)dx\n1\n···dx\nn\n= f Φ(u\n1\n,...,u\nn\n) (cid:12)detJac(Φ)(u\n1\n,...,u\nn\n)(cid:12)du\n1\n···du\nn\n.\nΩ U\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对开集间的 $C^1$ 微分同胚 $\\Phi:U\\to\\Omega$，以及非负或可积 $f$，\n\\[\n\\int_\\Omega f(x)\\dd x=\\int_U f(\\Phi(u))\\,|\\det D\\Phi(u)|\\dd u.\n\\]\n\\textbf{区域、函数、体积因子三个都要换}。Jacobian 取绝对值；极坐标因子是 $r$。极坐标要避开原点和重复角度，遗漏的零测边界可另行说明。\n\\dep{定理：换元公式；几乎处处不改变积分。}"
+  },
+  {
+    "id": "c7-01",
+    "title": "Lp 的对象与指数",
+    "title_fr": "Définition – Espaces Lp",
+    "chapter": 7,
+    "text": "Définition – Espaces Lp\nSoit (Ω,T,µ) un espace mesuré, p≥1. On note Lp(Ω,µ) l’ensemble des fonctions mesurables f :Ω→R vérifiant\nR |f|pdµ<+∞. Pour f ∈Lp, on note ∥f∥ := (cid:0)R |f|pdµ (cid:1)1/p .\nΩ p Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 $1\\le p<\\infty$，要求 $\\int|f|^p\\dd\\mu<\\infty$，并定义 $\\|f\\|_p=(\\int|f|^p\\dd\\mu)^{1/p}$。\n考纲先用 $L^p$ 记函数集合，谈 Banach、Hilbert 时须按\\textbf{几乎处处相等取等价类}。$p=\\infty$ 另用本质有界定义。\n\\dep{定义：Lp；几乎处处等价关系；分离性 c7-03。}"
+  },
+  {
+    "id": "c7-02",
+    "title": "L∞ 与本质上界",
+    "title_fr": "Définition – L∞",
+    "chapter": 7,
+    "text": "Définition – L∞\nL∞(Ω,µ) désigne l’ensemble des fonctions mesurables bornées µ-presque partout, i.e. pour lesquelles il existe\nM >0 avec µ(|f|>M)=0.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$L^\\infty$ 中的函数只要求\\textbf{几乎处处有界}；范数是忽略零测集合后的最小界，即 $\\operatorname*{ess\\,sup}|f|$。\n对 Lebesgue 测度，单点上任意大的取值不影响该范数；这与普通的逐点上确界不同。\n\\dep{定义：L∞；性质：零测修改。}"
+  },
+  {
+    "id": "c7-03",
+    "title": "为什么先是半范数",
+    "title_fr": "Propriété – Séparation, ou pourquoi ∥·∥ n’est qu’une semi-norme",
+    "chapter": 7,
+    "text": "Propriété – Séparation, ou pourquoi ∥·∥ n’est qu’une semi-norme\np\nSoit (Ω,T,µ) un espace mesuré, p∈[1,+∞[, f ∈Lp(Ω,µ). Alors\n∥f∥ =0 ⇐⇒ f =0 µ-presque partout.\np\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对有限 $p$，$\\|f\\|_p=0$ 当且仅当 $f=0$ 几乎处处，\\textbf{不必处处为零}。所以在实际函数集合上只是半范数。\n把几乎处处相同的函数视为一个元素后，分离性成立，得到真正的范数空间。说 $L^p$ 是 Banach 时要理解这个约定。\n\\dep{性质：Lp 的分离性；非负积分为零 c5-11。}"
+  },
+  {
+    "id": "c7-04",
+    "title": "Markov 不等式",
+    "title_fr": "Propriété – Inégalité de Markov",
+    "chapter": 7,
+    "text": "Propriété – Inégalité de Markov\nSoit (Ω,T,µ) un espace mesuré, f ≥0 mesurable. Alors\n1Z\n∀a>0, µ(f ≥a)≤ fdµ.\na\nΩ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 $f\\ge0$ 可测、$a>0$，\n\\[\n\\mu(f\\ge a)\\le\\frac1a\\int f\\dd\\mu.\n\\]\n高于阈值的那部分至少贡献“阈值乘质量”。不要求概率测度；积分若无穷，不等式仍成立，但不能给出有限控制。\n\\dep{性质：Markov 不等式；积分单调性。}"
+  },
+  {
+    "id": "c7-05",
+    "title": "Chebyshev 不等式",
+    "title_fr": "Propriété – Inégalité de Bienaymé-Tchebychev",
+    "chapter": 7,
+    "text": "Propriété – Inégalité de Bienaymé-Tchebychev\nSoit (Ω,T,µ) un espace mesuré, f ∈L2(Ω,µ), c∈R. Alors\n∀ε>0, µ (cid:0) |f −c|≥ε (cid:1) ≤ 1 Z (f −c)2dµ.\nε2\nΩ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于 $f\\in L^2$、$c\\in\\R$、$\\varepsilon>0$，\n\\[\n\\mu(|f-c|\\ge\\varepsilon)\\le\\frac1{\\varepsilon^2}\\int(f-c)^2\\dd\\mu.\n\\]\n它是对 $(f-c)^2$ 使用 Markov。\\textbf{$c$ 不必是均值}；在无限测度空间上右侧也可能无穷，不能擅自声称 $f-c\\in L^2$。\n\\dep{性质：Bienaymé–Tchebychev；Markov。}"
+  },
+  {
+    "id": "c7-06",
+    "title": "Hölder 不等式",
+    "title_fr": "Propriété – Inégalité de Hölder",
+    "chapter": 7,
+    "text": "Propriété – Inégalité de Hölder\n1 1\nSoit (Ω,T,µ) un espace mesuré, f,g deux fonctions mesurables, p,q ∈]1,+∞[ tels que + =1. Si f ∈Lp et\np q\ng ∈Lq, alors fg ∈L1 et\nZ\n|fg|dµ≤∥f∥ ∥g∥ .\np q\nΩ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n共轭指数 $p,q\\in(1,\\infty)$ 满足 $1/p+1/q=1$。若 $f\\in L^p,g\\in L^q$，则 $fg\\in L^1$ 且\n\\[\n\\int|fg|\\dd\\mu\\le\\|f\\|_p\\|g\\|_q.\n\\]\n\\textbf{指数和等于一指倒数相加}，不是 $p+q=1$。$p=q=2$ 给出 Cauchy–Schwarz。\n\\dep{性质：Hölder 不等式；定义：共轭指数。}"
+  },
+  {
+    "id": "c7-07",
+    "title": "有限测度空间上的 Lp 包含",
+    "title_fr": "Corollaire – Inclusion Lp ⊂Lq en mesure finie",
+    "chapter": 7,
+    "text": "Corollaire – Inclusion Lp ⊂Lq en mesure finie\nSoit (Ω,T,µ) un espace mesuré fini (i.e. µ(Ω)<+∞), soient 1≤q <p≤+∞. Alors Lp(Ω,µ)⊂Lq(Ω,µ).\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若\\textbf{$\\mu(\\Omega)<\\infty$} 且 $1\\le q<p\\le\\infty$，则 $L^p\\subseteq L^q$。\n条件不能删去：$\\R$ 上 $1/(1+|x|)$ 属于 $L^2$ 却不属于 $L^1$。也不要把包含方向倒过来。\n\\dep{推论：有限测度空间上的 Lp 包含；Hölder。}"
+  },
+  {
+    "id": "c7-08",
+    "title": "Minkowski 不等式",
+    "title_fr": "Propriété – Inégalité de Minkowski",
+    "chapter": 7,
+    "text": "Propriété – Inégalité de Minkowski\nSoit (Ω,T,µ) un espace mesuré, p≥1. Si f,g ∈Lp, alors f +g ∈Lp et ∥f +g∥ ≤∥f∥ +∥g∥ .\np p p\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于 $p\\ge1$，$f,g\\in L^p$ 时 $f+g\\in L^p$，并有 $\\|f+g\\|_p\\le\\|f\\|_p+\\|g\\|_p$。\n它就是 $L^p$ 范数的三角不等式。\\textbf{不要与 Hölder 混淆}：Hölder 控制乘积积分，Minkowski 控制和的范数。\n\\dep{性质：Minkowski 不等式。}"
+  },
+  {
+    "id": "c7-09",
+    "title": "Jensen 不等式",
+    "title_fr": "Propriété – Inégalité de Jensen",
+    "chapter": 7,
+    "text": "Propriété – Inégalité de Jensen\nSoit (Ω,T,µ) un espace mesuré avec 0 < µ(Ω) < +∞, f ∈ L1(Ω,µ), φ : R → R convexe telle que φ(f) soit\négalement intégrable. Alors\n(cid:16) 1 Z (cid:17) 1 Z\nφ fdµ ≤ φ(f)dµ.\nµ(Ω) µ(Ω)\nΩ Ω\nEn particulier, pour µ=P une mesure de probabilité (µ(Ω)=1), on retrouve φ (cid:0)R fdP(cid:1) ≤ R φ(f)dP.\nΩ Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $0<\\mu(\\Omega)<\\infty$、$f$ 可积、$\\varphi$ 凸且 $\\varphi(f)$ 可积，则\n\\[\n\\varphi\\!\\left(\\frac{\\int f\\dd\\mu}{\\mu(\\Omega)}\\right)\\le\n\\frac{\\int\\varphi(f)\\dd\\mu}{\\mu(\\Omega)}.\n\\]\n\\textbf{一般测度必须归一化}；总质量为 $1$ 时才可去掉分母。不要漏掉凸性和可积性。\n\\dep{性质：Jensen 不等式。}"
+  },
+  {
+    "id": "c7-10",
+    "title": "Riesz–Fischer：Lp 完备",
+    "title_fr": "Théorème – Riesz-Fischer",
+    "chapter": 7,
+    "text": "Théorème – Riesz-Fischer\nSoit (Ω,T,µ) un espace mesuré. Pour tout p∈[1,+∞], (Lp(Ω,µ),∥·∥ ) est un espace de Banach.\np\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 $1\\le p\\le\\infty$，按几乎处处等价类理解的 $L^p$ 是 Banach 空间。\n\\textbf{完备}意味着每个范数意义下的 Cauchy 列都有空间内的范数极限，不等于“所有函数列都收敛”，也不等于“逐点收敛”。\n\\dep{定理：Riesz–Fischer；定义：Banach、Cauchy 列。}"
+  },
+  {
+    "id": "c7-11",
+    "title": "L2 是 Hilbert 空间",
+    "title_fr": "Propriété – L2 est un espace de Hilbert",
+    "chapter": 7,
+    "text": "Propriété – L2 est un espace de Hilbert\nSur L2(Ω,µ), on pose\nZ\n⟨f,g⟩ := fgdµ.\nL2\nΩ\nAlors ⟨·,·⟩ est un produit scalaire (sur les classes de fonctions égales µ-presque partout), sa norme associée est\nL2\nexactement ∥·∥ , et L2(Ω,µ) est un espace de Hilbert.\n2\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n在等价类上，$\\langle f,g\\rangle=\\int fg\\dd\\mu$ 是内积；相应范数就是 $\\|f\\|_2$。完备性使 $L^2$ 成为 Hilbert 空间。\n内积积分的存在来自 Hölder。\\textbf{一般 $L^p$ 的范数不都来自内积}；本条专指 $p=2$。\n\\dep{性质：L2 是 Hilbert；Hölder、Riesz–Fischer。}"
+  },
+  {
+    "id": "c7-12",
+    "title": "Riesz 表示定理",
+    "title_fr": "Théorème – Théorème de représentation de Riesz",
+    "chapter": 7,
+    "text": "Théorème – Théorème de représentation de Riesz\nSoit H un espace de Hilbert réel et ℓ:H →R une forme linéaire continue. Alors il existe un unique h∈H tel que\n∀x∈H, ℓ(x)=⟨x,h⟩.\nDe plus,\n∥∥∥ℓ∥∥∥=∥h∥.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n实 Hilbert 空间 $H$ 上每个\\textbf{连续线性泛函} $\\ell$ 都可唯一写为 $\\ell(x)=\\langle x,h\\rangle$，某个 $h\\in H$，且 $\\|\\ell\\|=\\|h\\|$。\n“连续”“线性”“唯一”都属结论的精确表述。不要与 $L^p$ 完备性的 Riesz–Fischer 定理混为一个定理。\n\\dep{定理：Hilbert 空间的 Riesz 表示。}"
+  },
+  {
+    "id": "c7-13",
+    "title": "Lp 中简单函数的稠密性",
+    "title_fr": "Théorème – Densité dans Lp",
+    "chapter": 7,
+    "text": "Théorème – Densité dans Lp\nSoit (Ω,T,µ) un espace mesuré, p∈[1,+∞[. L’espace des fonctions étagées (intégrables) est dense dans Lp(Ω,µ) :\npour tout f ∈Lp, il existe une suite (f ) de fonctions étagées avec ∥f −f∥ →0.\nn n p\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对于\\textbf{$1\\le p<\\infty$}，每个 $f\\in L^p$ 都可用属于 $L^p$ 的简单函数 $s_n$ 在 $p$-范数中逼近：$\\|s_n-f\\|_p\\to0$。\n按“简单函数可积”的原文表述，选逼近时可用截断及有限测度支集保证所需可积性。\\textbf{不要把该条原封不动扩展到 $p=\\infty$}。\n\\dep{定理：Lp 稠密性；考纲所列指数范围。}"
+  },
+  {
+    "id": "c8-01",
+    "title": "离散测度",
+    "title_fr": "Définition – Mesure discrète",
+    "chapter": 8,
+    "text": "Définition – Mesure discrète\nSoit(Ω,T,µ)unespacemesuré.Onditqueµestunemesurediscrètes’ilexisteunensembleauplusdénombrable\nS ⊂Ω, formé d’atomes de µ, tel que\nµ(Ω\\S)=0.\nAutrement dit, toute la masse de µ est concentrée sur un nombre fini ou dénombrable d’atomes. On a alors\nX\nµ= µ({x})δ .\nx\nx∈S\nSi l’on autorise dans cette définition un ensemble S qui n’est pas nécessairement fini ou dénombrable, on dit que\nµ est purement atomique.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n离散测度的全部质量集中在一个\\textbf{至多可数的点原子集合}上，可写成\n\\[\n\\mu=\\sum_{x\\in S}\\mu(\\{x\\})\\delta_x.\n\\]\n质量系数非负；具体空间需满足相关单点可测的约定。“纯原子”在考纲里允许更一般的原子集合，不应随意互换术语。\n\\dep{定义：离散测度；点原子约定 c3-03。}"
+  },
+  {
+    "id": "c8-02",
+    "title": "有密度的测度",
+    "title_fr": "Définition – Mesure à densité",
+    "chapter": 8,
+    "text": "Définition – Mesure à densité\nR\nSoit µ une mesure sur (Ω,T), g :Ω→[0,+∞] mesurable. La mesure ν :=g·µ, définie par ν(A):= gdµ pour\nA\ndν\nA∈T, est appelée mesure de densité g par rapport à µ. On note aussi g = .\ndµ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对非负可测 $g$，定义 $\\nu(A)=\\int_A g\\dd\\mu$，记 $\\nu=g\\cdot\\mu$，$g=\\dd\\nu/\\dd\\mu$。\n\\textbf{密度总是相对于某个基准测度}。若基准是 Lebesgue 测度，$g=2\\mathbf1_{[0,1]}$ 产生总质量 $2$，不是概率测度。\n\\dep{定义：密度测度；集合上积分。}"
+  },
+  {
+    "id": "c8-03",
+    "title": "绝对连续是零测集关系",
+    "title_fr": "Définition – Mesure absolument continue",
+    "chapter": 8,
+    "text": "Définition – Mesure absolument continue\nSoit (Ω,T) un espace mesurable, µ,ν deux mesures sur (Ω,T). On dit que ν est absolument continue par\nrapport à µ, et l’on note ν ≪µ, si\n∀A∈T, µ(A)=0 =⇒ ν(A)=0.\nAutrement dit, ν ne peut charger un ensemble que si µ le charge déjà (au moins un peu) : ν ne peut pas être «\nplus précise » que µ quant à ce qui est négligeable.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\nu\\ll\\mu$ 意味着对所有可测 $A$，$\\mu(A)=0\\Rightarrow\\nu(A)=0$。\n\\textbf{箭头有方向}；不表示数值连续，不表示 $\\nu(A)\\le\\mu(A)$，也不自动给出任何密度，密度的逆向结论还需要 Radon–Nikodym 条件。\n\\dep{定义：绝对连续；Radon–Nikodym 定理 c8-11。}"
+  },
+  {
+    "id": "c8-04",
+    "title": "有密度推出绝对连续",
+    "title_fr": "Propriété – Une mesure à densité est absolument continue",
+    "chapter": 8,
+    "text": "Propriété – Une mesure à densité est absolument continue\nToute mesure à densité par rapport à µ est absolument continue par rapport à µ : si ν =g·µ, alors ν ≪µ.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $\\nu=g\\cdot\\mu$，在 $\\mu$-零测集 $A$ 上的积分为零，所以 $\\nu(A)=0$，即 $\\nu\\ll\\mu$。\n这个方向不需要先套用 Radon–Nikodym。\\textbf{逆方向按考纲需两测度 \\ensuremath{\\sigma}-有限}。\n\\dep{性质：有密度测度绝对连续；零测集上非负积分为零。}"
+  },
+  {
+    "id": "c8-05",
+    "title": "密度的积分转移",
+    "title_fr": "Propriété – Formule de transfert pour une mesure à densité",
+    "chapter": 8,
+    "text": "Propriété – Formule de transfert pour une mesure à densité\nSoit (Ω,T,µ) un espace mesuré, g :Ω→[0,+∞] mesurable, ν :=g·µ (Définition « Mesure à densité »). Alors,\npour toute fonction mesurable φ:Ω→[0,+∞],\nZ Z\nφdν = φgdµ.\nΩ Ω\nPlus généralement, pour φ:Ω→R mesurable, φ est ν-intégrable si et seulement si φg est µ-intégrable, et dans ce\nZ Z\ncas φdν = φgdµ.\nΩ Ω\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 $\\nu=g\\cdot\\mu$，非负可测 $\\varphi$ 满足\n\\[\n\\int\\varphi\\dd\\nu=\\int\\varphi g\\dd\\mu.\n\\]\n对实值 $\\varphi$，可积性也由 $\\varphi g$ 的可积性对应。\\textbf{这不是变量换元}：变量没变，是把测度换成基准测度加权。\n\\dep{性质：密度测度的转移公式。}"
+  },
+  {
+    "id": "c8-06",
+    "title": "互相奇异",
+    "title_fr": "Définition – Mesures étrangères, ou mutuellement singulières",
+    "chapter": 8,
+    "text": "Définition – Mesures étrangères, ou mutuellement singulières\nSoit (Ω,T) un espace mesurable, µ,ν deux mesures sur (Ω,T). On dit que µ et ν sont étrangères (ou mutuelle-\nment singulières), et l’on note µ⊥ν, s’il existe B ∈T tel que\nµ(B)=0 et ν(Bc)=0.\nAutrement dit, µ est tout entière « portée » par Bc, et ν tout entière « portée » par B : les deux mesures vivent\nsur deux parties disjointes de Ω.\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n$\\mu\\perp\\nu$ 意味着存在可测 $B$，使 $\\mu(B)=0$ 且 $\\nu(B^c)=0$：二者质量集中在可测的互不相交部分。\n例如 $\\delta_0\\perp\\lambda$。\\textbf{这不是“质量值不同”}，也不需要两个测度的拓扑支集互不相交。\n\\dep{定义：互相奇异测度；Dirac 与 Lebesgue 测度。}"
+  },
+  {
+    "id": "c8-07",
+    "title": "Cantor 测度的构造",
+    "title_fr": "Propriété – Construction de la mesure de Cantor",
+    "chapter": 8,
+    "text": "Propriété – Construction de la mesure de Cantor\nPour k ∈N, rappelons que C est une réunion de 2k segments fermés disjoints, chacun de longueur 3−k, de sorte\nk\nque λ(C ) = (2/3)k (Chapitre « Autour de la mesure extérieure de Lebesgue », Proposition « L’ensemble de\nk\nCantor est fermé, non dénombrable, et négligeable »). Posons\n(cid:16)3(cid:17)k\nµ (A):= λ(A∩C ), A∈B(R).\nk 2 k\nAlors chaque µ est une mesure de probabilité, et il existe une unique mesure de probabilité ν sur (R,B(R))\nk C\ntelle que, pour tout intervalle I ⊂R,\nν (I)= lim µ (I).\nC k\nk→+∞\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n在第 $k$ 阶段的 $C_k$ 上放均匀密度，定义 $\\mu_k(A)=(3/2)^k\\lambda(A\\cap C_k)$，其总质量为 $1$。\n考纲结论：存在唯一概率测度 $\\nu_C$，每个区间 $I$ 的质量为 $\\lim_k\\mu_k(I)$。\\textbf{这不是任意集合都可直接交换极限与测度}。\n\\dep{性质：Cantor 测度构造；Cantor 阶段长度 c2-12。}"
+  },
+  {
+    "id": "c8-08",
+    "title": "Cantor 测度的定义",
+    "title_fr": "Définition – Mesure de Cantor",
+    "chapter": 8,
+    "text": "Définition – Mesure de Cantor\nL’unique mesure de probabilité ν fournie par la Proposition « Construction de la mesure de Cantor » est appelée\nC\nmesure de Cantor et est notée ν .\nC\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n上一条唯一构造出的概率测度记作 $\\nu_C$。它把质量分配到 Cantor 集上，\\textbf{测度 $\\nu_C$ 与集合 $C$ 是不同对象}。\n记住它的用途：提供“弥散却没有 Lebesgue 密度”的例子。\n\\dep{定义：Cantor 测度；构造性质 c8-07。}"
+  },
+  {
+    "id": "c8-09",
+    "title": "Cantor 测度的三个性质",
+    "title_fr": "Théorème – Propriétés de la mesure de Cantor",
+    "chapter": 8,
+    "text": "Théorème – Propriétés de la mesure de Cantor\nLa mesure de Cantor ν vérifie :\nC\n1. ν est une mesure de probabilité sur R, avec ν (C)=1;\nC C\n2. ν est diffuse (elle n’a aucun atome);\nC\n3. ν est étrangère à la mesure de Lebesgue λ : ν ⊥λ.\nC C\nEn particulier, ν n’est ni une mesure discrète (par le point 2), ni la mesure à densité d’une fonction par rapport\nC\nà λ (par le point 3, cf. Remarque « Pourquoi ν n’a pas de densité »).\nC\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{总质量为 $1$、弥散、与 Lebesgue 测度互相奇异}。尤其 $\\nu_C(C)=1$，而 $\\lambda(C)=0$。\n若它有 Lebesgue 密度，就应对 $\\lambda$ 绝对连续，于是 $C$ 的质量必须零，矛盾。它也不是离散测度，因为每个点的质量都零。\n\\dep{定理：Cantor 测度性质；密度推出绝对连续；离散测度定义。}"
+  },
+  {
+    "id": "c8-10",
+    "title": "奇异连续测度",
+    "title_fr": "Définition – Mesure singulière continue",
+    "chapter": 8,
+    "text": "Définition – Mesure singulière continue\nUne mesure ν sur (R,B(R)) est dite singulière continue lorsqu’elle est à la fois diffuse et étrangère à la\nmesure de Lebesgue λ, c’est-à-dire\n∀x∈R, ν({x})=0, et ν ⊥λ.\nAinsi, par le Théorème « Propriétés de la mesure de Cantor », la mesure de Cantor ν est singulière continue.\nC\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n在 $(\\R,\\B(\\R))$ 上，同时弥散且与 $\\lambda$ 奇异的测度叫\\textbf{奇异连续测度}，Cantor 测度是典型例子。\n“连续”在这里不是指有一个连续密度函数；恰恰可能完全没有 Lebesgue 密度。\n\\dep{定义：奇异连续测度；Cantor 测度性质。}"
+  },
+  {
+    "id": "c8-11",
+    "title": "Radon–Nikodym 定理",
+    "title_fr": "Théorème – Théorème de Radon-Nikodym",
+    "chapter": 8,
+    "text": "Théorème – Théorème de Radon-Nikodym\nSoient µ et ν deux mesures σ-finies sur (Ω,T), avec ν absolument continue par rapport à µ (c’est-à-dire :\nµ(A)=0⇒ν(A)=0).Alorsilexisteunefonctionmesurableh:Ω→[0,+∞],uniqueàunensembleµ-négligeable\nprès, telle que\nZ\n∀A∈T, ν(A)= hdµ.\nA\ndν\nOn dit que h est la densité de ν par rapport à µ, notée h= .\ndµ\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n若 $\\mu,\\nu$ 都\\textbf{\\ensuremath{\\sigma}-有限}且 $\\nu\\ll\\mu$，则有非负可测 $h$ 使 $\\nu(A)=\\int_A h\\dd\\mu$；$h$ \\textbf{在 \\ensuremath{\\mu}-几乎处处意义下唯一}。\n该密度记 $h=\\dd\\nu/\\dd\\mu$。完整表述要保留 \\ensuremath{\\sigma}-有限、绝对连续与唯一性的意义，不能写成“所有测度都有密度”。\n\\dep{定理：Radon–Nikodym。}"
+  },
+  {
+    "id": "c8-12",
+    "title": "Lebesgue 分解定理",
+    "title_fr": "Théorème – Décomposition de Lebesgue",
+    "chapter": 8,
+    "text": "Théorème – Décomposition de Lebesgue\nSoientµ,ν deuxmesuresσ-finiessurunespacemesurable(Ω,T).Ilexisteununiquecouple(ν ,ν )demesures\nac sing\nsur (Ω,T) tel que\nν =ν +ν , ν ≪µ, ν ⊥µ.\nac sing ac sing\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n对 \\ensuremath{\\sigma}-有限的 $\\mu,\\nu$，存在唯一分解\n\\[\n\\nu=\\nu_{\\rm ac}+\\nu_{\\rm sing},\\quad\n\\nu_{\\rm ac}\\ll\\mu,\\quad\\nu_{\\rm sing}\\perp\\mu.\n\\]\n两个部分都是测度，\\textbf{相对于同一个基准 \\ensuremath{\\mu}}定义。绝对连续部分再可由 Radon–Nikodym 写成密度。\n\\dep{定理：Lebesgue 分解；绝对连续、互相奇异定义。}"
+  },
+  {
+    "id": "c8-13",
+    "title": "实数上有限测度的三部分",
+    "title_fr": "Corollaire – Décomposition d’une mesure finie sur R",
+    "chapter": 8,
+    "text": "Corollaire – Décomposition d’une mesure finie sur R\nSoit ν une mesure finie sur (R,B(R)). Il existe une fonction mesurable g :R→[0,+∞[ intégrable par rapport à λ,\nP\nune famille au plus dénombrable de points distincts (x ) , des coefficients p >0 tels que p <+∞, et une\ni i∈I i i∈I i\nmesure ν singulière continue tels que\nsc\nX\nν = g·λ + p δ + ν .\ni xi sc\n|{z} |{z}\nàdensité i∈I singulièrecontinue\n| {z }\ndiscrète\nCette décomposition est unique, à l’égalité λ-presque partout près pour g et à une permutation près des points\n(x ).\ni\n\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n相对于 Lebesgue 测度，有限测度可唯一分为\\textbf{有密度、离散、奇异连续}三部分：\n\\[\n\\nu=g\\cdot\\lambda+\\sum_i p_i\\delta_{x_i}+\\nu_{\\rm sc}.\n\\]\n其中 $g\\ge0$ 可积，点至多可数、不同，$p_i>0$ 且 $\\sum_i p_i<\\infty$。唯一性允许密度在零测集上变化和点的重新排列。\n\\dep{推论：有限测度的三部分分解；Lebesgue 分解与点原子。}"
+  },
+  {
+    "id": "p01",
+    "title": "外测度的基本性质",
+    "title_fr": "1.1 1. Premières propriétés de λ∗",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：覆盖能比较大小，合并覆盖能控制并集。}\n\\begin{enumerate}\n\\item 空集可被任意短的开区间覆盖，故 $0\\le\\lambda^*(\\varnothing)\\le\\varepsilon$，令 $\\varepsilon\\downarrow0$。\n\\dep{定义：外测度 c1-06；性质：非负数被任意正数控制则为零。}\n\\item 若 $A\\subseteq B$，每个覆盖 $B$ 的开区间族也覆盖 $A$，所以 $\\lambda^*(A)$ 不大于该覆盖的总长度。对所有 $B$ 的覆盖取 inf，得 $\\lambda^*(A)\\le\\lambda^*(B)$。\n\\dep{定义：外测度；性质：对所有候选成立的下界不超过其下确界。}\n\\item 对次可加性，若 $\\sum_n\\lambda^*(A_n)=\\infty$，结论直接成立。否则给 $n\\ge0$ 分配误差 $\\varepsilon2^{-n-1}$，按 inf 的定义选择覆盖费用小于 $\\lambda^*(A_n)+\\varepsilon2^{-n-1}$ 的覆盖。\n\\dep{分析性质：有限下确界可用任意正误差逼近；几何级数和为一。}\n\\item 合并所有覆盖仍是可数覆盖，覆盖 $\\bigcup_n A_n$，费用不超过 $\\sum_n\\lambda^*(A_n)+\\varepsilon$。令误差趋零得到结论。\n\\dep{性质：可数个可数族的并可数 c1-01；外测度定义。}\n\\end{enumerate}\n\\textbf{易漏点：}不保证最优覆盖存在；误差之和要有限且趋零。"
+  },
+  {
+    "id": "p02",
+    "title": "平移与伸缩",
+    "title_fr": "1.2 2. Invariance de λ∗ par translation et par homothétie",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：正向变换给一边，逆变换给另一边。}\n\\begin{enumerate}\n\\item 令 $\\Phi(x)=ax+b$，先设 $a>0$。若 $I_i$ 覆盖 $E$，则 $\\Phi(I_i)$ 覆盖 $\\Phi(E)$，长度乘 $a$，故 $\\lambda^*(aE+b)\\le a\\sum_i\\ell(I_i)$。\n\\dep{定义：外测度 c1-06；性质：正斜率仿射映射把开区间变为长度 a 倍的开区间。}\n\\item 对 $E$ 的所有覆盖取 inf，得到 $\\lambda^*(aE+b)\\le a\\lambda^*(E)$。\n\\dep{分析性质：正数倍与下确界交换；上一步不等式。}\n\\item 对 $aE+b$ 的覆盖用逆映射 $z\\mapsto(z-b)/a$，长度乘 $1/a$。同样取 inf，得 $\\lambda^*(E)\\le\\lambda^*(aE+b)/a$，合并即等式。\n\\dep{性质：逆仿射变换；前两步的同一覆盖论证。}\n\\item 若 $a<0$，区间端点交换而长度乘 $|a|$，正向和逆向论证仍成立。取 $a=1$ 就得到平移不变性。\n\\dep{定义：区间长度 c1-05；性质：负斜率仅反转方向；特例外推。}\n\\end{enumerate}\n\\textbf{易漏点：}只变换一次只能证明不等式；$a\\ne0$ 是逆变换存在的条件。"
+  },
+  {
+    "id": "p03",
+    "title": "σ-代数的交",
+    "title_fr": "1.3 3. Intersection de tribus",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：把“属于交”展开为“属于每个成员”。}\n设 $\\T=\\bigcap_{i\\in I}\\T_i$，$I\\ne\\varnothing$，各族在同一底集上。\n\\begin{enumerate}\n\\item 每个 $\\T_i$ 都含空集，故空集在交中。\n\\dep{定义：\\ensuremath{\\sigma}-代数 c2-01；定义：交集。}\n\\item 若 $A\\in\\T$，则每个 $\\T_i$ 都含 $A$，也含 $A^c$，所以 $A^c\\in\\T$。\n\\dep{定义：交集；公理：补集封闭。}\n\\item 若每个 $A_n\\in\\T$，固定任意 $i$ 后所有 $A_n\\in\\T_i$，故 $\\bigcup_n A_n\\in\\T_i$。对所有 $i$ 成立，因此并在交中。\n\\dep{公理：可数并封闭；定义：交集。}\n\\end{enumerate}\n三条公理都满足，故 $\\T$ 是 \\ensuremath{\\sigma}-代数。\n\\dep{定义：\\ensuremath{\\sigma}-代数。}\n\\textbf{易漏点：}不能把结论直接换成“\\ensuremath{\\sigma}-代数的并也是\\ensuremath{\\sigma}-代数”。"
+  },
+  {
+    "id": "p04",
+    "title": "生成 σ-代数的描述",
+    "title_fr": "1.4 4. Description de la tribu engendrée",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：证明所有候选的交正是最小候选。}\n\\begin{enumerate}\n\\item 设 $\\mathcal C$ 是所有包含 $\\mathcal G$ 的 \\ensuremath{\\sigma}-代数。$\\mathcal P(\\Omega)\\in\\mathcal C$，故候选族不空。令 $\\mathcal S=\\bigcap_{\\mathcal U\\in\\mathcal C}\\mathcal U$。\n\\dep{性质：幂集是 \\ensuremath{\\sigma}-代数；定义：候选族与交集。}\n\\item $\\mathcal S$ 是 \\ensuremath{\\sigma}-代数，因为它是非空族 \\ensuremath{\\sigma}-代数的交。\n\\dep{性质：交保持 \\ensuremath{\\sigma}-代数 c2-04；指定证明 03。}\n\\item 每个候选都包含 $\\mathcal G$，故交也包含 $\\mathcal G$。\n\\dep{定义：交集；候选族的定义。}\n\\item 任意包含 $\\mathcal G$ 的 \\ensuremath{\\sigma}-代数 $\\mathcal U$ 都在候选族中，所以 $\\mathcal S\\subseteq\\mathcal U$。结合上两步，$\\mathcal S$ 是最小候选，即 $\\sigma(\\mathcal G)$。\n\\dep{定义：交集的包含关系；生成 \\ensuremath{\\sigma}-代数的最小性 c2-03。}\n\\end{enumerate}\n\\textbf{易漏点：}只证明交是 \\ensuremath{\\sigma}-代数，还没有证明它生成了指定族。"
+  },
+  {
+    "id": "p05",
+    "title": "有界开区间生成 Borel 族",
+    "title_fr": "1.5 5. Génération de la tribu borélienne par les intervalles ouverts bornés",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：双包含；难点是把开集写成可数并。}\n设 $\\mathcal G$ 为所有有界开区间。\n\\begin{enumerate}\n\\item 每个生成区间是开集，故 $\\mathcal G\\subseteq\\B(\\R)$，从而 $\\sigma(\\mathcal G)\\subseteq\\B(\\R)$。\n\\dep{定义：Borel c2-07；性质：生成的最小性 c2-06。}\n\\item 给定开集 $O$ 和 $x\\in O$，选 $r_x>0$ 使 $(x-r_x,x+r_x)\\subseteq O$。按有理数稠密性选有理 $q$，使 $|x-q|<r_x/2$，再选正有理 $\\rho$ 满足 $|x-q|<\\rho<r_x-|x-q|$。\n\\dep{定义：开集；性质：Q 在 R 中稠密；三角不等式。}\n\\item 此时 $x\\in(q-\\rho,q+\\rho)\\subseteq O$。所有包含于 $O$ 的这类区间的并等于 $O$，而 $(q,\\rho)$ 的候选在 $\\Q\\times\\Q_+$ 中，至多可数。\n\\dep{前一步的包含关系；性质：两个可数集的直积可数 c1-01。}\n\\item 每个区间属于 $\\mathcal G$，可数并属于 $\\sigma(\\mathcal G)$。所以所有开集均在其中，进而 $\\B(\\R)\\subseteq\\sigma(\\mathcal G)$。双包含得等号。\n\\dep{\\ensuremath{\\sigma}-代数的可数并公理；Borel 定义；生成的最小性。}\n\\end{enumerate}\n\\textbf{易漏点：}使用任意实数端点的不可数并不能直接套 \\ensuremath{\\sigma}-代数公理。"
+  },
+  {
+    "id": "p06",
+    "title": "测度的基本性质",
+    "title_fr": "2.1 6. Propriétés élémentaires d’une mesure",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：把集合拆成不交块，用可加性。}\n\\begin{enumerate}\n\\item 将有限个不交集补上无穷个空集，套可列可加性，得到有限可加性。\n\\dep{定义：测度 c3-01；空集测度为零。}\n\\item 若 $A\\subseteq B$，有 $B=A\\sqcup(B\\setminus A)$，故 $\\mu(B)=\\mu(A)+\\mu(B\\setminus A)\\ge\\mu(A)$。\n\\dep{性质：差集可测 c2-02；上一步有限可加；非负性。}\n\\item 若再有 $\\mu(A)<\\infty$，可从分解式减去有限值，得 $\\mu(B\\setminus A)=\\mu(B)-\\mu(A)$。\n\\dep{前一步分解等式；分析约定：可减去有限数，不能作无穷减无穷。}\n\\item 若 $\\mu(A),\\mu(B)<\\infty$，由 $A\\cup B=A\\sqcup(B\\setminus A)$，并对 $A\\cap B\\subseteq B$ 应用上一步，得到二集合容斥公式。\n\\dep{有限可加；差集公式；单调性保证交集测度有限。}\n\\end{enumerate}\n\\textbf{易漏点：}先证明差集公式，再用于容斥，可避免循环论证。"
+  },
+  {
+    "id": "p07",
+    "title": "测度的递增与递减连续性",
+    "title_fr": "2.2 7. Continuité croissante et décroissante",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：递增拆成增量；递减转成有限集合内的补。}\n\\begin{enumerate}\n\\item 对 $A_n\\uparrow$，设 $A_{-1}=\\varnothing$，$D_n=A_n\\setminus A_{n-1}$。$D_n$ 两两不交，$A_n=\\bigsqcup_{k\\le n}D_k$，总并也不变。\n\\dep{集合性质：递增集合的不交增量分解；差集可测。}\n\\item 有 $\\mu(A_n)=\\sum_{k\\le n}\\mu(D_k)$。让 $n\\to\\infty$，非负级数等于其部分和极限，可列可加性给 $\\mu(\\bigcup_n A_n)=\\lim_n\\mu(A_n)$。\n\\dep{有限与可列可加；非负级数定义。}\n\\item 对 $B_n\\downarrow$，取 $m$ 使 $\\mu(B_m)<\\infty$，只看 $n\\ge m$。令 $C_n=B_m\\setminus B_n\\uparrow$，并为 $B_m\\setminus\\bigcap_n B_n$。\n\\dep{集合性质：递减族的补递增；丢掉有限项不改变交与极限。}\n\\item 对 $C_n$ 应用递增连续性，再用有限测度中的差集公式减回 $\\mu(B_m)$，即得递减结论。\n\\dep{本证明第二步；差集公式 c3-06；有限性排除无穷减无穷。}\n\\end{enumerate}\n\\textbf{易漏点：}“某项有限”用于最后减法，不能省掉。"
+  },
+  {
+    "id": "p08",
+    "title": "Boole 不等式",
+    "title_fr": "2.3 8. Sous-additivité dénombrable, inégalité de Boole",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：把重复计数的部分去掉。}\n\\begin{enumerate}\n\\item 对有限个可测集，依次令 $D_1=A_1$、$D_k=A_k\\setminus\\bigcup_{j<k}A_j$。这些集合可测、不交，总并与原来相同，且 $D_k\\subseteq A_k$。\n\\dep{\\ensuremath{\\sigma}-代数的差集和有限并封闭；集合不交化。}\n\\item 有 $\\mu(\\bigcup_{k=1}^n A_k)=\\sum_{k=1}^n\\mu(D_k)\\le\\sum_{k=1}^n\\mu(A_k)$。\n\\dep{有限可加性、单调性 c3-06。}\n\\item 有限并随 $n$ 递增到总并，取极限得到可列不等式，右侧是非负级数的部分和极限。\n\\dep{递增连续性 c3-07；非负级数定义。}\n\\end{enumerate}\n\\textbf{易漏点：}不能把有重叠的原集合直接代入可列可加等式。"
+  },
+  {
+    "id": "p09",
+    "title": "Borel–Cantelli 引理",
+    "title_fr": "2.4 9. Lemme de Borel–Cantelli",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：上极限包含在每个尾部并中，尾部费用趋零。}\n\\begin{enumerate}\n\\item 令 $U_n=\\bigcup_{k\\ge n}A_k$，則 $L=\\limsup A_n=\\bigcap_n U_n$，这些集合可测且 $L\\subseteq U_n$。\n\\dep{集合上极限公式 c1-04；\\ensuremath{\\sigma}-代数封闭性 c2-02。}\n\\item 对每个 $n$，$0\\le\\mu(L)\\le\\mu(U_n)\\le\\sum_{k\\ge n}\\mu(A_k)$。\n\\dep{测度单调性 c3-06；Boole 不等式 c3-08。}\n\\item 由假设 $\\sum_k\\mu(A_k)<\\infty$，尾部和趋零，夹逼得 $\\mu(L)=0$。\n\\dep{分析性质：收敛非负级数尾部趋零；夹逼。}\n\\end{enumerate}\n\\textbf{易漏点：}这里无需独立性；不必调用可能引入额外有限性条件的递减连续性。"
+  },
+  {
+    "id": "p10",
+    "title": "可测映射的复合",
+    "title_fr": "3.1 10. Stabilité par composition",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：目标可测集依次取两次原像。}\n设 $f:(E,\\T_E)\\to(F,\\T_F)$、$g:(F,\\T_F)\\to(G,\\T_G)$ 可测。\n\\begin{enumerate}\n\\item 对任意 $A\\in\\T_G$，有 $g^{-1}(A)\\in\\T_F$。\n\\dep{定义：g 的可测性 c4-04。}\n\\item 因 $f$ 可测，$f^{-1}(g^{-1}(A))\\in\\T_E$。\n\\dep{定义：f 的可测性；前一步目标集合在中间 \\ensuremath{\\sigma}-代数中。}\n\\item $(g\\circ f)^{-1}(A)=f^{-1}(g^{-1}(A))$，故复合可测。\n\\dep{原像复合恒等式 c4-01；可测映射定义。}\n\\end{enumerate}\n\\textbf{易漏点：}中间两个可测族必须匹配。"
+  },
+  {
+    "id": "p11",
+    "title": "生成族判别",
+    "title_fr": "3.2 11. Caractérisation par une famille génératrice",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：把原像可测的目标集合收集成一个 \\ensuremath{\\sigma}-代数。}\n设 $\\T_F=\\sigma(\\mathcal G)$。\n\\begin{enumerate}\n\\item 必要性：若 $f$ 可测，则 $\\mathcal G\\subseteq\\T_F$ 的每个成员的原像可测。\n\\dep{定义：可测性；生成族包含关系。}\n\\item 充分性：令 $\\mathcal C=\\{B\\subseteq F:f^{-1}(B)\\in\\T_E\\}$。空集在其中，原像保持补和可数并，所以 $\\mathcal C$ 是 \\ensuremath{\\sigma}-代数。\n\\dep{原像运算 c4-01；源 \\ensuremath{\\sigma}-代数公理 c2-01。}\n\\item 假设给出 $\\mathcal G\\subseteq\\mathcal C$；生成的最小性推出 $\\T_F=\\sigma(\\mathcal G)\\subseteq\\mathcal C$，即所有目标可测集的原像可测。\n\\dep{性质：生成族最小性 c2-06；可测性定义。}\n\\end{enumerate}\n\\textbf{与原文的关系：}这是原文所用“原像与生成 \\ensuremath{\\sigma}-代数交换”的等价展开，避免把整个性质当黑箱。"
+  },
+  {
+    "id": "p12",
+    "title": "连续映射可测",
+    "title_fr": "3.3 12. Mesurabilité des fonctions continues",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：开集原像为开集，检查生成元即可。}\n\\begin{enumerate}\n\\item 两个赋范空间都配备各自的 Borel \\ensuremath{\\sigma}-代数。目标开集的原像由连续性是源开集，因此属于源 Borel 族。\n\\dep{连续性性质：开集原像为开集；Borel 定义 c2-07。}\n\\item 目标开集族生成目标 Borel 族，故由生成族判别，$f$ 可测。\n\\dep{定义：Borel；生成族判别 c4-07，指定证明 11。}\n\\end{enumerate}\n\\textbf{易漏点：}结论必须附“配备 Borel \\ensuremath{\\sigma}-代数”；不能对任意可测族照搬。"
+  },
+  {
+    "id": "p13",
+    "title": "示性函数可测",
+    "title_fr": "3.4 13. Mesurabilité des fonctions indicatrices",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：它只取 0 和 1，所有原像只会有四种。}\n设 $A\\in\\T$，$B\\in\\B(\\R)$ 任意。\n\\begin{enumerate}\n\\item 根据 $B$ 是否含 $0$、$1$，$\\mathbf1_A^{-1}(B)$ 分别为 $\\varnothing,A,A^c,E$。\n\\dep{定义：示性函数；集合原像 c4-01。}\n\\item 四个集合都在 $\\T$ 中，所以任意目标 Borel 集的原像可测，$\\mathbf1_A$ 可测。\n\\dep{假设 A 可测；\\ensuremath{\\sigma}-代数公理及全集可测 c2-01、c2-02；可测性定义。}\n\\end{enumerate}\n\\textbf{易漏点：}讨论的是目标集合含不含函数的两个值，不是讨论 $B$ 的形状。"
+  },
+  {
+    "id": "p14",
+    "title": "可测函数的基本运算",
+    "title_fr": "3.5 14. Stabilité par opérations usuelles",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：可测坐标组合，再复合连续运算。}\n\\begin{enumerate}\n\\item $f,g$ 实值可测，故 $x\\mapsto(f(x),g(x))$ 作为到 $\\R^2$ 的函数可测。\n\\dep{性质：向量函数的坐标判别 c4-10。}\n\\item $(u,v)\\mapsto u+v$ 与 $(u,v)\\mapsto uv$ 连续，因而 Borel 可测，与上一步复合得到 $f+g$、$fg$ 可测。\n\\dep{连续函数可测 c4-08；可测复合 c4-06。}\n\\item $u\\mapsto\\lambda u$ 和 $u\\mapsto|u|$ 连续，与 $f$ 复合得 $\\lambda f$、$|f|$ 可测。\n\\dep{连续运算的性质；连续函数可测与可测复合。}\n\\end{enumerate}\n\\textbf{易漏点：}本条使用实值函数；扩展实数的未定义运算不能套用。"
+  },
+  {
+    "id": "p15",
+    "title": "非负积分为零",
+    "title_fr": "4.1 15. Espérance et nullité presque partout",
+    "chapter": null,
+    "text": "\\providecommand{\\Z}{\\mathbb Z}\\renewcommand{\\textbf}[1]{{\\bfseries\\color{black}#1}}\n\\textbf{思路：所有正值点都落在某个阈值层里。}\n\\begin{enumerate}\n\\item 设 $f\\ge0$ 可测且 $\\int f\\dd\\mu=0$。令 $A_n=\\{f\\ge1/n\\}$，$n\\ge1$。这些集合可测，并有 $f\\ge(1/n)\\mathbf1_{A_n}$。\n\\dep{生成族可测性判别 c4-07；点值不等式；示性函数定义。}\n\\item 单调性给 $0\\le\\mu(A_n)/n=\\int(1/n)\\mathbf1_{A_n}\\dd\\mu\\le\\int f\\dd\\mu=0$，故每个 $A_n$ 都零测。\n\\dep{简单函数积分 c5-04；积分单调性 c5-10；非负性。}\n\\item $\\{f>0\\}=\\bigcup_{n\\ge1}A_n$，Boole 不等式给该集合测度为零，即 $f=0$ 几乎处处。\n\\dep{实数性质：每个正数至少为某个 1/n；Boole c3-08；几乎处处定义 c5-08。}\n\\item 反向：若 $f=0$ 几乎处处，非负积分在零测修改下不变，故 $\\int f=\\int0=0$。\n\\dep{性质：非负函数几乎处处相等的积分一致 c5-10；零函数积分定义。}\n\\end{enumerate}\n\\textbf{易漏点：}不能删去非负条件；$f$ 的积分为零不必推出它处处为零。"
+  }
+]

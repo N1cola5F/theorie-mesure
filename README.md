@@ -1,3 +1,7 @@
+<!-- ds-reader -->
+DS 期中知识复习：[在线入口](https://n1cola5f.github.io/theorie-mesure/ds/) · [源文件与维护](期中复习/README.md) · 100 个知识条目与 15 个指定证明。
+<!-- /ds-reader -->
+
 <!-- semester-reader -->
 本学期 W1–W4（13 个主题、117 个条目）：[在线原文对照阅读器](https://n1cola5f.github.io/theorie-mesure/reader/) · [维护说明](reader-source/README.md)
 

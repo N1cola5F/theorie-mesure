@@ -1,0 +1,76 @@
+% @note intro|从零开始的阅读方法
+\textbf{这份复习册的任务是先把知识连起来。}顺序是集合与原像、外测度、σ-代数、测度、可测函数、积分、多重积分，再读 $L^p$ 与测度分解。不要从背整页定理或直接看题解开始。
+每个知识条目先读中文说明，搞清\textbf{对象、条件、结论、一个例子}，再切到法语原文确认正式表述。中文是学习说明；法语来自教师考纲的原 PDF 矢量内容，不是重新翻译的版本。
+指定证明按 01—15 阅读：先确认结论，再沿“依据”回到前置知识。\textbf{能解释为什么能取可数并、为什么能减、为什么要有限，才算读懂。}
+练习建议放在知识之后。新上传的 TD1—TD4 官方答案都含题目，足够作为题源；无须提供个人答案或往年 DS 才能开始。
+\dep{依据：官方考纲第 1 页、证明清单第 15 页；用户的学习起点与知识优先要求。}
+% @end
+% @note basics|先看懂这些符号与对象
+\textbf{集合运算。}$A\subseteq B$ 表示包含；$A^c$ 是相对于当前底集的补集；$\sqcup$ 强调不交并。$\mathcal P(E)$ 是 $E$ 的所有子集组成的集合。
+\textbf{量词。}$\forall$ 是“每个”，$\exists$ 是“至少有一个”；量词先后不能随便调换。$\bigcup_n$ 表示至少属于一项，$\bigcap_n$ 表示属于每一项。
+\textbf{原像。}$f^{-1}(B)=\{x:f(x)\in B\}$ 是一个集合，不是逆函数。即使 $f$ 不可逆也定义良好。
+\textbf{三个层次。}$E$ 是点组成的空间；$\T$ 是允许测量的集合族；$\mu$ 给这些集合分配非负质量。随后 $f$ 是空间上的函数，$\int f\dd\mu$ 是相对于该质量规则进行累加。
+\textbf{inf 与 sup。}下确界是所有下界中最大的，上确界是所有上界中最小的；不保证有某个候选达到它。遇到 $+\infty$ 时不能计算 $\infty-\infty$。
+\dep{基础定义：集合、量词、原像、确界；测度与积分的正式定义见后续章节。}
+% @end
+% @note i1|第 1 章怎样读
+先读可数性和集合极限，再读外测度的覆盖定义与性质，最后读可测判据和 Carathéodory 定理。\textbf{主线是“任意集合的覆盖费用”怎样变成“可测集合上的测度”。}
+最容易混淆：可数与零测；外测度与测度；存在覆盖与达到最小值。看完时至少能说明 $\Q$ 为什么稠密又零测，Cantor 集为什么让“零测必可数”失败。
+法语关键词：\textbf{dénombrable}（可数），\textbf{recouvrement}（覆盖），\textbf{négligeable}（零测），\textbf{mesure extérieure}（外测度）。证明 01、02 在此章之后读。
+\dep{知识来源：官方考纲第 2—3 页。}
+% @end
+% @note i2|第 2 章怎样读
+记住 σ-代数的三个公理，随后把“最小”与“所有候选的交”连起来；最后理解 Borel 族及其不同生成方式。
+\textbf{生成族方法是贯穿课程的核心套路}：构造一个候选 σ-代数，确认它含生成元，再借最小性得到包含关系。
+法语关键词：\textbf{tribu}（σ-代数），\textbf{tribu engendrée}（生成的 σ-代数），\textbf{borélien}（Borel 集）。此章后读证明 03—05。
+\dep{知识来源：官方考纲第 3—4 页。}
+% @end
+% @note i3|第 3 章怎样读
+先把测度公理与例子配对：Lebesgue 测度、Dirac、计数测度。再学有限与 σ-有限，最后学连续性、Boole 与 Borel–Cantelli。
+\textbf{区分三种命题}：不交并的可加等式，任意并的次可加不等式，递增或递减序列的极限等式。它们的条件各不相同。
+法语关键词：\textbf{mesure finie}（有限测度），\textbf{σ-finie}（σ-有限），\textbf{diffuse}（弥散），\textbf{croissance}（单调性）。此章后读证明 06—09。
+\dep{知识来源：官方考纲第 5—6 页。}
+% @end
+% @note i4|第 4 章怎样读
+所有可测性都从\textbf{原像}开始。先用定义理解目标集合为什么要拉回源空间，再读生成族判别与连续函数可测，最后学运算和 sup、inf。
+先选一个简单函数，把 $\{f<a\}$ 写成具体集合；然后理解为什么只检查半直线就够。不要把“连续”误当成可测的必要条件。
+法语关键词：\textbf{image réciproque}（原像），\textbf{application mesurable}（可测映射），\textbf{indicatrice}（示性函数）。此章后读证明 10—14。
+\dep{知识来源：官方考纲第 6—7 页。}
+% @end
+% @note i5|第 5 章怎样读
+\textbf{积分构造有顺序}：示性函数、非负简单函数、一般非负可测函数、可积实值函数。每一步都用上一步作为依据。
+接着读几乎处处与可积性，再比较单调收敛、Fatou、控制收敛。不要先记公式而忽略它们各自的非负性、单调性和控制条件。
+法语关键词：\textbf{étagée}（简单函数），\textbf{intégrable}（可积），\textbf{presque partout}（几乎处处），\textbf{domination}（控制）。此章后读证明 15。
+\dep{知识来源：官方考纲第 7—10 页。}
+% @end
+% @note i6|第 6 章怎样读
+先用截面理解为什么区域积分能转成迭代积分，再比较 Tonelli 与 Fubini，最后理解换元中 Jacobian 如何表示体积变化。
+\textbf{先写适用条件，再写积分限}。有正负时先确认绝对可积；换序时重新描述区域；换元时同时改函数、区域与体积因子。
+法语关键词：\textbf{coupe}（截面），\textbf{mesure produit}（乘积测度），\textbf{changement de variables}（换元）。本章有知识与 TD4 题型，\textbf{没有额外指定证明}。
+\dep{知识来源：官方考纲第 10—11 页；15 证明最终清单第 15 页。}
+% @end
+% @note i7|第 7 章怎样读
+本章\textbf{只准备定义和结论的准确表述}。先明白 $p$-范数与本质上界，再区分 Hölder、Minkowski、Jensen，最后理解完备性、Hilbert 与稠密性。
+读不等式时抓住输入条件：指数范围、有限测度、凸性、可积性。\textbf{不用为本次 DS 推导这些证明或做 Lp 习题。}
+法语关键词：\textbf{semi-norme}（半范数），\textbf{essentiellement bornée}（本质有界），\textbf{dense}（稠密），\textbf{complet}（完备）。
+\dep{范围依据：官方考纲第 1 页与第 11—12 页。}
+% @end
+% @note i8|第 8 章怎样读
+本章同样\textbf{只准备定义和结论}。以 $\lambda$ 为基准，把密度、绝对连续、互相奇异三个概念分清楚，再用 Dirac 与 Cantor 测度比较。
+最后读 Radon–Nikodym 与 Lebesgue 分解：前者告诉何时有密度，后者告诉如何分成绝对连续和奇异部分。\textbf{弥散不保证有密度}是必须理解的反例。
+法语关键词：\textbf{densité}（密度），\textbf{absolument continue}（绝对连续），\textbf{étrangères}（互相奇异），\textbf{singulière continue}（奇异连续）。
+\dep{范围依据：官方考纲第 1 页与第 12—14 页。}
+% @end
+% @note pitfalls|最容易漏掉的条件
+\begin{enumerate}
+\item \textbf{集合：}σ-代数对可数并封闭，不是任意并；可数集零测，零测集未必可数。
+\item \textbf{测度：}有限不等于 σ-有限；递减连续性需要某项有限；做差时排除 $\infty-\infty$。
+\item \textbf{可测性：}检查原像；标出源和目标的 σ-代数；复合时中间族一致。
+\item \textbf{积分：}积分为零推出几乎处处零需要非负；可积意味着绝对积分有限。
+\item \textbf{极限：}单调收敛要求非负递增；Fatou 给不等式；控制收敛需要统一且可积的控制函数。
+\item \textbf{多重积分：}Tonelli 允许无穷，Fubini 要绝对可积；换元要写 Jacobian 绝对值和新区域。
+\item \textbf{Lp：}有限测度才保证较高指数包含于较低指数；几乎处处等价类是范数空间的对象；稠密性条目不包括 $p=\infty$。
+\item \textbf{分解：}绝对连续有方向；密度几乎处处唯一；Cantor 测度弥散而无 Lebesgue 密度。
+\end{enumerate}
+\dep{依据：考纲第 1—8 章各定义、性质与定理的条件；对应条目可由目录或搜索定位。}
+% @end

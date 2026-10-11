@@ -1,3 +1,9 @@
+<!-- ds-maintenance -->
+
+独立 DS 期中版 v1.0.0（资料登记 v1.7.0）：[在线复习册](https://n1cola5f.github.io/theorie-mesure/ds/) · [维护说明](../期中复习/README.md)。全学期版继续为 v1.6.1。
+
+<!-- /ds-maintenance -->
+
 # 全学期资料阅读器
 
 在线入口：https://n1cola5f.github.io/theorie-mesure/reader/

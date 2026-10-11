@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-11",
+  "scope": "Build diagnostics, mappings and actual referenced resources only; no screenshots or exhaustive math audit",
+  "statements": 100,
+  "proofs": 15,
+  "sources": 15,
+  "referenced_assets": 400,
+  "latex_faults": [],
+  "all_pdf_hashes_match": true,
+  "existing_reader_and_three_offline_files_preserved": true,
+  "protected_files": 677,
+  "runtime_math_renderer": false,
+  "browser_checks": {
+  "scope": "Representative chapter, language modes, search, proof/dependency, mobile and one new PDF; no screenshots",
+  "initial": {
+    "cards": 0,
+    "inlineSVG": 0,
+    "images": 1
+  },
+  "initialPDFRequests": 0,
+  "modeTimesMs": {
+    "fr": 79,
+    "compare": 43,
+    "zh": 36
+  },
+  "searchJump": {
+    "hash": "#c6-05",
+    "target": true
+  },
+  "proof": {
+    "cards": 1,
+    "dependencies": 5,
+    "formulaImage": "vectors/a9b3825e79cd49540c.svg"
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "cards": 13,
+    "menuClosed": true,
+    "hasExercises": false
+  },
+  "td4PDFStatus": 200,
+  "pageErrors": [],
+  "failedRequests": []
+},
+  "publication_checks": null
+}

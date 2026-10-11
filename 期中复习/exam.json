@@ -1,0 +1,378 @@
+{
+  "version": "1.0.0",
+  "repository_release": "1.7.0",
+  "updated": "2026-10-11",
+  "title": "测量理论 · DS 知识复习",
+  "url": "https://n1cola5f.github.io/theorie-mesure/ds/",
+  "exam": {
+    "date": "2026-10-20",
+    "timezone": "Asia/Shanghai",
+    "closed_book": true,
+    "calculator": false,
+    "duration_minutes": null,
+    "duration_estimate_minutes": [
+      90,
+      120
+    ],
+    "confirmation_source": "用户确认日期、闭卷及禁用计算器；时长估计未经教师确认。",
+    "course_questions": "2–5 道；较早通知写 3 道",
+    "proof_questions": 1,
+    "easy_exercises": 3,
+    "intermediate_exercises": 1
+  },
+  "sources": {
+    "programme": {
+      "path": "origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方知识考纲与 15 证明清单",
+      "pages": 15,
+      "new": true
+    },
+    "preuves": {
+      "path": "origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方 15 个证明全文",
+      "pages": 8,
+      "new": true
+    },
+    "cm1": {
+      "path": "origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "label": "CM01 · 外测度",
+      "new": false
+    },
+    "cm2": {
+      "path": "origin/按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "label": "CM02 · 可测空间与测度",
+      "new": false
+    },
+    "cm3": {
+      "path": "origin/按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "label": "CM03 · 可测函数与积分",
+      "new": false
+    },
+    "cm4": {
+      "path": "origin/按周划分/W4/CM04_FR_integrales-multiples.pdf",
+      "label": "CM04 · 多重积分",
+      "new": false
+    },
+    "cm5": {
+      "path": "origin/按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "label": "CM05 · Lᵖ 与测度分解",
+      "pages": 61,
+      "new": true
+    },
+    "handbook": {
+      "path": "origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+      "label": "课程手册（复习只取第 1–8 章）",
+      "pages": 157,
+      "new": false
+    },
+    "td1": {
+      "path": "origin/按周划分/W1/TD01_FR.pdf",
+      "label": "TD1 原题",
+      "pages": 7,
+      "new": false
+    },
+    "td2": {
+      "path": "origin/按周划分/W2/TD02_FR.pdf",
+      "label": "TD2 原题",
+      "pages": 6,
+      "new": false
+    },
+    "td3": {
+      "path": "origin/按周划分/W3/TD03_FR.pdf",
+      "label": "TD3 原题",
+      "pages": 6,
+      "new": false
+    },
+    "corrige1": {
+      "path": "origin/按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "label": "TD1 官方题目与答案",
+      "new": false
+    },
+    "corrige2": {
+      "path": "origin/按周划分/W2/corrige/TD02_FR_corrige.pdf",
+      "label": "TD2 官方题目与答案",
+      "pages": 15,
+      "new": true
+    },
+    "corrige3": {
+      "path": "origin/按周划分/W3/corrige/TD03_FR_corrige.pdf",
+      "label": "TD3 官方题目与答案",
+      "pages": 14,
+      "new": true
+    },
+    "corrige4": {
+      "path": "origin/按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+      "label": "TD4 官方题目与答案",
+      "pages": 15,
+      "new": true
+    }
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "title": "外测度：用覆盖衡量集合",
+      "fr": "Mesure extérieure",
+      "subtitle": "先区分大小、覆盖与可测性",
+      "count": 13,
+      "proofs": [
+        1,
+        2
+      ],
+      "requires": []
+    },
+    {
+      "id": 2,
+      "title": "可测空间：哪些集合可以测量",
+      "fr": "Espaces mesurables",
+      "subtitle": "σ-代数、生成族与 Borel 集",
+      "count": 13,
+      "proofs": [
+        3,
+        4,
+        5
+      ],
+      "requires": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "title": "测度：在可测集上分配质量",
+      "fr": "Mesures",
+      "subtitle": "可列可加、有限性与连续性",
+      "count": 10,
+      "proofs": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "requires": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "title": "可测函数：把集合与函数连接起来",
+      "fr": "Fonctions mesurables",
+      "subtitle": "原像、生成族判别和运算稳定性",
+      "count": 14,
+      "proofs": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "requires": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Lebesgue 积分：从简单函数开始",
+      "fr": "Intégrale de Lebesgue",
+      "subtitle": "定义、可积性与交换极限的条件",
+      "count": 17,
+      "proofs": [
+        15
+      ],
+      "requires": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "title": "多重积分：截面、换序与换元",
+      "fr": "Intégrales multiples",
+      "subtitle": "Tonelli、Fubini 与 Jacobian",
+      "count": 7,
+      "proofs": [],
+      "requires": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Lᵖ 空间：以积分衡量函数",
+      "fr": "Espaces Lᵖ",
+      "subtitle": "仅要求定义与结论，不要求证明和习题",
+      "count": 13,
+      "proofs": [],
+      "requires": [
+        5
+      ],
+      "statements_only": true
+    },
+    {
+      "id": 8,
+      "title": "测度分解：质量如何分布",
+      "fr": "Décomposition des mesures",
+      "subtitle": "仅要求定义与结论，不要求证明和习题",
+      "count": 13,
+      "proofs": [],
+      "requires": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "statements_only": true
+    }
+  ],
+  "proof_cards": [
+    {
+      "number": 1,
+      "card": "c1-07",
+      "requires": [
+        "c1-06",
+        "c1-01"
+      ]
+    },
+    {
+      "number": 2,
+      "card": "c1-08",
+      "requires": [
+        "c1-05",
+        "c1-06"
+      ]
+    },
+    {
+      "number": 3,
+      "card": "c2-04",
+      "requires": [
+        "c2-01"
+      ]
+    },
+    {
+      "number": 4,
+      "card": "c2-05",
+      "requires": [
+        "c2-03",
+        "c2-04"
+      ]
+    },
+    {
+      "number": 5,
+      "card": "c2-08",
+      "requires": [
+        "c1-01",
+        "c2-01",
+        "c2-06",
+        "c2-07"
+      ]
+    },
+    {
+      "number": 6,
+      "card": "c3-06",
+      "requires": [
+        "c2-02",
+        "c3-01"
+      ]
+    },
+    {
+      "number": 7,
+      "card": "c3-07",
+      "requires": [
+        "c3-01",
+        "c3-06"
+      ]
+    },
+    {
+      "number": 8,
+      "card": "c3-08",
+      "requires": [
+        "c2-02",
+        "c3-01",
+        "c3-06",
+        "c3-07"
+      ]
+    },
+    {
+      "number": 9,
+      "card": "c3-10",
+      "requires": [
+        "c1-04",
+        "c3-06",
+        "c3-08",
+        "c3-09"
+      ]
+    },
+    {
+      "number": 10,
+      "card": "c4-06",
+      "requires": [
+        "c4-01",
+        "c4-04"
+      ]
+    },
+    {
+      "number": 11,
+      "card": "c4-07",
+      "requires": [
+        "c2-01",
+        "c2-06",
+        "c4-01",
+        "c4-04"
+      ]
+    },
+    {
+      "number": 12,
+      "card": "c4-08",
+      "requires": [
+        "c2-07",
+        "c4-07"
+      ]
+    },
+    {
+      "number": 13,
+      "card": "c4-09",
+      "requires": [
+        "c2-01",
+        "c4-04"
+      ]
+    },
+    {
+      "number": 14,
+      "card": "c4-11",
+      "requires": [
+        "c4-06",
+        "c4-08",
+        "c4-10"
+      ]
+    },
+    {
+      "number": 15,
+      "card": "c5-11",
+      "requires": [
+        "c3-08",
+        "c4-07",
+        "c5-04",
+        "c5-08",
+        "c5-10"
+      ]
+    }
+  ],
+  "excluded": [
+    "TD3bis、TD5、TD5bis",
+    "TD1–TD4 的第 3 部分",
+    "概率章节（手册第 9 章及以后）",
+    "第 7–8 章的证明与习题",
+    "开集的内正则性",
+    "测度的和与正数倍（独立表述条目）",
+    "Dynkin 系统定义、π–λ 定理及相应唯一性推论"
+  ],
+  "missing_required_files": [],
+  "pending_exam_information": [
+    "教师确认的考试时长",
+    "具体开考时间与地点"
+  ],
+  "learner": {
+    "starting_point": "从零开始",
+    "primary_goal": "先读懂全部考纲知识，再理解 15 个证明",
+    "exercise_role": "知识后的可选建议和官方资料入口"
+  }
+}

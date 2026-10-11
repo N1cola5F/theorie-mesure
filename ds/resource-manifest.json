@@ -1,0 +1,1137 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-11",
+  "exam": {
+    "date": "2026-10-20",
+    "timezone": "Asia/Shanghai",
+    "closed_book": true,
+    "calculator": false,
+    "duration_minutes": null,
+    "duration_estimate_minutes": [
+      90,
+      120
+    ],
+    "confirmation_source": "用户确认日期、闭卷及禁用计算器；时长估计未经教师确认。",
+    "course_questions": "2–5 道；较早通知写 3 道",
+    "proof_questions": 1,
+    "easy_exercises": 3,
+    "intermediate_exercises": 1
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "title": "外测度：用覆盖衡量集合",
+      "fr": "Mesure extérieure",
+      "subtitle": "先区分大小、覆盖与可测性",
+      "count": 13,
+      "proofs": [
+        1,
+        2
+      ],
+      "requires": [],
+      "data": "data/16c225100a79cd3c5d.json"
+    },
+    {
+      "id": 2,
+      "title": "可测空间：哪些集合可以测量",
+      "fr": "Espaces mesurables",
+      "subtitle": "σ-代数、生成族与 Borel 集",
+      "count": 13,
+      "proofs": [
+        3,
+        4,
+        5
+      ],
+      "requires": [
+        1
+      ],
+      "data": "data/abb4995e6b84453ca1.json"
+    },
+    {
+      "id": 3,
+      "title": "测度：在可测集上分配质量",
+      "fr": "Mesures",
+      "subtitle": "可列可加、有限性与连续性",
+      "count": 10,
+      "proofs": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "requires": [
+        2
+      ],
+      "data": "data/a2b6f0c32f9b40e28e.json"
+    },
+    {
+      "id": 4,
+      "title": "可测函数：把集合与函数连接起来",
+      "fr": "Fonctions mesurables",
+      "subtitle": "原像、生成族判别和运算稳定性",
+      "count": 14,
+      "proofs": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "requires": [
+        2,
+        3
+      ],
+      "data": "data/1894b917f124e04365.json"
+    },
+    {
+      "id": 5,
+      "title": "Lebesgue 积分：从简单函数开始",
+      "fr": "Intégrale de Lebesgue",
+      "subtitle": "定义、可积性与交换极限的条件",
+      "count": 17,
+      "proofs": [
+        15
+      ],
+      "requires": [
+        3,
+        4
+      ],
+      "data": "data/b08830eaaeabae189d.json"
+    },
+    {
+      "id": 6,
+      "title": "多重积分：截面、换序与换元",
+      "fr": "Intégrales multiples",
+      "subtitle": "Tonelli、Fubini 与 Jacobian",
+      "count": 7,
+      "proofs": [],
+      "requires": [
+        4,
+        5
+      ],
+      "data": "data/a5871ad241fcd971b0.json"
+    },
+    {
+      "id": 7,
+      "title": "Lᵖ 空间：以积分衡量函数",
+      "fr": "Espaces Lᵖ",
+      "subtitle": "仅要求定义与结论，不要求证明和习题",
+      "count": 13,
+      "proofs": [],
+      "requires": [
+        5
+      ],
+      "statements_only": true,
+      "data": "data/4ca43dd4633b9876a1.json"
+    },
+    {
+      "id": 8,
+      "title": "测度分解：质量如何分布",
+      "fr": "Décomposition des mesures",
+      "subtitle": "仅要求定义与结论，不要求证明和习题",
+      "count": 13,
+      "proofs": [],
+      "requires": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "statements_only": true,
+      "data": "data/2f1f162e2d0399725d.json"
+    }
+  ],
+  "proofs": [
+    {
+      "id": "p01",
+      "title": "外测度的基本性质",
+      "number": 1,
+      "requires": [
+        "c1-06",
+        "c1-01"
+      ],
+      "card": "c1-07",
+      "data": "data/c8ee777ca1e0be3d8a.json"
+    },
+    {
+      "id": "p02",
+      "title": "平移与伸缩",
+      "number": 2,
+      "requires": [
+        "c1-05",
+        "c1-06"
+      ],
+      "card": "c1-08",
+      "data": "data/c6820b239df0e4fad7.json"
+    },
+    {
+      "id": "p03",
+      "title": "σ-代数的交",
+      "number": 3,
+      "requires": [
+        "c2-01"
+      ],
+      "card": "c2-04",
+      "data": "data/93dc7895a68bf3bf0f.json"
+    },
+    {
+      "id": "p04",
+      "title": "生成 σ-代数的描述",
+      "number": 4,
+      "requires": [
+        "c2-03",
+        "c2-04"
+      ],
+      "card": "c2-05",
+      "data": "data/88c2ff302d9a7f1af9.json"
+    },
+    {
+      "id": "p05",
+      "title": "有界开区间生成 Borel 族",
+      "number": 5,
+      "requires": [
+        "c1-01",
+        "c2-01",
+        "c2-06",
+        "c2-07"
+      ],
+      "card": "c2-08",
+      "data": "data/853eb1904f7e4446b4.json"
+    },
+    {
+      "id": "p06",
+      "title": "测度的基本性质",
+      "number": 6,
+      "requires": [
+        "c2-02",
+        "c3-01"
+      ],
+      "card": "c3-06",
+      "data": "data/fc81014073c0a33cdb.json"
+    },
+    {
+      "id": "p07",
+      "title": "测度的递增与递减连续性",
+      "number": 7,
+      "requires": [
+        "c3-01",
+        "c3-06"
+      ],
+      "card": "c3-07",
+      "data": "data/8c63f47e1e8f992adb.json"
+    },
+    {
+      "id": "p08",
+      "title": "Boole 不等式",
+      "number": 8,
+      "requires": [
+        "c2-02",
+        "c3-01",
+        "c3-06",
+        "c3-07"
+      ],
+      "card": "c3-08",
+      "data": "data/fa2ae544ccaffdac8b.json"
+    },
+    {
+      "id": "p09",
+      "title": "Borel–Cantelli 引理",
+      "number": 9,
+      "requires": [
+        "c1-04",
+        "c3-06",
+        "c3-08",
+        "c3-09"
+      ],
+      "card": "c3-10",
+      "data": "data/01f35222d92fd210f9.json"
+    },
+    {
+      "id": "p10",
+      "title": "可测映射的复合",
+      "number": 10,
+      "requires": [
+        "c4-01",
+        "c4-04"
+      ],
+      "card": "c4-06",
+      "data": "data/6f65c2399d220951a7.json"
+    },
+    {
+      "id": "p11",
+      "title": "生成族判别",
+      "number": 11,
+      "requires": [
+        "c2-01",
+        "c2-06",
+        "c4-01",
+        "c4-04"
+      ],
+      "card": "c4-07",
+      "data": "data/3d1c038308e712b5e7.json"
+    },
+    {
+      "id": "p12",
+      "title": "连续映射可测",
+      "number": 12,
+      "requires": [
+        "c2-07",
+        "c4-07"
+      ],
+      "card": "c4-08",
+      "data": "data/7193f2e72cf165d7bd.json"
+    },
+    {
+      "id": "p13",
+      "title": "示性函数可测",
+      "number": 13,
+      "requires": [
+        "c2-01",
+        "c4-04"
+      ],
+      "card": "c4-09",
+      "data": "data/52a041aae56b3864e8.json"
+    },
+    {
+      "id": "p14",
+      "title": "可测函数的基本运算",
+      "number": 14,
+      "requires": [
+        "c4-06",
+        "c4-08",
+        "c4-10"
+      ],
+      "card": "c4-11",
+      "data": "data/d0faefa3a4e4329f7a.json"
+    },
+    {
+      "id": "p15",
+      "title": "非负积分为零",
+      "number": 15,
+      "requires": [
+        "c3-08",
+        "c4-07",
+        "c5-04",
+        "c5-08",
+        "c5-10"
+      ],
+      "card": "c5-11",
+      "data": "data/7eca17592048835add.json"
+    }
+  ],
+  "guides": {
+    "intro": {
+      "title": "从零开始的阅读方法",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b37430f303bb1c4f0e.svg",
+          "width": 340.72,
+          "height": 179.82
+        },
+        "narrow": {
+          "src": "vectors/5ddf0f68a5e8e8f240.svg",
+          "width": 221.17,
+          "height": 291.69
+        }
+      }
+    },
+    "basics": {
+      "title": "先看懂这些符号与对象",
+      "compiled": {
+        "wide": {
+          "src": "vectors/8b7768e5a0b2e6c84e.svg",
+          "width": 340.72,
+          "height": 179.82
+        },
+        "narrow": {
+          "src": "vectors/834a29990e0b343035.svg",
+          "width": 221.17,
+          "height": 273.07
+        }
+      }
+    },
+    "i1": {
+      "title": "第 1 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/1133026c461f0d2752.svg",
+          "width": 340.72,
+          "height": 142.52
+        },
+        "narrow": {
+          "src": "vectors/820fafd53c82eebfb3.svg",
+          "width": 221.17,
+          "height": 217.12
+        }
+      }
+    },
+    "i2": {
+      "title": "第 2 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b4ffa24541a99fa2fd.svg",
+          "width": 340.72,
+          "height": 105.22
+        },
+        "narrow": {
+          "src": "vectors/f034e56ecbc118434f.svg",
+          "width": 221.17,
+          "height": 142.52
+        }
+      }
+    },
+    "i3": {
+      "title": "第 3 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/65a9c14d6622160525.svg",
+          "width": 340.72,
+          "height": 123.87
+        },
+        "narrow": {
+          "src": "vectors/8e2f61a1cdabf9c101.svg",
+          "width": 221.17,
+          "height": 161.17
+        }
+      }
+    },
+    "i4": {
+      "title": "第 4 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/41ef44087e2db0c6ca.svg",
+          "width": 340.72,
+          "height": 123.87
+        },
+        "narrow": {
+          "src": "vectors/009f2ec2b7a08da377.svg",
+          "width": 221.17,
+          "height": 179.82
+        }
+      }
+    },
+    "i5": {
+      "title": "第 5 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/1caf70fe23034d8805.svg",
+          "width": 340.72,
+          "height": 123.87
+        },
+        "narrow": {
+          "src": "vectors/3e4a688dbc52521d18.svg",
+          "width": 221.17,
+          "height": 179.82
+        }
+      }
+    },
+    "i6": {
+      "title": "第 6 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/8b856e4b4878e67656.svg",
+          "width": 340.72,
+          "height": 123.87
+        },
+        "narrow": {
+          "src": "vectors/382d13c8363a81e492.svg",
+          "width": 221.17,
+          "height": 198.44
+        }
+      }
+    },
+    "i7": {
+      "title": "第 7 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/68386d244f99be8edf.svg",
+          "width": 340.72,
+          "height": 123.83
+        },
+        "narrow": {
+          "src": "vectors/490fb851be902f2c24.svg",
+          "width": 221.17,
+          "height": 161.13
+        }
+      }
+    },
+    "i8": {
+      "title": "第 8 章怎样读",
+      "compiled": {
+        "wide": {
+          "src": "vectors/febf7cee73e9ef3df3.svg",
+          "width": 340.72,
+          "height": 123.87
+        },
+        "narrow": {
+          "src": "vectors/5028856505f6b329de.svg",
+          "width": 221.17,
+          "height": 179.78
+        }
+      }
+    },
+    "pitfalls": {
+      "title": "最容易漏掉的条件",
+      "compiled": {
+        "wide": {
+          "src": "vectors/f882906086b192a3e0.svg",
+          "width": 340.72,
+          "height": 365.06
+        },
+        "narrow": {
+          "src": "vectors/06cf937225b4912c35.svg",
+          "width": 221.17,
+          "height": 439.73
+        }
+      }
+    }
+  },
+  "search": "data/dfb3c034f5dc79d5ac.json",
+  "sources": {
+    "programme": {
+      "path": "按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方知识考纲与 15 证明清单",
+      "pages": 15,
+      "new": true,
+      "sha256": "4e25cf08b585893ece02787cb9c2a9a2b0b8bf789493e6c758d3a3e011c1b556",
+      "href": "../origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf"
+    },
+    "preuves": {
+      "path": "按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf",
+      "label": "官方 15 个证明全文",
+      "pages": 8,
+      "new": true,
+      "sha256": "4cd5f1a88c7ba755504a4066b5f41975fd6cb263e94a691a4e29aaab9c9e4021",
+      "href": "../origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf"
+    },
+    "cm1": {
+      "path": "按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf",
+      "label": "CM01 · 外测度",
+      "new": false,
+      "pages": 73,
+      "sha256": "699cad327e3667679e4ce3c12d42bdaf53d575f048d1a5838301e38cb63f0dba",
+      "href": "../origin/按周划分/W1/CM1_ZFAI_chapitre1_FR.pdf"
+    },
+    "cm2": {
+      "path": "按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf",
+      "label": "CM02 · 可测空间与测度",
+      "new": false,
+      "pages": 88,
+      "sha256": "b1ab000990c80622ae2079c299f30de7ecc060e0d86833f7ebae38804a1bc249",
+      "href": "../origin/按周划分/W2/CM2_ZFAI_chapitre2_FR.pdf"
+    },
+    "cm3": {
+      "path": "按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf",
+      "label": "CM03 · 可测函数与积分",
+      "new": false,
+      "pages": 84,
+      "sha256": "5de662a826406f6dd2b0f7e31a38a54cf43c31ba93564fd469f277cbb027f686",
+      "href": "../origin/按周划分/W3/CM3_ZFAI_integrale_Lebesgue_FR.pdf"
+    },
+    "cm4": {
+      "path": "按周划分/W4/CM04_FR_integrales-multiples.pdf",
+      "label": "CM04 · 多重积分",
+      "new": false,
+      "pages": 25,
+      "sha256": "79c7f31206fe2adb755ee9ee4d86c3d0506beb13c8fd8f839c62eab5f33d34c5",
+      "href": "../origin/按周划分/W4/CM04_FR_integrales-multiples.pdf"
+    },
+    "cm5": {
+      "path": "按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf",
+      "label": "CM05 · Lᵖ 与测度分解",
+      "pages": 61,
+      "new": true,
+      "sha256": "6514281f04a9c36029058d6e199e1596759feb85c507e6fab7ae4ff9ef62d341",
+      "href": "../origin/按周划分/W5/CM05_FR_espaces-Lp_et_decomposition-des-mesures.pdf"
+    },
+    "handbook": {
+      "path": "按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf",
+      "label": "课程手册（复习只取第 1–8 章）",
+      "pages": 157,
+      "new": false,
+      "sha256": "039e61fd8b31ec613f3452bc12b27a74275c5417b017a949cbda23703c7ead89",
+      "href": "../origin/按周划分/W4/Cours_ZFAI_L4_Theorie_de_la_mesure_et_probabilites_FR.pdf"
+    },
+    "td1": {
+      "path": "按周划分/W1/TD01_FR.pdf",
+      "label": "TD1 原题",
+      "pages": 7,
+      "new": false,
+      "sha256": "606ddf6771970798a9437713b1b3cc3c5ced169c4b6face0aa8c3fdbd9dc47ef",
+      "href": "../origin/按周划分/W1/TD01_FR.pdf"
+    },
+    "td2": {
+      "path": "按周划分/W2/TD02_FR.pdf",
+      "label": "TD2 原题",
+      "pages": 6,
+      "new": false,
+      "sha256": "2af330be7e729165bb09b26121eeea7adee20ba45f82ebb99d0a1b437916e0ee",
+      "href": "../origin/按周划分/W2/TD02_FR.pdf"
+    },
+    "td3": {
+      "path": "按周划分/W3/TD03_FR.pdf",
+      "label": "TD3 原题",
+      "pages": 6,
+      "new": false,
+      "sha256": "2804ac8893f1adb2104b986380f4c4644c32600a675c45333b65ca4ac6d3cde9",
+      "href": "../origin/按周划分/W3/TD03_FR.pdf"
+    },
+    "corrige1": {
+      "path": "按周划分/W1/corrige/TD01_FR_corrige.pdf",
+      "label": "TD1 官方题目与答案",
+      "new": false,
+      "pages": 17,
+      "sha256": "b508db4edcd18d558684142190eff83e4b11b7ec38f9cd6fd279c60395e5f87b",
+      "href": "../origin/按周划分/W1/corrige/TD01_FR_corrige.pdf"
+    },
+    "corrige2": {
+      "path": "按周划分/W2/corrige/TD02_FR_corrige.pdf",
+      "label": "TD2 官方题目与答案",
+      "pages": 15,
+      "new": true,
+      "sha256": "327da8549efeca7dc8f9129e9c4893ef4b6de7d1301d5e77d8eff25073a9d47b",
+      "href": "../origin/按周划分/W2/corrige/TD02_FR_corrige.pdf"
+    },
+    "corrige3": {
+      "path": "按周划分/W3/corrige/TD03_FR_corrige.pdf",
+      "label": "TD3 官方题目与答案",
+      "pages": 14,
+      "new": true,
+      "sha256": "18f2ab04a2fdc23ff277f117202875bf5991820b07e12522c50928c31b8deae6",
+      "href": "../origin/按周划分/W3/corrige/TD03_FR_corrige.pdf"
+    },
+    "corrige4": {
+      "path": "按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf",
+      "label": "TD4 官方题目与答案",
+      "pages": 15,
+      "new": true,
+      "sha256": "3a7e57a44d44b8d0ed7f205bdb2ac703bba34dcfc6f0dd95ad605ab439dc2731",
+      "href": "../origin/按周划分/W4/corrige/TD04_FR_integrales-multiples_corrige.pdf"
+    }
+  },
+  "catalog": "data/3d5569ff706d6dd865.json",
+  "td": [
+    {
+      "number": 1,
+      "title": "外测度与可测性",
+      "chapters": [
+        1,
+        2
+      ],
+      "source": "corrige1",
+      "exercises": [
+        {
+          "number": "1.1",
+          "title": "可数集为什么零测",
+          "card": "c1-10",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.2",
+          "title": "有限覆盖与可数覆盖的区别",
+          "card": "c1-06",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.5",
+          "title": "Lipschitz 映射与零测集",
+          "card": "c1-08",
+          "page": 4,
+          "part": 1
+        },
+        {
+          "number": "1.8",
+          "title": "连续函数的 Borel 原像",
+          "card": "c4-08",
+          "page": 6,
+          "part": 1
+        },
+        {
+          "number": "2.1",
+          "title": "用测试集合理解可测判据",
+          "card": "c1-11",
+          "page": 6,
+          "part": 2
+        }
+      ],
+      "counts": {
+        "1": 8,
+        "2": 8
+      },
+      "all_exercise_locations": [
+        {
+          "number": "1.1",
+          "page": 2
+        },
+        {
+          "number": "1.2",
+          "page": 2
+        },
+        {
+          "number": "1.3",
+          "page": 3
+        },
+        {
+          "number": "1.4",
+          "page": 4
+        },
+        {
+          "number": "1.5",
+          "page": 4
+        },
+        {
+          "number": "1.6",
+          "page": 5
+        },
+        {
+          "number": "1.7",
+          "page": 6
+        },
+        {
+          "number": "1.8",
+          "page": 6
+        },
+        {
+          "number": "2.1",
+          "page": 6
+        },
+        {
+          "number": "2.2",
+          "page": 8
+        },
+        {
+          "number": "2.3",
+          "page": 8
+        },
+        {
+          "number": "2.4",
+          "page": 9
+        },
+        {
+          "number": "2.5",
+          "page": 9
+        },
+        {
+          "number": "2.6",
+          "page": 10
+        },
+        {
+          "number": "2.7",
+          "page": 11
+        },
+        {
+          "number": "2.8",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "σ-代数与测度",
+      "chapters": [
+        2,
+        3
+      ],
+      "source": "corrige2",
+      "exercises": [
+        {
+          "number": "1.1",
+          "title": "有限分割生成的 σ-代数",
+          "card": "c2-03",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.3",
+          "title": "有限并封闭为何不够",
+          "card": "c2-01",
+          "page": 3,
+          "part": 1
+        },
+        {
+          "number": "1.4",
+          "title": "可列可加与连续性的联系",
+          "card": "c3-07",
+          "page": 3,
+          "part": 1
+        },
+        {
+          "number": "1.5",
+          "title": "计数测度",
+          "card": "c3-01",
+          "page": 4,
+          "part": 1
+        },
+        {
+          "number": "1.9",
+          "title": "集合极限与测度",
+          "card": "c3-09",
+          "page": 6,
+          "part": 1
+        },
+        {
+          "number": "2.1",
+          "title": "在子集上的可测族",
+          "card": "c2-01",
+          "page": 7,
+          "part": 2
+        },
+        {
+          "number": "2.3",
+          "title": "计数测度的 σ-有限性",
+          "card": "c3-01",
+          "page": 9,
+          "part": 2
+        }
+      ],
+      "counts": {
+        "1": 9,
+        "2": 4
+      },
+      "all_exercise_locations": [
+        {
+          "number": "1.1",
+          "page": 2
+        },
+        {
+          "number": "1.2",
+          "page": 2
+        },
+        {
+          "number": "1.3",
+          "page": 3
+        },
+        {
+          "number": "1.4",
+          "page": 3
+        },
+        {
+          "number": "1.5",
+          "page": 4
+        },
+        {
+          "number": "1.6",
+          "page": 4
+        },
+        {
+          "number": "1.7",
+          "page": 5
+        },
+        {
+          "number": "1.8",
+          "page": 6
+        },
+        {
+          "number": "1.9",
+          "page": 6
+        },
+        {
+          "number": "2.1",
+          "page": 7
+        },
+        {
+          "number": "2.2",
+          "page": 8
+        },
+        {
+          "number": "2.3",
+          "page": 9
+        },
+        {
+          "number": "2.4",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "可测函数与积分",
+      "chapters": [
+        4,
+        5
+      ],
+      "source": "corrige3",
+      "exercises": [
+        {
+          "number": "1.1",
+          "title": "原像运算",
+          "card": "c4-01",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.2",
+          "title": "单调函数可测",
+          "card": "c4-07",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.4",
+          "title": "有限离散测度上的积分",
+          "card": "c5-04",
+          "page": 3,
+          "part": 1
+        },
+        {
+          "number": "1.6",
+          "title": "简单函数直接积分",
+          "card": "c5-04",
+          "page": 4,
+          "part": 1
+        },
+        {
+          "number": "2.1",
+          "title": "max 与 min 可测",
+          "card": "c4-11",
+          "page": 5,
+          "part": 2
+        },
+        {
+          "number": "2.4",
+          "title": "非负级数与离散积分",
+          "card": "c5-13",
+          "page": 6,
+          "part": 2
+        },
+        {
+          "number": "2.6",
+          "title": "sup、limsup 与点态极限",
+          "card": "c4-13",
+          "page": 8,
+          "part": 2
+        }
+      ],
+      "counts": {
+        "1": 8,
+        "2": 8
+      },
+      "all_exercise_locations": [
+        {
+          "number": "1.1",
+          "page": 2
+        },
+        {
+          "number": "1.2",
+          "page": 2
+        },
+        {
+          "number": "1.3",
+          "page": 3
+        },
+        {
+          "number": "1.4",
+          "page": 3
+        },
+        {
+          "number": "1.5",
+          "page": 4
+        },
+        {
+          "number": "1.6",
+          "page": 4
+        },
+        {
+          "number": "1.7",
+          "page": 5
+        },
+        {
+          "number": "1.8",
+          "page": 5
+        },
+        {
+          "number": "2.1",
+          "page": 5
+        },
+        {
+          "number": "2.2",
+          "page": 6
+        },
+        {
+          "number": "2.3",
+          "page": 6
+        },
+        {
+          "number": "2.4",
+          "page": 6
+        },
+        {
+          "number": "2.5",
+          "page": 8
+        },
+        {
+          "number": "2.6",
+          "page": 8
+        },
+        {
+          "number": "2.7",
+          "page": 9
+        },
+        {
+          "number": "2.8",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "多重积分",
+      "chapters": [
+        6
+      ],
+      "source": "corrige4",
+      "exercises": [
+        {
+          "number": "1.1",
+          "title": "用截面算单纯形体积",
+          "card": "c6-03",
+          "page": 2,
+          "part": 1
+        },
+        {
+          "number": "1.2",
+          "title": "用 Tonelli 算圆盘面积",
+          "card": "c6-05",
+          "page": 3,
+          "part": 1
+        },
+        {
+          "number": "1.4",
+          "title": "乘积函数的积分",
+          "card": "c6-05",
+          "page": 4,
+          "part": 1
+        },
+        {
+          "number": "1.5",
+          "title": "线性换元与 Jacobian",
+          "card": "c6-07",
+          "page": 4,
+          "part": 1
+        },
+        {
+          "number": "1.6",
+          "title": "非负级数与积分",
+          "card": "c5-13",
+          "page": 5,
+          "part": 1
+        },
+        {
+          "number": "2.3",
+          "title": "绝对可积阈值",
+          "card": "c6-05",
+          "page": 9,
+          "part": 2
+        },
+        {
+          "number": "2.4",
+          "title": "曲线之间的区域",
+          "card": "c6-06",
+          "page": 10,
+          "part": 2
+        },
+        {
+          "number": "2.5",
+          "title": "选择适合 x+y 的坐标",
+          "card": "c6-07",
+          "page": 10,
+          "part": 2
+        }
+      ],
+      "counts": {
+        "1": 11,
+        "2": 7
+      },
+      "all_exercise_locations": [
+        {
+          "number": "1.1",
+          "page": 2
+        },
+        {
+          "number": "1.2",
+          "page": 3
+        },
+        {
+          "number": "1.3",
+          "page": 4
+        },
+        {
+          "number": "1.4",
+          "page": 4
+        },
+        {
+          "number": "1.5",
+          "page": 4
+        },
+        {
+          "number": "1.6",
+          "page": 5
+        },
+        {
+          "number": "1.7",
+          "page": 5
+        },
+        {
+          "number": "1.8",
+          "page": 5
+        },
+        {
+          "number": "1.9",
+          "page": 6
+        },
+        {
+          "number": "1.10",
+          "page": 6
+        },
+        {
+          "number": "1.11",
+          "page": 7
+        },
+        {
+          "number": "2.1",
+          "page": 7
+        },
+        {
+          "number": "2.2",
+          "page": 8
+        },
+        {
+          "number": "2.3",
+          "page": 9
+        },
+        {
+          "number": "2.4",
+          "page": 10
+        },
+        {
+          "number": "2.5",
+          "page": 10
+        },
+        {
+          "number": "2.6",
+          "page": 11
+        },
+        {
+          "number": "2.7",
+          "page": 12
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "TD3bis、TD5、TD5bis",
+    "TD1–TD4 的第 3 部分",
+    "概率章节（手册第 9 章及以后）",
+    "第 7–8 章的证明与习题",
+    "开集的内正则性",
+    "测度的和与正数倍（独立表述条目）",
+    "Dynkin 系统定义、π–λ 定理及相应唯一性推论"
+  ],
+  "missing_required_files": [],
+  "pending_exam_information": [
+    "教师确认的考试时长",
+    "具体开考时间与地点"
+  ]
+}

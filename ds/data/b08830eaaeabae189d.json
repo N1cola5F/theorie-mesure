@@ -1,0 +1,539 @@
+{
+  "chapter": 5,
+  "cards": [
+    {
+      "id": "c5-01",
+      "title": "简单函数是积分的积木",
+      "compiled": {
+        "wide": {
+          "src": "vectors/90bc933bab0f3f79c0.svg",
+          "width": 340.72,
+          "height": 68.82
+        },
+        "narrow": {
+          "src": "vectors/b5b93a37cd9c55112b.svg",
+          "width": 221.17,
+          "height": 106.12
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Fonction étagée",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-98dd4f0aa28dc99384ee",
+          "page": 7,
+          "svg": {
+            "src": "vectors/ba366518df1a56dc32.svg",
+            "width": 515.276,
+            "height": 128.986
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-02",
+      "title": "简单函数可测",
+      "compiled": {
+        "wide": {
+          "src": "vectors/05dd186b7a3ca12601.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/3f766619bcadcea6d3.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-09",
+        "c4-11"
+      ],
+      "title_fr": "Propriété – Mesurabilité des fonctions étagées",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-92a5cb61cf6e225a52ee",
+          "page": 8,
+          "svg": {
+            "src": "vectors/c4130da52e14e898b9.svg",
+            "width": 515.276,
+            "height": 38.933
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-03",
+      "title": "非负可测函数的递增逼近",
+      "compiled": {
+        "wide": {
+          "src": "vectors/140521ba447049e7a8.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/87bcdd67983af60d3d.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Lemme d’approximation",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-bce11bcd753ef633d27a",
+          "page": 8,
+          "svg": {
+            "src": "vectors/5276242e972a420326.svg",
+            "width": 515.276,
+            "height": 51.497
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-04",
+      "title": "非负简单函数的积分",
+      "compiled": {
+        "wide": {
+          "src": "vectors/8635a40cfe9f6da0d8.svg",
+          "width": 340.72,
+          "height": 113.23
+        },
+        "narrow": {
+          "src": "vectors/a1f7028033cca601e6.svg",
+          "width": 221.17,
+          "height": 131.88
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Intégrale d’une fonction étagée positive",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-3e81ddf266ce2444d356",
+          "page": 8,
+          "svg": {
+            "src": "vectors/fb92953c8f33ab1aee.svg",
+            "width": 515.276,
+            "height": 92.939
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-05",
+      "title": "一般非负函数积分的定义",
+      "compiled": {
+        "wide": {
+          "src": "vectors/5fc4a925c7fceda782.svg",
+          "width": 340.72,
+          "height": 95.18
+        },
+        "narrow": {
+          "src": "vectors/cd5b16b3476b88acb2.svg",
+          "width": 221.17,
+          "height": 131.54
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c5-04"
+      ],
+      "title_fr": "Définition – Intégrale d’une fonction mesurable positive",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-3ddbd062334977338852",
+          "page": 8,
+          "svg": {
+            "src": "vectors/6df09c1ba96538070c.svg",
+            "width": 515.276,
+            "height": 97.491
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-06",
+      "title": "递增简单逼近计算积分",
+      "compiled": {
+        "wide": {
+          "src": "vectors/17ccba4263bab38b3f.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/2ba388f6af80d34a88.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Limite croissante et intégrale",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-fd2a66e077ad94d1f383",
+          "page": 8,
+          "svg": {
+            "src": "vectors/1d9617fcf93ad2702e.svg",
+            "width": 515.276,
+            "height": 53.102
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-07",
+      "title": "实值积分先分正负部分",
+      "compiled": {
+        "wide": {
+          "src": "vectors/44f942b3924c1cbb8b.svg",
+          "width": 340.72,
+          "height": 125.1
+        },
+        "narrow": {
+          "src": "vectors/955c945da9778d108f.svg",
+          "width": 221.17,
+          "height": 143.75
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c5-12"
+      ],
+      "title_fr": "Définition – Intégrale d’une fonction mesurable réelle",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-e34c1775c35700a655e3",
+          "page": 8,
+          "svg": {
+            "src": "vectors/73235ec318be0da006.svg",
+            "width": 515.276,
+            "height": 133.551
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-08",
+      "title": "集合上积分与几乎处处",
+      "compiled": {
+        "wide": {
+          "src": "vectors/6d008cbcaeee209802.svg",
+          "width": 340.72,
+          "height": 68.71
+        },
+        "narrow": {
+          "src": "vectors/b9b30e4b6ce4f5c871.svg",
+          "width": 221.17,
+          "height": 105.11
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Intégrale sur un événement, presque partout",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-97f6afbc22a54beeebbb",
+          "page": 8,
+          "svg": {
+            "src": "vectors/e4b6177dbf8c06f208.svg",
+            "width": 515.276,
+            "height": 65.39
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-09",
+      "title": "积分的线性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/594579402b08c26037.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/1f1313738bed5fbdf6.svg",
+          "width": 221.17,
+          "height": 123.8
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Linéarité de l’intégrale",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-4e59621da011c23f7090",
+          "page": 8,
+          "svg": {
+            "src": "vectors/937f569944e9af9eb4.svg",
+            "width": 515.276,
+            "height": 232.468
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-10",
+      "title": "单调性与零测修改",
+      "compiled": {
+        "wide": {
+          "src": "vectors/d5a08fcd733f60e2d9.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/39953b12393de643cc.svg",
+          "width": 221.17,
+          "height": 105.14
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Monotonie",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-e1278d073ff47d088d7e",
+          "page": 9,
+          "svg": {
+            "src": "vectors/765625e07e2830af9c.svg",
+            "width": 515.276,
+            "height": 169.112
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-11",
+      "title": "非负积分为零的含义",
+      "compiled": {
+        "wide": {
+          "src": "vectors/84bd0628f67cb4e022.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/6fa72ba8aeb18d69ff.svg",
+          "width": 221.17,
+          "height": 125.1
+        }
+      },
+      "proof": 15,
+      "requires": [],
+      "title_fr": "Propriété – Espérance et nullité presque partout",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-44e6fc575e59367eb801",
+          "page": 9,
+          "svg": {
+            "src": "vectors/71a6693d8c825a949d.svg",
+            "width": 515.276,
+            "height": 73.692
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-12",
+      "title": "可积性的常用判据",
+      "compiled": {
+        "wide": {
+          "src": "vectors/39d5032abc19bfbd57.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/49f1689cb373772024.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Intégrabilité",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-225c7c22250961e58d23",
+          "page": 9,
+          "svg": {
+            "src": "vectors/d495966058569c0b46.svg",
+            "width": 515.276,
+            "height": 111.826
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-13",
+      "title": "单调收敛定理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/e3780b4602534199a8.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/10dd1a5426a23481de.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Théorème de convergence monotone",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-0734553f814ff96c919c",
+          "page": 9,
+          "svg": {
+            "src": "vectors/2a8d3ec542d57a7120.svg",
+            "width": 515.276,
+            "height": 108.36
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-14",
+      "title": "Fatou 引理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/e34f36733c88ec24a5.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/6b7cfa4afce3aae76e.svg",
+          "width": 221.17,
+          "height": 143.44
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Lemme de Fatou",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-15d1508002c726328671",
+          "page": 9,
+          "svg": {
+            "src": "vectors/12e0edaab264f48df2.svg",
+            "width": 515.276,
+            "height": 72.051
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-15",
+      "title": "控制收敛定理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/387220e1d120da598f.svg",
+          "width": 340.72,
+          "height": 86.61
+        },
+        "narrow": {
+          "src": "vectors/4d6edc2bfae8ed687e.svg",
+          "width": 221.17,
+          "height": 105.26
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Théorème de convergence dominée",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-8c8f405738ad6b70390f",
+          "page": 9,
+          "svg": {
+            "src": "vectors/3b18a9ef0c96134a47.svg",
+            "width": 515.276,
+            "height": 97.713
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-16",
+      "title": "积分号内的连续性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/036152b69b5e5263c0.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/f687625945d8eb150f.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Continuité sous le signe intégral",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-9ebcaebe453ce1328ae4",
+          "page": 9,
+          "svg": {
+            "src": "vectors/5a7bacc4a666809cd6.svg",
+            "width": 515.276,
+            "height": 133.617
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-17",
+      "title": "积分号内求导",
+      "compiled": {
+        "wide": {
+          "src": "vectors/c68e393f41a5c67aeb.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/6e4459c95452f14631.svg",
+          "width": 221.17,
+          "height": 143.75
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Dérivabilité sous le signe intégral",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-5b722944c0164ea457b3",
+          "page": 10,
+          "svg": {
+            "src": "vectors/c814c045714ff1819b.svg",
+            "width": 515.276,
+            "height": 135.433
+          }
+        }
+      ]
+    }
+  ]
+}

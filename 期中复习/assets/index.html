@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="测量理论 DS 知识复习：官方 100 个知识条目、15 个指定证明、中文理解与法语原文对照。">
+<meta name="theme-color" content="#f5f2eb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23e6e0d3'/%3E%3Ctext x='8' y='24' font-size='25' fill='%23202633'%3E%CE%BC%3C/text%3E%3C/svg%3E">
+<title>测量理论 · DS 知识复习</title>
+<link rel="stylesheet" href="{{CSS}}">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar">
+  <button id="menu" class="menu" aria-controls="sidebar" aria-expanded="false" aria-label="打开目录">☰</button>
+  <a class="brand" href="#home"><span>THÉORIE DE LA MESURE</span><strong>DS · 知识复习</strong></a>
+  <div class="mode" role="group" aria-label="阅读语言">
+    <button data-mode="zh" aria-pressed="true">中文理解</button>
+    <button data-mode="compare" aria-pressed="false">中法对照</button>
+    <button data-mode="fr" aria-pressed="false">Français</button>
+  </div>
+</header>
+<aside id="sidebar" class="sidebar">
+  <label class="search-label" for="search">查找知识或证明</label>
+  <input id="search" type="search" placeholder="如：零测 / Fubini / intégrable" autocomplete="off">
+  <nav id="nav" aria-label="复习目录"></nav>
+  <a class="semester" href="../reader/">全学期阅读器 v1.6.1 ↗</a>
+  <p class="side-note">先读懂条件与结论，再看证明。<br>第 7–8 章仅准备知识表述。</p>
+</aside>
+<main id="main" tabindex="-1"><div class="loading">正在打开复习册…</div></main>
+<dialog id="zoom"><button class="close-zoom" aria-label="关闭原文放大">关闭 ×</button><div id="zoom-content"></div></dialog>
+<footer>DS 复习册 v1.0.0 · 2026-10-11 · 中文为学习说明，法语为教师原文</footer>
+<script id="manifest" type="application/json">{{MANIFEST}}</script>
+<script src="{{JS}}" defer></script>
+<noscript><p>目录与按章节加载需要 JavaScript。可直接阅读 <a href="../origin/按周划分/DemiSemestre/Programme_DS_FR_theorie-de-la-mesure.pdf">官方知识考纲</a> 和 <a href="../origin/按周划分/DemiSemestre/Preuves_DS_FR_theorie-de-la-mesure.pdf">官方证明</a>。</p></noscript>
+</body>
+</html>

@@ -14,7 +14,7 @@ process.env.DOCS_BASE = `/${repo}/`
 run('vitepress build docs')
 
 // Keep the semester reader and source PDFs when the original site is rebuilt.
-for (const directory of ['reader', 'origin']) {
+for (const directory of ['reader', 'origin', 'ds']) {
   if (existsSync(directory)) cpSync(directory, `${DIST}/${directory}`, { recursive: true })
 }
 

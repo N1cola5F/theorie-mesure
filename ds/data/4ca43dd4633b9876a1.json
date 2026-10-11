@@ -1,0 +1,412 @@
+{
+  "chapter": 7,
+  "cards": [
+    {
+      "id": "c7-01",
+      "title": "Lp 的对象与指数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b7420febee26d80e19.svg",
+          "width": 340.72,
+          "height": 69.41
+        },
+        "narrow": {
+          "src": "vectors/89ff4def019c66d270.svg",
+          "width": 221.17,
+          "height": 87.28
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c7-03"
+      ],
+      "title_fr": "Définition – Espaces Lp",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-075a7706ee69d8f89184",
+          "page": 11,
+          "svg": {
+            "src": "vectors/1e69457962486dab19.svg",
+            "width": 515.276,
+            "height": 55.869
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-02",
+      "title": "L∞ 与本质上界",
+      "compiled": {
+        "wide": {
+          "src": "vectors/17000a0c74b891f615.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/fc483f6e175153dd3d.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – L∞",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-651dd4377e637192ebd9",
+          "page": 11,
+          "svg": {
+            "src": "vectors/9496a0d4c99049e17b.svg",
+            "width": 515.276,
+            "height": 51.828
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-03",
+      "title": "为什么先是半范数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/540dbec2372bc7ff03.svg",
+          "width": 340.72,
+          "height": 87.32
+        },
+        "narrow": {
+          "src": "vectors/040b6b15981565c548.svg",
+          "width": 221.17,
+          "height": 105.97
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c5-11"
+      ],
+      "title_fr": "Propriété – Séparation, ou pourquoi ∥·∥ n’est qu’une semi-norme",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-90c32a6c547e17653d8b",
+          "page": 11,
+          "svg": {
+            "src": "vectors/fcdd90365d46d28e42.svg",
+            "width": 515.276,
+            "height": 63.285
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-04",
+      "title": "Markov 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/a4cbd3b4d39e9f7fbc.svg",
+          "width": 340.72,
+          "height": 106.24
+        },
+        "narrow": {
+          "src": "vectors/f0876b4aa9134e448a.svg",
+          "width": 221.17,
+          "height": 124.89
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Inégalité de Markov",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-f9aef782b136e3c43f22",
+          "page": 11,
+          "svg": {
+            "src": "vectors/f994a7b769de570f08.svg",
+            "width": 515.276,
+            "height": 73.692
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-05",
+      "title": "Chebyshev 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0fbdf87ea4900fcf47.svg",
+          "width": 340.72,
+          "height": 107.43
+        },
+        "narrow": {
+          "src": "vectors/16660bff85b72c6ee7.svg",
+          "width": 221.17,
+          "height": 126.08
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Inégalité de Bienaymé-Tchebychev",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-af1bfff32367fadbb0a8",
+          "page": 11,
+          "svg": {
+            "src": "vectors/e7e4e3f9c59c08695b.svg",
+            "width": 515.276,
+            "height": 74.329
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-06",
+      "title": "Hölder 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/6250e8967ad77ce1d0.svg",
+          "width": 340.72,
+          "height": 111.16
+        },
+        "narrow": {
+          "src": "vectors/3c1d680c05da24492c.svg",
+          "width": 221.17,
+          "height": 125.1
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Inégalité de Hölder",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-b5eb0af181211b728640",
+          "page": 11,
+          "svg": {
+            "src": "vectors/37f4f8ff9ed48ab8e9.svg",
+            "width": 515.276,
+            "height": 85.388
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-07",
+      "title": "有限测度空间上的 Lp 包含",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4529f963a10084ba79.svg",
+          "width": 340.72,
+          "height": 50.11
+        },
+        "narrow": {
+          "src": "vectors/5e4525a09b8c131260.svg",
+          "width": 221.17,
+          "height": 68.63
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Corollaire – Inclusion Lp ⊂Lq en mesure finie",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-f19daa9a6af6c5a69f51",
+          "page": 11,
+          "svg": {
+            "src": "vectors/160f50c74360608ef8.svg",
+            "width": 515.276,
+            "height": 39.754
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-08",
+      "title": "Minkowski 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0a847bdaee187b47d1.svg",
+          "width": 340.72,
+          "height": 67.88
+        },
+        "narrow": {
+          "src": "vectors/d00196f58247649220.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Inégalité de Minkowski",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-57aa58ddf972ba06fcad",
+          "page": 11,
+          "svg": {
+            "src": "vectors/b2a66160e34ec9f102.svg",
+            "width": 515.276,
+            "height": 144.742
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-09",
+      "title": "Jensen 不等式",
+      "compiled": {
+        "wide": {
+          "src": "vectors/c23ef22bb46fda7035.svg",
+          "width": 340.72,
+          "height": 109.67
+        },
+        "narrow": {
+          "src": "vectors/758ca08e90b1b9c179.svg",
+          "width": 221.17,
+          "height": 112.86
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Inégalité de Jensen",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-c4b9a87142bb59fe8e4e",
+          "page": 12,
+          "svg": {
+            "src": "vectors/7f0a385eed546130af.svg",
+            "width": 515.276,
+            "height": 95.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-10",
+      "title": "Riesz–Fischer：Lp 完备",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4743586b39858b5e44.svg",
+          "width": 340.72,
+          "height": 68.81
+        },
+        "narrow": {
+          "src": "vectors/8726fdd46d03c1e562.svg",
+          "width": 221.17,
+          "height": 104.28
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Riesz-Fischer",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-dd4e517c2090b66dc029",
+          "page": 12,
+          "svg": {
+            "src": "vectors/438ca54cb0a333d42d.svg",
+            "width": 515.276,
+            "height": 38.456
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-11",
+      "title": "L2 是 Hilbert 空间",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b6dcb9c2d4109b2cc7.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/7a120b328c090753f1.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – L2 est un espace de Hilbert",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-e58ef674cd56f9862b18",
+          "page": 12,
+          "svg": {
+            "src": "vectors/aaa3d6ce877457c817.svg",
+            "width": 515.276,
+            "height": 94.465
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-12",
+      "title": "Riesz 表示定理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0d946a71f590249ac3.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/beda3ef1b522db4025.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Théorème de représentation de Riesz",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-d205c49016c15c2bfe71",
+          "page": 12,
+          "svg": {
+            "src": "vectors/cf9d39e31c71a3e530.svg",
+            "width": 515.276,
+            "height": 94.126
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-13",
+      "title": "Lp 中简单函数的稠密性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/a627599dfd6f668395.svg",
+          "width": 340.72,
+          "height": 87.36
+        },
+        "narrow": {
+          "src": "vectors/5cef0c411a395ada0f.svg",
+          "width": 221.17,
+          "height": 106.01
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Densité dans Lp",
+      "source": "programme",
+      "originals": [
+        {
+          "key": "fr-acfa11968e75ad34de64",
+          "page": 12,
+          "svg": {
+            "src": "vectors/3eaaf4a997dc4576e9.svg",
+            "width": 515.276,
+            "height": 65.215
+          }
+        }
+      ]
+    }
+  ]
+}
