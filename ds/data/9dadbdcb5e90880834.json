@@ -1,0 +1,533 @@
+{
+  "chapter": 4,
+  "cards": [
+    {
+      "id": "c4-01",
+      "title": "原像运算是可测性的基础",
+      "compiled": {
+        "wide": {
+          "src": "vectors/60036ff88d3a5f56eb.svg",
+          "width": 340.72,
+          "height": 86.61
+        },
+        "narrow": {
+          "src": "vectors/32f535df686619a19b.svg",
+          "width": 221.17,
+          "height": 105.26
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/a1d2166a77d18925fc.svg",
+          "width": 340.72,
+          "height": 218.61
+        },
+        "narrow": {
+          "src": "vectors/73686fd26d7fc42ebc.svg",
+          "width": 221.17,
+          "height": 272.74
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Propriétés algébriques de l’image réciproque",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "c4-02",
+      "title": "目标 σ-代数的原像族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/78b787055a39acb799.svg",
+          "width": 340.72,
+          "height": 67.96
+        },
+        "narrow": {
+          "src": "vectors/663504d27095f5db49.svg",
+          "width": 221.17,
+          "height": 86.61
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/f309fec0e251fa9666.svg",
+          "width": 340.72,
+          "height": 112.2
+        },
+        "narrow": {
+          "src": "vectors/edf02504c45c767804.svg",
+          "width": 221.17,
+          "height": 163.45
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-01"
+      ],
+      "title_fr": "Propriété – Stabilité d’une tribu par image réciproque",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "c4-03",
+      "title": "原像与生成 σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b0ee4062c2c2d7fd45.svg",
+          "width": 340.72,
+          "height": 83.52
+        },
+        "narrow": {
+          "src": "vectors/3c7964d61c1b07ac42.svg",
+          "width": 221.17,
+          "height": 102.17
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/d78a19467d57fe3863.svg",
+          "width": 340.72,
+          "height": 69.47
+        },
+        "narrow": {
+          "src": "vectors/e7fcefef3dfa244e03.svg",
+          "width": 221.17,
+          "height": 98.08
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Tribu engendrée et image réciproque",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "c4-04",
+      "title": "可测映射的定义",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4c260b2d2fd8266cc0.svg",
+          "width": 340.72,
+          "height": 97.53
+        },
+        "narrow": {
+          "src": "vectors/9a3a5755399f540162.svg",
+          "width": 221.17,
+          "height": 116.18
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/11acceb966dcc3f576.svg",
+          "width": 340.72,
+          "height": 125.13
+        },
+        "narrow": {
+          "src": "vectors/e5cf0198700673384c.svg",
+          "width": 221.17,
+          "height": 143.78
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Fonction mesurable",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "c4-05",
+      "title": "Lebesgue 可测函数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/1d72a63695cd414c69.svg",
+          "width": 340.72,
+          "height": 68.82
+        },
+        "narrow": {
+          "src": "vectors/893c2fa8940065a59d.svg",
+          "width": 221.17,
+          "height": 87.47
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/c6043ea79fa2aa84af.svg",
+          "width": 340.72,
+          "height": 182.83
+        },
+        "narrow": {
+          "src": "vectors/5277d6d01b220428ad.svg",
+          "width": 221.17,
+          "height": 238.78
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-10"
+      ],
+      "title_fr": "Définition – Fonction Lebesgue-mesurable",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-06",
+      "title": "可测映射复合",
+      "compiled": {
+        "wide": {
+          "src": "vectors/40dc17e96821f0756f.svg",
+          "width": 340.72,
+          "height": 67.88
+        },
+        "narrow": {
+          "src": "vectors/835e323a34c150343e.svg",
+          "width": 221.17,
+          "height": 104.19
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/752c8bb40ba28c6059.svg",
+          "width": 340.72,
+          "height": 49.25
+        },
+        "narrow": {
+          "src": "vectors/be2709b3a8d5fe2699.svg",
+          "width": 221.17,
+          "height": 67.9
+        }
+      },
+      "proof": 10,
+      "requires": [],
+      "title_fr": "Propriété – Stabilité par composition",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-07",
+      "title": "只需检查生成元",
+      "compiled": {
+        "wide": {
+          "src": "vectors/a8ac92715da060a0f2.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/184859f469475e3103.svg",
+          "width": 221.17,
+          "height": 105.14
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/5aa968ea85036164a9.svg",
+          "width": 340.72,
+          "height": 68.38
+        },
+        "narrow": {
+          "src": "vectors/258843768ba3524e2c.svg",
+          "width": 221.17,
+          "height": 123.03
+        }
+      },
+      "proof": 11,
+      "requires": [
+        "c2-09"
+      ],
+      "title_fr": "Propriété – Caractérisation par une famille génératrice",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-08",
+      "title": "连续函数为什么可测",
+      "compiled": {
+        "wide": {
+          "src": "vectors/f77078b1a9b4cad4cb.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/555b5157a9b61200d6.svg",
+          "width": 221.17,
+          "height": 123.31
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/1de90d822e51e264b9.svg",
+          "width": 340.72,
+          "height": 65.78
+        },
+        "narrow": {
+          "src": "vectors/a56ff0f537438b308f.svg",
+          "width": 221.17,
+          "height": 105.2
+        }
+      },
+      "proof": 12,
+      "requires": [],
+      "title_fr": "Propriété – Mesurabilité des fonctions continues",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-09",
+      "title": "示性函数可测",
+      "compiled": {
+        "wide": {
+          "src": "vectors/94f2716ef9d840d48c.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/854d00ff3b100bb396.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/4f223b718da0169a69.svg",
+          "width": 340.72,
+          "height": 31.08
+        },
+        "narrow": {
+          "src": "vectors/38ca8bdd6d52bc98b0.svg",
+          "width": 221.17,
+          "height": 49.71
+        }
+      },
+      "proof": 13,
+      "requires": [],
+      "title_fr": "Propriété – Mesurabilité des indicatrices",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-10",
+      "title": "向量值函数按坐标判别",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4f82123f2a6dcf2882.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/c3d3a60b13cbe69304.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/2694d599abe91fa0f2.svg",
+          "width": 340.72,
+          "height": 87.09
+        },
+        "narrow": {
+          "src": "vectors/e067d751391a3081cd.svg",
+          "width": 221.17,
+          "height": 124.39
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Caractérisation des fonctions mesurables à valeurs vectorielles",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-11",
+      "title": "可测函数的基本运算",
+      "compiled": {
+        "wide": {
+          "src": "vectors/decf23a9645b7a9db3.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/163e8e3aac829d11c3.svg",
+          "width": 221.17,
+          "height": 123.84
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/e9d87ed2c95f586afe.svg",
+          "width": 340.72,
+          "height": 49.75
+        },
+        "narrow": {
+          "src": "vectors/000d3de83446f23772.svg",
+          "width": 221.17,
+          "height": 87.05
+        }
+      },
+      "proof": 14,
+      "requires": [
+        "c4-10",
+        "c4-08",
+        "c4-06"
+      ],
+      "title_fr": "Propriété – Stabilité par opérations usuelles",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-12",
+      "title": "扩展实数与其 Borel 族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/774af16594c75579dc.svg",
+          "width": 340.72,
+          "height": 107.14
+        },
+        "narrow": {
+          "src": "vectors/2f53fe5336f1074635.svg",
+          "width": 221.17,
+          "height": 144.44
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/3c887ac463f9674c28.svg",
+          "width": 340.72,
+          "height": 111.65
+        },
+        "narrow": {
+          "src": "vectors/5be662042b1cbae681.svg",
+          "width": 221.17,
+          "height": 162.9
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Droite réelle achevée, tribu borélienne achevée",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-13",
+      "title": "可数上确界与下确界",
+      "compiled": {
+        "wide": {
+          "src": "vectors/10ecea47c7222c9419.svg",
+          "width": 340.72,
+          "height": 111.37
+        },
+        "narrow": {
+          "src": "vectors/759aafa9c6c07c1869.svg",
+          "width": 221.17,
+          "height": 147.75
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/9ae80a82876db21026.svg",
+          "width": 340.72,
+          "height": 88.88
+        },
+        "narrow": {
+          "src": "vectors/93f7c3728fe001ca80.svg",
+          "width": 221.17,
+          "height": 144.83
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Stabilité par sup et inf dénombrables",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "c4-14",
+      "title": "像测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/19e7c7aa124ca892a7.svg",
+          "width": 340.72,
+          "height": 106.5
+        },
+        "narrow": {
+          "src": "vectors/f16625e107d974243d.svg",
+          "width": 221.17,
+          "height": 143.8
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/3f03c8d429cb818997.svg",
+          "width": 340.72,
+          "height": 68.38
+        },
+        "narrow": {
+          "src": "vectors/46850819910cbdb785.svg",
+          "width": 221.17,
+          "height": 105.68
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure image",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 7
+        }
+      ]
+    }
+  ]
+}

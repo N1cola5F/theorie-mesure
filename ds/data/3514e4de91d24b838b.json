@@ -1,0 +1,497 @@
+{
+  "chapter": 2,
+  "cards": [
+    {
+      "id": "c2-01",
+      "title": "σ-代数与可测空间",
+      "compiled": {
+        "wide": {
+          "src": "vectors/de3da480702b35375a.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/19d675f187d34592b3.svg",
+          "width": 221.17,
+          "height": 122.93
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/4ba9b71bbc57cf2c82.svg",
+          "width": 340.72,
+          "height": 218.19
+        },
+        "narrow": {
+          "src": "vectors/86dd6af9499739f646.svg",
+          "width": 221.17,
+          "height": 294.85
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu ou σ-algèbre",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c2-02",
+      "title": "σ-代数的派生封闭性",
+      "compiled": {
+        "wide": {
+          "src": "vectors/284f4e94c42b0ce501.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/05e6db45904a33bb87.svg",
+          "width": 221.17,
+          "height": 124.77
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/7aed2e0212503eee9f.svg",
+          "width": 340.72,
+          "height": 158.15
+        },
+        "narrow": {
+          "src": "vectors/d96723ecdbf061adea.svg",
+          "width": 221.17,
+          "height": 214.1
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-01"
+      ],
+      "title_fr": "Propriété – Propriétés élémentaires d’une tribu",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c2-03",
+      "title": "生成的 σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/76022b3385bfa883af.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/ad444a8908b61742be.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/4a5630a4c95fb17e58.svg",
+          "width": 340.72,
+          "height": 49.75
+        },
+        "narrow": {
+          "src": "vectors/b48d176823b377bba0.svg",
+          "width": 221.17,
+          "height": 104.38
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu engendrée par une famille de parties",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c2-04",
+      "title": "σ-代数的交",
+      "compiled": {
+        "wide": {
+          "src": "vectors/ade0399a27f4463c05.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/8ae3cb953acc0c749a.svg",
+          "width": 221.17,
+          "height": 122.93
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/d053ee76bcc20d7840.svg",
+          "width": 340.72,
+          "height": 93.88
+        },
+        "narrow": {
+          "src": "vectors/5ace0bc858bb60ab48.svg",
+          "width": 221.17,
+          "height": 107.83
+        }
+      },
+      "proof": 3,
+      "requires": [],
+      "title_fr": "Propriété – Intersection de tribus",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c2-05",
+      "title": "生成 σ-代数的交集描述",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0e37122ac340ffabf1.svg",
+          "width": 340.72,
+          "height": 97.08
+        },
+        "narrow": {
+          "src": "vectors/a5dd172110d80bf2ae.svg",
+          "width": 221.17,
+          "height": 134.35
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/a8e36c367e8ad6f263.svg",
+          "width": 340.72,
+          "height": 79.33
+        },
+        "narrow": {
+          "src": "vectors/c7a772ba7194dd31af.svg",
+          "width": 221.17,
+          "height": 97.98
+        }
+      },
+      "proof": 4,
+      "requires": [],
+      "title_fr": "Propriété – Description de la tribu engendrée",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-06",
+      "title": "生成族方法的核心包含关系",
+      "compiled": {
+        "wide": {
+          "src": "vectors/7b7905260f45a6ed6c.svg",
+          "width": 340.72,
+          "height": 67.88
+        },
+        "narrow": {
+          "src": "vectors/56a5fd6cd484a64f45.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/1d80f55016d678735f.svg",
+          "width": 340.72,
+          "height": 168.42
+        },
+        "narrow": {
+          "src": "vectors/85232f3adc380861a1.svg",
+          "width": 221.17,
+          "height": 224.37
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-03"
+      ],
+      "title_fr": "Propriété – Monotonie de la tribu engendrée",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-07",
+      "title": "Borel σ-代数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/12be201c4d91dbb05f.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/5d4cfaca841014bd67.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/8133e699dd7d0534b3.svg",
+          "width": 340.72,
+          "height": 67.78
+        },
+        "narrow": {
+          "src": "vectors/daf7951cd416254d95.svg",
+          "width": 221.17,
+          "height": 105.08
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Tribu borélienne, borélien",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-08",
+      "title": "有界开区间生成 Borel 族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/ba4e93e1472f6a5503.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/5fa68da12c01094fd6.svg",
+          "width": 221.17,
+          "height": 123.84
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/7884e36a6837b782e1.svg",
+          "width": 340.72,
+          "height": 88.12
+        },
+        "narrow": {
+          "src": "vectors/f7998fe935697eccde.svg",
+          "width": 221.17,
+          "height": 116.73
+        }
+      },
+      "proof": 5,
+      "requires": [],
+      "title_fr": "Propriété – Génération de la tribu borélienne par les intervalles ouverts bornés",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-09",
+      "title": "Borel 的其他生成族",
+      "compiled": {
+        "wide": {
+          "src": "vectors/8f955eece732cc746d.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/37a3b6adea1a1692d6.svg",
+          "width": 221.17,
+          "height": 162.33
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/f918cc05e588887cf3.svg",
+          "width": 340.72,
+          "height": 93.54
+        },
+        "narrow": {
+          "src": "vectors/c9d2326a3d309db174.svg",
+          "width": 221.17,
+          "height": 122.15
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-07"
+      ],
+      "title_fr": "Propriété – Autres familles génératrices de la tribu borélienne",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-10",
+      "title": "Borel 集与 Lebesgue 可测集",
+      "compiled": {
+        "wide": {
+          "src": "vectors/7eea3899a9ef299a85.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/92b3370907a1117851.svg",
+          "width": 221.17,
+          "height": 142.49
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/bdcbd214611fbff38d.svg",
+          "width": 340.72,
+          "height": 31.08
+        },
+        "narrow": {
+          "src": "vectors/bc0344b203d8cb878c.svg",
+          "width": 221.17,
+          "height": 67.92
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c4-05"
+      ],
+      "title_fr": "Propriété – Les boréliens sont Lebesgue-mesurables",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-11",
+      "title": "可测集等于 Borel 集加零测余项",
+      "compiled": {
+        "wide": {
+          "src": "vectors/5418a6dd8c4ab3644e.svg",
+          "width": 340.72,
+          "height": 87.47
+        },
+        "narrow": {
+          "src": "vectors/4141dd960337446d31.svg",
+          "width": 221.17,
+          "height": 106.12
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/50a1e72e260dcb5f6e.svg",
+          "width": 340.72,
+          "height": 97.01
+        },
+        "narrow": {
+          "src": "vectors/1dbe936ae3aadd0689.svg",
+          "width": 221.17,
+          "height": 134.31
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-12",
+      "title": "Cantor 集的构造",
+      "compiled": {
+        "wide": {
+          "src": "vectors/3e31143fcc2f8b8c4a.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/7475c06e91acc64a43.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/66b5064f86b7545d65.svg",
+          "width": 340.72,
+          "height": 165.35
+        },
+        "narrow": {
+          "src": "vectors/061c5ff0dbf6b38533.svg",
+          "width": 221.17,
+          "height": 218.56
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Ensemble de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "c2-13",
+      "title": "Cantor 集的重要反例作用",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4a35bdc6351a3069c4.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/0abaa797de6dec023a.svg",
+          "width": 221.17,
+          "height": 123.8
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/333140997fa0316e12.svg",
+          "width": 340.72,
+          "height": 124.16
+        },
+        "narrow": {
+          "src": "vectors/38bbfe2fd10d161527.svg",
+          "width": 221.17,
+          "height": 124.16
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-12",
+        "c8-09"
+      ],
+      "title_fr": "Propriété – L’ensemble de Cantor est fermé, non dénombrable, et négligeable",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 4
+        }
+      ]
+    }
+  ]
+}

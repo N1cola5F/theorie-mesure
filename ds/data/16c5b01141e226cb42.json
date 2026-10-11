@@ -1,0 +1,494 @@
+{
+  "chapter": 8,
+  "cards": [
+    {
+      "id": "c8-01",
+      "title": "离散测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/cac6e0281d4f6013d8.svg",
+          "width": 340.72,
+          "height": 111.67
+        },
+        "narrow": {
+          "src": "vectors/a14d829d757914837e.svg",
+          "width": 221.17,
+          "height": 148.97
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/0d8d54464b5badd544.svg",
+          "width": 340.72,
+          "height": 228.64
+        },
+        "narrow": {
+          "src": "vectors/e2181efcdc6a1805d0.svg",
+          "width": 221.17,
+          "height": 298.54
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c3-03"
+      ],
+      "title_fr": "Définition – Mesure discrète",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "c8-02",
+      "title": "有密度的测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/c42499b4848fc13259.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/da57d35ac4084c2d7b.svg",
+          "width": 221.17,
+          "height": 86.53
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/8cc5016a6d09a131cf.svg",
+          "width": 340.72,
+          "height": 71.08
+        },
+        "narrow": {
+          "src": "vectors/4511248105b4703e75.svg",
+          "width": 221.17,
+          "height": 108.38
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure à densité",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "c8-03",
+      "title": "绝对连续是零测集关系",
+      "compiled": {
+        "wide": {
+          "src": "vectors/099847c228b8e29647.svg",
+          "width": 340.72,
+          "height": 68.77
+        },
+        "narrow": {
+          "src": "vectors/e96f01016d17015183.svg",
+          "width": 221.17,
+          "height": 106.07
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/c10160fb7dfe83e618.svg",
+          "width": 340.72,
+          "height": 148.49
+        },
+        "narrow": {
+          "src": "vectors/4b68df7102b56b46ea.svg",
+          "width": 221.17,
+          "height": 218.5
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c8-11"
+      ],
+      "title_fr": "Définition – Mesure absolument continue",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-04",
+      "title": "有密度推出绝对连续",
+      "compiled": {
+        "wide": {
+          "src": "vectors/69a482ff371b7a52ac.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/c8208f3b2a5328499f.svg",
+          "width": 221.17,
+          "height": 105.19
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/4c143f9cca51aeee1f.svg",
+          "width": 340.72,
+          "height": 49.37
+        },
+        "narrow": {
+          "src": "vectors/17c2be40da818d1254.svg",
+          "width": 221.17,
+          "height": 86.67
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Une mesure à densité est absolument continue",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-05",
+      "title": "密度的积分转移",
+      "compiled": {
+        "wide": {
+          "src": "vectors/e4221db838b9226d52.svg",
+          "width": 340.72,
+          "height": 106.45
+        },
+        "narrow": {
+          "src": "vectors/024de2d6a0fe97f9ed.svg",
+          "width": 221.17,
+          "height": 125.1
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/ddbc1ea44392ccbdfd.svg",
+          "width": 340.72,
+          "height": 147.46
+        },
+        "narrow": {
+          "src": "vectors/66feacbcb69c11a452.svg",
+          "width": 221.17,
+          "height": 240.71
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Formule de transfert pour une mesure à densité",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-06",
+      "title": "互相奇异",
+      "compiled": {
+        "wide": {
+          "src": "vectors/7b8fdd751a72aacf4f.svg",
+          "width": 340.72,
+          "height": 68.82
+        },
+        "narrow": {
+          "src": "vectors/02fa359d3fdd277850.svg",
+          "width": 221.17,
+          "height": 87.43
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/1640e14b4c79f98553.svg",
+          "width": 340.72,
+          "height": 160.3
+        },
+        "narrow": {
+          "src": "vectors/2ee58dc4e6cbb5df74.svg",
+          "width": 221.17,
+          "height": 237.03
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesures étrangères, ou mutuellement singulières",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-07",
+      "title": "Cantor 测度的构造",
+      "compiled": {
+        "wide": {
+          "src": "vectors/e42da54a5ad4734d96.svg",
+          "width": 340.72,
+          "height": 68.19
+        },
+        "narrow": {
+          "src": "vectors/f62b09dda046ab2afa.svg",
+          "width": 221.17,
+          "height": 122.93
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/5c10b1c1f432ac3f37.svg",
+          "width": 340.72,
+          "height": 226.29
+        },
+        "narrow": {
+          "src": "vectors/d52e85f86dc02e981d.svg",
+          "width": 221.17,
+          "height": 310.86
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-12"
+      ],
+      "title_fr": "Propriété – Construction de la mesure de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-08",
+      "title": "Cantor 测度的定义",
+      "compiled": {
+        "wide": {
+          "src": "vectors/441fe6248ceec606dc.svg",
+          "width": 340.72,
+          "height": 67.96
+        },
+        "narrow": {
+          "src": "vectors/55080485541597df0e.svg",
+          "width": 221.17,
+          "height": 86.61
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/d63e43768bf8a336f3.svg",
+          "width": 340.72,
+          "height": 68.52
+        },
+        "narrow": {
+          "src": "vectors/7622339c90f0ac0c19.svg",
+          "width": 221.17,
+          "height": 87.17
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c8-07"
+      ],
+      "title_fr": "Définition – Mesure de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-09",
+      "title": "Cantor 测度的三个性质",
+      "compiled": {
+        "wide": {
+          "src": "vectors/cea22b18031a16672f.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/826d0d4aac64342bff.svg",
+          "width": 221.17,
+          "height": 123.84
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/a54cf09ebd8060aafe.svg",
+          "width": 340.72,
+          "height": 165.04
+        },
+        "narrow": {
+          "src": "vectors/647a5789d2e293babb.svg",
+          "width": 221.17,
+          "height": 258.17
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Propriétés de la mesure de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "c8-10",
+      "title": "奇异连续测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/de38e898ae6c057537.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/5620cc02493d3122d2.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/dcc375124626b654e3.svg",
+          "width": 340.72,
+          "height": 130.45
+        },
+        "narrow": {
+          "src": "vectors/59d18acef37307ab80.svg",
+          "width": 221.17,
+          "height": 181.09
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure singulière continue",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "c8-11",
+      "title": "Radon–Nikodym 定理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/58810f48d9271385ba.svg",
+          "width": 340.72,
+          "height": 68.77
+        },
+        "narrow": {
+          "src": "vectors/9fe2aba1736c74f49c.svg",
+          "width": 221.17,
+          "height": 106.07
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/d3ca606d0b20aa05f9.svg",
+          "width": 340.72,
+          "height": 149.91
+        },
+        "narrow": {
+          "src": "vectors/0087341aeea4241df9.svg",
+          "width": 221.17,
+          "height": 222.6
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Théorème de Radon-Nikodym",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "c8-12",
+      "title": "Lebesgue 分解定理",
+      "compiled": {
+        "wide": {
+          "src": "vectors/927c3432160d81603f.svg",
+          "width": 340.72,
+          "height": 107.35
+        },
+        "narrow": {
+          "src": "vectors/91c764f187c1b47d16.svg",
+          "width": 221.17,
+          "height": 142.81
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/0d2d5106a1dce7edfc.svg",
+          "width": 340.72,
+          "height": 102.54
+        },
+        "narrow": {
+          "src": "vectors/47071e71127e6d56b9.svg",
+          "width": 221.17,
+          "height": 127.72
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Décomposition de Lebesgue",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "c8-13",
+      "title": "实数上有限测度的三部分",
+      "compiled": {
+        "wide": {
+          "src": "vectors/4e03acbcbf0b6d0156.svg",
+          "width": 340.72,
+          "height": 116.72
+        },
+        "narrow": {
+          "src": "vectors/404a29efafee3e9678.svg",
+          "width": 221.17,
+          "height": 166.95
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/7be2e691153c71be09.svg",
+          "width": 340.72,
+          "height": 215.02
+        },
+        "narrow": {
+          "src": "vectors/d0ceb2cc43f9ca4358.svg",
+          "width": 221.17,
+          "height": 287.81
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Corollaire – Décomposition d’une mesure finie sur R",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 14
+        }
+      ]
+    }
+  ]
+}

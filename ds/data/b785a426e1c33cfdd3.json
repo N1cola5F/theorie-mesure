@@ -1,0 +1,42 @@
+{
+  "id": "p14",
+  "title": "可测函数的基本运算",
+  "number": 14,
+  "compiled": {
+    "wide": {
+      "src": "vectors/65771001bab3912885.svg",
+      "width": 340.72,
+      "height": 195.25
+    },
+    "narrow": {
+      "src": "vectors/2005441584213c879d.svg",
+      "width": 221.17,
+      "height": 288.46
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/1a83b58f686ba62035.svg",
+      "width": 340.72,
+      "height": 217.66
+    },
+    "narrow": {
+      "src": "vectors/f20eebea052bdabbe3.svg",
+      "width": 221.17,
+      "height": 364.18
+    }
+  },
+  "requires": [
+    "c4-06",
+    "c4-08",
+    "c4-10"
+  ],
+  "card": "c4-11",
+  "title_fr": "3.5 14. Stabilité par opérations usuelles",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 8
+    }
+  ]
+}

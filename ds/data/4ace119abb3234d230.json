@@ -1,0 +1,41 @@
+{
+  "id": "p10",
+  "title": "可测映射的复合",
+  "number": 10,
+  "compiled": {
+    "wide": {
+      "src": "vectors/fc648175f89148e75e.svg",
+      "width": 340.72,
+      "height": 195.21
+    },
+    "narrow": {
+      "src": "vectors/f9ae118e81e15dc75f.svg",
+      "width": 221.17,
+      "height": 232.51
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/8d7fe9a988d14ebe36.svg",
+      "width": 340.72,
+      "height": 124.35
+    },
+    "narrow": {
+      "src": "vectors/531c097095433798e7.svg",
+      "width": 221.17,
+      "height": 161.65
+    }
+  },
+  "requires": [
+    "c4-01",
+    "c4-04"
+  ],
+  "card": "c4-06",
+  "title_fr": "3.1 10. Stabilité par composition",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 7
+    }
+  ]
+}
