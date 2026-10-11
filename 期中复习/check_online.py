@@ -24,7 +24,7 @@ def main():
     manifest=json.loads(fetch('resource-manifest.json'));assert manifest['version']==release['version']
     chapter=json.loads(fetch(manifest['chapters'][5]['data']));assert chapter['chapter']==6 and len(chapter['cards'])==7
     card=chapter['cards'][0]
-    for vector in [card['compiled']['wide'],card['originals'][0]['svg']]:
+    for vector in [card['compiled']['wide'],card['french']['wide']]:
         body=fetch(vector['src']);assert b'<svg' in body
         assert hashlib.sha256(body).hexdigest().startswith(Path(vector['src']).stem)
     fetch(manifest['sources']['corrige4']['href'],'HEAD')

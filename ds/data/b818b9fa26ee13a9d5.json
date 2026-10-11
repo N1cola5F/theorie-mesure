@@ -1,0 +1,44 @@
+{
+  "id": "p02",
+  "title": "平移与伸缩",
+  "number": 2,
+  "compiled": {
+    "wide": {
+      "src": "vectors/02099aeded705c0891.svg",
+      "width": 340.72,
+      "height": 300.83
+    },
+    "narrow": {
+      "src": "vectors/60689c664213c8a282.svg",
+      "width": 221.17,
+      "height": 448.62
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/bd55f1895ca93f4e63.svg",
+      "width": 340.72,
+      "height": 766.05
+    },
+    "narrow": {
+      "src": "vectors/8ccc326747216afd41.svg",
+      "width": 221.17,
+      "height": 1058.63
+    }
+  },
+  "requires": [
+    "c1-05",
+    "c1-06"
+  ],
+  "card": "c1-08",
+  "title_fr": "1.2 2. Invariance de λ∗ par translation et par homothétie",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 2
+    },
+    {
+      "page": 3
+    }
+  ]
+}

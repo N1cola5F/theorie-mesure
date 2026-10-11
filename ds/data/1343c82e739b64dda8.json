@@ -1,0 +1,41 @@
+{
+  "id": "p06",
+  "title": "测度的基本性质",
+  "number": 6,
+  "compiled": {
+    "wide": {
+      "src": "vectors/a9eafc662cd6128397.svg",
+      "width": 340.72,
+      "height": 262.12
+    },
+    "narrow": {
+      "src": "vectors/cd417c6330f777c8ed.svg",
+      "width": 221.17,
+      "height": 392.67
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/316ab4619308c121b5.svg",
+      "width": 340.72,
+      "height": 452.19
+    },
+    "narrow": {
+      "src": "vectors/e26da3a9e92f78a79d.svg",
+      "width": 221.17,
+      "height": 694.64
+    }
+  },
+  "requires": [
+    "c2-02",
+    "c3-01"
+  ],
+  "card": "c3-06",
+  "title_fr": "2.1 6. Propriétés élémentaires d’une mesure",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 5
+    }
+  ]
+}

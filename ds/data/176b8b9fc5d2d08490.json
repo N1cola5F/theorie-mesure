@@ -1,0 +1,41 @@
+{
+  "id": "p01",
+  "title": "外测度的基本性质",
+  "number": 1,
+  "compiled": {
+    "wide": {
+      "src": "vectors/4ed27f20d10f5644c4.svg",
+      "width": 340.72,
+      "height": 299.42
+    },
+    "narrow": {
+      "src": "vectors/6ca7e828d9fcccaca9.svg",
+      "width": 221.17,
+      "height": 485.92
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/43529a90355d9beec2.svg",
+      "width": 340.72,
+      "height": 583.87
+    },
+    "narrow": {
+      "src": "vectors/61d97cc8ec5805728f.svg",
+      "width": 221.17,
+      "height": 733.06
+    }
+  },
+  "requires": [
+    "c1-06",
+    "c1-01"
+  ],
+  "card": "c1-07",
+  "title_fr": "1.1 1. Premières propriétés de λ∗",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 2
+    }
+  ]
+}

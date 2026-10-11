@@ -1,0 +1,803 @@
+% Transcription du Programme officiel, pp. 2–14. Mêmes mots et formules ; seules les lignes sont recomposées.
+% Les identifiants correspondent aux 100 énoncés officiels. Ne pas traduire depuis les explications chinoises.
+% @note fr-c1-01|Ensemble dénombrable
+\textbf{Définition – Ensemble dénombrable}
+
+Soit $E$ un ensemble. On dit que $E$ est \textbf{dénombrable} s’il existe $\varphi:E\to\N$ injective.
+% @end
+% @note fr-c1-02|Non-dénombrabilité de R : argument diagonal de Cantor
+\textbf{Propriété – Non-dénombrabilité de $\R$ : argument diagonal de Cantor}
+
+L’intervalle $]0,1[$, et donc $\R$, n’est pas dénombrable.
+% @end
+% @note fr-c1-03|Limite supérieure et limite inférieure d’une suite d’ensembles
+\textbf{Définition – Limite supérieure et limite inférieure d’une suite d’ensembles}
+
+Soit $(A_n)_{n\in\N}$ une suite de parties d’un ensemble $\Omega$. On appelle :
+\begin{itemize}
+\item \textbf{limite supérieure} de $(A_n)_{n\in\N}$ l’ensemble des éléments qui appartiennent à une infinité de $A_n$ :
+\[
+\begin{gathered}
+\limsup_{n\in\N} A_n\\
+=\left\{\omega\in\Omega\ \middle|\ \begin{gathered}\omega\in A_n\text{ pour une infinité}\\\text{d’indices }n\end{gathered}\right\}\\
+=\left\{\omega\in\Omega\ \middle|\ \begin{gathered}\forall i\in\N,\ \exists j\ge i,\\\omega\in A_j\end{gathered}\right\}.
+\end{gathered}
+\]
+\item \textbf{limite inférieure} de $(A_n)_{n\in\N}$ l’ensemble des éléments qui appartiennent à tous les $A_n$ sauf un nombre fini d’entre eux :
+\[
+\begin{gathered}
+\liminf_{n\in\N} A_n\\
+=\left\{\omega\in\Omega\ \middle|\ \begin{gathered}\omega\in A_n\text{ pour tout }n\\\text{assez grand}\end{gathered}\right\}\\
+=\left\{\omega\in\Omega\ \middle|\ \begin{gathered}\exists i\in\N,\ \forall j\ge i,\\\omega\in A_j\end{gathered}\right\}.
+\end{gathered}
+\]
+\end{itemize}
+% @end
+% @note fr-c1-04|Description par réunion et intersection
+\textbf{Propriété – Description par réunion et intersection}
+
+Soit $(A_n)_{n\in\N}$ une suite de parties de $\Omega$. Alors :
+\[
+\begin{aligned}
+\limsup_{n\in\N}A_n&=\bigcap_{n\in\N}\Bigl(\bigcup_{m\ge n}A_m\Bigr),\\
+\liminf_{n\in\N}A_n&=\bigcup_{n\in\N}\Bigl(\bigcap_{m\ge n}A_m\Bigr).
+\end{aligned}
+\]
+% @end
+% @note fr-c1-05|Longueur d’un intervalle
+\textbf{Définition – Longueur d’un intervalle}
+
+Si $I$ est un intervalle borné de $\R$ ayant pour extrémités $a\le b$ (qu’elles appartiennent ou non à $I$), on note
+\[\ell(I):=b-a.\]
+Pour un intervalle non borné, on pose $\ell(I):=+\infty$.
+% @end
+% @note fr-c1-06|Mesure extérieure de Lebesgue
+\textbf{Définition – Mesure extérieure de Lebesgue}
+
+Pour toute partie $A\subset\R$, on pose
+\[
+\begin{gathered}
+\lambda^*(A):=\\
+\inf\left\{\sum_{i\in\N}\ell(I_i)\ \middle|\ \begin{gathered}A\subset\bigcup_{i\in\N}I_i,\\ I_i\text{ intervalle ouvert}\end{gathered}\right\},
+\end{gathered}
+\]
+la borne inférieure étant prise sur tous les recouvrements dénombrables de $A$ par des intervalles ouverts. Le nombre $\lambda^*(A)\in[0,+\infty]$ est appelé \textbf{mesure extérieure} de $A$.
+% @end
+% @note fr-c1-07|Premières propriétés de λ∗
+\textbf{Propriété – Premières propriétés de $\lambda^*$}
+
+La mesure extérieure de Lebesgue vérifie :
+\begin{enumerate}
+\item $\lambda^*(\varnothing)=0$ ;
+\item \textbf{croissance} : $A\subset B\Rightarrow\lambda^*(A)\le\lambda^*(B)$ ;
+\item \textbf{$\sigma$-sous-additivité} : pour toute suite $(A_n)_{n\in\N}$ de parties de $\R$,
+\[\lambda^*\Bigl(\bigcup_n A_n\Bigr)\le\sum_n\lambda^*(A_n).\]
+\end{enumerate}
+% @end
+% @note fr-c1-08|Invariance de λ∗ par translation et par homothétie
+\textbf{Propriété – Invariance de $\lambda^*$ par translation et par homothétie}
+
+Pour toute partie $E\subset\R$ :
+\begin{enumerate}
+\item pour tout $x\in\R$, en notant $x+E:=\{x+y\mid y\in E\}$, on a $\lambda^*(x+E)=\lambda^*(E)$ ;
+\item pour tout $a\in\R^*$ et tout $b\in\R$, en notant $aE+b:=\{ay+b\mid y\in E\}$, on a $\lambda^*(aE+b)=|a|\lambda^*(E)$.
+\end{enumerate}
+% @end
+% @note fr-c1-09|Valeur de λ∗ sur les intervalles
+\textbf{Théorème – Valeur de $\lambda^*$ sur les intervalles}
+
+Pour tous réels $a\le b$, $\lambda^*([a,b])=\lambda^*(]a,b[)=b-a$.
+% @end
+% @note fr-c1-10|Ensemble négligeable
+\textbf{Définition – Ensemble négligeable}
+
+Une partie $N\subset\R$ est dite \textbf{négligeable} si sa mesure extérieure de Lebesgue est nulle, c’est-à-dire si $\lambda^*(N)=0$. En particulier, les singletons, $\Q$ et plus généralement toutes les parties dénombrables de $\R$ sont négligeables.
+% @end
+% @note fr-c1-11|Ensembles Lebesgue-mesurables
+\textbf{Définition – Ensembles Lebesgue-mesurables}
+
+Une partie $B\subset\R$ est dite \textbf{Lebesgue-mesurable} si
+\[
+\begin{gathered}
+\forall A\subset\R,\\
+\lambda^*(A)=\lambda^*(A\cap B)+\lambda^*(A\cap B^c).
+\end{gathered}
+\]
+On note $\M(\lambda^*)$ l’ensemble des parties Lebesgue-mesurables de $\R$.
+% @end
+% @note fr-c1-12|Théorème de Carathéodory
+\textbf{Théorème – Théorème de Carathéodory}
+
+$\M(\lambda^*)$ contient $\varnothing$, est stable par complémentation et par réunion dénombrable ; il contient également toute partie de mesure extérieure nulle. De plus, la restriction de $\lambda^*$ à $\M(\lambda^*)$ est additive sur les réunions dénombrables disjointes : si $(B_n)_{n\in\N}$ sont des éléments de $\M(\lambda^*)$ deux à deux disjoints, alors $\lambda^*(\bigcup_n B_n)=\sum_n\lambda^*(B_n)$.
+% @end
+% @note fr-c1-13|Ensemble de Vitali
+\textbf{Théorème – Ensemble de Vitali}
+
+Il existe une partie $F$ de $[0,1]$ qui n’est pas Lebesgue-mesurable, c’est-à-dire $F\notin\M(\lambda^*)$. En particulier, $\M(\lambda^*)\subsetneq\mathcal P(\R)$.
+% @end
+% @note fr-c2-01|Tribu ou σ-algèbre
+\textbf{Définition – Tribu ou $\sigma$-algèbre}
+
+Soit $\Omega$ un ensemble. Une partie $\T$ de $\mathcal P(\Omega)$ est appelée \textbf{tribu} (ou \textbf{$\sigma$-algèbre}) sur $\Omega$ si :
+\begin{itemize}
+\item $\varnothing\in\T$ ;
+\item si $A\in\T$, alors $A^c\in\T$ (stabilité par complémentation) ;
+\item si $(A_n)_{n\in\N}$ est une famille d’éléments de $\T$, alors $\bigcup_{n\in\N}A_n\in\T$ (stabilité par réunion dénombrable).
+\end{itemize}
+Le couple $(\Omega,\T)$ est appelé \textbf{espace mesurable}, ou, dans un contexte probabiliste, \textbf{espace probabilisable}. Les éléments de $\T$ sont appelés \textbf{parties mesurables}, ou, dans un contexte probabiliste, \textbf{événements}.
+% @end
+% @note fr-c2-02|Propriétés élémentaires d’une tribu
+\textbf{Propriété – Propriétés élémentaires d’une tribu}
+
+Soit $\T$ une tribu sur $\Omega$. Alors :
+\begin{enumerate}
+\item $\Omega\in\T$ ;
+\item $\T$ est stable par intersection dénombrable ;
+\item $\T$ est stable par réunion et intersection finies ;
+\item si $A,B\in\T$, alors
+\[A\setminus B\in\T\quad\text{et}\quad A\mathbin{\triangle}B\in\T.\]
+\end{enumerate}
+% @end
+% @note fr-c2-03|Tribu engendrée par une famille de parties
+\textbf{Définition – Tribu engendrée par une famille de parties}
+
+Soit $\Omega$ un ensemble, $\mathcal G\subset\mathcal P(\Omega)$. On appelle \textbf{tribu engendrée} par $\mathcal G$, notée $\sigma(\mathcal G)$, la plus petite tribu (au sens de l’inclusion) contenant $\mathcal G$.
+% @end
+% @note fr-c2-04|Intersection de tribus
+\textbf{Propriété – Intersection de tribus}
+
+Soit $\Omega$ un ensemble et soit $(\T_i)_{i\in I}$ une famille non vide de tribus sur $\Omega$. Alors
+\[\bigcap_{i\in I}\T_i\]
+est encore une tribu sur $\Omega$.
+% @end
+% @note fr-c2-05|Description de la tribu engendrée
+\textbf{Propriété – Description de la tribu engendrée}
+
+Soit $\Omega$ un ensemble, $\mathcal G\subset\mathcal P(\Omega)$. Alors
+\[\sigma(\mathcal G)=\bigcap_{\substack{\T'\text{ tribu}\\\mathcal G\subset\T'}}\T'.\]
+% @end
+% @note fr-c2-06|Monotonie de la tribu engendrée
+\textbf{Propriété – Monotonie de la tribu engendrée}
+
+Soit $\Omega$ un ensemble, soit $\mathcal A\subseteq\mathcal P(\Omega)$ et soit $\mathcal U$ une tribu sur $\Omega$. Si
+\[\mathcal A\subseteq\mathcal U,\]
+alors
+\[\sigma(\mathcal A)\subseteq\mathcal U.\]
+Autrement dit : dès qu’une tribu contient les générateurs, elle contient automatiquement toute la tribu engendrée par ces générateurs.
+% @end
+% @note fr-c2-07|Tribu borélienne, borélien
+\textbf{Définition – Tribu borélienne, borélien}
+
+Soit $\mathcal O$ l’ensemble des ouverts de $\R$ (pour la valeur absolue). On appelle \textbf{tribu borélienne} de $\R$ la tribu $\B(\R):=\sigma(\mathcal O)$ engendrée par $\mathcal O$. Les éléments de cette tribu sont appelés \textbf{boréliens}.
+% @end
+% @note fr-c2-08|Génération de la tribu borélienne par les intervalles ouverts bornés
+\textbf{Propriété – Génération de la tribu borélienne par les intervalles ouverts bornés}
+
+La tribu borélienne de $\R$ est engendrée par les intervalles ouverts bornés :
+\[\B(\R)=\sigma\bigl(\{]a,b[\, : a<b\}\bigr).\]
+% @end
+% @note fr-c2-09|Autres familles génératrices de la tribu borélienne
+\textbf{Propriété – Autres familles génératrices de la tribu borélienne}
+
+On a également
+\[
+\begin{aligned}
+\B(\R)&=\sigma\bigl(\{[a,b]:a<b\}\bigr)\\
+&=\sigma\bigl(\{]-\infty,a]:a\in\R\}\bigr)\\
+&=\sigma\bigl(\{]-\infty,a[:a\in\R\}\bigr).
+\end{aligned}
+\]
+% @end
+% @note fr-c2-10|Les boréliens sont Lebesgue-mesurables
+\textbf{Propriété – Les boréliens sont Lebesgue-mesurables}
+
+$\B(\R)\subset\M(\lambda^*)$ : tout borélien est Lebesgue-mesurable.
+% @end
+% @note fr-c2-11|Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près
+\textbf{Théorème – Tout ensemble Lebesgue-mesurable est un borélien à un ensemble négligeable près}
+
+Soit $E\in\M(\lambda^*)$. Il existe un borélien $B\in\B(\R)$ et un ensemble $N\subset\R$ de mesure extérieure nulle tels que
+\[E=B\sqcup N\quad\text{(réunion disjointe)},\quad B\subset E.\]
+% @end
+% @note fr-c2-12|Ensemble de Cantor
+\textbf{Définition – Ensemble de Cantor}
+
+On construit une suite $(C_n)_{n\in\N}$ de parties fermées de $[0,1]$ par récurrence : $C_0=[0,1]$, et $C_{n+1}$ s’obtient en retirant, au milieu de chaque intervalle constituant $C_n$, son tiers central ouvert. Ainsi
+\[
+\begin{aligned}
+C_1&=\bigl[0,\tfrac13\bigr]\cup\bigl[\tfrac23,1\bigr],\\
+C_2&=\bigl[0,\tfrac19\bigr]\cup\bigl[\tfrac29,\tfrac13\bigr]\\
+&\quad\cup\bigl[\tfrac23,\tfrac79\bigr]\cup\bigl[\tfrac89,1\bigr],\quad\ldots
+\end{aligned}
+\]
+L’ensemble triadique de Cantor est $C:=\bigcap_{n\in\N}C_n$.
+% @end
+% @note fr-c2-13|L’ensemble de Cantor est fermé, non dénombrable, et négligeable
+\textbf{Propriété – L’ensemble de Cantor est fermé, non dénombrable, et négligeable}
+
+L’ensemble $C$ vérifie :
+\begin{enumerate}
+\item $C$ est un fermé de $\R$, donc $C\in\B(\R)$ ;
+\item $C$ n’est pas dénombrable ;
+\item $\lambda(C)=0$.
+\end{enumerate}
+% @end
+% @note fr-c3-01|Mesure, mesure finie, mesure σ-finie, mesure de probabilité
+\textbf{Définition – Mesure, mesure finie, mesure $\sigma$-finie, mesure de probabilité}
+
+Soit $(\Omega,\T)$ un espace mesurable. Soit $\mu:\T\to\R^+\cup\{+\infty\}$ une application. On dit que $\mu$ est une \textbf{mesure} si :
+\begin{enumerate}
+\item $\mu(\varnothing)=0$ ;
+\item pour toute famille $(A_n)_{n\in\N}$ d’éléments de $\T$ deux à deux incompatibles (i.e. disjoints), on a $\mu(\bigcup_{n\in\N}A_n)=\sum_{n\in\N}\mu(A_n)$ ($\sigma$-additivité).
+\end{enumerate}
+On dit de plus que $\mu$ est :
+\begin{itemize}
+\item une \textbf{mesure finie} si $\mu(\Omega)<+\infty$ ;
+\item une \textbf{mesure $\sigma$-finie} s’il existe une famille $(A_n)_{n\in\N}$ d’éléments de $\T$ vérifiant $\bigcup_n A_n=\Omega$ et $\mu(A_n)<+\infty$ pour tout $n$ ;
+\item une \textbf{mesure de probabilité} (ou \textbf{probabilité}) si $\mu(\Omega)=1$.
+\end{itemize}
+Le triplet $(\Omega,\T,\mu)$ est appelé \textbf{espace mesuré} ; lorsque $\mu$ est une probabilité, on parle d’\textbf{espace probabilisé} et on note en général $\mathbb P$ plutôt que $\mu$.
+% @end
+% @note fr-c3-02|Mesure de Dirac
+\textbf{Définition – Mesure de Dirac}
+
+Soit $(\Omega,\T)$ un espace mesurable et soit $x\in\Omega$. La \textbf{mesure de Dirac} en $x$, notée $\delta_x$, est définie par
+\[\delta_x(A):=\begin{cases}1&\text{si }x\in A,\\0&\text{si }x\notin A,\end{cases}\quad A\in\T.\]
+Plus généralement, si $(x_i)_{i\in I}$ est une famille au plus dénombrable de points de $\Omega$ et $(p_i)_{i\in I}$ des réels positifs, $\mu:=\sum_{i\in I}p_i\delta_{x_i}$ (c’est-à-dire $\mu(A)=\sum_{i\in I}p_i\mathbf1_A(x_i)$) est une mesure sur $(\Omega,\T)$, dite \textbf{discrète} ; c’est une mesure de probabilité si et seulement si $\sum_i p_i=1$. La notion plus générale de mesure \textbf{purement atomique} sera précisée au Chapitre « Décomposition des mesures ».
+% @end
+% @note fr-c3-03|Atome et mesure diffuse
+\textbf{Définition – Atome et mesure diffuse}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré. Un élément $x\in\Omega$ est appelé \textbf{atome} de $\mu$ lorsque son singleton est mesurable et $\mu(\{x\})>0$.
+
+On dit que $\mu$ est \textbf{diffuse} si elle n’a aucun atome.
+% @end
+% @note fr-c3-04|Mesure de Lebesgue sur Rn
+\textbf{Théorème – Mesure de Lebesgue sur $\R^n$}
+
+Soit $n\ge1$ ; on considère l’espace mesurable $(\R^n,\B(\R^n))$. Il existe une unique mesure $\lambda_n$ (notée simplement $\lambda$ ou $dx$ lorsque $n=1$), appelée \textbf{mesure de Lebesgue}, vérifiant :
+\[
+\begin{gathered}
+\forall P=[a_1,b_1]\times\cdots\times[a_n,b_n]\in\B(\R^n),\\
+\lambda_n(P)=\prod_{i=1}^n(b_i-a_i),
+\end{gathered}
+\]
+où $a_1<b_1,\ldots,a_n<b_n$. Autrement dit, $\lambda_n$ prolonge à tous les boréliens la notion usuelle de longueur, d’aire ou de volume d’un pavé.
+% @end
+% @note fr-c3-05|Ensemble négligeable
+\textbf{Définition – Ensemble négligeable}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré. Soit $A\in\T$. On dit que $A$ est \textbf{négligeable} (pour $\mu$) si $\mu(A)=0$.
+% @end
+% @note fr-c3-06|Propriétés élémentaires d’une mesure
+\textbf{Propriété – Propriétés élémentaires d’une mesure}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré. Alors :
+\begin{enumerate}
+\item (\textbf{additivité finie}) pour $(A_i)_{1\le i\le n}$ une famille finie d’événements deux à deux incompatibles, $\mu(\bigcup_{i=1}^n A_i)=\sum_{i=1}^n\mu(A_i)$ ; en particulier, si $A,B$ sont incompatibles, $\mu(A\cup B)=\mu(A)+\mu(B)$ ;
+\item (\textbf{croissance}) si $A\subset B$ (avec $A,B\in\T$), alors $\mu(A)\le\mu(B)$ ; en particulier si $\mu(B)<+\infty$ alors $\mu(A)<+\infty$ ;
+\item (\textbf{formule du crible à deux termes}) si $A,B$ sont de mesure finie, $A\cup B$ est de mesure finie et $\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)$ ;
+\item (\textbf{différence propre}) si $A\subset B$, alors $\mu(B\setminus A)=\mu(B)-\mu(A)$ dès que $\mu(A)<+\infty$.
+\end{enumerate}
+% @end
+% @note fr-c3-07|Continuité croissante et décroissante
+\textbf{Propriété – Continuité croissante et décroissante}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré.
+\begin{enumerate}
+\item Si $(A_n)_{n\in\N}$ est une suite croissante d’événements (i.e. $A_n\subset A_{n+1}$ pour tout $n$), alors
+\[\mu\Bigl(\bigcup_{n\in\N} A_n\Bigr)=\lim_{n\to+\infty}\mu(A_n).\]
+\item Si $(B_n)_{n\in\N}$ est une suite décroissante d’événements et s’il existe $m$ tel que $\mu(B_m)<+\infty$, alors
+\[\mu\Bigl(\bigcap_{n\in\N} B_n\Bigr)=\lim_{n\to+\infty}\mu(B_n).\]
+\end{enumerate}
+% @end
+% @note fr-c3-08|Sous-additivité dénombrable, inégalité de Boole
+\textbf{Propriété – Sous-additivité dénombrable, inégalité de Boole}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $(A_n)_{n\in\N}$ une famille d’événements. Alors
+\[\mu\Bigl(\bigcup_{n\in\N} A_n\Bigr)\le\sum_{n\in\N}\mu(A_n).\]
+% @end
+% @note fr-c3-09|Stabilité par limsup/liminf
+\textbf{Propriété – Stabilité par limsup/liminf}
+
+Soit $(\Omega,\T)$ un espace mesurable, soit $(A_n)_{n\in\N}$ une suite d’éléments de $\T$. Alors $\limsup_n A_n$ et $\liminf_n A_n$ appartiennent à $\T$.
+% @end
+% @note fr-c3-10|Lemme de Borel–Cantelli
+\textbf{Théorème – Lemme de Borel–Cantelli}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $(A_n)_{n\in\N}$ une suite d’éléments de $\T$. Si
+\[\sum_{n\in\N}\mu(A_n)<+\infty,\]
+alors
+\[\mu\bigl(\limsup_n A_n\bigr)=0.\]
+% @end
+% @note fr-c4-01|Propriétés algébriques de l’image réciproque
+\textbf{Propriété – Propriétés algébriques de l’image réciproque}
+
+Soient $E,F$ deux ensembles, $f:E\to F$ une application. Alors :
+\begin{enumerate}
+\item $f^{-1}(\varnothing)=\varnothing$ et $f^{-1}(F)=E$ ;
+\item pour tout $B\subset F$, $f^{-1}(B^c)=\bigl(f^{-1}(B)\bigr)^c$ ;
+\item pour toute famille $(B_i)_{i\in I}$ de parties de $F$,
+\[
+\begin{aligned}
+f^{-1}\Bigl(\bigcup_{i\in I}B_i\Bigr)&=\bigcup_{i\in I}f^{-1}(B_i)\\
+\text{et}\quad f^{-1}\Bigl(\bigcap_{i\in I}B_i\Bigr)&=\bigcap_{i\in I}f^{-1}(B_i).
+\end{aligned}
+\]
+\end{enumerate}
+De plus, si les $B_i$ sont deux à deux disjoints, les $f^{-1}(B_i)$ le sont également.
+% @end
+% @note fr-c4-02|Stabilité d’une tribu par image réciproque
+\textbf{Propriété – Stabilité d’une tribu par image réciproque}
+
+Soit $E$ un ensemble, soit $(F,\mathcal S)$ un espace mesurable, soit $f:E\to F$. Alors
+\[f^{-1}(\mathcal S):=\{f^{-1}(B)\mid B\in\mathcal S\}\]
+est une tribu sur $E$. De plus, c’est la plus petite tribu sur $E$ qui rende $f$ mesurable comme application de $E$ vers $(F,\mathcal S)$.
+% @end
+% @note fr-c4-03|Tribu engendrée et image réciproque
+\textbf{Propriété – Tribu engendrée et image réciproque}
+
+Soient $E,F$ deux ensembles, $f:E\to F$ une application, $\mathcal G$ une partie de $\mathcal P(F)$. Alors :
+\[f^{-1}\bigl(\sigma(\mathcal G)\bigr)=\sigma\bigl(f^{-1}(\mathcal G)\bigr).\]
+% @end
+% @note fr-c4-04|Fonction mesurable
+\textbf{Définition – Fonction mesurable}
+
+Soient $(E,\T_E)$ et $(F,\T_F)$ deux espaces mesurables. Soit $f:E\to F$ une application. On dit que $f$ est \textbf{mesurable} si
+\[\forall\Sigma\in\T_F,\quad f^{-1}(\Sigma)\in\T_E.\]
+Lorsque $\T_E$ et $\T_F$ sont les tribus boréliennes de $E$ et $F$, on dit aussi que $f$ est \textbf{borélienne}.
+% @end
+% @note fr-c4-05|Fonction Lebesgue-mesurable
+\textbf{Définition – Fonction Lebesgue-mesurable}
+
+Une fonction $f:\R\to\R$ est dite \textbf{Lebesgue-mesurable} lorsqu’elle est mesurable de
+\[(\R,\M(\lambda^*))\quad\text{dans}\quad(\R,\B(\R)),\]
+c’est-à-dire lorsque
+\[\forall B\in\B(\R),\quad f^{-1}(B)\in\M(\lambda^*).\]
+En particulier, toute fonction borélienne $f:\R\to\R$ est Lebesgue-mesurable puisque $\B(\R)\subseteq\M(\lambda^*)$.
+% @end
+% @note fr-c4-06|Stabilité par composition
+\textbf{Propriété – Stabilité par composition}
+
+Soient $(E,\T_E)$, $(F,\T_F)$, $(G,\T_G)$ trois espaces mesurables, $f:E\to F$ et $g:F\to G$ mesurables. Alors $g\circ f$ est mesurable.
+% @end
+% @note fr-c4-07|Caractérisation par une famille génératrice
+\textbf{Propriété – Caractérisation par une famille génératrice}
+
+Soient $(E,\T_E)$ et $(F,\T_F)$ deux espaces mesurables, $f:E\to F$, et $\mathcal G$ une partie de $\T_F$ engendrant $\T_F$. Alors $f$ est mesurable si et seulement si $f^{-1}(G)\in\T_E$ pour tout $G\in\mathcal G$.
+% @end
+% @note fr-c4-08|Mesurabilité des fonctions continues
+\textbf{Propriété – Mesurabilité des fonctions continues}
+
+Soient $(E,\T_E)$ et $(F,\T_F)$ deux espaces vectoriels normés munis de leur tribu borélienne. Toute application continue $f:E\to F$ est mesurable.
+% @end
+% @note fr-c4-09|Mesurabilité des indicatrices
+\textbf{Propriété – Mesurabilité des indicatrices}
+
+Soit $(E,\T)$ un espace mesurable, soit $A\in\T$. Alors $\mathbf1_A$ est mesurable.
+% @end
+% @note fr-c4-10|Caractérisation des fonctions mesurables à valeurs vectorielles
+\textbf{Propriété – Caractérisation des fonctions mesurables à valeurs vectorielles}
+
+Soit $(E,\T)$ un espace mesurable, $n\ge1$, $f=(f_1,\ldots,f_n):E\to\R^n$ ($\R^n$ muni de sa tribu borélienne). Alors $f$ est mesurable si et seulement si chaque $f_i:E\to\R$ est mesurable.
+% @end
+% @note fr-c4-11|Stabilité par opérations usuelles
+\textbf{Propriété – Stabilité par opérations usuelles}
+
+Soit $(E,\T)$ un espace mesurable, $\lambda\in\R$, $f,g:E\to\R$ mesurables. Alors $f+g$, $fg$, $\lambda f$, $|f|$ sont mesurables.
+% @end
+% @note fr-c4-12|Droite réelle achevée, tribu borélienne achevée
+\textbf{Définition – Droite réelle achevée, tribu borélienne achevée}
+
+On appelle \textbf{droite réelle achevée} l’ensemble $\overline\R=\R\cup\{-\infty,+\infty\}$, notée aussi $[-\infty,+\infty]$. On appelle \textbf{tribu borélienne achevée} l’ensemble
+\[\B(\overline\R):=\{A\subset\overline\R\mid A\cap\R\in\B(\R)\},\]
+où $\B(\R)$ désigne la tribu borélienne de $\R$.
+% @end
+% @note fr-c4-13|Stabilité par sup et inf dénombrables
+\textbf{Propriété – Stabilité par sup et inf dénombrables}
+
+Soit $(E,\T)$ un espace mesurable, soit $(f_n)_{n\ge1}$ une famille de fonctions mesurables $E\to\overline\R:=\R\cup\{-\infty,+\infty\}$ (muni de la tribu borélienne achevée de la Définition « Droite réelle achevée, tribu borélienne achevée »). Alors $\sup_{n\ge1}f_n$ et $\inf_{n\ge1}f_n$ sont mesurables.
+% @end
+% @note fr-c4-14|Mesure image
+\textbf{Définition – Mesure image}
+
+Soit $f:(E,\T_E)\to(F,\T_F)$ une application mesurable, $\mu$ une mesure sur $(E,\T_E)$. La \textbf{mesure image} de $\mu$ par $f$, notée $f(\mu)$ ou $\mu_f$, est la mesure sur $(F,\T_F)$ définie par $f(\mu)(B):=\mu(f^{-1}(B))$ pour $B\in\T_F$.
+% @end
+% @note fr-c5-01|Fonction étagée
+\textbf{Définition – Fonction étagée}
+
+Soit $(E,\T)$ un espace mesurable, soit $f:E\to\R$. On dit que $f$ est \textbf{simple} ou \textbf{étagée} s’il existe une famille $(A_k)_{1\le k\le n}\in\T^n$ d’ensembles mesurables deux à deux disjoints et $(x_k)_{1\le k\le n}\in\R^n$ tels que
+\[f=\sum_{k=1}^n x_k\mathbf1_{A_k}.\]
+% @end
+% @note fr-c5-02|Mesurabilité des fonctions étagées
+\textbf{Propriété – Mesurabilité des fonctions étagées}
+
+Toute fonction étagée est mesurable.
+% @end
+% @note fr-c5-03|Lemme d’approximation
+\textbf{Théorème – Lemme d’approximation}
+
+Soit $(E,\T)$ un espace mesurable, soit $f:E\to[0,+\infty]$ mesurable. Il existe une suite $(f_n)_{n\ge1}$ de fonctions étagées positives qui converge simplement en croissant vers $f$.
+% @end
+% @note fr-c5-04|Intégrale d’une fonction étagée positive
+\textbf{Définition – Intégrale d’une fonction étagée positive}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $(A_1,\ldots,A_n)$ une partition (finie) de $\Omega$ par des éléments de $\T$, soient $x_1,\ldots,x_n\in\R^+$. On pose $f=\sum_{k=1}^n x_k\mathbf1_{A_k}$. L’intégrale de $f$ est le réel positif
+\[\int_\Omega f\dd\mu:=\sum_{k=1}^n x_k\mu(A_k)\]
+(notée aussi $\int f\dd\mu$).
+% @end
+% @note fr-c5-05|Intégrale d’une fonction mesurable positive
+\textbf{Définition – Intégrale d’une fonction mesurable positive}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $f:\Omega\to[0,+\infty]$ mesurable. On appelle \textbf{intégrale} de $f$ par rapport à $\mu$ :
+\[
+\begin{aligned}
+\int_\Omega f\dd\mu
+&:=\sup\left\{\int_\Omega S\dd\mu\ \middle|\ \begin{gathered}0\le S\le f,\\S\text{ étagée}\end{gathered}\right\}\\
+&\in[0,+\infty].
+\end{aligned}
+\]
+Si $\int_\Omega f\dd\mu<+\infty$, on dit que $f$ est \textbf{$\mu$-intégrable}.
+% @end
+% @note fr-c5-06|Limite croissante et intégrale
+\textbf{Propriété – Limite croissante et intégrale}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $(f_n)_{n\ge1}$ une suite croissante de fonctions étagées positives convergeant simplement vers $f$. Alors $\lim_{n\to+\infty}\int_\Omega f_n\dd\mu=\int_\Omega f\dd\mu$.
+% @end
+% @note fr-c5-07|Intégrale d’une fonction mesurable réelle
+\textbf{Définition – Intégrale d’une fonction mesurable réelle}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $f:\Omega\to\R$ mesurable. On pose $f^+=\max(f,0)$, $f^-=\max(-f,0)$ (de sorte que $f=f^+-f^-$ et $|f|=f^++f^-$) : ce sont deux fonctions mesurables positives. On dit que $f$ est \textbf{$\mu$-intégrable} si $\int_\Omega f^+\dd\mu<+\infty$ et $\int_\Omega f^-\dd\mu<+\infty$, et l’on définit alors
+\[\int_\Omega f\dd\mu:=\int_\Omega f^+\dd\mu-\int_\Omega f^-\dd\mu.\]
+On note $L^1(\Omega,\mu)$ l’ensemble des fonctions $\mu$-intégrables sur $\Omega$ (cette notation sera reprise et généralisée aux espaces $L^p$, $p\ge1$, au Chapitre « Espaces $L^p$ »).
+% @end
+% @note fr-c5-08|Intégrale sur un événement, presque partout
+\textbf{Définition – Intégrale sur un événement, presque partout}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f:\Omega\to\R$, $A\in\T$. On appelle \textbf{intégrale de $f$ sur $A$} la quantité $\int_A f\dd\mu:=\int_\Omega f\cdot\mathbf1_A\dd\mu$.
+
+On dit qu’une propriété $P$ est vraie \textbf{presque partout} (p.p.) sur $\Omega$ s’il existe $N\in\T$ avec $\mu(N)=0$ tel que $P(x)$ soit vraie pour tout $x\notin N$ ; lorsque $\mu$ est une probabilité, on dit \textbf{presque sûrement} (p.s.).
+% @end
+% @note fr-c5-09|Linéarité de l’intégrale
+\textbf{Propriété – Linéarité de l’intégrale}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré.
+\begin{enumerate}
+\item Si $f,g:\Omega\to[0,+\infty]$ sont mesurables, ou si $f,g:\Omega\to\R$ sont mesurables et intégrables, alors $f+g$ est respectivement positive mesurable ou intégrable, et
+\[\int_\Omega(f+g)\dd\mu=\int_\Omega f\dd\mu+\int_\Omega g\dd\mu.\]
+\item Si $f\ge0$ est mesurable et $\lambda\ge0$, ou si $f:\Omega\to\R$ est intégrable et $\lambda\in\R$, alors $\lambda f$ est respectivement positive mesurable ou intégrable, et
+\[\int_\Omega\lambda f\dd\mu=\lambda\int_\Omega f\dd\mu.\]
+\item Si $A,B\in\T$ sont disjoints et si $f$ est positive mesurable, ou si $f:\Omega\to\R$ est intégrable, alors
+\[\int_{A\cup B} f\dd\mu=\int_A f\dd\mu+\int_B f\dd\mu.\]
+\end{enumerate}
+% @end
+% @note fr-c5-10|Monotonie
+\textbf{Propriété – Monotonie}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré.
+\begin{enumerate}
+\item Si $f:\Omega\to[0,+\infty]$ est mesurable, alors $\int_\Omega f\dd\mu\ge0$.
+\item Si $0\le g\le f$ avec $f,g:\Omega\to[0,+\infty]$ mesurables, ou si $f,g:\Omega\to\R$ sont intégrables et $g\le f$, alors
+\[\int_\Omega g\dd\mu\le\int_\Omega f\dd\mu.\]
+\item Si $f$ et $g$ sont deux fonctions mesurables positives, ou deux fonctions intégrables, et si $f=g$ presque partout, alors
+\[\int_\Omega f\dd\mu=\int_\Omega g\dd\mu.\]
+\end{enumerate}
+% @end
+% @note fr-c5-11|Espérance et nullité presque partout
+\textbf{Propriété – Espérance et nullité presque partout}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f:\Omega\to[0,+\infty]$ mesurable. Alors
+\[\int_\Omega f\dd\mu=0\iff f=0\text{ presque partout}.\]
+% @end
+% @note fr-c5-12|Intégrabilité
+\textbf{Propriété – Intégrabilité}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f,g:\Omega\to\R$ mesurables. Alors :
+\begin{enumerate}
+\item $f$ est $\mu$-intégrable si et seulement si $|f|$ l’est ;
+\item si $f$ est $\mu$-intégrable, alors $f$ est finie presque partout ;
+\item si $|f|\le g$ avec $g$ intégrable, alors $f$ est intégrable ;
+\item si $f,g$ sont intégrables, elles admettent des versions à valeurs réelles presque partout ; la somme de telles versions est intégrable.
+\end{enumerate}
+% @end
+% @note fr-c5-13|Théorème de convergence monotone
+\textbf{Théorème – Théorème de convergence monotone}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, soit $(f_n)_{n\ge1}$ une suite croissante de fonctions mesurables $\Omega\to[0,+\infty]$, convergeant simplement vers $f$. Alors $f$ est mesurable et
+\[
+\begin{gathered}
+\int_\Omega f\dd\mu=\lim_{n\to+\infty}\int_\Omega f_n\dd\mu\\
+\text{(égalité dans }[0,+\infty]\text{)}.
+\end{gathered}
+\]
+Version « série » : pour $(g_n)_{n\ge1}$ mesurables positives, $\int_\Omega\sum_{n\ge1}g_n\dd\mu=\sum_{n\ge1}\int_\Omega g_n\dd\mu$.
+% @end
+% @note fr-c5-14|Lemme de Fatou
+\textbf{Théorème – Lemme de Fatou}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $(f_n)_{n\ge1}$ mesurables à valeurs dans $[0,+\infty]$. Alors
+\[\int_\Omega\liminf_{n\ge1}f_n\dd\mu\le\liminf_{n\ge1}\int_\Omega f_n\dd\mu.\]
+% @end
+% @note fr-c5-15|Théorème de convergence dominée
+\textbf{Théorème – Théorème de convergence dominée}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $(f_n)_{n\ge1}$ mesurables $\Omega\to\R$, telles que :
+\begin{enumerate}
+\item $(f_n)$ converge simplement presque partout vers $f$ ;
+\item (hypothèse de domination) il existe $g:\Omega\to[0,+\infty]$ intégrable telle que $|f_n|\le g$ pour tout $n$.
+\end{enumerate}
+Alors $f$ est intégrable et $\int_\Omega f\dd\mu=\lim_{n\to+\infty}\int_\Omega f_n\dd\mu$.
+% @end
+% @note fr-c5-16|Continuité sous le signe intégral
+\textbf{Théorème – Continuité sous le signe intégral}
+
+Soit $(E,\|\cdot\|)$ un espace vectoriel normé, $U\subset E$, $u_0\in U$, $f:U\times\Omega\to\R$ telle que :
+\begin{enumerate}
+\item pour tout $u\in U$, $x\mapsto f(u,x)$ est mesurable ;
+\item pour $\mu$-presque tout $x$, $u\mapsto f(u,x)$ est continue en $u_0$ ;
+\item (domination) il existe $g\in L^1(\Omega,\mu)$ positive telle que $|f(u,x)|\le g(x)$ pour tout $u\in U$, $\mu$-p.p.
+\end{enumerate}
+Alors $F(u):=\int_\Omega f(u,x)\dd\mu(x)$ est bien définie pour tout $u\in U$, et continue en $u_0$.
+% @end
+% @note fr-c5-17|Dérivabilité sous le signe intégral
+\textbf{Théorème – Dérivabilité sous le signe intégral}
+
+Soit $I\subset\R$ un intervalle ouvert, $f:I\times\Omega\to\R$ telle que :
+\begin{enumerate}
+\item pour tout $u\in I$, $x\mapsto f(u,x)$ est dans $L^1(\Omega,\mu)$ ;
+\item pour $\mu$-presque tout $x$, $u\mapsto f(u,x)$ est dérivable sur $I$ tout entier, de dérivée notée $\frac{\partial f}{\partial u}(u,x)$ ;
+\item (domination) il existe $g\in L^1(\Omega,\mu)$ positive telle que $\bigl|\frac{\partial f}{\partial u}(u,x)\bigr|\le g(x)$ pour tout $u\in I$, $\mu$-p.p.
+\end{enumerate}
+Alors $F(u):=\int_\Omega f(u,x)\dd\mu(x)$ est dérivable sur $I$ tout entier, de dérivée $F'(u)=\int_\Omega\frac{\partial f}{\partial u}(u,x)\dd\mu(x)$ pour tout $u\in I$.
+% @end
+% @note fr-c6-01|Tribu produit
+\textbf{Définition – Tribu produit}
+
+Soient $(E,\T_E)$ et $(F,\T_F)$ deux espaces mesurables. On appelle \textbf{tribu produit} sur $E\times F$, notée $\T_E\otimes\T_F$, la tribu engendrée par les pavés $(A\times B)_{A\in\T_E,B\in\T_F}$.
+% @end
+% @note fr-c6-02|Existence et unicité de la mesure produit
+\textbf{Théorème – Existence et unicité de la mesure produit}
+
+Soient $(E,\T_E,\mu)$ et $(F,\T_F,\nu)$ deux espaces mesurés $\sigma$-finis. Il existe une unique mesure $\mu\otimes\nu$ sur $(E\times F,\T_E\otimes\T_F)$ telle que
+\[(\mu\otimes\nu)(A\times B)=\mu(A)\nu(B)\]
+pour tous $A\in\T_E$ et $B\in\T_F$. Elle est appelée \textbf{mesure produit} de $\mu$ et $\nu$.
+% @end
+% @note fr-c6-03|Coupes d’un ensemble
+\textbf{Définition – Coupes d’un ensemble}
+
+Pour $D\subset E\times F$ et $x\in E$, on appelle \textbf{coupe verticale} de $D$ en $x$ l’ensemble
+\[D_x:=\{y\in F\mid(x,y)\in D\}.\]
+De même, pour $y\in F$, on définit la \textbf{coupe horizontale} $D^y:=\{x\in E\mid(x,y)\in D\}$.
+% @end
+% @note fr-c6-04|Mesurabilité des coupes
+\textbf{Propriété – Mesurabilité des coupes}
+
+Si $D\in\T_E\otimes\T_F$, alors $D_x\in\T_F$ pour tout $x\in E$ et $D^y\in\T_E$ pour tout $y\in F$. De plus, les applications
+\[x\longmapsto\nu(D_x),\quad y\longmapsto\mu(D^y)\]
+sont mesurables, et
+\[
+\begin{aligned}
+(\mu\otimes\nu)(D)&=\int_E\nu(D_x)\dd\mu(x)\\
+&=\int_F\mu(D^y)\dd\nu(y).
+\end{aligned}
+\]
+% @end
+% @note fr-c6-05|Théorème de Fubini-Tonelli
+\textbf{Théorème – Théorème de Fubini-Tonelli}
+
+Soient $(E,\T_E,\mu)$, $(F,\T_F,\nu)$ deux espaces mesurés $\sigma$-finis.
+\begin{itemize}
+\item (\textbf{Tonelli, cas positif}) Si $f:E\times F\to[0,+\infty]$ est mesurable, alors
+\[
+\begin{gathered}
+\int_{E\times F} f\dd(\mu\otimes\nu)\\
+=\int_E\Bigl(\int_F f(x,y)\dd\nu(y)\Bigr)\dd\mu(x)\\
+=\int_F\Bigl(\int_E f(x,y)\dd\mu(x)\Bigr)\dd\nu(y).
+\end{gathered}
+\]
+\item (\textbf{Fubini, cas intégrable}) Si $f:E\times F\to\R$ est mesurable et $\int_{E\times F}|f|\dd(\mu\otimes\nu)<+\infty$, alors les mêmes égalités sont vraies (les fonctions $x\mapsto\int_F f(x,y)\dd\nu(y)$ etc. étant définies pour presque tout $x$).
+\end{itemize}
+% @end
+% @note fr-c6-06|Intégrales multiples en dimension finie
+\textbf{Corollaire – Intégrales multiples en dimension finie}
+
+Par récurrence, Tonelli et Fubini s’appliquent à un produit fini d’espaces mesurés $\sigma$-finis. En particulier, pour une fonction positive sur $\R^n$ (ou intégrable sur $\R^n$), on peut calculer
+\[\int_{\R^n}f(x_1,\ldots,x_n)\dd x_1\cdots\dd x_n\]
+par $n$ intégrations successives, dans n’importe quel ordre autorisé par Tonelli ou Fubini.
+% @end
+% @note fr-c6-07|Formule du changement de variable
+\textbf{Théorème – Formule du changement de variable}
+
+Soient $U,\Omega$ deux ouverts de $\R^n$ et
+\[
+\begin{gathered}
+\Phi:U\to\Omega,\\
+\Phi(u_1,\ldots,u_n)=(x_1,\ldots,x_n),
+\end{gathered}
+\]
+un $C^1$-difféomorphisme. Si $f:\Omega\to\R$ est mesurable, positive ou intégrable, alors
+\[
+\begin{aligned}
+&\int_\Omega f(x_1,\ldots,x_n)\dd x_1\cdots\dd x_n\\
+&\quad=\int_U f\bigl(\Phi(u_1,\ldots,u_n)\bigr)\\
+&\qquad\cdot\bigl|\det\operatorname{Jac}(\Phi)(u_1,\ldots,u_n)\bigr|\dd u_1\cdots\dd u_n.
+\end{aligned}
+\]
+% @end
+% @note fr-c7-01|Espaces Lp
+\textbf{Définition – Espaces $L^p$}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $p\ge1$. On note $L^p(\Omega,\mu)$ l’ensemble des fonctions mesurables $f:\Omega\to\R$ vérifiant $\int_\Omega|f|^p\dd\mu<+\infty$. Pour $f\in L^p$, on note $\|f\|_p:=\bigl(\int_\Omega|f|^p\dd\mu\bigr)^{1/p}$.
+% @end
+% @note fr-c7-02|L∞
+\textbf{Définition – $L^\infty$}
+
+$L^\infty(\Omega,\mu)$ désigne l’ensemble des fonctions mesurables bornées $\mu$-presque partout, i.e. pour lesquelles il existe $M>0$ avec $\mu(|f|>M)=0$.
+% @end
+% @note fr-c7-03|Séparation, ou pourquoi ∥·∥p n’est qu’une semi-norme
+\textbf{Propriété – Séparation, ou pourquoi $\|\cdot\|_p$ n’est qu’une semi-norme}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $p\in[1,+\infty[$, $f\in L^p(\Omega,\mu)$. Alors
+\[\|f\|_p=0\iff f=0\quad\mu\text{-presque partout}.\]
+% @end
+% @note fr-c7-04|Inégalité de Markov
+\textbf{Propriété – Inégalité de Markov}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f\ge0$ mesurable. Alors
+\[\forall a>0,\quad\mu(f\ge a)\le\frac1a\int_\Omega f\dd\mu.\]
+% @end
+% @note fr-c7-05|Inégalité de Bienaymé-Tchebychev
+\textbf{Propriété – Inégalité de Bienaymé-Tchebychev}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f\in L^2(\Omega,\mu)$, $c\in\R$. Alors
+\[\forall\varepsilon>0,\quad\mu\bigl(|f-c|\ge\varepsilon\bigr)\le\frac1{\varepsilon^2}\int_\Omega(f-c)^2\dd\mu.\]
+% @end
+% @note fr-c7-06|Inégalité de Hölder
+\textbf{Propriété – Inégalité de Hölder}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $f,g$ deux fonctions mesurables, $p,q\in]1,+\infty[$ tels que $\frac1p+\frac1q=1$. Si $f\in L^p$ et $g\in L^q$, alors $fg\in L^1$ et
+\[\int_\Omega|fg|\dd\mu\le\|f\|_p\|g\|_q.\]
+% @end
+% @note fr-c7-07|Inclusion Lp ⊂ Lq en mesure finie
+\textbf{Corollaire – Inclusion $L^p\subset L^q$ en mesure finie}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré fini (i.e. $\mu(\Omega)<+\infty$), soient $1\le q<p\le+\infty$. Alors $L^p(\Omega,\mu)\subset L^q(\Omega,\mu)$.
+% @end
+% @note fr-c7-08|Inégalité de Minkowski
+\textbf{Propriété – Inégalité de Minkowski}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $p\ge1$. Si $f,g\in L^p$, alors $f+g\in L^p$ et $\|f+g\|_p\le\|f\|_p+\|g\|_p$.
+% @end
+% @note fr-c7-09|Inégalité de Jensen
+\textbf{Propriété – Inégalité de Jensen}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré avec $0<\mu(\Omega)<+\infty$, $f\in L^1(\Omega,\mu)$, $\varphi:\R\to\R$ convexe telle que $\varphi(f)$ soit également intégrable. Alors
+\[\varphi\Bigl(\frac1{\mu(\Omega)}\int_\Omega f\dd\mu\Bigr)\le\frac1{\mu(\Omega)}\int_\Omega\varphi(f)\dd\mu.\]
+En particulier, pour $\mu=\mathbb P$ une mesure de probabilité ($\mu(\Omega)=1$), on retrouve $\varphi\bigl(\int_\Omega f\dd\mathbb P\bigr)\le\int_\Omega\varphi(f)\dd\mathbb P$.
+% @end
+% @note fr-c7-10|Riesz-Fischer
+\textbf{Théorème – Riesz-Fischer}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré. Pour tout $p\in[1,+\infty]$, $(L^p(\Omega,\mu),\|\cdot\|_p)$ est un espace de Banach.
+% @end
+% @note fr-c7-11|L2 est un espace de Hilbert
+\textbf{Propriété – $L^2$ est un espace de Hilbert}
+
+Sur $L^2(\Omega,\mu)$, on pose
+\[\langle f,g\rangle_{L^2}:=\int_\Omega fg\dd\mu.\]
+Alors $\langle\cdot,\cdot\rangle_{L^2}$ est un produit scalaire (sur les classes de fonctions égales $\mu$-presque partout), sa norme associée est exactement $\|\cdot\|_2$, et $L^2(\Omega,\mu)$ est un espace de Hilbert.
+% @end
+% @note fr-c7-12|Théorème de représentation de Riesz
+\textbf{Théorème – Théorème de représentation de Riesz}
+
+Soit $H$ un espace de Hilbert réel et $\ell:H\to\R$ une forme linéaire continue. Alors il existe un unique $h\in H$ tel que
+\[\forall x\in H,\quad\ell(x)=\langle x,h\rangle.\]
+De plus,
+\[\lvert\!\lvert\!\lvert\ell\rvert\!\rvert\!\rvert=\|h\|.\]
+% @end
+% @note fr-c7-13|Densité dans Lp
+\textbf{Théorème – Densité dans $L^p$}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $p\in[1,+\infty[$. L’espace des fonctions étagées (intégrables) est dense dans $L^p(\Omega,\mu)$ : pour tout $f\in L^p$, il existe une suite $(f_n)$ de fonctions étagées avec $\|f-f_n\|_p\to0$.
+% @end
+% @note fr-c8-01|Mesure discrète
+\textbf{Définition – Mesure discrète}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré. On dit que $\mu$ est une \textbf{mesure discrète} s’il existe un ensemble au plus dénombrable $S\subset\Omega$, formé d’atomes de $\mu$, tel que
+\[\mu(\Omega\setminus S)=0.\]
+Autrement dit, toute la masse de $\mu$ est concentrée sur un nombre fini ou dénombrable d’atomes. On a alors
+\[\mu=\sum_{x\in S}\mu(\{x\})\delta_x.\]
+Si l’on autorise dans cette définition un ensemble $S$ qui n’est pas nécessairement fini ou dénombrable, on dit que $\mu$ est \textbf{purement atomique}.
+% @end
+% @note fr-c8-02|Mesure à densité
+\textbf{Définition – Mesure à densité}
+
+Soit $\mu$ une mesure sur $(\Omega,\T)$, $g:\Omega\to[0,+\infty]$ mesurable. La mesure $\nu:=g\cdot\mu$, définie par $\nu(A):=\int_A g\dd\mu$ pour $A\in\T$, est appelée \textbf{mesure de densité} $g$ par rapport à $\mu$. On note aussi $g=\frac{d\nu}{d\mu}$.
+% @end
+% @note fr-c8-03|Mesure absolument continue
+\textbf{Définition – Mesure absolument continue}
+
+Soit $(\Omega,\T)$ un espace mesurable, $\mu,\nu$ deux mesures sur $(\Omega,\T)$. On dit que $\nu$ est \textbf{absolument continue} par rapport à $\mu$, et l’on note $\nu\ll\mu$, si
+\[\forall A\in\T,\quad\mu(A)=0\implies\nu(A)=0.\]
+Autrement dit, $\nu$ ne peut charger un ensemble que si $\mu$ le charge déjà (au moins un peu) : $\nu$ ne peut pas être « plus précise » que $\mu$ quant à ce qui est négligeable.
+% @end
+% @note fr-c8-04|Une mesure à densité est absolument continue
+\textbf{Propriété – Une mesure à densité est absolument continue}
+
+Toute mesure à densité par rapport à $\mu$ est absolument continue par rapport à $\mu$ : si $\nu=g\cdot\mu$, alors $\nu\ll\mu$.
+% @end
+% @note fr-c8-05|Formule de transfert pour une mesure à densité
+\textbf{Propriété – Formule de transfert pour une mesure à densité}
+
+Soit $(\Omega,\T,\mu)$ un espace mesuré, $g:\Omega\to[0,+\infty]$ mesurable, $\nu:=g\cdot\mu$ (Définition « Mesure à densité »). Alors, pour toute fonction mesurable $\varphi:\Omega\to[0,+\infty]$,
+\[\int_\Omega\varphi\dd\nu=\int_\Omega\varphi g\dd\mu.\]
+Plus généralement, pour $\varphi:\Omega\to\R$ mesurable, $\varphi$ est $\nu$-intégrable si et seulement si $\varphi g$ est $\mu$-intégrable, et dans ce cas $\int_\Omega\varphi\dd\nu=\int_\Omega\varphi g\dd\mu$.
+% @end
+% @note fr-c8-06|Mesures étrangères, ou mutuellement singulières
+\textbf{Définition – Mesures étrangères, ou mutuellement singulières}
+
+Soit $(\Omega,\T)$ un espace mesurable, $\mu,\nu$ deux mesures sur $(\Omega,\T)$. On dit que $\mu$ et $\nu$ sont \textbf{étrangères} (ou \textbf{mutuellement singulières}), et l’on note $\mu\perp\nu$, s’il existe $B\in\T$ tel que
+\[\mu(B)=0\quad\text{et}\quad\nu(B^c)=0.\]
+Autrement dit, $\mu$ est tout entière « portée » par $B^c$, et $\nu$ tout entière « portée » par $B$ : les deux mesures vivent sur deux parties disjointes de $\Omega$.
+% @end
+% @note fr-c8-07|Construction de la mesure de Cantor
+\textbf{Propriété – Construction de la mesure de Cantor}
+
+Pour $k\in\N$, rappelons que $C_k$ est une réunion de $2^k$ segments fermés disjoints, chacun de longueur $3^{-k}$, de sorte que $\lambda(C_k)=(2/3)^k$ (Chapitre « Autour de la mesure extérieure de Lebesgue », Proposition « L’ensemble de Cantor est fermé, non dénombrable, et négligeable »). Posons
+\[\mu_k(A):=\Bigl(\frac32\Bigr)^k\lambda(A\cap C_k),\quad A\in\B(\R).\]
+Alors chaque $\mu_k$ est une mesure de probabilité, et il existe une unique mesure de probabilité $\nu_C$ sur $(\R,\B(\R))$ telle que, pour tout intervalle $I\subset\R$,
+\[\nu_C(I)=\lim_{k\to+\infty}\mu_k(I).\]
+% @end
+% @note fr-c8-08|Mesure de Cantor
+\textbf{Définition – Mesure de Cantor}
+
+L’unique mesure de probabilité $\nu_C$ fournie par la Proposition « Construction de la mesure de Cantor » est appelée \textbf{mesure de Cantor} et est notée $\nu_C$.
+% @end
+% @note fr-c8-09|Propriétés de la mesure de Cantor
+\textbf{Théorème – Propriétés de la mesure de Cantor}
+
+La mesure de Cantor $\nu_C$ vérifie :
+\begin{enumerate}
+\item $\nu_C$ est une mesure de probabilité sur $\R$, avec $\nu_C(C)=1$ ;
+\item $\nu_C$ est diffuse (elle n’a aucun atome) ;
+\item $\nu_C$ est étrangère à la mesure de Lebesgue $\lambda$ : $\nu_C\perp\lambda$.
+\end{enumerate}
+En particulier, $\nu_C$ n’est ni une mesure discrète (par le point 2), ni la mesure à densité d’une fonction par rapport à $\lambda$ (par le point 3, cf. Remarque « Pourquoi $\nu_C$ n’a pas de densité »).
+% @end
+% @note fr-c8-10|Mesure singulière continue
+\textbf{Définition – Mesure singulière continue}
+
+Une mesure $\nu$ sur $(\R,\B(\R))$ est dite \textbf{singulière continue} lorsqu’elle est à la fois diffuse et étrangère à la mesure de Lebesgue $\lambda$, c’est-à-dire
+\[\forall x\in\R,\quad\nu(\{x\})=0,\quad\text{et}\quad\nu\perp\lambda.\]
+Ainsi, par le Théorème « Propriétés de la mesure de Cantor », la mesure de Cantor $\nu_C$ est singulière continue.
+% @end
+% @note fr-c8-11|Théorème de Radon-Nikodym
+\textbf{Théorème – Théorème de Radon-Nikodym}
+
+Soient $\mu$ et $\nu$ deux mesures $\sigma$-finies sur $(\Omega,\T)$, avec $\nu$ absolument continue par rapport à $\mu$ (c’est-à-dire : $\mu(A)=0\Rightarrow\nu(A)=0$). Alors il existe une fonction mesurable $h:\Omega\to[0,+\infty]$, unique à un ensemble $\mu$-négligeable près, telle que
+\[\forall A\in\T,\quad\nu(A)=\int_A h\dd\mu.\]
+On dit que $h$ est la \textbf{densité} de $\nu$ par rapport à $\mu$, notée $h=\frac{d\nu}{d\mu}$.
+% @end
+% @note fr-c8-12|Décomposition de Lebesgue
+\textbf{Théorème – Décomposition de Lebesgue}
+
+Soient $\mu,\nu$ deux mesures $\sigma$-finies sur un espace mesurable $(\Omega,\T)$. Il existe un unique couple $(\nu_{\mathrm{ac}},\nu_{\mathrm{sing}})$ de mesures sur $(\Omega,\T)$ tel que
+\[
+\begin{gathered}
+\nu=\nu_{\mathrm{ac}}+\nu_{\mathrm{sing}},\\
+\nu_{\mathrm{ac}}\ll\mu,\quad\nu_{\mathrm{sing}}\perp\mu.
+\end{gathered}
+\]
+% @end
+% @note fr-c8-13|Décomposition d’une mesure finie sur R
+\textbf{Corollaire – Décomposition d’une mesure finie sur $\R$}
+
+Soit $\nu$ une mesure finie sur $(\R,\B(\R))$. Il existe une fonction mesurable $g:\R\to[0,+\infty[$ intégrable par rapport à $\lambda$, une famille au plus dénombrable de points distincts $(x_i)_{i\in I}$, des coefficients $p_i>0$ tels que $\sum_{i\in I}p_i<+\infty$, et une mesure $\nu_{\mathrm{sc}}$ singulière continue tels que
+\[
+\begin{aligned}
+\nu&=\underbrace{g\cdot\lambda}_{\text{à densité}}+\underbrace{\sum_{i\in I}p_i\delta_{x_i}}_{\text{discrète}}\\
+&\quad+\underbrace{\nu_{\mathrm{sc}}}_{\text{singulière continue}}.
+\end{aligned}
+\]
+Cette décomposition est unique, à l’égalité $\lambda$-presque partout près pour $g$ et à une permutation près des points $(x_i)$.
+% @end

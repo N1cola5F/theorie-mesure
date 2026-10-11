@@ -18,6 +18,7 @@ def existing_typesetter():
     spec=importlib.util.spec_from_file_location('semester_typesetter',ROOT/'知识整合/build.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
     module.BUILD=BUILD
+    module.BASE=BASE # DS uses the shared font configuration plus its own diagram macros.
     return module
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -147,9 +148,17 @@ def main():
     BUILD.mkdir(parents=True,exist_ok=True);SITE.mkdir(parents=True,exist_ok=True)
     config=json.loads((BASE/'exam.json').read_text(encoding='utf-8'))
     notes=load_notes('knowledge.tex');proofs=load_notes('proofs.tex');guides=load_notes('guides.tex')
+    french=load_notes('french-knowledge.tex');french_proofs=load_notes('french-proofs.tex')
     assert len(notes)==100 and len(proofs)==15
     assert [p['id'] for p in proofs]==[f'p{n:02}' for n in range(1,16)]
     ids={c['id'] for c in notes}
+    assert {n['id'] for n in french}=={'fr-'+id for id in ids},'French statement mapping incomplete'
+    assert {n['id'] for n in french_proofs}=={'fr-'+n['id'] for n in proofs},'French proof mapping incomplete'
+    french_map={n['id'].removeprefix('fr-'):n for n in french}
+    for note in french_proofs:
+        note['body']=re.sub(r'\\officialstatement\{(c[1-8]-\d{2})\}',lambda m:french_map[m[1]]['body'],note['body'])
+    for note in french+french_proofs:
+        note['body']=r'\raggedright'+'\n'+note['body']
     for chapter in config['chapters']:
         assert sum(n['id'].startswith('c'+str(chapter['id'])+'-') for n in notes)==chapter['count']
     for p in config['proof_cards']:
@@ -167,15 +176,16 @@ def main():
     assert {b['id'] for b in indices['preuves']['blocks']}=={p['id'] for p in proofs}
     fontroot=Path(os.environ['LOCALAPPDATA'])/'Programs/MiKTeX/fonts/opentype/public'
     existing=existing_typesetter()
-    for n in notes+proofs+guides:
+    for n in notes+proofs+guides+french+french_proofs:
         for char,tex in [('σ',r'\ensuremath{\sigma}'),('μ',r'\ensuremath{\mu}')]:
             n['body']=n['body'].replace(char,tex)
         n['body']=r'\providecommand{\Z}{\mathbb Z}\renewcommand{\textbf}[1]{{\bfseries\color{black}#1}}'+'\n'+n['body']
-    fragments,files=existing.typeset(notes+proofs+guides,fontroot,args.reuse)
-    originals,fr_files=make_originals(indices,config,args.reuse)
-    vector_urls={key:export_asset(path,'vectors') for key,path in {**files,**fr_files}.items()}
+    fragments,files=existing.typeset(notes+proofs+guides+french+french_proofs,fontroot,args.reuse)
+    # Keep official source/page metadata, but render the maintainable French TeX instead of PDF crops.
+    originals={b['id']:{'title_fr':b['title'],'source':source,'originals':[{'page':p['page']} for p in b['pieces']],'original_text':'\n'.join(p['text'] for p in b['pieces'])} for source,index in indices.items() for b in index['blocks']}
+    vector_urls={key:export_asset(path,'vectors') for key,path in files.items()}
     def asset(key):
-        svg=ET.parse(({**files,**fr_files})[key]).getroot()
+        svg=ET.parse(files[key]).getroot()
         box=svg.get('viewBox')
         if box:w,h=map(float,box.split()[2:])
         else:w,h=(float(re.sub('[a-z]+','',svg.get(k))) for k in ['width','height'])
@@ -187,10 +197,10 @@ def main():
         cards=[]
         for note in notes:
             if not note['id'].startswith('c'+str(chapter['id'])+'-'):continue
-            original=copy.deepcopy(originals[note['id']]);original['originals']=[{**p,'svg':asset(p['key'])} for p in original['originals']]
+            original=copy.deepcopy(originals[note['id']])
             searchable=original.pop('original_text')+'\n'+note['body']
             dependencies=list(dict.fromkeys(re.findall(r'\bc[1-8]-\d{2}\b',note['body'])))
-            card={'id':note['id'],'title':note['title'],'compiled':compiled(note),'proof':proof_numbers.get(note['id']),'requires':[d for d in dependencies if d in ids and d!=note['id']],**original}
+            card={'id':note['id'],'title':note['title'],'compiled':compiled(note),'french':compiled(french_map[note['id']]),'proof':proof_numbers.get(note['id']),'requires':[d for d in dependencies if d in ids and d!=note['id']],**original}
             cards.append(card);search.append({'id':note['id'],'title':note['title'],'title_fr':original['title_fr'],'chapter':chapter['id'],'text':searchable})
         data={'chapter':chapter['id'],'cards':cards}
         filename=BUILD/f'chapter-{chapter["id"]}.json';write_json(filename,data)
@@ -198,8 +208,8 @@ def main():
     proof_metadata=[]
     for note,spec in zip(proofs,config['proof_cards']):
         orig=copy.deepcopy(originals[note['id']]);orig.pop('original_text')
-        orig['originals']=[{**p,'svg':asset(p['key'])} for p in orig['originals']]
-        data={'id':note['id'],'title':note['title'],'number':spec['number'],'compiled':compiled(note),'requires':spec['requires'],'card':spec['card'],**orig}
+        fr=next(n for n in french_proofs if n['id']=='fr-'+note['id'])
+        data={'id':note['id'],'title':note['title'],'number':spec['number'],'compiled':compiled(note),'french':compiled(fr),'requires':spec['requires'],'card':spec['card'],**orig}
         filename=BUILD/(note['id']+'.json');write_json(filename,data)
         proof_metadata.append({k:data[k] for k in ['id','title','number','requires','card']})
         proof_metadata[-1]['data']=export_asset(filename,'data')
@@ -215,15 +225,15 @@ def main():
     css_text=(BASE/'assets/ds.css').read_text(encoding='utf-8').replace('{{FONT}}','../'+font_url)
     (BUILD/'ds.css').write_text(css_text,encoding='utf-8')
     css=export_asset(BUILD/'ds.css','styles');js=export_asset(BASE/'assets/ds.js','scripts')
-    manifest={'version':config['version'],'updated':config['updated'],'exam':config['exam'],'chapters':chapters,'proofs':proof_metadata,'guides':guide_map,'search':search_url,'sources':source_records,'catalog':catalog_url,'td':td,'excluded':config['excluded'],'missing_required_files':config['missing_required_files'],'pending_exam_information':config['pending_exam_information']}
+    manifest={'version':config['version'],'updated':config['updated'],'french_delivery':'precompiled-xelatex-from-official-text','exam':config['exam'],'chapters':chapters,'proofs':proof_metadata,'guides':guide_map,'search':search_url,'sources':source_records,'catalog':catalog_url,'td':td,'excluded':config['excluded'],'missing_required_files':config['missing_required_files'],'pending_exam_information':config['pending_exam_information']}
     write_json(SITE/'resource-manifest.json',manifest)
     manifest_json=json.dumps(manifest,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
-    template=(BASE/'assets/index.html').read_text(encoding='utf-8').replace('{{CSS}}',css).replace('{{JS}}',js).replace('{{MANIFEST}}',manifest_json)
+    template=(BASE/'assets/index.html').read_text(encoding='utf-8').replace('{{CSS}}',css).replace('{{JS}}',js).replace('{{MANIFEST}}',manifest_json).replace('{{VERSION}}',config['version']).replace('{{UPDATED}}',config['updated'])
     (SITE/'index.html').write_text(template,encoding='utf-8')
     (SITE/'.nojekyll').write_text('',encoding='utf-8')
     # A small separate local launcher; compiled resources stay external.
     (ROOT/'测量理论_DS期中复习.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=site/ds/index.html"><title>DS 期中复习</title><a href="site/ds/index.html">本地入口</a> · <a href="'+config['url']+'">在线阅读</a><p>本地按章节加载需启动 HTTP 预览；可直接使用在线地址。</p></html>',encoding='utf-8')
-    report={'version':config['version'],'repository_release':config['repository_release'],'date':config['updated'],'statements':len(notes),'proofs':len(proofs),'intro_guides':len(guides),'compiled_chinese_fragments':len(fragments),'official_vector_fragments':len(fr_files),'runtime_latex':False,'official_method':'PDF vector clips; original wording retained, black emphasis','glyph_boundary_check':'passed','latex_faults':0,'html_bytes':(SITE/'index.html').stat().st_size,'td_parts_1_2':{f'TD{t["number"]}':t['counts'] for t in td},'sources':source_records,'url':config['url']}
+    report={'version':config['version'],'repository_release':config['repository_release'],'date':config['updated'],'statements':len(notes),'proofs':len(proofs),'intro_guides':len(guides),'compiled_chinese_fragments':2*(len(notes)+len(proofs)+len(guides)),'compiled_french_fragments':2*(len(french)+len(french_proofs)),'official_vector_fragments':0,'runtime_latex':False,'official_method':'Official French wording and formulas in maintainable TeX, precompiled with Chinese at 11pt / 16pt on 340pt and 220pt layouts; black emphasis; PDF page links retained','source_mapping_check':'100 statements and 15 proofs','latex_faults':0,'html_bytes':(SITE/'index.html').stat().st_size,'td_parts_1_2':{f'TD{t["number"]}':t['counts'] for t in td},'sources':source_records,'url':config['url']}
     write_json(BASE/'构建记录.json',report)
     print(json.dumps({k:v for k,v in report.items() if k!='sources'},ensure_ascii=False,indent=2),flush=True)
 

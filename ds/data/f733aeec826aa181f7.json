@@ -1,0 +1,496 @@
+{
+  "chapter": 1,
+  "cards": [
+    {
+      "id": "c1-01",
+      "title": "可数集",
+      "compiled": {
+        "wide": {
+          "src": "vectors/c08489e3cc9f9bb2f9.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/aacc1c3e66509b224d.svg",
+          "width": 221.17,
+          "height": 142.49
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/1155f2a4d1f46ce9d0.svg",
+          "width": 340.72,
+          "height": 49.4
+        },
+        "narrow": {
+          "src": "vectors/9cbb7e30a9d0a996af.svg",
+          "width": 221.17,
+          "height": 67.9
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Ensemble dénombrable",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-02",
+      "title": "实数不可数",
+      "compiled": {
+        "wide": {
+          "src": "vectors/6c2ddb102a2ba1e694.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/ac1ad59b9ac44a641c.svg",
+          "width": 221.17,
+          "height": 123.83
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/15475e3d80983078e3.svg",
+          "width": 340.72,
+          "height": 49.75
+        },
+        "narrow": {
+          "src": "vectors/b37cfdc705d7f1c87a.svg",
+          "width": 221.17,
+          "height": 65.78
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Propriété – Non-dénombrabilité de R : argument diagonal de Cantor",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-03",
+      "title": "集合的上极限与下极限",
+      "compiled": {
+        "wide": {
+          "src": "vectors/cd92fc339c8fecf1cc.svg",
+          "width": 340.72,
+          "height": 140.23
+        },
+        "narrow": {
+          "src": "vectors/003dcdab8022cd5a5c.svg",
+          "width": 221.17,
+          "height": 177.19
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/a9600e114ec83b8b24.svg",
+          "width": 340.72,
+          "height": 380.94
+        },
+        "narrow": {
+          "src": "vectors/e38275dcf4f9d18f2f.svg",
+          "width": 221.17,
+          "height": 452.33
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Limite supérieure et limite inférieure d’une suite d’ensembles",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-04",
+      "title": "把量词写成并与交",
+      "compiled": {
+        "wide": {
+          "src": "vectors/30c054dc63d3c92f9c.svg",
+          "width": 340.72,
+          "height": 138.66
+        },
+        "narrow": {
+          "src": "vectors/596ec3fcbe12a631ae.svg",
+          "width": 221.17,
+          "height": 138.66
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/2e6fe3f55d87e69714.svg",
+          "width": 340.72,
+          "height": 99.76
+        },
+        "narrow": {
+          "src": "vectors/d822db2e7e115b0c31.svg",
+          "width": 221.17,
+          "height": 124.06
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c1-03"
+      ],
+      "title_fr": "Propriété – Description par réunion et intersection",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-05",
+      "title": "区间的长度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/0a6bd8d16c0623b291.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/437193ebf405e22294.svg",
+          "width": 221.17,
+          "height": 86.57
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/eccd38cd6f92e572a0.svg",
+          "width": 340.72,
+          "height": 107.5
+        },
+        "narrow": {
+          "src": "vectors/868d957b11c8d5525c.svg",
+          "width": 221.17,
+          "height": 144.8
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Longueur d’un intervalle",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-06",
+      "title": "Lebesgue 外测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/bf1ebab816531824e0.svg",
+          "width": 340.72,
+          "height": 125.09
+        },
+        "narrow": {
+          "src": "vectors/480822e554df179782.svg",
+          "width": 221.17,
+          "height": 143.7
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/6848303183c6d09a74.svg",
+          "width": 340.72,
+          "height": 171.9
+        },
+        "narrow": {
+          "src": "vectors/922414a53d044e953e.svg",
+          "width": 221.17,
+          "height": 225.23
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Mesure extérieure de Lebesgue",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-07",
+      "title": "外测度的三个基本性质",
+      "compiled": {
+        "wide": {
+          "src": "vectors/9e7fe474a928db5816.svg",
+          "width": 340.72,
+          "height": 110.77
+        },
+        "narrow": {
+          "src": "vectors/5700b0fd6a250bc54d.svg",
+          "width": 221.17,
+          "height": 148.07
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/29be0c124832ae2a1c.svg",
+          "width": 340.72,
+          "height": 143.75
+        },
+        "narrow": {
+          "src": "vectors/24ecb94366c321daa1.svg",
+          "width": 221.17,
+          "height": 162.4
+        }
+      },
+      "proof": 1,
+      "requires": [
+        "c1-06"
+      ],
+      "title_fr": "Propriété – Premières propriétés de λ∗",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-08",
+      "title": "平移与伸缩",
+      "compiled": {
+        "wide": {
+          "src": "vectors/b96a8381b30382d4a8.svg",
+          "width": 340.72,
+          "height": 106.24
+        },
+        "narrow": {
+          "src": "vectors/7a27e26d0bfd191c86.svg",
+          "width": 221.17,
+          "height": 124.89
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/6b3664ebbb014c998a.svg",
+          "width": 340.72,
+          "height": 116.66
+        },
+        "narrow": {
+          "src": "vectors/6c45c2efab1326bc25.svg",
+          "width": 221.17,
+          "height": 172.61
+        }
+      },
+      "proof": 2,
+      "requires": [],
+      "title_fr": "Propriété – Invariance de λ∗ par translation et par homothétie",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "c1-09",
+      "title": "区间的外测度等于长度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/00612a19a98b50ccbf.svg",
+          "width": 340.72,
+          "height": 83.52
+        },
+        "narrow": {
+          "src": "vectors/a199dad74cb99c2a83.svg",
+          "width": 221.17,
+          "height": 120.78
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/e8f5360bc0daff8c6f.svg",
+          "width": 340.72,
+          "height": 31.1
+        },
+        "narrow": {
+          "src": "vectors/d2a45070975d8dd6f6.svg",
+          "width": 221.17,
+          "height": 68.4
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Théorème – Valeur de λ∗ sur les intervalles",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c1-10",
+      "title": "零测集不一定是空集",
+      "compiled": {
+        "wide": {
+          "src": "vectors/9db24e696b73f0fecb.svg",
+          "width": 340.72,
+          "height": 67.92
+        },
+        "narrow": {
+          "src": "vectors/fd00422e86f4bfb633.svg",
+          "width": 221.17,
+          "height": 105.19
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/cd64f5be94a47db750.svg",
+          "width": 340.72,
+          "height": 86.57
+        },
+        "narrow": {
+          "src": "vectors/5eb298036cf38d671f.svg",
+          "width": 221.17,
+          "height": 105.22
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-13"
+      ],
+      "title_fr": "Définition – Ensemble négligeable",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c1-11",
+      "title": "Lebesgue 可测性的判据",
+      "compiled": {
+        "wide": {
+          "src": "vectors/434939c233657687dc.svg",
+          "width": 340.72,
+          "height": 107.4
+        },
+        "narrow": {
+          "src": "vectors/c20ea664bdfdd3e868.svg",
+          "width": 221.17,
+          "height": 162.41
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/e2fdbc5b44d69b0ac7.svg",
+          "width": 340.72,
+          "height": 103.75
+        },
+        "narrow": {
+          "src": "vectors/357717b36c7e376024.svg",
+          "width": 221.17,
+          "height": 159.24
+        }
+      },
+      "proof": null,
+      "requires": [],
+      "title_fr": "Définition – Ensembles Lebesgue-mesurables",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c1-12",
+      "title": "从外测度得到真正的测度",
+      "compiled": {
+        "wide": {
+          "src": "vectors/c612341c87f5a39743.svg",
+          "width": 340.72,
+          "height": 87.46
+        },
+        "narrow": {
+          "src": "vectors/d906dcc093aab94bc3.svg",
+          "width": 221.17,
+          "height": 143.41
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/9bce792eb0b7cb3977.svg",
+          "width": 340.72,
+          "height": 107.43
+        },
+        "narrow": {
+          "src": "vectors/b4f2cecd76d611c83c.svg",
+          "width": 221.17,
+          "height": 163.38
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c1-11"
+      ],
+      "title_fr": "Théorème – Théorème de Carathéodory",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "c1-13",
+      "title": "Vitali 集：并非所有集合都可测",
+      "compiled": {
+        "wide": {
+          "src": "vectors/f23dea96f44d120ad4.svg",
+          "width": 340.72,
+          "height": 107.4
+        },
+        "narrow": {
+          "src": "vectors/3509041edfb6627a69.svg",
+          "width": 221.17,
+          "height": 180.54
+        }
+      },
+      "french": {
+        "wide": {
+          "src": "vectors/183efbd82c232d321e.svg",
+          "width": 340.72,
+          "height": 49.73
+        },
+        "narrow": {
+          "src": "vectors/14a8c322a2e9b0bcd5.svg",
+          "width": 221.17,
+          "height": 68.38
+        }
+      },
+      "proof": null,
+      "requires": [
+        "c2-10"
+      ],
+      "title_fr": "Théorème – Ensemble de Vitali",
+      "source": "programme",
+      "originals": [
+        {
+          "page": 3
+        }
+      ]
+    }
+  ]
+}

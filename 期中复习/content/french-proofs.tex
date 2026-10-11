@@ -1,0 +1,275 @@
+% Transcription des 15 preuves officielles. Les énoncés communs sont inclus depuis french-knowledge.tex.
+% \officialstatement{cX-YY} est développé par build.py, avant la compilation XeLaTeX.
+% Conserver la rédaction officielle, y compris ses conventions ; la colonne chinoise est une explication distincte.
+% @note fr-p01|Premières propriétés de λ∗
+\textbf{1.1\quad 1. Premières propriétés de $\lambda^*$}
+
+\officialstatement{c1-07}
+
+\textbf{Démonstration.} Le point 1 est immédiat sur la définition. Pour le point 2, supposons $A\subset B$ et fixons un recouvrement dénombrable $(I_i)_{i\in\N}$ de $B$ par des intervalles ouverts. Ce recouvrement couvre aussi $A$. Par définition de la borne inférieure qui définit $\lambda^*(A)$, on a donc, dans un premier temps,
+\[\lambda^*(A)\le\sum_{i\in\N}\ell(I_i).\]
+Cette inégalité étant vraie pour tout recouvrement dénombrable de $B$, on prend, dans un second temps, la borne inférieure du membre de droite sur tous ces recouvrements ; on obtient
+\[\lambda^*(A)\le\inf_{B\subset\bigcup_i I_i}\sum_i\ell(I_i)=\lambda^*(B).\]
+Pour le point 3 : soit $\varepsilon>0$. Pour chaque $n$, on choisit un recouvrement $(]a_i^{(n)},b_i^{(n)}[)_{i\in\N}$ de $A_n$ tel que $\sum_i(b_i^{(n)}-a_i^{(n)})\le\lambda^*(A_n)+\varepsilon2^{-n}$ (possible par définition de la borne inférieure). La famille $\bigl(]a_i^{(n)},b_i^{(n)}[\bigr)_{n,i}$, qui est encore dénombrable (réunion dénombrable de familles dénombrables), recouvre $\bigcup_n A_n$ ; donc
+\[
+\begin{aligned}
+\lambda^*\Bigl(\bigcup_n A_n\Bigr)&\le\sum_n\sum_i(b_i^{(n)}-a_i^{(n)})\\
+&\le\sum_n\lambda^*(A_n)+\varepsilon.
+\end{aligned}
+\]
+On conclut en faisant $\varepsilon\to0$.\hfill$\blacksquare$
+% @end
+% @note fr-p02|Invariance de λ∗ par translation et par homothétie
+\textbf{1.2\quad 2. Invariance de $\lambda^*$ par translation et par homothétie}
+
+\officialstatement{c1-08}
+
+\textbf{Démonstration.} Le point 1 est le cas particulier $a=1$ du point 2 ; montrons directement le point 2, en supposant d’abord $a>0$. Soit $(]a_i,b_i[)_{i\in\N}$ un recouvrement de $E$ par des intervalles ouverts. Alors $\bigl(]aa_i+b,ab_i+b[\bigr)_{i\in\N}$ est un recouvrement de $aE+b$ par des intervalles ouverts (car $y\in]a_i,b_i[\iff ay+b\in]aa_i+b,ab_i+b[$ lorsque $a>0$), de longueur totale
+\[\sum_i\ell(aI_i+b)=a\sum_i\ell(I_i).\]
+Pour ce recouvrement fixé de $E$, la famille transformée est un recouvrement admissible de $aE+b$. Par définition de la borne inférieure, on a donc d’abord
+\[\lambda^*(aE+b)\le a\sum_i\ell(I_i).\]
+Le membre de gauche ne dépend plus du recouvrement choisi de $E$. Comme l’inégalité vaut pour tout recouvrement dénombrable $(I_i)_i$ de $E$, on prend maintenant la borne inférieure du membre de droite sur tous ces recouvrements :
+\[\lambda^*(aE+b)\le a\inf_{E\subset\bigcup_i I_i}\sum_i\ell(I_i)=a\lambda^*(E).\]
+Réciproquement, fixons un recouvrement $(J_i)_i$ de $aE+b$. Par l’application réciproque $z\mapsto\frac{z-b}{a}$, on obtient un recouvrement de $E$ dont la longueur totale vaut $\frac1a\sum_i\ell(J_i)$. En prenant d’abord la borne inférieure sur les recouvrements de $E$ dans le membre de gauche,
+\[\lambda^*(E)\le\frac1a\sum_i\ell(J_i).\]
+Cette inégalité valant pour tout recouvrement $(J_i)_i$ de $aE+b$, on prend ensuite la borne inférieure du membre de droite sur tous ces recouvrements :
+\[\lambda^*(E)\le\frac1a\lambda^*(aE+b).\]
+Ainsi $a\lambda^*(E)\le\lambda^*(aE+b)$, et l’égalité suit.
+
+Si $a<0$, le même calcul vaut en échangeant les rôles de $a_i$ et $b_i$ (l’application $y\mapsto ay+b$ renverse l’orientation), et l’on obtient $\lambda^*(aE+b)=|a|\lambda^*(E)=-a\lambda^*(E)$.\hfill$\blacksquare$
+% @end
+% @note fr-p03|Intersection de tribus
+\textbf{1.3\quad 3. Intersection de tribus}
+
+\officialstatement{c2-04}
+
+\textbf{Démonstration.} Posons
+\[\T:=\bigcap_{i\in I}\T_i.\]
+Par définition d’une intersection, un ensemble $A\subset\Omega$ appartient à $\T$ si et seulement s’il appartient à toutes les tribus $\T_i$. Vérifions successivement les trois axiomes d’une tribu.
+\begin{itemize}
+\item \textbf{L’ensemble vide appartient à $\T$.} Pour tout $i\in I$, $\T_i$ est une tribu, donc $\varnothing\in\T_i$. Ainsi $\varnothing$ appartient à toutes les $\T_i$, donc
+\[\varnothing\in\bigcap_{i\in I}\T_i=\T.\]
+\item \textbf{$\T$ est stable par complémentaire.} Soit $A\in\T$. Alors, par définition de $\T$, on a $A\in\T_i$ pour tout $i\in I$. Comme chaque $\T_i$ est une tribu, on a donc $A^c\in\T_i$ pour tout $i\in I$. Par conséquent $A^c$ appartient à leur intersection :
+\[A^c\in\bigcap_{i\in I}\T_i=\T.\]
+\item \textbf{$\T$ est stable par réunion dénombrable.} Soit $(A_n)_{n\in\N}$ une suite d’éléments de $\T$. Pour chaque $n$ et pour chaque $i\in I$, on a $A_n\in\T_i$. Fixons $i\in I$. Puisque $\T_i$ est une tribu, elle est stable par réunion dénombrable, donc
+\[\bigcup_{n\in\N}A_n\in\T_i.\]
+Cette conclusion est vraie pour tout $i\in I$. Ainsi $\bigcup_{n\in\N}A_n$ appartient à toutes les $\T_i$, donc
+\[\bigcup_{n\in\N}A_n\in\bigcap_{i\in I}\T_i=\T.\]
+\end{itemize}
+Les trois axiomes étant vérifiés, $\T$ est une tribu sur $\Omega$.\hfill$\blacksquare$
+% @end
+% @note fr-p04|Description de la tribu engendrée
+\textbf{1.4\quad 4. Description de la tribu engendrée}
+
+\officialstatement{c2-05}
+
+\textbf{Démonstration.} Notons
+\[\mathcal C:=\left\{\T'\subset\mathcal P(\Omega);\,\begin{gathered}\T'\text{ est une tribu sur }\Omega\\\text{et }\mathcal G\subset\T'\end{gathered}\right\}.\]
+Cette famille n’est pas vide : en effet, $\mathcal P(\Omega)$ est une tribu sur $\Omega$ et contient évidemment $\mathcal G$. On peut donc considérer l’intersection de toutes les tribus appartenant à $\mathcal C$ :
+\[\mathcal S:=\bigcap_{\T'\in\mathcal C}\T'.\]
+Nous allons vérifier pas à pas que $\mathcal S$ est précisément la tribu engendrée par $\mathcal G$.
+\begin{enumerate}
+\item \textbf{$\mathcal S$ est une tribu.} Toutes les familles $\T'\in\mathcal C$ sont des tribus sur le même ensemble $\Omega$. D’après la Proposition « Intersection de tribus », leur intersection $\mathcal S$ est donc elle-même une tribu sur $\Omega$.
+\item \textbf{$\mathcal S$ contient $\mathcal G$.} Soit $A\in\mathcal G$. Par définition de $\mathcal C$, chaque tribu $\T'\in\mathcal C$ contient toute la famille $\mathcal G$ ; en particulier, elle contient $A$. Ainsi $A$ appartient à toutes les tribus $\T'\in\mathcal C$. Par définition d’une intersection,
+\[A\in\bigcap_{\T'\in\mathcal C}\T'=\mathcal S.\]
+Comme ceci vaut pour tout $A\in\mathcal G$, on a bien $\mathcal G\subset\mathcal S$.
+\item \textbf{$\mathcal S$ est la plus petite tribu contenant $\mathcal G$.} Soit $\mathcal U$ une tribu quelconque sur $\Omega$ telle que $\mathcal G\subset\mathcal U$. Alors $\mathcal U$ satisfait exactement les conditions qui définissent $\mathcal C$, donc $\mathcal U\in\mathcal C$.
+
+Or $\mathcal S$ est l’intersection de tous les éléments de $\mathcal C$. Un élément qui appartient à cette intersection doit appartenir à chacun des ensembles intersectés, et en particulier à $\mathcal U$. On obtient donc
+\[\mathcal S\subset\mathcal U.\]
+\end{enumerate}
+Autrement dit, $\mathcal S$ est incluse dans toute tribu $\mathcal U$ qui contient $\mathcal G$. Nous avons déjà montré que $\mathcal S$ est elle-même une tribu contenant $\mathcal G$ ; elle est donc la plus petite tribu contenant $\mathcal G$ au sens de l’inclusion.
+
+Par définition de la tribu engendrée, cette plus petite tribu est $\sigma(\mathcal G)$. Ainsi
+\[\sigma(\mathcal G)=\bigcap_{\substack{\T'\text{ tribu}\\\mathcal G\subset\T'}}\T'.\]
+\hfill$\blacksquare$
+% @end
+% @note fr-p05|Génération de la tribu borélienne par les intervalles ouverts bornés
+\textbf{1.5\quad 5. Génération de la tribu borélienne par les intervalles ouverts bornés}
+
+\officialstatement{c2-08}
+
+\textbf{Démonstration.} Posons
+\[\mathcal G:=\{]a,b[\ ;\ a<b\}.\]
+D’après la Définition « Tribu borélienne, borélien », chaque élément de $\mathcal G$ est un ouvert, donc
+\[\sigma(\mathcal G)\subseteq\B(\R).\]
+Montrons l’inclusion réciproque. Soit $O$ un ouvert de $\R$ et soit $x\in O$.
+
+Comme $O$ est ouvert, il existe $r_x>0$ tel que
+\[]x-r_x,x+r_x[\subset O.\]
+\DSintervaldiagram{1}
+Comme $\Q$ est dense dans $\R$, on peut choisir
+\[q_x\in\Q\cap\left]x-\frac{r_x}2,x+\frac{r_x}2\right[.\]
+\DSintervaldiagram{2}
+On a donc $|x-q_x|<r_x/2$.
+
+Toujours par densité de $\Q$ dans $\R$, on choisit $\rho_x\in\Q_+^*$ tel que
+\[|x-q_x|<\rho_x<r_x-|x-q_x|.\]
+\DSintervaldiagram{3}
+Alors
+\[
+\begin{aligned}
+x\in]q_x-\rho_x,q_x+\rho_x[&\subset]x-r_x,x+r_x[\\
+&\subset O.
+\end{aligned}
+\]
+Ceci étant vrai pour tout $x\in O$, on obtient
+\[O=\bigcup_{\substack{q\in\Q,\rho\in\Q_+^*\\]q-\rho,q+\rho[\subset O}}]q-\rho,q+\rho[.\]
+La famille des couples $(q,\rho)\in\Q\times\Q_+^*$ est dénombrable ; cette réunion est donc dénombrable. Chaque intervalle qui intervient appartient à $\mathcal G$, donc $O\in\sigma(\mathcal G)$. Ainsi tous les ouverts appartiennent à $\sigma(\mathcal G)$ et, par la Définition « Tribu borélienne, borélien »,
+\[\B(\R)\subseteq\sigma(\mathcal G).\]
+Avec l’inclusion réciproque obtenue au début de la preuve, on conclut
+\[\B(\R)=\sigma\bigl(\{]a,b[:a<b\}\bigr).\]
+\hfill$\blacksquare$
+% @end
+% @note fr-p06|Propriétés élémentaires d’une mesure
+\textbf{2.1\quad 6. Propriétés élémentaires d’une mesure}
+
+\officialstatement{c3-06}
+
+\textbf{Démonstration. Point 1.} On complète $(A_i)_{1\le i\le n}$ en une suite infinie en posant $A_i=\varnothing$ pour $i\ge n+1$ ; la $\sigma$-additivité donne $\mu(\bigcup_{i\ge1}A_i)=\sum_{i\ge1}\mu(A_i)$, et il ne reste que les $n$ premiers termes non nuls.
+
+\textbf{Point 2.} On écrit $B=A\sqcup(B\setminus A)$ (réunion disjointe), d’où par additivité finie $\mu(B)=\mu(A)+\mu(B\setminus A)\ge\mu(A)$ par positivité de $\mu$.
+
+\textbf{Point 3.} On écrit $A\cup B=A\sqcup(B\setminus A)$, donc $\mu(A\cup B)=\mu(A)+\mu(B\setminus A)$ ; or $\mu(B\setminus A)=\mu(B)-\mu(A\cap B)$ par le point précédent appliqué à $A\cap B\subset B$.
+
+\textbf{Point 4.} C’est exactement l’égalité utilisée dans la preuve du point 2, valable dès que $\mu(A)$ est finie (pour pouvoir soustraire).\hfill$\blacksquare$
+% @end
+% @note fr-p07|Continuité croissante et décroissante
+\textbf{2.2\quad 7. Continuité croissante et décroissante}
+
+\officialstatement{c3-07}
+
+\textbf{Démonstration. Continuité croissante.} Posons $A_{-1}=\varnothing$ et
+\[D_i:=A_i\setminus A_{i-1}\quad(i\in\N).\]
+Les $D_i$ sont deux à deux disjoints, et
+\[\bigcup_{i\in\N}A_i=\bigsqcup_{i\in\N}D_i.\]
+Par $\sigma$-additivité,
+\[
+\begin{aligned}
+\mu\Bigl(\bigcup_{i\in\N}A_i\Bigr)&=\sum_{i\in\N}\mu(D_i)\\
+&=\lim_{n\to+\infty}\sum_{i=0}^n\mu(D_i).
+\end{aligned}
+\]
+Mais, pour chaque $n$, $A_n=\bigsqcup_{i=0}^n D_i$ ; l’additivité finie donne donc, sans aucune soustraction de quantités éventuellement infinies,
+\[\sum_{i=0}^n\mu(D_i)=\mu(A_n).\]
+Ainsi
+\[\mu\Bigl(\bigcup_{i\in\N}A_i\Bigr)=\lim_{n\to+\infty}\mu(A_n).\]
+\textbf{Continuité décroissante.} On applique la continuité croissante à la suite croissante $(B_m\setminus B_n)_{n\ge m}$, en utilisant $\mu(B_m)<+\infty$ pour écrire $\mu(B_m\setminus B_n)=\mu(B_m)-\mu(B_n)$, puis on passe à la limite et on simplifie.\hfill$\blacksquare$
+% @end
+% @note fr-p08|Sous-additivité dénombrable, inégalité de Boole
+\textbf{2.3\quad 8. Sous-additivité dénombrable, inégalité de Boole}
+
+\officialstatement{c3-08}
+
+\textbf{Démonstration.} Pour $n\in\N$, posons
+\[B_n:=\bigcup_{i=0}^n A_i.\]
+On rend cette réunion disjointe en posant $D_0:=A_0$ et, pour $i\ge1$,
+\[D_i:=A_i\setminus\bigcup_{j=0}^{i-1}A_j.\]
+Alors $B_n=\bigsqcup_{i=0}^nD_i$ et $D_i\subseteq A_i$. D’après la Proposition « Propriétés élémentaires d’une mesure » (additivité finie puis croissance),
+\[
+\begin{aligned}
+\mu(B_n)&=\sum_{i=0}^n\mu(D_i)\\
+&\le\sum_{i=0}^n\mu(A_i)\\
+&\le\sum_{i\in\N}\mu(A_i).
+\end{aligned}
+\]
+Or $B_n\uparrow\bigcup_{i\in\N}A_i$. Par la Proposition « Continuité croissante et décroissante »,
+\[
+\begin{aligned}
+\mu\Bigl(\bigcup_{i\in\N}A_i\Bigr)&=\lim_{n\to+\infty}\mu(B_n)\\
+&\le\sum_{i\in\N}\mu(A_i).
+\end{aligned}
+\]
+C’est exactement l’inégalité de Boole.\hfill$\blacksquare$
+% @end
+% @note fr-p09|Lemme de Borel–Cantelli
+\textbf{2.4\quad 9. Lemme de Borel–Cantelli}
+
+\officialstatement{c3-10}
+
+\textbf{Démonstration.} Pour tout entier $N$, on a
+\[
+\begin{aligned}
+\limsup_n A_n&=\bigcap_{N\in\N}\bigcup_{n\ge N}A_n\\
+&\subseteq\bigcup_{n\ge N}A_n.
+\end{aligned}
+\]
+Par croissance de la mesure, puis par l’inégalité de Boole (Proposition « Sous-additivité dénombrable, inégalité de Boole »),
+\[
+\begin{aligned}
+\mu(\limsup_n A_n)&\le\mu\Bigl(\bigcup_{n\ge N}A_n\Bigr)\\
+&\le\sum_{n\ge N}\mu(A_n).
+\end{aligned}
+\]
+Comme la série à termes positifs $\sum_n\mu(A_n)$ converge, son reste $\sum_{n\ge N}\mu(A_n)$ tend vers $0$ quand $N\to+\infty$. L’inégalité précédente étant vraie pour tout $N$, on obtient nécessairement $\mu(\limsup_n A_n)=0$.\hfill$\blacksquare$
+% @end
+% @note fr-p10|Stabilité par composition
+\textbf{3.1\quad 10. Stabilité par composition}
+
+\officialstatement{c4-06}
+
+\textbf{Démonstration.} Soit $W\in\T_G$. Alors $(g\circ f)^{-1}(W)=f^{-1}\bigl(g^{-1}(W)\bigr)$. Or $g^{-1}(W)\in\T_F$ (car $g$ est mesurable), donc $f^{-1}(g^{-1}(W))\in\T_E$ (car $f$ est mesurable).\hfill$\blacksquare$
+% @end
+% @note fr-p11|Caractérisation par une famille génératrice
+\textbf{3.2\quad 11. Caractérisation par une famille génératrice}
+
+\officialstatement{c4-07}
+
+\textbf{Démonstration.} Le sens direct est immédiat : si $f$ est mesurable, $f^{-1}(G)\in\T_E$ pour tout $G\in\T_F$, donc en particulier pour $G\in\mathcal G\subset\T_F$.
+
+Réciproquement, supposons $f^{-1}(G)\in\T_E$ pour tout $G\in\mathcal G$, c’est-à-dire $f^{-1}(\mathcal G)\subset\T_E$. En appliquant l’opération $\sigma(\cdot)$ (tribu engendrée) aux deux membres, qui préserve l’inclusion, on obtient $\sigma\bigl(f^{-1}(\mathcal G)\bigr)\subset\T_E$ (car $\T_E$ est déjà une tribu, elle est égale à la tribu qu’elle engendre). Or, par la Proposition « Tribu engendrée et image réciproque », $\sigma\bigl(f^{-1}(\mathcal G)\bigr)=f^{-1}\bigl(\sigma(\mathcal G)\bigr)=f^{-1}(\T_F)$ (car $\mathcal G$ engendre $\T_F$ par hypothèse). On a donc $f^{-1}(\T_F)\subset\T_E$, c’est-à-dire exactement que $f$ est mesurable.\hfill$\blacksquare$
+% @end
+% @note fr-p12|Mesurabilité des fonctions continues
+\textbf{3.3\quad 12. Mesurabilité des fonctions continues}
+
+\officialstatement{c4-08}
+
+\textbf{Démonstration.} La famille des ouverts de $F$ engendre $\T_F=\B(F)$. Or pour $f$ continue et $V$ ouvert de $F$, $f^{-1}(V)$ est un ouvert de $E$, donc un élément de $\B(E)=\T_E$. On conclut par la Proposition « Caractérisation par une famille génératrice ».\hfill$\blacksquare$
+% @end
+% @note fr-p13|Mesurabilité des fonctions indicatrices
+\textbf{3.4\quad 13. Mesurabilité des fonctions indicatrices}
+
+\textbf{Propriété – Mesurabilité des indicatrices}
+
+Soit $(E,\T)$ un espace mesurable et soit $A\in\T$. Alors $\mathbf1_A:E\to\R$ est mesurable.
+
+\textbf{Démonstration.} Soit $B\in\B(\R)$. Par définition de la fonction indicatrice,
+\[
+\mathbf1_A^{-1}(B)=\begin{cases}
+\varnothing,&\text{si }0\notin B\text{ et }1\notin B,\\
+A,&\text{si }0\notin B\text{ et }1\in B,\\
+A^c,&\text{si }0\in B\text{ et }1\notin B,\\
+E,&\text{si }0\in B\text{ et }1\in B.
+\end{cases}
+\]
+puisque $A\in\T$. Cette propriété étant vraie pour tout $B\in\B(\R)$, la fonction $\mathbf1_A$ est mesurable.\hfill$\blacksquare$
+% @end
+% @note fr-p14|Stabilité par opérations usuelles
+\textbf{3.5\quad 14. Stabilité par opérations usuelles}
+
+\officialstatement{c4-11}
+
+\textbf{Démonstration.} Soit $h:E\to\R^2$, $h(x)=(f(x),g(x))$. Par la Proposition « Caractérisation des fonctions mesurables à valeurs vectorielles », $h$ est mesurable puisque ses deux coordonnées $f,g$ le sont. Les applications $S:(x,y)\mapsto x+y$, $P:(x,y)\mapsto xy$, $m_\lambda:x\mapsto\lambda x$, $\mathrm{abs}:x\mapsto|x|$ sont continues, donc mesurables (Proposition « Mesurabilité des fonctions continues »). Par stabilité par composition (Proposition « Stabilité par composition »), $S\circ h=f+g$, $P\circ h=fg$, $m_\lambda\circ f=\lambda f$ et $\mathrm{abs}\circ f=|f|$ sont mesurables.\hfill$\blacksquare$
+% @end
+% @note fr-p15|Espérance et nullité presque partout
+\textbf{4.1\quad 15. Espérance et nullité presque partout}
+
+\officialstatement{c5-11}
+
+\textbf{Démonstration.} Supposons $\int_\Omega f\dd\mu=0$. Pour $n\ge1$, posons
+\[A_n:=\{f\ge1/n\}.\]
+La fonction étagée positive $\frac1n\mathbf1_{A_n}$ est majorée par $f$. Par définition de l’intégrale d’une fonction positive,
+\[
+\begin{aligned}
+0\le\frac1n\mu(A_n)&=\int_\Omega\frac1n\mathbf1_{A_n}\dd\mu\\
+&\le\int_\Omega f\dd\mu=0.
+\end{aligned}
+\]
+Donc $\mu(A_n)=0$ pour tout $n$. Or
+\[\{f>0\}=\bigcup_{n\ge1}A_n,\]
+donc $\mu(f>0)=0$ par $\sigma$-sous-additivité : $f=0$ presque partout.
+
+Réciproquement, si $f=0$ presque partout, le point 3 de la Proposition « Monotonie », appliqué à $f$ et à la fonction nulle, donne
+\[\int_\Omega f\dd\mu=\int_\Omega0\dd\mu=0.\]
+\hfill$\blacksquare$
+% @end

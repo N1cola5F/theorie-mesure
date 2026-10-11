@@ -23,10 +23,19 @@ def main():
         assert len(data['cards'])==chapter['count']
         for card in data['cards']:
             assert card['id'] not in ids;ids.add(card['id']);asset(card)
+            assert set(card['french'])=={'wide','narrow'} and card['originals']
+            assert card['compiled']['wide']['width']==card['french']['wide']['width']
+            assert card['compiled']['narrow']['width']==card['french']['narrow']['width']
     for proof in manifest['proofs']:
         paths.add(proof['data']);data=load(SITE/proof['data']);proofs.add(data['id']);asset(data)
         assert data['card'] in ids and set(data['requires'])<=ids
+        assert set(data['french'])=={'wide','narrow'} and data['originals']
+        assert data['compiled']['wide']['width']==data['french']['wide']['width']
+        assert data['compiled']['narrow']['width']==data['french']['narrow']['width']
     assert len(ids)==100 and len(proofs)==15
+    from build import load_notes
+    assert {n['id'] for n in load_notes('french-knowledge.tex')}=={'fr-'+id for id in ids}
+    assert {n['id'] for n in load_notes('french-proofs.tex')}=={'fr-'+id for id in proofs}
     for chapter in manifest['chapters']:
         for card in load(SITE/chapter['data'])['cards']:assert set(card['requires'])<=ids
     asset(manifest['guides']);paths|={manifest['search'],manifest['catalog']}
@@ -52,6 +61,7 @@ def main():
     result={'version':manifest['version'],'date':manifest['updated'],'scope':'Build diagnostics, mappings and actual referenced resources only; no screenshots or exhaustive math audit',
       'statements':len(ids),'proofs':len(proofs),'sources':len(source_hashes),'referenced_assets':len(paths),'latex_faults':faults,
       'all_pdf_hashes_match':True,'existing_reader_and_three_offline_files_preserved':True,'protected_files':len(protected),'runtime_math_renderer':False,
+      'french_tex_statements':100,'french_tex_proofs':15,'same_chinese_french_layout_widths':True,
       'browser_checks':None,'publication_checks':None}
     (BASE/'必要检查.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))

@@ -34,7 +34,7 @@ async (page) => {
   await page.locator('#menu').click();
   await page.locator('nav a[href="#ch8"]').click();
   await page.locator('#c8-13').waitFor();
-  const mobile=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,cards:document.querySelectorAll('.card').length,menuClosed:!document.getElementById('sidebar').classList.contains('open'),hasExercises:document.querySelector('main').innerText.includes('学完后的练习建议')}));
+  const mobile=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,cards:document.querySelectorAll('.card').length,menuClosed:document.getElementById('sidebar').inert,hasExercises:document.querySelector('main').innerText.includes('学完后的练习建议')}));
   if(mobile.scrollWidth>mobile.width||mobile.hasExercises||mobile.cards!==13)throw Error('Mobile/chapter8 scope');
   await page.locator('#menu').click();
   await page.locator('nav a[href="#td"]').click();

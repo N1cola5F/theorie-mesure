@@ -1,0 +1,40 @@
+{
+  "id": "p03",
+  "title": "σ-代数的交",
+  "number": 3,
+  "compiled": {
+    "wide": {
+      "src": "vectors/f81112aa52ecac1ea3.svg",
+      "width": 340.72,
+      "height": 251.16
+    },
+    "narrow": {
+      "src": "vectors/0fedf0e16671cdf098.svg",
+      "width": 221.17,
+      "height": 307.11
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/5667ef69f99c85f216.svg",
+      "width": 340.72,
+      "height": 659.41
+    },
+    "narrow": {
+      "src": "vectors/1449294355fbbe7c1b.svg",
+      "width": 221.17,
+      "height": 842.69
+    }
+  },
+  "requires": [
+    "c2-01"
+  ],
+  "card": "c2-04",
+  "title_fr": "1.3 3. Intersection de tribus",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 3
+    }
+  ]
+}

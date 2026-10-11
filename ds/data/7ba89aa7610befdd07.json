@@ -1,0 +1,44 @@
+{
+  "id": "p15",
+  "title": "非负积分为零",
+  "number": 15,
+  "compiled": {
+    "wide": {
+      "src": "vectors/a9b3825e79cd49540c.svg",
+      "width": 340.72,
+      "height": 300.55
+    },
+    "narrow": {
+      "src": "vectors/0318cfc7feaf87956e.svg",
+      "width": 221.17,
+      "height": 411.32
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/35c8a8850392079dec.svg",
+      "width": 340.72,
+      "height": 426.52
+    },
+    "narrow": {
+      "src": "vectors/a2acc5b7c3818ae480.svg",
+      "width": 221.17,
+      "height": 556.93
+    }
+  },
+  "requires": [
+    "c3-08",
+    "c4-07",
+    "c5-04",
+    "c5-08",
+    "c5-10"
+  ],
+  "card": "c5-11",
+  "title_fr": "4.1 15. Espérance et nullité presque partout",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 8
+    }
+  ]
+}

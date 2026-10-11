@@ -1,0 +1,44 @@
+{
+  "id": "p04",
+  "title": "生成 σ-代数的描述",
+  "number": 4,
+  "compiled": {
+    "wide": {
+      "src": "vectors/6c2ed5100c8b74edef.svg",
+      "width": 340.72,
+      "height": 262.08
+    },
+    "narrow": {
+      "src": "vectors/871c12b5af468de180.svg",
+      "width": 221.17,
+      "height": 336.63
+    }
+  },
+  "french": {
+    "wide": {
+      "src": "vectors/3048a6cfa4d9444535.svg",
+      "width": 340.72,
+      "height": 806.4
+    },
+    "narrow": {
+      "src": "vectors/cbb0565d5f88208482.svg",
+      "width": 221.17,
+      "height": 1095.29
+    }
+  },
+  "requires": [
+    "c2-03",
+    "c2-04"
+  ],
+  "card": "c2-05",
+  "title_fr": "1.4 4. Description de la tribu engendrée",
+  "source": "preuves",
+  "originals": [
+    {
+      "page": 3
+    },
+    {
+      "page": 4
+    }
+  ]
+}

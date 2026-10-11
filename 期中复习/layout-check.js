@@ -1,0 +1,55 @@
+async (page) => {
+  const errors=[],failed=[],requests=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  page.on('requestfailed',r=>failed.push(r.url()));
+  page.on('request',r=>requests.push(r.url()));
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('http://127.0.0.1:8765/site/ds/#ch1');
+  await page.locator('#c1-13').waitFor();
+  await page.locator('[data-mode="compare"]').click();
+  await page.locator('#c1-01 .fr-reading picture').waitFor();
+  const sizes=async id=>{await page.locator('#'+id).scrollIntoViewIfNeeded();return page.evaluate(async id=>{
+    const imgs=[...document.querySelectorAll('#'+id+' .column picture img')];
+    await Promise.all(imgs.map(i=>i.decode()));
+    const dimensions=imgs.map(i=>({width:i.getBoundingClientRect().width,naturalWidth:i.naturalWidth,scale:i.getBoundingClientRect().width/i.naturalWidth,src:i.currentSrc}));
+    return {id,dimensions,overflow:document.documentElement.scrollWidth>innerWidth};
+  },id)};
+  const equal=sample=>{
+    if(sample.dimensions.length!==2||sample.overflow)throw Error('Two-column/overflow: '+JSON.stringify(sample));
+    if(Math.abs(sample.dimensions[0].width-sample.dimensions[1].width)>.5||Math.abs(sample.dimensions[0].scale-sample.dimensions[1].scale)>.002)throw Error('Unequal text scale: '+JSON.stringify(sample));
+  };
+  const desktop=await sizes('c1-01');equal(desktop);
+  const before=await page.locator('main').boundingBox();
+  await page.locator('#menu').click();
+  await page.waitForFunction(()=>document.getElementById('menu').getAttribute('aria-expanded')==='false');
+  const collapsed=await page.evaluate(()=>({inert:document.getElementById('sidebar').inert,left:document.getElementById('main').getBoundingClientRect().left}));
+  if(!collapsed.inert||collapsed.left!==0||before.x<=collapsed.left)throw Error('Sidebar did not release space');
+  await page.reload();await page.locator('#c1-01 .fr-reading picture').waitFor();
+  const persisted=await page.evaluate(()=>document.body.classList.contains('sidebar-collapsed')&&document.getElementById('menu').getAttribute('aria-expanded')==='false');
+  if(!persisted)throw Error('Sidebar choice not retained');
+  await page.locator('#menu').click();
+  await page.locator('nav a[href="#ch6"]').click();await page.locator('#c6-05').waitFor();
+  const longFormula=await sizes('c6-05');equal(longFormula);
+  await page.locator('[data-mode="fr"]').click();
+  await page.waitForFunction(()=>document.querySelector('#c6-05 .columns').children.length===1);
+  await page.locator('[data-mode="compare"]').click();
+  await page.locator('#c6-05 .fr-reading picture').waitFor();
+  await page.setViewportSize({width:390,height:844});
+  await page.waitForFunction(()=>document.getElementById('sidebar').inert);
+  const mobile=await sizes('c6-05');equal(mobile);
+  await page.locator('#menu').click();
+  await page.locator('nav a[href="#ch8"]').click();await page.locator('#c8-13').waitFor();
+  const mobileMenu=await page.evaluate(()=>({closed:document.getElementById('sidebar').inert&&document.getElementById('scrim').hidden,expanded:document.getElementById('menu').getAttribute('aria-expanded')}));
+  if(!mobileMenu.closed||mobileMenu.expanded!=='false')throw Error('Mobile navigation did not close');
+  const decomposition=await sizes('c8-13');equal(decomposition);
+  await page.locator('#menu').click();await page.locator('#scrim').click({position:{x:350,y:100}});
+  await page.locator('#menu').click();await page.keyboard.press('Escape');
+  if(await page.locator('#menu').getAttribute('aria-expanded')!=='false')throw Error('Escape did not close menu');
+  await page.goto('http://127.0.0.1:8765/site/ds/#p05');await page.locator('#p05').waitFor();
+  const proof=await sizes('p05');equal(proof);
+  const sources=await page.locator('#p05 .source-line a').evaluateAll(a=>a.map(x=>x.getAttribute('href')));
+  if(!sources.length||!sources.every(h=>h.includes('Preuves_DS_FR')&&h.includes('#page=')))throw Error('Official proof links missing');
+  const pdfRequests=requests.filter(u=>/\.pdf(?:#|$)/.test(u)).length;
+  if(pdfRequests||errors.length||failed.length)throw Error(JSON.stringify({pdfRequests,errors,failed}));
+  return {scope:'Equal Chinese/French scale, one long formula, desktop collapse/persistence, mobile menu and official proof link; no screenshots',desktop,collapsed,persisted,longFormula,mobile,mobileMenu,decomposition,proof,pdfRequests,pageErrors:errors,failedRequests:failed};
+}

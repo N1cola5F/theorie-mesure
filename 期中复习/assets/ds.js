@@ -6,21 +6,39 @@
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const stored=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
   const save=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
+  const sidebar=document.getElementById('sidebar'),menu=document.getElementById('menu'),scrim=document.getElementById('scrim'),mobile=matchMedia('(max-width:760px)');
+  document.body.classList.toggle('sidebar-collapsed',stored('mesure-ds-sidebar-collapsed',false)===true);
+  function updateMenu(){
+    const open=mobile.matches?document.body.classList.contains('mobile-menu'):!document.body.classList.contains('sidebar-collapsed');
+    menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'收起目录':'展开目录');
+    menu.title=open?'收起目录':'展开目录';document.getElementById('menu-label').textContent=mobile.matches?'目录':open?'收起目录':'展开目录';
+    sidebar.inert=!open;scrim.hidden=!(mobile.matches&&open);
+  }
+  function closeMobile(){document.body.classList.remove('mobile-menu');updateMenu()}
+  menu.addEventListener('click',()=>{
+    document.body.classList.toggle(mobile.matches?'mobile-menu':'sidebar-collapsed');
+    if(!mobile.matches)save('mesure-ds-sidebar-collapsed',document.body.classList.contains('sidebar-collapsed'));
+    updateMenu();
+  });
+  scrim.addEventListener('click',closeMobile);mobile.addEventListener('change',closeMobile);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobile.matches&&document.body.classList.contains('mobile-menu')){closeMobile();menu.focus()}});
+  new ResizeObserver(([entry])=>document.documentElement.style.setProperty('--top',entry.target.offsetHeight+'px')).observe(document.querySelector('.topbar'));
+  updateMenu();
   let mode=stored('mesure-ds-mode','zh'),read=stored('mesure-ds-read',{}),serial=0,current={kind:'home'},searchTimer;
   if(!['zh','fr','compare'].includes(mode))mode='zh';
   const source=(key,page)=>encodeURI(M.sources[key].href)+(page?'#page='+page:'');
   const link=(key,page,label)=>`<a href="${esc(source(key,page))}" target="_blank" rel="noopener">${esc(label||M.sources[key].label)} ↗</a>`;
   const image=(asset,alt,lazy=true)=>`<img src="${esc(asset.src)}" width="${asset.width}" height="${asset.height}" alt="${esc(alt)}" loading="${lazy?'lazy':'eager'}" decoding="async">`;
-  const compiled=(item,lazy=true)=>`<picture class="tex-picture"><source media="(max-width:1100px)" srcset="${esc(item.compiled.narrow.src)}" width="${item.compiled.narrow.width}" height="${item.compiled.narrow.height}">${image(item.compiled.wide,item.title,lazy)}</picture>`;
+  const compiled=(item,lazy=true,french=false)=>{const assets=french?item.french:item.compiled;return `<picture class="tex-picture"><source media="(max-width:1100px)" srcset="${esc(assets.narrow.src)}" width="${assets.narrow.width}" height="${assets.narrow.height}">${image(assets.wide,french?item.title_fr:item.title,lazy)}</picture>`};
   const guide=id=>mode==='fr'&&/^i[1-8]$/.test(id)?'':`<section class="panel">${compiled(M.guides[id],false)}</section>`;
   const heading=(eyebrow,title,subtitle='')=>`<p class="eyebrow">${esc(eyebrow)}</p><h1>${esc(title)}</h1>${subtitle?`<p class="subtitle">${esc(subtitle)}</p>`:''}`;
   async function get(url){if(cache.has(url))return cache.get(url);const promise=fetch(url).then(r=>{if(!r.ok)throw Error('资源返回 '+r.status);return r.json()}).catch(e=>{cache.delete(url);throw e});cache.set(url,promise);return promise}
   function chapterOf(id){const m=/^c([1-8])-/.exec(id);return m?Number(m[1]):null}
   const chapter=n=>M.chapters.find(c=>c.id===n);
   function refs(item){return `<div class="refs">${(item.requires||[]).map(id=>`<a href="#${id}" title="前置知识">依据 ${id}</a>`).join('')}${item.proof?`<a class="proof-link" href="#p${String(item.proof).padStart(2,'0')}">读指定证明 ${String(item.proof).padStart(2,'0')} →</a>`:''}</div>`}
-  function official(item){return item.originals.map((p,i)=>`<div class="official-piece">${image(p.svg,item.title_fr+' · p.'+p.page)}<div class="source-line">${link(item.source,p.page,'教师原文 · PDF p.'+p.page)}<button class="text-button" data-zoom="${esc(p.svg.src)}" data-alt="${esc(item.title_fr)}">放大原文</button></div></div>`).join('')}
+  function official(item){return `${compiled(item,true,true)}<div class="source-line">${item.originals.map(p=>link(item.source,p.page,'官方 PDF p.'+p.page)).join('')}<button class="text-button" data-zoom="${esc(item.french.wide.src)}" data-alt="${esc(item.title_fr)}">放大正文</button></div>`}
   function body(item){const cn=`<div class="column"><div class="column-label">中文 · 理解说明与依据</div>${compiled(item)}</div>`;
-    const fr=`<div class="column" lang="fr"><div class="column-label">FRANÇAIS · TEXTE ORIGINAL</div>${official(item)}</div>`;
+    const fr=`<div class="column fr-reading" lang="fr"><div class="column-label">FRANÇAIS · TEXTE OFFICIEL</div>${official(item)}</div>`;
     return `<div class="columns ${mode==='compare'?'compare':''}">${mode==='zh'?cn:mode==='fr'?fr:cn+fr}</div>`}
   function card(item){return `<article class="card" id="${item.id}" data-read="${!!read[item.id]}"><div class="card-head"><div><div class="card-id">${esc(item.id)}</div><h2>${esc(mode==='fr'?item.title_fr:item.title)}</h2>${mode==='compare'?`<p class="official-title" lang="fr">${esc(item.title_fr)}</p>`:''}</div><label class="read-check"><input type="checkbox" data-read="${item.id}" ${read[item.id]?'checked':''}> 已读</label></div>${body(item)}${refs(item)}${mode==='zh'?`<div class="source-line">${link(item.source,item.originals[0].page,'对应官方条目 · p.'+item.originals[0].page)}</div>`:''}</article>`}
   function updateNav(){nav.innerHTML=`<a href="#home" data-route="home">范围与阅读顺序</a><a href="#basics" data-route="basics">起步：符号与对象</a><span class="section-label">按考纲过知识 · 100 条</span>${M.chapters.map(c=>`<a href="#ch${c.id}" data-route="ch${c.id}">${String(c.id).padStart(2,'0')} · ${esc(mode==='fr'?c.fr:c.title.split('：')[0])}${c.statements_only?' · 表述':''}</a>`).join('')}<span class="section-label">理解与补充</span><a href="#proofs" data-route="proofs">15 个指定证明</a><a href="#pitfalls" data-route="pitfalls">条件与易错点</a><a href="#td" data-route="td">学完后的练习建议</a><a href="#sources" data-route="sources">官方资料与待确认信息</a>`;
@@ -33,7 +51,7 @@
     guide('intro')+
     `<section class="panel"><h2>从零开始的顺序</h2><p>先读“符号与对象”，再依次读第 1–6 章。在每章后理解相应指定证明；接着读第 7–8 章的定义与结论，最后回看条件与反例。一次读不透时，用依据链接回到前置知识。</p><p>10 月 11–19 日是复习窗口。可把第 1–3 章、第 4–5 章、第 6 章、第 7–8 章依次安排在前四个阶段，末尾留时间回读证明和薄弱处；这是建议顺序，不是已经掌握程度的预测。</p><a href="#basics">从基础符号开始 →</a></section>`+
     `<div class="route-grid">${M.chapters.map(c=>`<a class="route" href="#ch${c.id}"><span class="number">CHAPITRE ${String(c.id).padStart(2,'0')} · ${c.count} 条</span><b>${esc(c.title)}</b><small>${esc(c.subtitle)}</small></a>`).join('')}</div>`}
-  function proofList(){return heading('PREUVES EXIGIBLES','15 个指定证明','名单来自官方最终清单。先读对应知识，再沿逐步依据理解；没有新增 Fubini、控制收敛等清单外的必背证明。')+`<section class="panel note"><p>中文是讲解稿，法语是原 PDF 的证明全文。证明 06 调整了差集公式与容斥的讲解顺序；证明 11 展开生成族判别的等价论证，法语侧保留原文。</p>${link('preuves',2,'官方完整证明')}</section><ol class="proof-list">${M.proofs.map(p=>`<li><a href="#${p.id}"><span class="pnumber">${String(p.number).padStart(2,'0')}</span><span>${esc(p.title)}<small>对应 ${p.card} · ${p.requires.length} 项前置知识</small></span></a></li>`).join('')}</ol>`}
+  function proofList(){return heading('PREUVES EXIGIBLES','15 个指定证明','名单来自官方最终清单。先读对应知识，再沿逐步依据理解；没有新增 Fubini、控制收敛等清单外的必背证明。')+`<section class="panel note"><p>中文是讲解稿，法语按官方 PDF 的文字和公式重新排版。证明 06 调整了差集公式与容斥的讲解顺序；证明 11 展开生成族判别的等价论证，法语侧保留原文。</p>${link('preuves',2,'官方完整证明')}</section><ol class="proof-list">${M.proofs.map(p=>`<li><a href="#${p.id}"><span class="pnumber">${String(p.number).padStart(2,'0')}</span><span>${esc(p.title)}<small>对应 ${p.card} · ${p.requires.length} 项前置知识</small></span></a></li>`).join('')}</ol>`}
   function tdAdvice(filter){const list=filter?M.td.filter(t=>t.chapters.includes(filter)):M.td;
     return `<section class="panel"><h2>学完后的练习建议</h2><p>先能解释知识，再选一两题看它怎样使用。下面是阅读后的建议，不是预测出题。打开官方答案会同时看到题目；先遮住解答写出思路，再对照所用定义或定理。</p>${list.map(t=>`<details><summary>TD${t.number} · ${esc(t.title)} · Part 1 / Part 2</summary><p class="source-note">官方题解含 Part 1 的 ${t.counts['1']} 题与 Part 2 的 ${t.counts['2']} 题。第 3 部分不在 DS 范围。</p><ul class="exercise-list">${t.exercises.map(e=>`<li>${link(t.source,e.page,'Ex. '+e.number+' · '+e.title)}<span>先读 <a href="#${e.card}">${e.card}</a> · ${e.part===1?'基础应用':'进阶理解'} · 官方题解 p.${e.page}</span></li>`).join('')}</ul><div class="source-line">${link(t.source,null,'TD'+t.number+' 全部题目与官方解答')}</div></details>`).join('')}${!list.length?'<p class="source-note">本章仅准备知识表述，不安排 DS 习题。</p>':''}</section>`}
   function sources(){return heading('SOURCES & INFORMATIONS','资料已足够开始复习','TD2、TD3、TD4 新增官方答案包含题目；不需要个人答案或往年 DS 试卷作为启动条件。')+
@@ -85,12 +103,11 @@
     if(e.target.closest('.close-zoom'))document.getElementById('zoom').close();
     if(e.target.closest('#retry'))render();
     if(e.target.closest('a[href^="#"]')){
-      search.value='';clearTimeout(searchTimer);document.getElementById('sidebar').classList.remove('open');document.getElementById('menu').setAttribute('aria-expanded','false');
+      search.value='';clearTimeout(searchTimer);closeMobile();
       const hash=e.target.closest('a').getAttribute('href');if(hash===location.hash)render();
     }
   });
   document.addEventListener('change',e=>{if(e.target.matches('[data-read]')){read[e.target.dataset.read]=e.target.checked;save('mesure-ds-read',read);e.target.closest('.card').dataset.read=String(e.target.checked)}});
-  document.getElementById('menu').addEventListener('click',e=>{const open=document.getElementById('sidebar').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open))});
   search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(find,160)});
   window.addEventListener('hashchange',()=>{search.value='';clearTimeout(searchTimer);render()});
   narrow.addEventListener('change',()=>{ /* picture selects the precompiled layout without retypesetting. */ });
